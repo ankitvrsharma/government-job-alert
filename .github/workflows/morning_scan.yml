@@ -54,4 +54,5 @@ jobs:
           git add data/review_queue.json data/seen_items.json
           if [ -f data/review_queue.csv ]; then git add data/review_queue.csv; fi
           git diff --cached --quiet || git commit -m "Update recruitment review queue"
+          git pull --rebase origin main
           git push
