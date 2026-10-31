@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "description": "Starter list; confirm URLs and crawling rules before relying on them.",
+  "sources": [
+    {
+      "name": "UPSC",
+      "url": "https://upsc.gov.in/recruitment/recruitment-advertisements",
+      "category": "Central recruitment",
+      "enabled": true,
+      "allowed_domains": [
+        "upsc.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "SSC",
+      "url": "https://ssc.gov.in/",
+      "category": "Central recruitment",
+      "enabled": true,
+      "allowed_domains": [
+        "ssc.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "NTA",
+      "url": "https://nta.ac.in/",
+      "category": "Examinations and recruitment",
+      "enabled": true,
+      "allowed_domains": [
+        "nta.ac.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "UGC",
+      "url": "https://www.ugc.gov.in/",
+      "category": "Higher education",
+      "enabled": true,
+      "allowed_domains": [
+        "ugc.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "NCS",
+      "url": "https://www.ncs.gov.in/",
+      "category": "Government employment portal",
+      "enabled": true,
+      "allowed_domains": [
+        "ncs.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "Employment News",
+      "url": "https://employmentnews.gov.in/",
+      "category": "Government employment publication",
+      "enabled": true,
+      "allowed_domains": [
+        "employmentnews.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "KVS",
+      "url": "https://kvsangathan.nic.in/",
+      "category": "Education",
+      "enabled": true,
+      "allowed_domains": [
+        "kvsangathan.nic.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "NVS",
+      "url": "https://navodaya.gov.in/",
+      "category": "Education",
+      "enabled": true,
+      "allowed_domains": [
+        "navodaya.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "CBSE",
+      "url": "https://www.cbse.gov.in/",
+      "category": "Education",
+      "enabled": true,
+      "allowed_domains": [
+        "cbse.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "CSIR",
+      "url": "https://www.csir.res.in/",
+      "category": "Research",
+      "enabled": true,
+      "allowed_domains": [
+        "csir.res.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "ICMR",
+      "url": "https://www.icmr.gov.in/",
+      "category": "Research and health",
+      "enabled": true,
+      "allowed_domains": [
+        "icmr.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "DRDO",
+      "url": "https://www.drdo.gov.in/",
+      "category": "Defence and research",
+      "enabled": true,
+      "allowed_domains": [
+        "drdo.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "RBI",
+      "url": "https://www.rbi.org.in/",
+      "category": "Banking and finance",
+      "enabled": true,
+      "allowed_domains": [
+        "rbi.org.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "IBPS",
+      "url": "https://www.ibps.in/",
+      "category": "Banking",
+      "enabled": true,
+      "allowed_domains": [
+        "ibps.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "SBI Careers",
+      "url": "https://sbi.co.in/web/careers",
+      "category": "Banking",
+      "enabled": true,
+      "allowed_domains": [
+        "sbi.co.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "Railway Recruitment Boards",
+      "url": "https://www.rrbapply.gov.in/",
+      "category": "Railways",
+      "enabled": true,
+      "allowed_domains": [
+        "rrbapply.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "NIELIT",
+      "url": "https://www.nielit.gov.in/",
+      "category": "Central recruitment",
+      "enabled": true,
+      "allowed_domains": [
+        "nielit.gov.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    },
+    {
+      "name": "NIOS",
+      "url": "https://nios.ac.in/",
+      "category": "Education",
+      "enabled": true,
+      "allowed_domains": [
+        "nios.ac.in"
+      ],
+      "keywords": [
+        "recruitment",
+        "vacancy",
+        "advertisement",
+        "application",
+        "notification",
+        "career",
+        "employment"
+      ]
+    }
+  ]
+}
