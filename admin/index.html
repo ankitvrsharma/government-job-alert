@@ -46,7 +46,7 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
 </section>
 <section id="dashboard">
   <div class="topbar"><div><b id="signedInAs">Administrator</b><div style="color:var(--muted);font-size:12px">Authenticated admin session</div></div><button class="logout" id="logoutBtn" type="button">Sign out</button></div>
-  <div class="notice"><b>Human verification is mandatory.</b> Sharing is locked until you confirm that you checked the official notification. This confirmation is for this browser session only. Share opens your device's share sheet; choose WhatsApp, Telegram or another available app.</div>
+  <div class="notice"><b>Human verification is mandatory.</b> Sharing is locked until you confirm that you checked the official notification. This confirmation is for this browser session only. Chrome workflow: prepare the image and caption, then finish publishing manually in your WhatsApp Channel.</div>
   <section class="source-manager" aria-label="Manage tracked sources"><h2>＋ Add websites to monitor</h2><p>Add an official recruitment or examination website. Its links will be scanned in the next scheduled run (08:00 or 18:00 IST). Use the organisation's notices or recruitment page where possible.</p><form id="sourceForm" class="source-form"><input id="sourceName" maxlength="120" placeholder="Organisation / source name" required><input id="sourceUrl" type="url" placeholder="https://official.gov.in/recruitment" required><input id="sourceCategory" maxlength="80" placeholder="Category (optional)"><button class="source-add" type="submit">＋ Add URL</button></form><div id="sourceStatus" class="source-status" role="status" aria-live="polite"></div><div id="sourceList" class="source-list"><div class="empty">Loading tracked websites…</div></div></section>
   <section class="stats" aria-label="Queue statistics">
     <div class="stat"><b id="total">—</b><span>Total detected</span></div><div class="stat"><b id="pending">—</b><span>Awaiting review</span></div><div class="stat"><b id="ready">0</b><span>Verified in this session</span></div>
@@ -129,7 +129,7 @@ function render(){
   (d.application_url?'<a href="'+esc(d.application_url)+'" target="_blank" rel="noopener">Application portal ↗</a>':'')+
   (r.source_page?'<a href="'+esc(r.source_page)+'" target="_blank" rel="noopener">Source website ↗</a>':'')+'</div>'+
   '<label class="verify"><input type="checkbox" data-verify="'+esc(r.id)+'" '+(ok?'checked':'')+'> <span><b>I have personally checked the official notification</b> and verified the organisation, post, eligibility, dates and links. This unlocks WhatsApp sharing for this session.</span></label>'+
-  '<div class="actions"><button class="share" type="button" data-share="'+esc(r.id)+'" '+(ok?'':'disabled')+'>↗ Share</button><button class="copy" type="button" data-edit="'+esc(r.id)+'">✎ Edit post</button><button class="source-delete" type="button" data-discard="'+esc(r.id)+'">✕ Discard</button></div><div class="edit-panel" id="edit-'+esc(r.id)+'" hidden><div class="edit-grid">'+[
+  '<div class="actions"><button class="share" type="button" data-share="'+esc(r.id)+'" '+(ok?'':'disabled')+'>↗ Prepare WhatsApp post</button><button class="copy" type="button" data-edit="'+esc(r.id)+'">✎ Edit post</button><button class="source-delete" type="button" data-discard="'+esc(r.id)+'">✕ Discard</button></div><div class="source-status" data-channel-status="'+esc(r.id)+'" role="status" aria-live="polite"></div><div class="edit-panel" id="edit-'+esc(r.id)+'" hidden><div class="edit-grid">'+[
 ['title','Post title',titleOf(r),'text'],['organisation','Organisation',d.organisation||r.source_name||'','text'],['summary','Post summary',d.summary||'','textarea'],['exam_name','Examination name',d.exam_name||'','text'],['event_date','Current / revised date',d.event_date||'','text'],['previous_event_date','Previous date',d.previous_event_date||'','text'],['change_reason','Reason / remarks',d.change_reason||'','text'],['vacancy_count','Vacancies',d.vacancy_count||'','text'],['qualification','Qualification',d.qualification||'','text'],['age_limit','Age limit',d.age_limit||'','text'],['application_start_date','Application start date',d.application_start_date||'','text'],['application_end_date','Last date',d.application_end_date||'','text'],['application_fee','Application fee',d.application_fee||'','text'],['selection_process','Selection process',d.selection_process||'','text'],['official_notification_url','Official notification URL',d.official_notification_url||r.candidate_url||'','url'],['application_url','Application URL',d.application_url||'','url'],['important_dates','Important dates (one per line)',(Array.isArray(d.important_dates)?d.important_dates:[]).join('\n'),'textarea'],['change_summary','What changed (one per line)',(Array.isArray(r.change_summary)?r.change_summary:[]).join('\n'),'textarea']
 ].map(x=>'<div class="edit-field '+(['summary','important_dates','change_summary'].includes(x[0])?'full':'')+'"><label>'+x[1]+'</label>'+(x[3]==='textarea'?'<textarea data-field="'+x[0]+'">'+esc(x[2])+'</textarea>':'<input data-field="'+x[0]+'" type="'+x[3]+'" value="'+esc(x[2])+'">')+'</div>').join('')+'</div><div class="edit-actions"><button class="save-edit" type="button" data-save="'+esc(r.id)+'">Save changes</button><button class="cancel-edit" type="button" data-cancel="'+esc(r.id)+'">Cancel</button></div><div class="summary" data-edit-status="'+esc(r.id)+'" aria-live="polite"></div></div></article>';
  }).join('');
@@ -250,25 +250,33 @@ function makePostCanvas(r){
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
 
-async function sharePost(r){
- const canvas=makePostCanvas(r),text=shareText(r);
+const WHATSAPP_CHANNEL_URL='https://whatsapp.com/channel/0029VbDHMMX11ulVHstCUr30';
+async function prepareWhatsAppChannelPost(r){
+ const status=jobsEl.querySelector('[data-channel-status="'+CSS.escape(r.id)+'"]');
+ const text=shareText(r),canvas=makePostCanvas(r);
+ // Open the channel immediately in the click gesture so Chrome does not block the popup.
+ const channelTab=window.open(WHATSAPP_CHANNEL_URL,'_blank','noopener');
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
- if(!blob){alert('Could not prepare the post image.');return;}
- const file=new File([blob],'the-educator-career-updates.png',{type:'image/png'});
- try{
-  if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
-   await navigator.share({files:[file],title:postLabel(r),text});
-   return;
-  }
-  if(navigator.share){
-   await navigator.share({title:postLabel(r),text});
-   alert('Your device shared the text. This browser cannot attach the image in the same share action.');
-   return;
-  }
-  await navigator.clipboard.writeText(text);
-  const link=document.createElement('a');link.download='the-educator-career-updates.png';link.href=URL.createObjectURL(blob);link.click();URL.revokeObjectURL(link.href);
-  alert('Text copied and image downloaded. Your browser does not provide a combined share sheet.');
- }catch(e){if(e.name!=='AbortError')alert('Sharing could not be completed: '+e.message);}
+ if(!blob){if(status)status.textContent='Could not prepare the post image. Please try again.';return;}
+ const slug=String(r.post_type||'vacancy').toLowerCase().replace(/[^a-z0-9-]+/g,'-');
+ const link=document.createElement('a');
+ link.download='educator-career-updates-'+slug+'.png';
+ const objectUrl=URL.createObjectURL(blob);link.href=objectUrl;
+ document.body.appendChild(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(objectUrl),30000);
+ let copied=false;
+ try{await navigator.clipboard.writeText(text);copied=true;}catch(error){console.warn('Clipboard write unavailable',error);}
+ if(status){
+  status.innerHTML='';
+  const message=document.createElement('div');
+  message.textContent=copied
+   ?'Caption copied. Image download started. In the WhatsApp Channel tab, attach the downloaded PNG and paste the caption before publishing.'
+   :'Image download started. Chrome did not allow automatic caption copying; use the Copy caption button, then attach the PNG in your channel.';
+  status.appendChild(message);
+  const linkEl=document.createElement('a');linkEl.href=WHATSAPP_CHANNEL_URL;linkEl.target='_blank';linkEl.rel='noopener';linkEl.textContent=channelTab?'Open WhatsApp Channel':'Open WhatsApp Channel (if the tab did not open)';
+  linkEl.style.cssText='display:inline-block;margin-top:7px;color:#7dd3fc';
+  status.appendChild(linkEl);
+ }
 }
 function openEditor(id){
  const panel=$('edit-'+id);if(panel)panel.hidden=false;
@@ -313,7 +321,7 @@ jobsEl.addEventListener('click',async e=>{
  if(edit){openEditor(edit.dataset.edit);return;}
  if(cancel){closeEditor(cancel.dataset.cancel);return;}
  if(save){await saveEditor(save.dataset.save,save);return;}
- if(share){const id=share.dataset.share;if(!verified.has(id))return;const r=records.find(x=>x.id===id);if(r)await sharePost(r);}
+ if(share){const id=share.dataset.share;if(!verified.has(id))return;const r=records.find(x=>x.id===id);if(r)await prepareWhatsAppChannelPost(r);}
 });
 
 sb.auth.getSession().then(({data})=>{if(data.session)enterDashboard(data.session);});
