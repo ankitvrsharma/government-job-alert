@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101827">
-<title>Government Job Alert — Admin</title>
+<title>The Educator Career Updates — Admin</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1220;--panel:#111c2e;--panel2:#17243a;--line:#293951;--text:#eef4ff;--muted:#9aabc2;--accent:#4ade80;--blue:#7dd3fc;--amber:#fbbf24}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -29,12 +29,12 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
 </style>
 </head>
 <body>
-<header><div class="brand">Government Job Alert</div><h1>Admin Review & Share</h1><p>Recruitment and exam updates for review. Edit inline, verify the official notice, then share text and artwork to your preferred app.</p></header>
+<header><div class="brand">The Educator Career Updates</div><h1>Admin Review & Share</h1><p>Recruitment and exam updates for review. Edit inline, verify the official notice, then share text and artwork to your preferred app.</p></header>
 <main>
 <section id="loginPanel" class="auth-wrap">
   <div class="brand">Restricted access</div>
   <h2>Admin sign in</h2>
-  <p>Sign in with the email and password registered for the Government Job Alert administrator.</p>
+  <p>Sign in with the email and password registered for the The Educator Career Updates administrator.</p>
   <form id="loginForm">
     <input id="email" type="email" autocomplete="username" placeholder="Admin email" required>
     <input id="password" type="password" autocomplete="current-password" placeholder="Password" required>
@@ -94,7 +94,7 @@ function shareText(r){
  const notice=d.official_notification_url||r.candidate_url;
  if(notice)lines.push('Official notification: '+notice);
  if(d.application_url)lines.push('Apply here: '+d.application_url);
- lines.push('','Please verify all details and eligibility from the official notification before applying.','— Government Job Alert');
+ lines.push('','Please verify all details and eligibility from the official notification before applying.','— The Educator Career Updates');
  return lines.join('\n');
 }
 function render(){
@@ -224,13 +224,13 @@ function makePostCanvas(r){
  ctx.fillStyle='#9fe7ff';ctx.font='bold 28px Arial';ctx.fillText('GOVERNMENT JOB ALERT',80,1000);
  return canvas;
 }
-function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='government-job-alert-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
+function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
 
 async function sharePost(r){
  const canvas=makePostCanvas(r),text=shareText(r);
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
  if(!blob){alert('Could not prepare the post image.');return;}
- const file=new File([blob],'government-job-alert.png',{type:'image/png'});
+ const file=new File([blob],'the-educator-career-updates.png',{type:'image/png'});
  try{
   if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
    await navigator.share({files:[file],title:postLabel(r),text});
@@ -242,7 +242,7 @@ async function sharePost(r){
    return;
   }
   await navigator.clipboard.writeText(text);
-  const link=document.createElement('a');link.download='government-job-alert.png';link.href=URL.createObjectURL(blob);link.click();URL.revokeObjectURL(link.href);
+  const link=document.createElement('a');link.download='the-educator-career-updates.png';link.href=URL.createObjectURL(blob);link.click();URL.revokeObjectURL(link.href);
   alert('Text copied and image downloaded. Your browser does not provide a combined share sheet.');
  }catch(e){if(e.name!=='AbortError')alert('Sharing could not be completed: '+e.message);}
 }
