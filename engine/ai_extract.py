@@ -2,8 +2,12 @@ import json, logging, time
 from .config import GEMINI_API_KEY, GEMINI_MODEL
 
 log = logging.getLogger("job-alert")
+QUOTA_EXHAUSTED = False
 
 def extract_with_ai(text, title, url):
+    global QUOTA_EXHAUSTED
+    if QUOTA_EXHAUSTED:
+        return {"status": "ai_quota_exceeded", "error": "Gemini daily quota was already exhausted earlier in this scan; retry on the next scheduled scan.", "model": GEMINI_MODEL}
     if not GEMINI_API_KEY:
         return {"status": "ai_unavailable", "error": "GEMINI_API_KEY is not configured"}
     if not text.strip():
@@ -66,6 +70,11 @@ DOCUMENT:
             return parsed
         except Exception as exc:
             last_error = exc
+            message = str(exc)
+            if any(token in message.lower() for token in ("resource_exhausted", "quota exceeded", "429")):
+                QUOTA_EXHAUSTED = True
+                log.error("Gemini quota exhausted; disabling further AI requests for this scan.")
+                return {"status": "ai_quota_exceeded", "error": message, "model": GEMINI_MODEL}
             log.warning("Gemini attempt %s failed: %s", attempt + 1, exc)
             if attempt < 2:
                 time.sleep(2 ** attempt)
