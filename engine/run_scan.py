@@ -102,7 +102,7 @@ def main():
                     "ai_draft": draft
                 })
                 ids.add(ident)
-                if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred"):
+                if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred", "ai_error"):
                     mark(item, digest, state)
                 else:
                     log.info("Candidate retained for later AI retry (%s): %s", draft.get("status"), ident)
