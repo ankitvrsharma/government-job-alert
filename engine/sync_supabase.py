@@ -24,11 +24,14 @@ def main():
     for row in rows:
         draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
         posts = draft.get("post_names")
+        vacancy = draft.get("post_category") == "vacancy" or draft.get("is_recruitment_notice") is True
+        evidence = draft.get("recruitment_evidence") if vacancy else draft.get("event_evidence")
         if (draft.get("status") == "ai_draft"
-                and draft.get("is_recruitment_notice") is True
-                and isinstance(posts, list) and any(str(p).strip() for p in posts)
-                and str(draft.get("recruitment_evidence") or "").strip()
-                and len(str(draft.get("summary") or "").strip()) >= 40):
+                and (draft.get("is_relevant_notice") is True or vacancy)
+                and (not vacancy or (isinstance(posts, list) and any(str(p).strip() for p in posts)))
+                and str(evidence or "").strip()
+                and len(str(draft.get("summary") or "").strip()) >= 40
+                and (vacancy or draft.get("event_type") or draft.get("post_category"))):
             valid.append({"id": row["id"], "payload": row})
 
     # Upsert current records first, so a transient cleanup failure never loses current data.
@@ -61,7 +64,7 @@ def main():
             timeout=30,
         )
         response.raise_for_status()
-    print(f"Supabase queue sync complete: {len(valid)} complete vacancy notices; {len(stale)} stale records removed.")
+    print(f"Supabase queue sync complete: {len(valid)} complete recruitment/exam notices; {len(stale)} stale records removed.")
 
 if __name__ == "__main__":
     try:
