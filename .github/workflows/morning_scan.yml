@@ -37,6 +37,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_MODELS: ${{ vars.GEMINI_FALLBACK_MODELS }}
+          MAX_AI_REQUESTS_PER_SCAN: "45"
+          SCAN_TIME_BUDGET_SECONDS: "1320"
         run: python -m engine.run_scan
       - name: Commit review queue and logs
         if: always()
