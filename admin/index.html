@@ -103,32 +103,42 @@ function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({dead
 function shareText(r){
  const d=draftOf(r);
  if(typeof d.custom_caption==='string'&&d.custom_caption.trim())return d.custom_caption;
- const lines=['*'+postIcon(r)+' '+postLabel(r)+'*','', '*'+titleOf(r)+'*'];
- const org=d.organisation||r.source_name||'Not stated';
- lines.push('*Organisation:* '+org);
- if(d.exam_name)lines.push('*Examination:* '+d.exam_name);
- if(d.vacancy_count)lines.push('*Vacancies:* '+d.vacancy_count);
- const keyDates=[];
- if(d.event_date)keyDates.push('• Current/revised date: '+d.event_date);
- if(d.previous_event_date)keyDates.push('• Previous date: '+d.previous_event_date);
- if(d.application_start_date)keyDates.push('• Application starts: '+d.application_start_date);
- if(d.application_end_date)keyDates.push('• Last date: '+d.application_end_date);
- if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,6).forEach(x=>keyDates.push('• '+x));
- if(keyDates.length)lines.push('', '*IMPORTANT DATES*',...keyDates);
+ const title=titleOf(r),org=d.organisation||r.source_name||'';
+ const lines=['*'+title+'*'];
+ // A short, natural opening replaces repetitive AI-style section headings.
+ const intro=String(d.summary||'').replace(/\\s+/g,' ').trim();
+ if(intro)lines.push('',intro);
+ const facts=[];
+ const add=(label,value)=>{if(value&&String(value).trim()&&!facts.some(x=>x.toLowerCase()===String(value).trim().toLowerCase()))facts.push(label+': '+String(value).trim());};
+ if(org)add('Organisation',org);
+ if(d.exam_name&&String(d.exam_name).toLowerCase()!==title.toLowerCase())add('Examination',d.exam_name);
+ if(d.vacancy_count)add('Vacancies',d.vacancy_count);
+ if(d.advertisement_number)add('Advertisement No.',d.advertisement_number);
+ if(facts.length)lines.push('',...facts);
+ const dates=[],seen=new Set();
+ const addDate=(label,value)=>{
+  if(!value)return;const text=String(value).trim(),key=text.toLowerCase();
+  if(!key||seen.has(key))return;seen.add(key);dates.push((label?label+': ':'')+text);
+ };
+ if(d.event_date)addDate(d.previous_event_date?'Revised date':'Exam / event date',d.event_date);
+ if(d.previous_event_date)addDate('Earlier date',d.previous_event_date);
+ if(d.application_start_date)addDate('Applications open',d.application_start_date);
+ if(d.application_end_date)addDate('Last date to apply',d.application_end_date);
+ if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,7).forEach(x=>addDate('',x));
+ if(dates.length)lines.push('', '*Key dates*',...dates.map(x=>'• '+x));
  const eligibility=[];
- if(d.qualification)eligibility.push('• Qualification: '+d.qualification);
- if(d.age_limit)eligibility.push('• Age limit: '+d.age_limit);
- if(d.application_fee)eligibility.push('• Application fee: '+d.application_fee);
- if(d.selection_process)eligibility.push('• Selection: '+d.selection_process);
- if(eligibility.length)lines.push('', '*ELIGIBILITY & PROCESS*',...eligibility);
- if(d.change_reason)lines.push('', '*Reason/remarks:* '+d.change_reason);
- if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('', '*WHAT CHANGED*',...r.change_summary.slice(0,4).map(x=>'• '+x));
- if(d.summary)lines.push('', '*ABOUT THIS UPDATE*',d.summary);
+ if(d.qualification)eligibility.push('Qualification: '+d.qualification);
+ if(d.age_limit)eligibility.push('Age limit: '+d.age_limit);
+ if(d.application_fee)eligibility.push('Application fee: '+d.application_fee);
+ if(d.selection_process)eligibility.push('Selection: '+d.selection_process);
+ if(eligibility.length)lines.push('', '*Eligibility & selection*',...eligibility.map(x=>'• '+x));
+ const changes=Array.isArray(r.change_summary)?r.change_summary.filter(Boolean).slice(0,3):[];
+ if(changes.length)lines.push('', '*What has changed*',...changes.map(x=>'• '+x));
  const notice=d.official_notification_url||r.candidate_url;
- if(notice)lines.push('', '*Official notification:*',notice);
- if(d.application_url)lines.push('*Apply online:*',d.application_url);
- lines.push('', '⚠️ _Please verify all details and eligibility in the official notification before applying._','', '*The Educator Career Updates*');
- return lines.join('\n');
+ if(notice)lines.push('', '*Official notification*',notice);
+ if(d.application_url)lines.push('*Apply online*',d.application_url);
+ lines.push('', 'Please check the official notification for complete details before applying.', '', '*The Educator Career Updates*');
+ return lines.join('\\n');
 }
 function render(){
  const q=$('search').value.trim().toLowerCase(),f=$('filter').value;
