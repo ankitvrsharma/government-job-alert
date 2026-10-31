@@ -59,3 +59,17 @@ Edit `sources/sources.json`. Each source supports `name`, `url`, `enabled`, `all
 ## Schedule (UTC)
 - `30 2 * * *` = 08:00 IST
 - `30 12 * * *` = 18:00 IST
+
+
+## Vacancy-only queue and Supabase sync
+
+The scanner now queues only readable, complete recruitment notices that contain named employment posts and explicit evidence that applications/interviews are invited. Exam calendars, exam eligibility notices (including UGC-NET/JRF), admissions, results, generic career pages, and title-only links are excluded. The admin page hides records that do not meet this completeness check and displays all available recruitment details.
+
+To sync each scan into the protected Supabase admin queue:
+
+1. In GitHub, open **Settings → Secrets and variables → Actions → New repository secret**.
+2. Create the secret named `SUPABASE_SERVICE_ROLE_KEY`.
+3. Copy the project's **service_role secret** from Supabase **Project Settings → API Keys**. Never put this key in source code or share it in chat.
+4. Run **Actions → Morning recruitment scan → Run workflow** (or wait for the scheduled scan).
+
+The workflow syncs only complete vacancy records to the protected Supabase table and removes stale records. If the secret is absent, the sync step safely skips database syncing.
