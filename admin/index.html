@@ -300,35 +300,69 @@ function baseTemplateCanvas(r){
  const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1200,420);
  g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.58,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
  ctx.fillStyle=g;ctx.fillRect(0,0,1200,420);
- // Reusable type-specific decorative background: create once, reuse for every post of this type.
- ctx.fillStyle='rgba(255,255,255,.055)';ctx.beginPath();ctx.arc(1130,30,250,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='rgba(255,255,255,.07)';ctx.fillRect(52,48,1096,324);
- ctx.fillStyle=t.accent||'#9fe7ff';ctx.fillRect(0,0,13,420);
+ // Reusable branded background for each post type: soft light, layered geometry and accent rail.
+ const glow=ctx.createRadialGradient(1080,72,12,1080,72,370);
+ glow.addColorStop(0,'rgba(255,255,255,.17)');glow.addColorStop(1,'rgba(255,255,255,0)');
+ ctx.fillStyle=glow;ctx.fillRect(700,0,500,420);
+ ctx.fillStyle='rgba(255,255,255,.045)';ctx.beginPath();ctx.moveTo(850,0);ctx.lineTo(1200,0);ctx.lineTo(1200,420);ctx.lineTo(1030,420);ctx.closePath();ctx.fill();
+ ctx.fillStyle='rgba(255,255,255,.035)';ctx.beginPath();ctx.arc(1100,390,240,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle=t.accent||'#9fe7ff';ctx.fillRect(0,0,12,420);
  templateCanvasCache.set(key,canvas);return canvas;
 }
 function makePostCanvas(r){
  const d=draftOf(r),kind=postLabel(r),title=titleOf(r),org=d.organisation||r.source_name||'Government Recruitment';
- const signature=JSON.stringify([r.post_type,kind,title,org,'The Educator Career Updates']);
+ const facts=[];
+ const addFact=(label,value)=>{if(value!==undefined&&value!==null&&String(value).trim()&&facts.length<3)facts.push([label,String(value).trim()]);};
+ if(d.vacancy_count)addFact('TOTAL VACANCIES',d.vacancy_count);
+ if(d.application_end_date)addFact('LAST DATE',d.application_end_date);
+ if(d.event_date)addFact('EXAM / EVENT DATE',d.event_date);
+ if(d.application_start_date&&!d.application_end_date)addFact('APPLICATION OPENS',d.application_start_date);
+ if(d.advertisement_number)addFact('ADVERTISEMENT NO.',d.advertisement_number);
+ if(d.exam_name&&!title.toLowerCase().includes(String(d.exam_name).toLowerCase()))addFact('EXAMINATION',d.exam_name);
+ const signature=JSON.stringify([r.post_type,kind,title,org,facts,'The Educator Career Updates']);
  const cached=postImageCache.get(r.id);
  if(cached&&cached.signature===signature)return cached.canvas;
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
  const ctx=canvas.getContext('2d'),t=templateFor(r),accent=t.accent||'#9fe7ff';
  ctx.drawImage(baseTemplateCanvas(r),0,0);
  const wrap=(value,max,font)=>{ctx.font=font;const words=String(value||'').split(/\\s+/),out=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){out.push(line);line=word;}else line=test;}if(line)out.push(line);return out;};
- // The banner is a reusable post-type design; only the notice text changes per post.
- ctx.fillStyle=accent;ctx.font='800 27px Arial';ctx.textBaseline='alphabetic';
- ctx.fillText(kind,78,112);
- ctx.fillStyle='#fff';ctx.font='700 57px Arial';
- const titleLines=wrap(title,790,'700 57px Arial').slice(0,2);
- let y=205;titleLines.forEach(line=>{ctx.fillText(line,78,y);y+=66;});
- ctx.fillStyle='#e7edf6';ctx.font='36px Arial';
- const orgLines=wrap(org,800,'36px Arial').slice(0,2);
- orgLines.forEach(line=>{ctx.fillText(line,80,y+2);y+=44;});
- // A restrained type-relevant symbol balances the title without adding extra copy.
- ctx.textAlign='center';ctx.font='112px Arial';ctx.fillStyle='#fff';ctx.fillText(postIcon(r),1030,230);
- // Channel attribution is deliberately small and anchored at the lower-right corner.
- ctx.textAlign='right';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='700 20px Arial';
- ctx.fillText('THE EDUCATOR CAREER UPDATES',1120,350);ctx.textAlign='left';
+ const fitTitle=(value,maxWidth,maxLines)=>{
+  let size=58,lines=[];
+  while(size>=39){lines=wrap(value,maxWidth,'700 '+size+'px Arial');if(lines.length<=maxLines)break;size-=2;}
+  return {size,lines:lines.slice(0,maxLines)};
+ };
+ // Top-left type label is intentionally secondary to the actual notice headline.
+ ctx.fillStyle='rgba(255,255,255,.13)';ctx.beginPath();ctx.roundRect(62,48,Math.min(360,Math.max(190,kind.length*17+46)),48,24);ctx.fill();
+ ctx.fillStyle=accent;ctx.font='800 22px Arial';ctx.textBaseline='middle';ctx.fillText(kind,84,72);
+ // Main headline and issuing organisation.
+ const titleLayout=fitTitle(title,790,2);
+ ctx.fillStyle='#fff';ctx.font='700 '+titleLayout.size+'px Arial';ctx.textBaseline='alphabetic';
+ let y=titleLayout.lines.length===1?194:164;
+ titleLayout.lines.forEach(line=>{ctx.fillText(line,70,y);y+=titleLayout.size+9;});
+ ctx.fillStyle='rgba(239,245,255,.88)';ctx.font='30px Arial';
+ const orgLines=wrap(org,790,'30px Arial').slice(0,1);
+ if(orgLines[0])ctx.fillText(orgLines[0],72,Math.min(260,y+5));
+ // Useful facts appear as compact, readable information chips; absent facts are omitted.
+ if(facts.length){
+  let x=70;const baseY=318;
+  facts.forEach(([label,value])=>{
+   ctx.font='700 15px Arial';const labelW=ctx.measureText(label).width;
+   ctx.font='700 22px Arial';const valueW=ctx.measureText(value).width;
+   const chipW=Math.min(290,Math.max(170,Math.max(labelW,valueW)+34));
+   if(x+chipW>920)return;
+   ctx.fillStyle='rgba(4,12,24,.32)';ctx.beginPath();ctx.roundRect(x,baseY-37,chipW,68,12);ctx.fill();
+   ctx.fillStyle=accent;ctx.font='700 13px Arial';ctx.textBaseline='alphabetic';ctx.fillText(label,x+16,baseY-13);
+   ctx.fillStyle='#fff';ctx.font='700 20px Arial';ctx.fillText(value.length>23?value.slice(0,21)+'…':value,x+16,baseY+15);
+   x+=chipW+12;
+  });
+ }
+ // A subtle icon anchors the right-hand visual area without competing with the headline.
+ ctx.fillStyle='rgba(255,255,255,.09)';ctx.beginPath();ctx.arc(1035,185,104,0,Math.PI*2);ctx.fill();
+ ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='100px Arial';ctx.fillStyle='#fff';ctx.fillText(postIcon(r),1035,180);
+ ctx.strokeStyle='rgba(255,255,255,.24)';ctx.lineWidth=2;ctx.beginPath();ctx.arc(1035,185,116,0,Math.PI*2);ctx.stroke();
+ // Channel name stays in the lower-right corner as requested.
+ ctx.textAlign='right';ctx.textBaseline='alphabetic';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='700 17px Arial';
+ ctx.fillText('THE EDUCATOR CAREER UPDATES',1140,392);ctx.textAlign='left';
  postImageCache.set(r.id,{signature,canvas});return canvas;
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
