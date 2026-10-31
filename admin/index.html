@@ -78,23 +78,31 @@ const hasVacancyContent=r=>{const d=draftOf(r),vacancy=d.post_category==='vacanc
 function postLabel(r){const d=draftOf(r),t=String(r.post_type||'new').toLowerCase();const labels={new:'NEW VACANCY',update:'VACANCY UPDATED',deadline_extension:'DEADLINE EXTENDED',exam_calendar:'EXAM CALENDAR',exam_schedule:'EXAM SCHEDULE',exam_date_change:'EXAM DATE CHANGED',exam_postponed:'EXAM POSTPONED',exam_cancelled:'EXAM CANCELLED',admit_card:'ADMIT CARD UPDATE',application_update:'APPLICATION UPDATE',corrigendum:'CORRIGENDUM',answer_key:'ANSWER KEY',result:'RESULT DECLARED',scorecard:'SCORECARD',cut_off:'CUT-OFF UPDATE',interview_schedule:'INTERVIEW SCHEDULE',selection_update:'SELECTION UPDATE',document_verification:'DOCUMENT VERIFICATION'};return labels[t]||String(d.event_type||d.post_category||'RECRUITMENT UPDATE').replaceAll('_',' ').toUpperCase();}
 function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({deadline_extension:'⏰',exam_calendar:'🗓️',exam_schedule:'📅',exam_date_change:'🔄',exam_postponed:'⚠️',exam_cancelled:'❌',admit_card:'🎫',application_update:'📝',corrigendum:'📌',answer_key:'🗝️',result:'🏆',scorecard:'📊',cut_off:'📈',interview_schedule:'🤝',selection_update:'✅',document_verification:'📄'})[t]||((t==='update')?'🔔':'🏛️');}
 function shareText(r){
- const d=draftOf(r),lines=['📢 '+postLabel(r),'',titleOf(r),'Organisation/Authority: '+(d.organisation||r.source_name||'Not stated')];
- if(d.exam_name)lines.push('Examination: '+d.exam_name);
- if(d.event_date)lines.push('Revised/current date: '+d.event_date);
- if(d.previous_event_date)lines.push('Previous date: '+d.previous_event_date);
- if(d.change_reason)lines.push('Reason/remarks: '+d.change_reason);
- if(d.vacancy_count)lines.push('Vacancies: '+d.vacancy_count);
- if(d.qualification)lines.push('Qualification: '+d.qualification);
- if(d.age_limit)lines.push('Age limit: '+d.age_limit);
- if(d.application_start_date)lines.push('Application starts: '+d.application_start_date);
- if(d.application_end_date)lines.push('Last date: '+d.application_end_date);
- if(Array.isArray(d.important_dates)&&d.important_dates.length)lines.push('Important dates: '+d.important_dates.slice(0,5).join('; '));
- if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('Changes: '+r.change_summary.join('; '));
- if(d.summary)lines.push('',d.summary);
+ const d=draftOf(r),lines=['*'+postIcon(r)+' '+postLabel(r)+'*','', '*'+titleOf(r)+'*'];
+ const org=d.organisation||r.source_name||'Not stated';
+ lines.push('*Organisation:* '+org);
+ if(d.exam_name)lines.push('*Examination:* '+d.exam_name);
+ if(d.vacancy_count)lines.push('*Vacancies:* '+d.vacancy_count);
+ const keyDates=[];
+ if(d.event_date)keyDates.push('• Current/revised date: '+d.event_date);
+ if(d.previous_event_date)keyDates.push('• Previous date: '+d.previous_event_date);
+ if(d.application_start_date)keyDates.push('• Application starts: '+d.application_start_date);
+ if(d.application_end_date)keyDates.push('• Last date: '+d.application_end_date);
+ if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,6).forEach(x=>keyDates.push('• '+x));
+ if(keyDates.length)lines.push('', '*IMPORTANT DATES*',...keyDates);
+ const eligibility=[];
+ if(d.qualification)eligibility.push('• Qualification: '+d.qualification);
+ if(d.age_limit)eligibility.push('• Age limit: '+d.age_limit);
+ if(d.application_fee)eligibility.push('• Application fee: '+d.application_fee);
+ if(d.selection_process)eligibility.push('• Selection: '+d.selection_process);
+ if(eligibility.length)lines.push('', '*ELIGIBILITY & PROCESS*',...eligibility);
+ if(d.change_reason)lines.push('', '*Reason/remarks:* '+d.change_reason);
+ if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('', '*WHAT CHANGED*',...r.change_summary.slice(0,4).map(x=>'• '+x));
+ if(d.summary)lines.push('', '*ABOUT THIS UPDATE*',d.summary);
  const notice=d.official_notification_url||r.candidate_url;
- if(notice)lines.push('Official notification: '+notice);
- if(d.application_url)lines.push('Apply here: '+d.application_url);
- lines.push('','Please verify all details and eligibility from the official notification before applying.','— The Educator Career Updates');
+ if(notice)lines.push('', '*Official notification:*',notice);
+ if(d.application_url)lines.push('*Apply online:*',d.application_url);
+ lines.push('', '⚠️ _Please verify all details and eligibility in the official notification before applying._','', '*The Educator Career Updates*');
  return lines.join('\n');
 }
 function render(){
@@ -233,19 +241,37 @@ function makePostCanvas(r){
  const cached=postImageCache.get(r.id);
  if(cached&&cached.signature===signature)return cached.canvas;
  const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
- const ctx=canvas.getContext('2d'),isUpdate=r.post_type&&r.post_type!=='new',t=templateFor(r);
+ const ctx=canvas.getContext('2d'),t=templateFor(r),accent=t.accent||'#9fe7ff';
  ctx.drawImage(baseTemplateCanvas(r),0,0);
- ctx.fillStyle=t.accent|| (isUpdate?'#ffe19a':'#9fe7ff');ctx.font='bold 30px Arial';ctx.fillText(postLabel(r),76,130);
- const wrap=(text,max)=>{const words=String(text||'').split(/\\s+/),lines=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);return lines;};
- ctx.fillStyle='#ffffff';ctx.font='bold 66px Arial';
- let y=270;for(const line of wrap((d.post_names||[]).join(', ')||titleOf(r)||'Recruitment Notification',850).slice(0,4)){ctx.fillText(line,76,y);y+=82;}
- ctx.fillStyle='#dceaf6';ctx.font='38px Arial';ctx.fillText(String(d.organisation||r.source_name||'Government Recruitment').slice(0,45),78,y+30);
- y+=115;
- const facts=[d.exam_name?'Exam: '+d.exam_name:'',d.event_date?'Date: '+d.event_date:'',d.previous_event_date?'Previous date: '+d.previous_event_date:'',d.vacancy_count?'Vacancies: '+d.vacancy_count:'',d.qualification?'Qualification: '+d.qualification:'',d.application_end_date?'Last date: '+d.application_end_date:''].filter(Boolean);
- ctx.fillStyle='#ffffff';ctx.font='bold 34px Arial';facts.slice(0,3).forEach((v,i)=>ctx.fillText(v.slice(0,58),80,y+i*64));
- if(isUpdate&&Array.isArray(r.change_summary)&&r.change_summary.length){y+=Math.min(3,facts.length)*64+45;ctx.fillStyle=t.accent||'#ffe19a';ctx.font='bold 29px Arial';ctx.fillText('WHAT CHANGED',80,y);ctx.fillStyle='#fff2d1';ctx.font='26px Arial';wrap(r.change_summary[0],850).slice(0,2).forEach((v,i)=>ctx.fillText(v,80,y+52+i*38));}
- ctx.fillStyle='rgba(255,255,255,.82)';ctx.font='bold 26px Arial';ctx.fillText('OFFICIAL NOTICE & APPLY LINK IN POST CAPTION',80,940);
- ctx.fillStyle=t.accent||'#9fe7ff';ctx.font='bold 28px Arial';ctx.fillText('THE EDUCATOR CAREER UPDATES',80,1000);
+ const round=(x,y,w,h,rad,fill)=>{ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,rad);ctx.fill();};
+ const wrap=(value,max,font)=>{ctx.font=font;const words=String(value||'').split(/\s+/),out=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){out.push(line);line=word;}else line=test;}if(line)out.push(line);return out;};
+ // Clear, high-contrast hierarchy: status, title, organisation, key facts and brand.
+ round(64,64,952,88,22,'rgba(5,12,24,.34)');
+ ctx.fillStyle=accent;ctx.font='bold 27px Arial';ctx.fillText(postLabel(r),94,119);
+ ctx.fillStyle='#fff';ctx.font='bold 62px Arial';
+ const titleLines=wrap((d.post_names||[]).join(', ')||titleOf(r)||'Recruitment Notification',880,'bold 62px Arial').slice(0,3);
+ let y=270;titleLines.forEach(line=>{ctx.fillText(line,78,y);y+=76;});
+ ctx.fillStyle='#dceaf6';ctx.font='34px Arial';
+ const orgLines=wrap(d.organisation||r.source_name||'Government Recruitment',870,'34px Arial').slice(0,2);
+ orgLines.forEach(line=>{ctx.fillText(line,82,y+4);y+=46;});
+ const facts=[
+  d.exam_name?'EXAM  ·  '+d.exam_name:'',
+  d.event_date?'DATE  ·  '+d.event_date:'',
+  d.vacancy_count?'VACANCIES  ·  '+d.vacancy_count:'',
+  d.application_end_date?'LAST DATE  ·  '+d.application_end_date:'',
+  d.qualification?'ELIGIBILITY  ·  '+d.qualification:''
+ ].filter(Boolean).slice(0,4);
+ const panelY=Math.max(510,Math.min(620,y+28)),panelH=255;
+ round(72,panelY,936,panelH,24,'rgba(5,14,28,.58)');
+ ctx.fillStyle=accent;ctx.font='bold 24px Arial';ctx.fillText('KEY INFORMATION',104,panelY+48);
+ let fy=panelY+100;
+ facts.forEach((fact)=>{ctx.fillStyle='#fff';ctx.font='bold 29px Arial';const lines=wrap(fact,850,'bold 29px Arial').slice(0,2);lines.forEach(line=>{if(fy<panelY+panelH-18){ctx.fillText(line,104,fy);fy+=39;}});});
+ if(r.post_type&&r.post_type!=='new'&&Array.isArray(r.change_summary)&&r.change_summary.length){
+  ctx.fillStyle=accent;ctx.font='bold 22px Arial';ctx.fillText('UPDATE: '+wrap(r.change_summary[0],790,'bold 22px Arial')[0],104,Math.min(950,panelY+panelH+54));
+ }
+ round(72,916,936,96,18,'rgba(5,12,24,.42)');
+ ctx.fillStyle='rgba(255,255,255,.85)';ctx.font='bold 20px Arial';ctx.fillText('OFFICIAL NOTICE & APPLY LINK IN CAPTION',100,955);
+ ctx.fillStyle=accent;ctx.font='bold 25px Arial';ctx.fillText('THE EDUCATOR CAREER UPDATES',100,987);
  postImageCache.set(r.id,{signature,canvas});return canvas;
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
