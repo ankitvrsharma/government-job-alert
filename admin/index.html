@@ -37,7 +37,7 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
 </main>
 <script>
 (function(){
- const DATA_URL = '../data/review_queue.json';
+ const DATA_URL = 'https://raw.githubusercontent.com/ankitvrsharma/government-job-alert/main/data/review_queue.json';
  const jobsEl=document.getElementById('jobs'), searchEl=document.getElementById('search'), filterEl=document.getElementById('filter');
  let records=[], verified=new Set();
  const clean=v=>v===null||v===undefined||v===''?'Not stated':String(v);
