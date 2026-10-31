@@ -15,9 +15,13 @@ def load_seen(path):
     if not isinstance(value, dict):
         return {"urls": [], "hashes": []}
     urls, hashes = value.get("urls", []), value.get("hashes", [])
+    snapshots = value.get("snapshots", {})
+    registry = value.get("notice_registry", {})
     return {
         "urls": [norm(x) for x in urls if isinstance(x, str)] if isinstance(urls, list) else [],
-        "hashes": [x for x in hashes if isinstance(x, str)] if isinstance(hashes, list) else []
+        "hashes": [x for x in hashes if isinstance(x, str)] if isinstance(hashes, list) else [],
+        "snapshots": snapshots if isinstance(snapshots, dict) else {},
+        "notice_registry": registry if isinstance(registry, dict) else {}
     }
 
 def seen(item, digest, state):
