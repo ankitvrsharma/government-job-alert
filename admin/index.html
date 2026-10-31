@@ -124,40 +124,60 @@ function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({dead
 function shareText(r){
  const d=draftOf(r);
  if(typeof d.custom_caption==='string'&&d.custom_caption.trim())return d.custom_caption;
- const title=titleOf(r),org=d.organisation||r.source_name||'';
+ const title=titleOf(r),summary=String(d.summary||'').replace(/\s+/g,' ').trim();
  const lines=['*'+title+'*'];
- const intro=String(d.summary||'').replace(/\s+/g,' ').trim();
- if(intro)lines.push('',intro);
+ if(summary)lines.push('',summary);
+ const contains=(text,needle)=>String(text||'').toLowerCase().includes(String(needle||'').toLowerCase());
  const facts=[];
  const add=(label,value)=>{if(value&&String(value).trim())facts.push(label+': '+String(value).trim());};
- if(org)add('Organisation',org);
- if(d.exam_name&&String(d.exam_name).toLowerCase()!==title.toLowerCase())add('Examination',d.exam_name);
+ // Avoid repeating the organisation when the opening summary already names it.
+ const org=d.organisation||r.source_name||'';
+ if(org&&!contains(summary,org)&&!contains(title,org))add('Organisation',org);
+ if(d.exam_name&&!contains(title,d.exam_name)&&!contains(summary,d.exam_name))add('Examination',d.exam_name);
  if(d.vacancy_count)add('Vacancies',d.vacancy_count);
  if(d.advertisement_number)add('Advertisement No.',d.advertisement_number);
  if(facts.length)lines.push('',...facts);
  const dates=[],seen=new Set();
  const addDate=(label,value)=>{
-  if(!value)return;const valueText=String(value).trim(),key=valueText.toLowerCase();
-  if(!key||seen.has(key))return;seen.add(key);dates.push((label?label+': ':'')+valueText);
+  if(!value)return;const v=String(value).trim(),key=(label+' '+v).toLowerCase();
+  if(!v||seen.has(key))return;seen.add(key);
+  dates.push((label?label+': ':'')+v);
  };
- if(d.event_date)addDate(d.previous_event_date?'Revised date':'Exam / event date',d.event_date);
- if(d.previous_event_date)addDate('Earlier date',d.previous_event_date);
+ if(d.event_date)addDate(d.previous_event_date?'Revised date':'Event date',d.event_date);
+ if(d.previous_event_date)addDate('Previous date',d.previous_event_date);
  if(d.application_start_date)addDate('Applications open',d.application_start_date);
  if(d.application_end_date)addDate('Last date to apply',d.application_end_date);
- if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,7).forEach(x=>addDate('',x));
- if(dates.length)lines.push('', '*Key dates*',...dates.map(x=>'• '+x));
+ // Prefer exam-to-date mappings from the structured extraction.
+ if(Array.isArray(d.exam_date_details)){
+  d.exam_date_details.forEach(item=>{
+   if(item&&item.exam&&item.date)addDate(String(item.exam).trim(),item.date+(item.shift?' · '+item.shift:''));
+  });
+ }else if(Array.isArray(d.important_dates)){
+  d.important_dates.filter(Boolean).slice(0,12).forEach(item=>{
+   const value=String(item).trim();
+   if(!value)return;
+   if(value.includes(':')){
+    const parts=value.split(':');addDate(parts.shift().trim(),parts.join(':').trim());
+   }else if(d.exam_name){
+    addDate(d.exam_name,value);
+   }
+   // Unlabelled dates in multi-exam calendars are intentionally omitted:
+   // assigning them to an exam without evidence would be misleading.
+  });
+ }
+ if(dates.length)lines.push('', '*Important dates*',...dates.map(x=>'• '+x));
  const eligibility=[];
  if(d.qualification)eligibility.push('Qualification: '+d.qualification);
  if(d.age_limit)eligibility.push('Age limit: '+d.age_limit);
  if(d.application_fee)eligibility.push('Application fee: '+d.application_fee);
- if(d.selection_process)eligibility.push('Selection: '+d.selection_process);
+ if(d.selection_process)eligibility.push('Selection process: '+d.selection_process);
  if(eligibility.length)lines.push('', '*Eligibility & selection*',...eligibility.map(x=>'• '+x));
  const changes=Array.isArray(r.change_summary)?r.change_summary.filter(Boolean).slice(0,3):[];
  if(changes.length)lines.push('', '*What has changed*',...changes.map(x=>'• '+x));
  const notice=d.official_notification_url||r.candidate_url;
  if(notice)lines.push('', '*Official notification*',notice);
  if(d.application_url)lines.push('*Apply online*',d.application_url);
- lines.push('', 'Please check the official notification for complete details before applying.', '', '*The Educator Career Updates*');
+ lines.push('', 'Please refer to the official notice for complete details.', '', '*The Educator Career Updates*');
  return lines.join('\n');
 }
 function render(){
