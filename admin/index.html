@@ -347,7 +347,7 @@ function makePostCanvas(r){
   facts.forEach(([label,value])=>{
    const val=value.length>19?value.slice(0,17)+'…':value;
    ctx.font='700 17px Arial';const w=Math.max(155,Math.min(250,ctx.measureText(label).width+ctx.measureText(val).width+44));
-   if(x+w>850)return;
+   if(x+w>660)return;
    ctx.fillStyle='rgba(4,13,27,.38)';ctx.beginPath();ctx.roundRect(x,344,w,55,12);ctx.fill();
    ctx.fillStyle=accent;ctx.font='700 12px Arial';ctx.textBaseline='alphabetic';ctx.fillText(label,x+13,363);
    ctx.fillStyle='#fff';ctx.font='700 17px Arial';ctx.fillText(val,x+13,386);
@@ -361,7 +361,7 @@ function makePostCanvas(r){
  // Consistent channel lockup: book symbol and name in a gold outlined pill.
  ctx.fillStyle='rgba(7,20,37,.78)';ctx.strokeStyle=accent;ctx.lineWidth=3;
  ctx.beginPath();ctx.roundRect(690,330,468,72,36);ctx.fill();ctx.stroke();
- ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.font='43px Arial';ctx.fillText('♧',730,365);
+ ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.font='43px Arial';ctx.fillText('📖',730,365);
  ctx.fillStyle=accent;ctx.fillRect(765,347,2,36);
  ctx.textAlign='left';ctx.fillStyle='#fff';ctx.font='700 20px Arial';
  ctx.fillText('THE EDUCATOR CAREER UPDATES',784,366);
