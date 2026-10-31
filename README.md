@@ -1,6 +1,6 @@
-# Government Job Alert — Release 1.1
+# Government Job Alert — Recruitment & Exam Alert System
 
-An English-only, AI-assisted monitor for Indian government recruitment notices. It scans configured official sources twice daily and creates a **manual-review queue**. It never automatically publishes a vacancy.
+An English-only, AI-assisted monitor for Indian government recruitment and competitive-examination notices. It scans configured official sources twice daily and creates a **manual-review queue** for new notices and meaningful changes. It never automatically publishes or sends alerts.
 
 ## Features
 - Scheduled scans at 08:00 IST and 18:00 IST through GitHub Actions.
@@ -63,7 +63,7 @@ Edit `sources/sources.json`. Each source supports `name`, `url`, `enabled`, `all
 
 ## Vacancy-only queue and Supabase sync
 
-The scanner now queues only readable, complete recruitment notices that contain named employment posts and explicit evidence that applications/interviews are invited. Exam calendars, exam eligibility notices (including UGC-NET/JRF), admissions, results, generic career pages, and title-only links are excluded. The admin page hides records that do not meet this completeness check and displays all available recruitment details.
+The scanner queues readable, evidence-backed government recruitment and exam lifecycle notices: vacancies; exam calendars and schedules; date changes, postponements and cancellations; admit cards; application updates; corrigenda; answer keys; results, scorecards and cut-offs; interview schedules; selection updates; and document verification. Admissions, generic career pages, coaching promotions, unrelated announcements and title-only links are excluded. The admin page filters incomplete records and displays relevant details for each event type.
 
 To sync each scan into the protected Supabase admin queue:
 
@@ -79,6 +79,6 @@ The workflow syncs only complete vacancy records to the protected Supabase table
 
 The scanner fingerprints the readable content of each tracked candidate URL on every scheduled scan. Unchanged content is ignored. Existing URLs from the pre-change tracker are baselined once, so the first run does not create retroactive posts for old notices. After baselining, a post is created only when a new vacancy notice is discovered or a tracked notice changes materially.
 
-Recruitment notices are matched by organisation plus advertisement number (or post names when no advertisement number exists). Material changes to post names, vacancy count, qualification, age limit, application dates, fee, selection process or application link create an update post linked to the previous post. Application deadline changes are labelled separately as deadline-extension updates. Non-recruitment content and changes that do not alter recruitment details are not posted.
+Notices are matched by authority plus advertisement number, post names, examination name or related notice where available. Material changes to vacancy details, exam dates, schedules, event status, application dates, fees, selection process or official links create a new event/update post linked to the previous notice. Event labels distinguish exam calendars, date changes, postponements, cancellations, admit cards, answer keys, results and other lifecycle updates. Unchanged content and changes that do not alter meaningful recruitment/exam details are not posted.
 
-The admin review page generates branded 1080×1080 PNG artwork for each post: a new-vacancy design, an update design, or a deadline-extension design. Admins can download the image or use the device share sheet where image sharing is supported. WhatsApp text sharing remains behind the manual verification checkbox; nothing is auto-published.
+The admin review page generates branded 1080×1080 PNG artwork for each post: event-specific artwork for new vacancies, notice updates, exam schedules, postponements/cancellations, results and deadline extensions. Admins can download the image or use the device share sheet where image sharing is supported. WhatsApp text sharing remains behind the manual verification checkbox; nothing is auto-published.
