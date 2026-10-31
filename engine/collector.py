@@ -10,7 +10,7 @@ UA = "GovernmentJobAlertBot/1.1 (public recruitment notice monitor)"
 log = logging.getLogger("job-alert")
 
 def session():
-    retry = Retry(total=3, connect=3, read=3, status=3, backoff_factor=1,
+    retry = Retry(total=1, connect=1, read=1, status=1, backoff_factor=0.4,
                   status_forcelist=(429, 500, 502, 503, 504),
                   allowed_methods=frozenset(["GET"]))
     s = requests.Session()
@@ -29,7 +29,7 @@ def robots_allowed(url):
     p = urlparse(url)
     robots_url = f"{p.scheme}://{p.netloc}/robots.txt"
     try:
-        response = HTTP.get(robots_url, timeout=12)
+        response = HTTP.get(robots_url, timeout=(5, 8))
         if response.status_code == 404:
             return True
         response.raise_for_status()
@@ -48,7 +48,7 @@ def fetch_source(source):
     if not robots_allowed(source_url):
         log.info("Skipped by robots policy: %s", name)
         return []
-    response = HTTP.get(source_url, timeout=(10, 30))
+    response = HTTP.get(source_url, timeout=(6, 18))
     response.raise_for_status()
     final_url = response.url
     ctype = response.headers.get("Content-Type", "").lower()
@@ -83,7 +83,7 @@ def fetch_source(source):
 def download_pdf(item, folder, max_bytes=25 * 1024 * 1024):
     if not robots_allowed(item["url"]):
         raise PermissionError("robots.txt does not permit this PDF URL")
-    with HTTP.get(item["url"], timeout=(10, 45), stream=True) as response:
+    with HTTP.get(item["url"], timeout=(6, 25), stream=True) as response:
         response.raise_for_status()
         size = response.headers.get("Content-Length")
         if size and int(size) > max_bytes:
