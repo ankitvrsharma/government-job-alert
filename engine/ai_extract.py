@@ -40,7 +40,7 @@ def extract_with_ai(text, title, url):
 
     prompt = f"""Extract facts from this official Indian recruitment notice.
 Return only facts supported by the text. Never guess; use null or [] when absent.
-Keep the output in English. This is an unverified draft requiring human review.
+This queue is ONLY for actual employment vacancies. Set is_recruitment_notice=true only if this document itself advertises paid employment posts and invites applications/interviews. Exam notices (including UGC-NET/JRF/Assistant Professor eligibility), exam calendars, results, answer keys, admit cards, admissions, academic fellowships, training, internships, proposals, EoIs, consultancy, general announcements and generic career pages are NOT job vacancies. A post title or keyword alone is not proof. For true recruitment, provide named post_names and recruitment_evidence quoting the document's invitation to apply/interview. If uncertain, set false. Extract all available recruitment details and write a useful factual summary.
 Title: {title}
 URL: {url}
 DOCUMENT:
@@ -49,6 +49,8 @@ DOCUMENT:
     schema = types.Schema(
         type=types.Type.OBJECT,
         properties={
+            "is_recruitment_notice": types.Schema(type=types.Type.BOOLEAN),
+            "recruitment_evidence": types.Schema(type=types.Type.STRING, nullable=True),
             "notice_type": types.Schema(type=types.Type.STRING, nullable=True),
             "organisation": types.Schema(type=types.Type.STRING, nullable=True),
             "post_names": types.Schema(type=types.Type.ARRAY, items=types.Schema(type=types.Type.STRING)),
@@ -66,7 +68,7 @@ DOCUMENT:
             "summary": types.Schema(type=types.Type.STRING, nullable=True),
             "uncertainties": types.Schema(type=types.Type.ARRAY, items=types.Schema(type=types.Type.STRING)),
         },
-        required=["post_names", "important_dates", "uncertainties"]
+        required=["is_recruitment_notice", "post_names", "important_dates", "uncertainties"]
     )
 
     client = genai.Client(api_key=GEMINI_API_KEY)
