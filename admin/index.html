@@ -74,8 +74,8 @@ const titleOf=r=>{const d=draftOf(r);return(d.post_names&&d.post_names.length?d.
 const summaryOf=r=>draftOf(r).summary||'';
 const endDate=r=>draftOf(r).application_end_date||'';
 const hasVacancyContent=r=>{const d=draftOf(r);return d.is_recruitment_notice===true&&Array.isArray(d.post_names)&&d.post_names.some(x=>String(x).trim())&&String(d.recruitment_evidence||'').trim()&&String(d.summary||'').trim().length>=40;};
-function postLabel(r){return r.post_type==='update'?'NOTICE UPDATED':'NEW VACANCY';}
-function postIcon(r){return r.post_type==='update'?'🔔':'🏛️';}
+function postLabel(r){return r.post_type==='deadline_extension'?'DEADLINE EXTENDED':r.post_type==='update'?'NOTICE UPDATED':'NEW VACANCY';}
+function postIcon(r){return r.post_type==='deadline_extension'?'⏰':r.post_type==='update'?'🔔':'🏛️';}
 function shareText(r){
  const d=draftOf(r),lines=[r.post_type==='update'?'🔔 GOVERNMENT VACANCY UPDATE':'📢 NEW GOVERNMENT VACANCY','',titleOf(r),'Organisation: '+(d.organisation||r.source_name||'Not stated')];
  if(d.vacancy_count)lines.push('Vacancies: '+d.vacancy_count);
@@ -111,8 +111,8 @@ function render(){
   const d=draftOf(r),ok=verified.has(r.id),official=d.official_notification_url||r.candidate_url;
   const fields=[['Vacancies',d.vacancy_count],['Advertisement no.',d.advertisement_number],['Qualification',d.qualification],['Age limit',d.age_limit],['Application starts',d.application_start_date],['Last date',d.application_end_date],['Application fee',d.application_fee],['Selection process',d.selection_process]].filter(x=>clean(x[1]));
   const dates=Array.isArray(d.important_dates)?d.important_dates.filter(Boolean):[];
-  return '<article class="job"><div class="jobtop"><div><div class="org">'+esc(d.organisation||r.source_name||'Organisation')+'</div><h2>'+esc(titleOf(r))+'</h2></div><span class="pill">'+(r.post_type==='update'?'Updated notice':'New vacancy')+'</span></div>'+
-  '<div class="post-art '+(r.post_type==='update'?'update':'new')+'"><span class="art-kicker">'+postLabel(r)+'</span><strong>'+esc(titleOf(r))+'</strong><span class="art-meta">'+esc(d.organisation||r.source_name||'Government Recruitment')+(d.vacancy_count?' · '+esc(d.vacancy_count)+' vacancies':'')+'</span><span class="art-icon">'+postIcon(r)+'</span></div>'+
+  return '<article class="job"><div class="jobtop"><div><div class="org">'+esc(d.organisation||r.source_name||'Organisation')+'</div><h2>'+esc(titleOf(r))+'</h2></div><span class="pill">'+(r.post_type==='deadline_extension'?'Deadline extended':r.post_type==='update'?'Updated notice':'New vacancy')+'</span></div>'+
+  '<div class="post-art '+(r.post_type&&r.post_type!=='new'?'update':'new')+'"><span class="art-kicker">'+postLabel(r)+'</span><strong>'+esc(titleOf(r))+'</strong><span class="art-meta">'+esc(d.organisation||r.source_name||'Government Recruitment')+(d.vacancy_count?' · '+esc(d.vacancy_count)+' vacancies':'')+'</span><span class="art-icon">'+postIcon(r)+'</span></div>'+
   (Array.isArray(r.change_summary)&&r.change_summary.length?'<p class="change-list"><b>What changed:</b> '+r.change_summary.map(esc).join(' · ')+'</p>':'')+
   '<p class="summary">'+esc(summaryOf(r))+'</p><div class="details">'+fields.map(x=>'<div class="detail"><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>').join('')+'</div>'+
   (dates.length?'<p class="summary"><b>Important dates</b><br>'+dates.map(esc).join('<br>')+'</p>':'')+
@@ -162,7 +162,7 @@ $('search').addEventListener('input',render);$('filter').addEventListener('chang
 jobsEl.addEventListener('change',e=>{const id=e.target.dataset.verify;if(!id)return;if(e.target.checked)verified.add(id);else verified.delete(id);render();});
 function makePostCanvas(r){
  const d=draftOf(r),canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
- const ctx=canvas.getContext('2d'),isUpdate=r.post_type==='update';
+ const ctx=canvas.getContext('2d'),isUpdate=r.post_type&&r.post_type!=='new';
  const g=ctx.createLinearGradient(0,0,1080,1080);
  if(isUpdate){g.addColorStop(0,'#3b2a16');g.addColorStop(.55,'#18283c');g.addColorStop(1,'#62451e');}
  else{g.addColorStop(0,'#0c355b');g.addColorStop(.58,'#12253c');g.addColorStop(1,'#0d5657');}
@@ -182,7 +182,7 @@ function makePostCanvas(r){
  ctx.fillStyle='#9fe7ff';ctx.font='bold 28px Arial';ctx.fillText('GOVERNMENT JOB ALERT',80,1000);
  return canvas;
 }
-function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='government-job-alert-'+(r.post_type==='update'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
+function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='government-job-alert-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
 async function sharePostImage(r){const canvas=makePostCanvas(r);canvas.toBlob(async blob=>{if(!blob)return;const file=new File([blob],'government-job-alert.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:postLabel(r),text:shareText(r)});}catch(e){if(e.name!=='AbortError')downloadPostImage(r);}}else{downloadPostImage(r);alert('Image saved. Attach it in WhatsApp with the prepared post text.');}},'image/png');}
 
 jobsEl.addEventListener('click',e=>{
