@@ -127,7 +127,18 @@ def main():
                         or not isinstance(posts, list) or not any(str(p).strip() for p in posts)
                         or not evidence or len(summary) < 40):
                     log.info("Not queued: no verifiable vacancy evidence/content for %s", item.get("title"))
+                    state["snapshots"][url_key] = digest
                     mark(item, digest, state)
+                    continue
+
+                stable_key = notice_key(draft)
+                registry = state.setdefault("notice_registry", {})
+                prior = registry.get(stable_key) if stable_key else None
+                changes = changed_fields(prior.get("draft", {}) if prior else {}, draft) if prior else []
+                if prior and not changes:
+                    state["snapshots"][url_key] = digest
+                    mark(item, digest, state)
+                    log.info("Content changed but recruitment details did not; no post generated: %s", item.get("title"))
                     continue
 
                 ident = hashlib.sha256((item["url"] + (digest or "")).encode()).hexdigest()[:16]
@@ -151,8 +162,14 @@ def main():
                     "local_pdf": str(local.relative_to(DATA)) if local else None,
                     "review_status": "pending_review",
                     "human_verified": False,
+                    "post_type": "update" if prior else "new",
+                    "previous_post_id": prior.get("id") if prior else None,
+                    "change_summary": changes,
                     "ai_draft": draft
                 })
+                if stable_key:
+                    registry[stable_key] = {"id": ident, "draft": draft, "updated_at": datetime.now(timezone.utc).isoformat()}
+                state["snapshots"][url_key] = digest
                 ids.add(ident)
                 if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred", "ai_error"):
                     mark(item, digest, state)
