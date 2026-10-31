@@ -256,8 +256,8 @@ async function discardPost(id){
  const button=jobsEl.querySelector('[data-discard="'+CSS.escape(id)+'"]');if(button)button.disabled=true;
  const {data:userData,error:userError}=await sb.auth.getUser();
  if(userError||!userData.user){if(button)button.disabled=false;alert('Your admin session could not be verified. Please sign in again.');return;}
- const {error:markError}=await sb.from('dismissed_job_posts').upsert({id,dismissed_by:userData.user.id,reason:'discarded_by_admin'},{onConflict:'id'});
- if(markError){if(button)button.disabled=false;alert('Could not record the discard: '+markError.message);return;}
+ const {error:markError}=await sb.from('dismissed_job_posts').insert({id,dismissed_by:userData.user.id,reason:'discarded_by_admin'});
+ if(markError&&markError.code!=='23505'){if(button)button.disabled=false;alert('Could not record the discard: '+markError.message);return;}
  const {data,error}=await sb.from('job_alert_queue').delete().eq('id',id).select('id').maybeSingle();
  if(error){if(button)button.disabled=false;alert('Discard was recorded, but the queue row could not be removed: '+error.message+'. It will be suppressed on the next scan; refresh the queue shortly.');return;}
  records=records.filter(x=>x.id!==id);verified.delete(id);render();
