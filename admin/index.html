@@ -144,10 +144,16 @@ function render(){
 }
 async function loadQueue(){
  jobsEl.innerHTML='<div class="empty">Loading secure queue…</div>';
- await loadPostTemplates();
- const {data,error}=await sb.from('job_alert_queue').select('payload').order('updated_at',{ascending:false}).limit(1000);
- if(error){jobsEl.innerHTML='<div class="empty">Could not load protected queue: '+esc(error.message)+'</div>';return;}
- records=(data||[]).map(x=>x.payload).filter(hasVacancyContent);render();
+ try{
+  await withTimeout(loadPostTemplates(),12000,'Artwork templates');
+  const result=await withTimeout(sb.from('job_alert_queue').select('payload').order('updated_at',{ascending:false}).limit(1000),18000,'Secure queue request');
+  if(result.error)throw result.error;
+  records=(result.data||[]).map(x=>x.payload).filter(hasVacancyContent);
+  render();
+ }catch(error){
+  jobsEl.innerHTML='<div class="empty">Queue could not be loaded: '+esc(error.message||String(error))+'<br><br>Check your connection, then tap “Refresh queue”. If this repeats, send this error message to the site administrator.</div>';
+  $('total').textContent='—';$('pending').textContent='—';
+ }
 }
 function withTimeout(promise,ms,label){
  let timer;
@@ -201,11 +207,15 @@ $('logoutBtn').addEventListener('click',async()=>{await sb.auth.signOut();record
 async function loadTrackedSources(){
  const list=$('sourceList'),status=$('sourceStatus');
  list.innerHTML='<div class="empty">Loading tracked websites…</div>';
- const {data,error}=await sb.from('tracked_sources').select('id,name,url,category,enabled,created_at').order('created_at',{ascending:false}).limit(500);
- if(error){list.innerHTML='<div class="empty">Could not load tracked websites: '+esc(error.message)+'</div>';return;}
- trackedSources=data||[];
- if(!trackedSources.length){list.innerHTML='<div class="empty">No custom websites added yet. Existing built-in sources continue to run.</div>';return;}
- list.innerHTML=trackedSources.map(x=>'<div class="source-row"><div><b>'+esc(x.name)+'</b> <span class="pill">'+(x.enabled?'Active':'Paused')+'</span><small>'+esc(x.url)+'</small></div><div class="actions"><button class="source-toggle" type="button" data-source-toggle="'+esc(x.id)+'" data-enabled="'+String(x.enabled)+'">'+(x.enabled?'Pause':'Enable')+'</button><button class="source-delete" type="button" data-source-delete="'+esc(x.id)+'">Remove</button></div></div>').join('');
+ try{
+  const result=await withTimeout(sb.from('tracked_sources').select('id,name,url,category,enabled,created_at').order('created_at',{ascending:false}).limit(500),18000,'Tracked websites request');
+  if(result.error)throw result.error;
+  trackedSources=result.data||[];
+  if(!trackedSources.length){list.innerHTML='<div class="empty">No custom websites added yet. Existing built-in sources continue to run.</div>';return;}
+  list.innerHTML=trackedSources.map(x=>'<div class="source-row"><div><b>'+esc(x.name)+'</b> <span class="pill">'+(x.enabled?'Active':'Paused')+'</span><small>'+esc(x.url)+'</small></div><div class="actions"><button class="source-toggle" type="button" data-source-toggle="'+esc(x.id)+'" data-enabled="'+String(x.enabled)+'">'+(x.enabled?'Pause':'Enable')+'</button><button class="source-delete" type="button" data-source-delete="'+esc(x.id)+'">Remove</button></div></div>').join('');
+ }catch(error){
+  list.innerHTML='<div class="empty">Tracked websites could not be loaded: '+esc(error.message||String(error))+'<br><br>Refresh the page after checking your connection.</div>';
+ }
 }
 $('sourceForm').addEventListener('submit',async e=>{
  e.preventDefault();
