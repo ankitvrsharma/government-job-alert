@@ -92,8 +92,29 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const draftOf=r=>r.ai_draft&&typeof r.ai_draft==='object'?r.ai_draft:{};
 const titleOf=r=>{
  const d=draftOf(r);
- const raw=d.post_title||((d.post_names&&d.post_names.length)?d.post_names.join(', '):'')||r.candidate_title||d.exam_name||d.notice_type||'Recruitment notice';
- return String(raw).replace(/\\s+/g,' ').replace(/\\s*[,;|]\\s*/g,', ').trim().replace(/^(latest|official)\\s+(update|notice)[: -]*/i,'');
+ const generic=/^(read more|click here|view more|know more|download|notice|public notice|exam calendar|latest update|important notice)$/i;
+ const clean=v=>String(v||'').replace(/\s+/g,' ').replace(/\s*[,;|]\s*/g,', ').trim();
+ const evidence=clean(d.event_evidence||d.recruitment_evidence||''),exam=clean(d.exam_name||'');
+ let raw=clean(d.post_title);
+ if(!raw||generic.test(raw)){
+  const context=(evidence+' '+exam).toLowerCase(),type=String(r.post_type||d.post_category||'').toLowerCase();
+  if(type==='result'||/declaration of results|result declared/.test(context))raw=exam+' Result Declared';
+  else if(type==='cut_off'||/cut.?off marks/.test(context))raw=exam+' Subject-wise Cut-off Marks Released';
+  else if(type==='answer_key'||/answer keys/.test(context))raw=exam+(/final answer keys/.test(context)?' Final Answer Key Released':' Answer Key Released');
+  else if(type==='exam_city_intimation')raw=exam+' Exam City Intimation Released';
+  else if(type==='exam_schedule'&&/traffic congestion|advisory/.test(context))raw=exam+' Candidate Advisory for Delhi Centres';
+  else if(type==='exam_schedule'||type==='exam_calendar')raw='NTA Examination Calendar: December 2026–April 2027';
+  else if(type==='application_update'&&/extension of last date/.test(context))raw=exam+' Application Deadline Extended';
+  else if(type==='application_update'&&/clarification/.test(context))raw=exam+' Application Form Clarification Issued';
+  else if(type==='application_update'&&/registration process|advisory and instructions/.test(context))raw=exam+' Registration Instructions Issued';
+  else if(type==='corrigendum'&&/specification of degrees/.test(context))raw='UGC Specification of Degrees: Fifth Amendment';
+  else if(type==='corrigendum')raw=exam?exam+' Application Deadline Extended':'NTA Recruitment Notice: Corrigendum';
+  else if(type==='other_recruitment_update'&&/successfully concluded/.test(context))raw=exam+' Examination Concluded';
+  else if(type==='vacancy'||/vacancy notification/.test(context))raw=exam?exam+' Vacancy Notification':'NTA Vacancy Notification';
+  else raw=exam||clean(d.notice_type)||clean(r.candidate_title);
+ }
+ if(!raw||generic.test(raw))raw=clean(d.exam_name)||clean(d.organisation)||'Official Recruitment Update';
+ return raw;
 };
 const summaryOf=r=>draftOf(r).summary||'';
 const endDate=r=>draftOf(r).application_end_date||'';
