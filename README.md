@@ -22,9 +22,25 @@ Open **Actions**, choose Morning or Evening recruitment scan, select **Run workf
 
 ## Admin panel and WhatsApp sharing
 
-A responsive review dashboard is available at `/admin/` when GitHub Pages is enabled. It reads the latest public review queue, supports search and filters, and provides WhatsApp share/copy-message actions. Sharing is locked until the reviewer confirms they checked the official notification. The confirmation is session-only and does not write back to the queue. WhatsApp opens a prefilled message; a person must press Send.
+The dashboard at `/admin/` uses Supabase email/password authentication. The job queue is read from a Supabase table protected by Row Level Security (RLS); only users explicitly listed in `public.admin_users` can read or change it. The browser contains only the Supabase publishable key, never a service-role key. WhatsApp sharing remains manual: the reviewer must confirm checking the official notice, then press Send in WhatsApp.
 
-To publish the dashboard, set **Settings → Pages → Build and deployment → Source: GitHub Actions**, then run the **Deploy admin panel** workflow. The panel and queue are public because this repository is public. Do not add credentials or private data.
+### One-time Supabase setup
+1. Use the Supabase project **Government Job Alert Auth**.
+2. In **Authentication → URL Configuration**, set Site URL to `https://ankitvrsharma.github.io/government-job-alert` and add `https://ankitvrsharma.github.io/**` to Redirect URLs.
+3. Open `/admin/`, create an account with your email and a strong password, and confirm the email if Supabase asks.
+4. The account is not authorised until its owner row is added to `public.admin_users`. Add the first administrator using the Supabase SQL Editor:
+   ```sql
+   insert into public.admin_users (user_id, email)
+   select id, email from auth.users
+   where lower(email) = lower('YOUR_EMAIL')
+   on conflict (user_id) do nothing;
+   ```
+5. Disable public sign-ups in **Authentication → Sign In / Providers → Email** after the administrator account is created. Only authorised accounts can access queue rows because of RLS.
+
+### Publish
+Set **GitHub Settings → Pages → Build and deployment → Source: GitHub Actions**, then run the **Deploy admin panel** workflow. The expected dashboard URL is `https://ankitvrsharma.github.io/government-job-alert/admin/`.
+
+**Repository visibility warning:** this GitHub repository is currently public, so historical copies of `data/review_queue.json` and `data/review_queue.csv` in Git history may still be publicly readable. The dashboard no longer fetches those files; its live data comes from the RLS-protected Supabase table. For full confidentiality, the queue files and their Git history must be moved out of this public repository (or the repository must be made private, subject to GitHub Pages plan support). Never commit credentials or service-role keys.
 
 ## Review
 Inspect `data/review_queue.csv` or `data/review_queue.json`. Verify every field against the official notification before changing its review status. No social channel is automatically posted to.
