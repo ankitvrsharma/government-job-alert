@@ -17,7 +17,7 @@ def load_seen(path):
     urls, hashes = value.get("urls", []), value.get("hashes", [])
     return {
         "urls": [norm(x) for x in urls if isinstance(x, str)] if isinstance(urls, list) else [],
-        "hashes": [x for x in hashes if isinstance(x, str)] if isinstance(hashes, list)
+        "hashes": [x for x in hashes if isinstance(x, str)] if isinstance(hashes, list) else []
     }
 
 def seen(item, digest, state):
