@@ -105,11 +105,10 @@ function shareText(r){
  if(typeof d.custom_caption==='string'&&d.custom_caption.trim())return d.custom_caption;
  const title=titleOf(r),org=d.organisation||r.source_name||'';
  const lines=['*'+title+'*'];
- // A short, natural opening replaces repetitive AI-style section headings.
- const intro=String(d.summary||'').replace(/\\s+/g,' ').trim();
+ const intro=String(d.summary||'').replace(/\s+/g,' ').trim();
  if(intro)lines.push('',intro);
  const facts=[];
- const add=(label,value)=>{if(value&&String(value).trim()&&!facts.some(x=>x.toLowerCase()===String(value).trim().toLowerCase()))facts.push(label+': '+String(value).trim());};
+ const add=(label,value)=>{if(value&&String(value).trim())facts.push(label+': '+String(value).trim());};
  if(org)add('Organisation',org);
  if(d.exam_name&&String(d.exam_name).toLowerCase()!==title.toLowerCase())add('Examination',d.exam_name);
  if(d.vacancy_count)add('Vacancies',d.vacancy_count);
@@ -117,8 +116,8 @@ function shareText(r){
  if(facts.length)lines.push('',...facts);
  const dates=[],seen=new Set();
  const addDate=(label,value)=>{
-  if(!value)return;const text=String(value).trim(),key=text.toLowerCase();
-  if(!key||seen.has(key))return;seen.add(key);dates.push((label?label+': ':'')+text);
+  if(!value)return;const valueText=String(value).trim(),key=valueText.toLowerCase();
+  if(!key||seen.has(key))return;seen.add(key);dates.push((label?label+': ':'')+valueText);
  };
  if(d.event_date)addDate(d.previous_event_date?'Revised date':'Exam / event date',d.event_date);
  if(d.previous_event_date)addDate('Earlier date',d.previous_event_date);
@@ -138,7 +137,7 @@ function shareText(r){
  if(notice)lines.push('', '*Official notification*',notice);
  if(d.application_url)lines.push('*Apply online*',d.application_url);
  lines.push('', 'Please check the official notification for complete details before applying.', '', '*The Educator Career Updates*');
- return lines.join('\\n');
+ return lines.join('\n');
 }
 function render(){
  const q=$('search').value.trim().toLowerCase(),f=$('filter').value;
