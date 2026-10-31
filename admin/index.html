@@ -292,31 +292,37 @@ function templateFor(r){const kind=String(r.post_type||'new').toLowerCase();retu
 function baseTemplateCanvas(r){
  const kind=String(r.post_type||'new').toLowerCase(),key=postTemplates[kind]?kind:(kind==='new'?'new':'update');
  if(templateCanvasCache.has(key))return templateCanvasCache.get(key);
- const t=templateFor(r),canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
- const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1080,1080);
- g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.55,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
- ctx.fillStyle=g;ctx.fillRect(0,0,1080,1080);
- ctx.fillStyle='rgba(255,255,255,.07)';ctx.beginPath();ctx.arc(1000,90,330,0,Math.PI*2);ctx.fill();
- ctx.beginPath();ctx.arc(80,1040,270,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='rgba(255,255,255,.08)';ctx.fillRect(54,54,972,972);
+ const t=templateFor(r),canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
+ const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1200,420);
+ g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.58,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
+ ctx.fillStyle=g;ctx.fillRect(0,0,1200,420);
+ // Reusable type-specific decorative background: create once, reuse for every post of this type.
+ ctx.fillStyle='rgba(255,255,255,.055)';ctx.beginPath();ctx.arc(1130,30,250,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='rgba(255,255,255,.07)';ctx.fillRect(52,48,1096,324);
+ ctx.fillStyle=t.accent||'#9fe7ff';ctx.fillRect(0,0,13,420);
  templateCanvasCache.set(key,canvas);return canvas;
 }
 function makePostCanvas(r){
- const d=draftOf(r),kind=postLabel(r),signature=JSON.stringify([r.post_type,kind,'The Educator Career Updates']);
+ const d=draftOf(r),kind=postLabel(r),title=titleOf(r),org=d.organisation||r.source_name||'Government Recruitment';
+ const signature=JSON.stringify([r.post_type,kind,title,org,'The Educator Career Updates']);
  const cached=postImageCache.get(r.id);
  if(cached&&cached.signature===signature)return cached.canvas;
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
  const ctx=canvas.getContext('2d'),t=templateFor(r),accent=t.accent||'#9fe7ff';
- const g=ctx.createLinearGradient(0,0,1200,420);
- g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.58,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
- ctx.fillStyle=g;ctx.fillRect(0,0,1200,420);
- ctx.fillStyle='rgba(255,255,255,.055)';ctx.beginPath();ctx.arc(1120,40,270,0,Math.PI*2);ctx.fill();
- ctx.fillStyle=accent;ctx.fillRect(0,0,14,420);
- ctx.fillStyle='rgba(255,255,255,.10)';ctx.fillRect(56,56,1088,308);
- ctx.fillStyle=accent;ctx.font='800 38px Arial';ctx.textBaseline='middle';
- ctx.fillText(kind,92,180);
- ctx.fillStyle='#fff';ctx.font='700 31px Arial';
- ctx.fillText('THE EDUCATOR CAREER UPDATES',92,260);
+ ctx.drawImage(baseTemplateCanvas(r),0,0);
+ const wrap=(value,max,font)=>{ctx.font=font;const words=String(value||'').split(/\\s+/),out=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){out.push(line);line=word;}else line=test;}if(line)out.push(line);return out;};
+ // The banner is a reusable post-type design; only the notice text changes per post.
+ ctx.fillStyle=accent;ctx.font='800 27px Arial';ctx.textBaseline='alphabetic';
+ ctx.fillText(kind,78,112);
+ ctx.fillStyle='#fff';ctx.font='700 57px Arial';
+ const titleLines=wrap(title,850,'700 57px Arial').slice(0,2);
+ let y=205;titleLines.forEach(line=>{ctx.fillText(line,78,y);y+=66;});
+ ctx.fillStyle='#e7edf6';ctx.font='36px Arial';
+ const orgLines=wrap(org,860,'36px Arial').slice(0,2);
+ orgLines.forEach(line=>{ctx.fillText(line,80,y+2);y+=44;});
+ // Channel attribution is deliberately small and anchored at the lower-right corner.
+ ctx.textAlign='right';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='700 20px Arial';
+ ctx.fillText('THE EDUCATOR CAREER UPDATES',1120,350);ctx.textAlign='left';
  postImageCache.set(r.id,{signature,canvas});return canvas;
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
