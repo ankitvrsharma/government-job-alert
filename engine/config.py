@@ -4,14 +4,15 @@ import json, os
 ROOT = Path(__file__).resolve().parents[1]
 DATA, LOGS = ROOT / "data", ROOT / "logs"
 DOWNLOADS = DATA / "downloads"
-for p in (DATA, LOGS, DOWNLOADS):
-    p.mkdir(parents=True, exist_ok=True)
+for directory in (DATA, LOGS, DOWNLOADS):
+    directory.mkdir(parents=True, exist_ok=True)
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
 
 def load_sources():
-    return json.loads(
-        (ROOT / "sources/sources.json").read_text(encoding="utf-8")
-    )["sources"]
-
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-# Gemini 3.8 Flash is the default; override with the GEMINI_MODEL Actions variable if needed.
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+    payload = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
+    sources = payload.get("sources") if isinstance(payload, dict) else None
+    if not isinstance(sources, list):
+        raise ValueError("sources/sources.json must contain a 'sources' list")
+    return [s for s in sources if isinstance(s, dict) and s.get("enabled")]
