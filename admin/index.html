@@ -169,7 +169,7 @@ function makePostCanvas(r){
  ctx.fillStyle=g;ctx.fillRect(0,0,1080,1080);
  ctx.fillStyle='rgba(255,255,255,.07)';ctx.beginPath();ctx.arc(1000,90,330,0,Math.PI*2);ctx.fill();
  ctx.beginPath();ctx.arc(80,1040,270,0,Math.PI*2);ctx.fill();
- ctx.fillStyle=isUpdate?'#ffe19a':'#9fe7ff';ctx.font='bold 30px Arial';ctx.fillText(isUpdate?'IMPORTANT UPDATE':'NEW GOVERNMENT VACANCY',76,130);
+ ctx.fillStyle=isUpdate?'#ffe19a':'#9fe7ff';ctx.font='bold 30px Arial';ctx.fillText(postLabel(r),76,130);
  ctx.fillStyle='#ffffff';ctx.font='bold 66px Arial';
  const wrap=(text,max)=>{const words=String(text||'').split(/\s+/),lines=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);return lines;};
  let y=270;for(const line of wrap((d.post_names||[]).join(', ')||'Recruitment Notification',850).slice(0,4)){ctx.fillText(line,76,y);y+=82;}
