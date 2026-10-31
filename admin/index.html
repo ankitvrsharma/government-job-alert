@@ -149,22 +149,44 @@ async function loadQueue(){
  if(error){jobsEl.innerHTML='<div class="empty">Could not load protected queue: '+esc(error.message)+'</div>';return;}
  records=(data||[]).map(x=>x.payload).filter(hasVacancyContent);render();
 }
+function withTimeout(promise,ms,label){
+ let timer;
+ return Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+' timed out after '+Math.round(ms/1000)+' seconds. Check your internet connection and retry.')),ms);})]).finally(()=>clearTimeout(timer));
+}
 async function enterDashboard(session){
- const {data:admin,error}=await sb.from('admin_users').select('user_id,email').eq('user_id',session.user.id).maybeSingle();
- if(error||!admin){
-  await sb.auth.signOut();
-  loginPanel.style.display='block';dashboard.style.display='none';
-  authMessage.textContent='This account is not authorised as an administrator. Ask the owner to approve your email.';
-  return;
+ authMessage.textContent='Signed in. Checking administrator access…';
+ try{
+  const {data:admin,error}=await withTimeout(sb.from('admin_users').select('user_id,email').eq('user_id',session.user.id).maybeSingle(),15000,'Administrator access check');
+  if(error)throw error;
+  if(!admin){
+   await sb.auth.signOut();
+   loginPanel.style.display='block';dashboard.style.display='none';
+   authMessage.textContent='This account is not authorised as an administrator. Ask the owner to approve your email.';
+   return;
+  }
+  loginPanel.style.display='none';dashboard.style.display='block';$('signedInAs').textContent=admin.email;
+  authMessage.textContent='';
+  await Promise.all([loadQueue(),loadTrackedSources()]);
+ }catch(error){
+  dashboard.style.display='none';loginPanel.style.display='block';
+  authMessage.textContent='Could not verify administrator access: '+(error.message||String(error))+' Please retry. If this continues, check Supabase connectivity and the admin_users SELECT policy.';
  }
- loginPanel.style.display='none';dashboard.style.display='block';$('signedInAs').textContent=admin.email;
- authMessage.textContent='';await Promise.all([loadQueue(),loadTrackedSources()]);
 }
 $('loginForm').addEventListener('submit',async e=>{
- e.preventDefault();authMessage.textContent='Signing in…';
- const {data,error}=await sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});
- if(error){authMessage.textContent=error.message;return;}
- await enterDashboard(data.session);
+ e.preventDefault();
+ const button=$('loginForm').querySelector('button[type="submit"]');
+ if(button.disabled)return;
+ button.disabled=true;button.textContent='Connecting…';authMessage.textContent='Connecting to secure sign-in…';
+ try{
+  const {data,error}=await withTimeout(sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value}),15000,'Sign-in request');
+  if(error)throw error;
+  if(!data.session)throw new Error('Sign-in returned no active session. Check email confirmation and try again.');
+  await enterDashboard(data.session);
+ }catch(error){
+  authMessage.textContent='Sign-in failed: '+(error.message||String(error))+' If this is a timeout, check Chrome internet access and reload the page.';
+ }finally{
+  button.disabled=false;button.textContent='Sign in';
+ }
 });
 $('signupBtn').addEventListener('click',async()=>{
  const email=$('email').value.trim(),password=$('password').value;
