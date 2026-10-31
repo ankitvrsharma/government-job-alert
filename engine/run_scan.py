@@ -1,4 +1,4 @@
-import csv, hashlib, json, logging, os, time
+import csv, hashlib, json, logging, time
 from datetime import datetime, timezone
 from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME_BUDGET_SECONDS
 from .collector import fetch_source, download_pdf
@@ -85,7 +85,7 @@ def main():
                     if existing and isinstance(old_draft, dict) and old_draft.get("status") in ("ai_quota_exceeded", "ai_error", "ai_deferred") and draft.get("status") == "ai_draft":
                         existing["ai_draft"] = draft
                         log.info("Updated AI draft for previously queued candidate: %s", ident)
-                    if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred"):
+                    if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred", "ai_error"):
                         mark(item, digest, state)
                     continue
                 queue.append({
