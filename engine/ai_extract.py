@@ -38,8 +38,9 @@ def extract_with_ai(text, title, url):
     except ImportError as exc:
         return {"status": "ai_unavailable", "error": str(exc)}
 
-    prompt = f"""Extract facts from this official Indian recruitment notice.
-Return only facts supported by the text. Never guess; use null or [] when absent.
+    today = time.strftime("%Y-%m-%d")
+    prompt = f"""Today is {today}. Extract facts from this official Indian recruitment/examination notice.
+Return only facts supported by the text. Never guess; use null or [] when absent. For this initial backfill, include only official calendars or notices relevant to a cycle that is still active/upcoming as of today, or a newly published result/answer key/interview/selection stage for a current recruitment cycle. Do not create posts for expired application windows or wholly past cycles unless the notice itself is a newly issued result/selection-stage update. Clearly mark tentative dates as tentative and never turn expected dates into confirmed dates.
 Classify this as a government recruitment/examination lifecycle notice when it contains a concrete official update relevant to a government job, recruitment process or competitive examination. Supported categories: vacancy, exam_calendar, exam_schedule, exam_date_change, exam_postponed, exam_cancelled, admit_card, application_update, corrigendum, answer_key, result, scorecard, cut_off, interview_schedule, selection_update, document_verification, other_recruitment_update. Exclude admissions, academic course calendars, generic career pages, unrelated announcements, coaching promotions and non-government events. A title/keyword alone is not proof. Extract the exact event, affected exam/recruitment, dates, changed-from/to details and official evidence. For vacancy notices, require named employment posts and explicit invitation to apply/interview. For all other categories, require event_evidence that supports the specific update. If uncertain or unrelated, set is_relevant_notice=false. Write a useful factual summary without guessing.
 Title: {title}
 URL: {url}
