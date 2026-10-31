@@ -55,11 +55,11 @@ def notice_key(draft):
     return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
 
 def changed_fields(old, new):
-    labels = {'vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process'}
+    labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link'}
     changes = []
     for field, label in labels.items():
-        before = str(old.get(field) or '').strip()
-        after = str(new.get(field) or '').strip()
+        before = '; '.join(old.get(field) or []) if isinstance(old.get(field), list) else str(old.get(field) or '').strip()
+        after = '; '.join(new.get(field) or []) if isinstance(new.get(field), list) else str(new.get(field) or '').strip()
         if before != after and after:
             changes.append(label + ': ' + (before or 'Not stated') + ' -> ' + after)
     return changes
