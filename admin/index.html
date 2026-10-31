@@ -136,6 +136,7 @@ function render(){
 }
 async function loadQueue(){
  jobsEl.innerHTML='<div class="empty">Loading secure queue…</div>';
+ await loadPostTemplates();
  const {data,error}=await sb.from('job_alert_queue').select('payload').order('updated_at',{ascending:false}).limit(1000);
  if(error){jobsEl.innerHTML='<div class="empty">Could not load protected queue: '+esc(error.message)+'</div>';return;}
  records=(data||[]).map(x=>x.payload).filter(hasVacancyContent);render();
@@ -202,29 +203,50 @@ $('sourceList').addEventListener('click',async e=>{
 $('refresh').addEventListener('click',loadQueue);
 $('search').addEventListener('input',render);$('filter').addEventListener('change',render);
 jobsEl.addEventListener('change',e=>{const id=e.target.dataset.verify;if(!id)return;if(e.target.checked)verified.add(id);else verified.delete(id);render();});
-function makePostCanvas(r){
- const d=draftOf(r),canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
- const ctx=canvas.getContext('2d'),isUpdate=r.post_type&&r.post_type!=='new';
- const g=ctx.createLinearGradient(0,0,1080,1080),kind=String(r.post_type||'').toLowerCase();
- if(kind==='exam_postponed'||kind==='exam_cancelled'){g.addColorStop(0,'#572626');g.addColorStop(.55,'#29243c');g.addColorStop(1,'#713d28');}
- else if(kind==='result'||kind==='scorecard'||kind==='cut_off'){g.addColorStop(0,'#173f39');g.addColorStop(.55,'#18283c');g.addColorStop(1,'#38552b');}
- else if(isUpdate||kind!=='new'){g.addColorStop(0,'#3b2a16');g.addColorStop(.55,'#18283c');g.addColorStop(1,'#62451e');}
- else{g.addColorStop(0,'#0c355b');g.addColorStop(.58,'#12253c');g.addColorStop(1,'#0d5657');}
+let postTemplates={},templateCanvasCache=new Map(),postImageCache=new Map();
+async function loadPostTemplates(){
+ try{
+  const response=await fetch('./post-templates.json',{cache:'no-cache'});
+  if(!response.ok)throw new Error('Template file unavailable');
+  const saved=await response.json();
+  postTemplates=saved.templates||{};
+ }catch(error){
+  console.warn('Using built-in fallback artwork template.',error);
+  postTemplates={new:{start:'#0c355b',middle:'#12253c',end:'#0d5657',accent:'#9fe7ff'},update:{start:'#3b2a16',middle:'#18283c',end:'#62451e',accent:'#ffe19a'}};
+ }
+}
+function templateFor(r){const kind=String(r.post_type||'new').toLowerCase();return postTemplates[kind]||postTemplates[kind==='new'?'new':'update']||postTemplates.new||{start:'#0c355b',middle:'#12253c',end:'#0d5657',accent:'#9fe7ff'};}
+function baseTemplateCanvas(r){
+ const kind=String(r.post_type||'new').toLowerCase(),key=postTemplates[kind]?kind:(kind==='new'?'new':'update');
+ if(templateCanvasCache.has(key))return templateCanvasCache.get(key);
+ const t=templateFor(r),canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
+ const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1080,1080);
+ g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.55,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
  ctx.fillStyle=g;ctx.fillRect(0,0,1080,1080);
  ctx.fillStyle='rgba(255,255,255,.07)';ctx.beginPath();ctx.arc(1000,90,330,0,Math.PI*2);ctx.fill();
  ctx.beginPath();ctx.arc(80,1040,270,0,Math.PI*2);ctx.fill();
- ctx.fillStyle=isUpdate?'#ffe19a':'#9fe7ff';ctx.font='bold 30px Arial';ctx.fillText(postLabel(r),76,130);
+ ctx.fillStyle='rgba(255,255,255,.08)';ctx.fillRect(54,54,972,972);
+ templateCanvasCache.set(key,canvas);return canvas;
+}
+function makePostCanvas(r){
+ const d=draftOf(r),signature=JSON.stringify([r.post_type,titleOf(r),d,r.change_summary,r.source_name]);
+ const cached=postImageCache.get(r.id);
+ if(cached&&cached.signature===signature)return cached.canvas;
+ const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1080;
+ const ctx=canvas.getContext('2d'),isUpdate=r.post_type&&r.post_type!=='new',t=templateFor(r);
+ ctx.drawImage(baseTemplateCanvas(r),0,0);
+ ctx.fillStyle=t.accent|| (isUpdate?'#ffe19a':'#9fe7ff');ctx.font='bold 30px Arial';ctx.fillText(postLabel(r),76,130);
+ const wrap=(text,max)=>{const words=String(text||'').split(/\\s+/),lines=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);return lines;};
  ctx.fillStyle='#ffffff';ctx.font='bold 66px Arial';
- const wrap=(text,max)=>{const words=String(text||'').split(/\s+/),lines=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);return lines;};
- let y=270;for(const line of wrap((d.post_names||[]).join(', ')||'Recruitment Notification',850).slice(0,4)){ctx.fillText(line,76,y);y+=82;}
+ let y=270;for(const line of wrap((d.post_names||[]).join(', ')||titleOf(r)||'Recruitment Notification',850).slice(0,4)){ctx.fillText(line,76,y);y+=82;}
  ctx.fillStyle='#dceaf6';ctx.font='38px Arial';ctx.fillText(String(d.organisation||r.source_name||'Government Recruitment').slice(0,45),78,y+30);
  y+=115;
  const facts=[d.exam_name?'Exam: '+d.exam_name:'',d.event_date?'Date: '+d.event_date:'',d.previous_event_date?'Previous date: '+d.previous_event_date:'',d.vacancy_count?'Vacancies: '+d.vacancy_count:'',d.qualification?'Qualification: '+d.qualification:'',d.application_end_date?'Last date: '+d.application_end_date:''].filter(Boolean);
  ctx.fillStyle='#ffffff';ctx.font='bold 34px Arial';facts.slice(0,3).forEach((v,i)=>ctx.fillText(v.slice(0,58),80,y+i*64));
- if(isUpdate&&Array.isArray(r.change_summary)&&r.change_summary.length){y+=Math.min(3,facts.length)*64+45;ctx.fillStyle='#ffe19a';ctx.font='bold 29px Arial';ctx.fillText('WHAT CHANGED',80,y);ctx.fillStyle='#fff2d1';ctx.font='26px Arial';wrap(r.change_summary[0],850).slice(0,2).forEach((v,i)=>ctx.fillText(v,80,y+52+i*38));}
+ if(isUpdate&&Array.isArray(r.change_summary)&&r.change_summary.length){y+=Math.min(3,facts.length)*64+45;ctx.fillStyle=t.accent||'#ffe19a';ctx.font='bold 29px Arial';ctx.fillText('WHAT CHANGED',80,y);ctx.fillStyle='#fff2d1';ctx.font='26px Arial';wrap(r.change_summary[0],850).slice(0,2).forEach((v,i)=>ctx.fillText(v,80,y+52+i*38));}
  ctx.fillStyle='rgba(255,255,255,.82)';ctx.font='bold 26px Arial';ctx.fillText('OFFICIAL NOTICE & APPLY LINK IN POST CAPTION',80,940);
- ctx.fillStyle='#9fe7ff';ctx.font='bold 28px Arial';ctx.fillText('THE EDUCATOR CAREER UPDATES',80,1000);
- return canvas;
+ ctx.fillStyle=t.accent||'#9fe7ff';ctx.font='bold 28px Arial';ctx.fillText('THE EDUCATOR CAREER UPDATES',80,1000);
+ postImageCache.set(r.id,{signature,canvas});return canvas;
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
 
@@ -281,7 +303,7 @@ async function saveEditor(id,button){
  button.disabled=false;
  if(error){status.textContent='Save failed: '+error.message+' — Check that the Supabase admin UPDATE policy is enabled.';return;}
  if(!data){status.textContent='No row was updated. Check your administrator permissions.';return;}
- const index=records.findIndex(x=>x.id===id);if(index>=0)records[index]=updated;
+ postImageCache.delete(id);const index=records.findIndex(x=>x.id===id);if(index>=0)records[index]=updated;
  verified.delete(id);render();
  const reopened=$('edit-'+id);if(reopened){reopened.hidden=false;const msg=reopened.querySelector('[data-edit-status]');if(msg)msg.textContent='Changes saved. Please verify the edited official details again before sharing.';}
 }
