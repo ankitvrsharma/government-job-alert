@@ -43,6 +43,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/review_queue.json data/review_queue.csv data/seen_items.json logs/latest_scan.log
+          mkdir -p logs
+          touch logs/latest_scan.log
+          git add data/review_queue.json data/seen_items.json logs/latest_scan.log
+          if [ -f data/review_queue.csv ]; then git add data/review_queue.csv; fi
           git diff --cached --quiet || git commit -m "Update recruitment review queue"
           git push
