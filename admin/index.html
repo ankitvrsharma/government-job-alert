@@ -154,22 +154,23 @@ function withTimeout(promise,ms,label){
  return Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+' timed out after '+Math.round(ms/1000)+' seconds. Check your internet connection and retry.')),ms);})]).finally(()=>clearTimeout(timer));
 }
 async function enterDashboard(session){
- authMessage.textContent='Signed in. Checking administrator access…';
+ authMessage.textContent='Signed in. Verifying secure administrator role…';
  try{
-  const {data:admin,error}=await withTimeout(sb.from('admin_users').select('user_id,email').eq('user_id',session.user.id).maybeSingle(),15000,'Administrator access check');
-  if(error)throw error;
-  if(!admin){
+  // Authorization comes from Supabase's server-controlled app_metadata claim.
+  // This avoids a second PostgREST request during sign-in and is enforced again by RLS.
+  if(session.user.app_metadata?.role!=='admin'){
    await sb.auth.signOut();
    loginPanel.style.display='block';dashboard.style.display='none';
-   authMessage.textContent='This account is not authorised as an administrator. Ask the owner to approve your email.';
+   authMessage.textContent='This account is not authorised as an administrator. Ask the owner to approve it.';
    return;
   }
-  loginPanel.style.display='none';dashboard.style.display='block';$('signedInAs').textContent=admin.email;
+  loginPanel.style.display='none';dashboard.style.display='block';
+  $('signedInAs').textContent=session.user.email||'Administrator';
   authMessage.textContent='';
   await Promise.all([loadQueue(),loadTrackedSources()]);
  }catch(error){
   dashboard.style.display='none';loginPanel.style.display='block';
-  authMessage.textContent='Could not verify administrator access: '+(error.message||String(error))+' Please retry. If this continues, check Supabase connectivity and the admin_users SELECT policy.';
+  authMessage.textContent='Could not open the admin dashboard: '+(error.message||String(error))+' Please refresh and sign in again.';
  }
 }
 $('loginForm').addEventListener('submit',async e=>{
