@@ -96,19 +96,25 @@ def main():
                 break
             candidates += 1
             try:
-                if seen(item, None, state):
-                    continue
+                url_key = norm(item["url"])
                 digest = local = None
                 if item["kind"] == "pdf":
                     local, digest = download_pdf(item, DOWNLOADS)
-                    if seen(item, digest, state):
-                        mark(item, digest, state)
-                        continue
                     body = extract_pdf_text(local)
-                    draft = extract_with_ai(body, item["title"], item["url"])
                 else:
                     body = extract_web_text(item)
-                    draft = extract_with_ai(body, item["title"], item["url"])
+                    digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
+
+                previous_fingerprint = state.setdefault("snapshots", {}).get(url_key)
+                if previous_fingerprint == digest:
+                    continue
+                if previous_fingerprint is None and url_key in state["urls"]:
+                    state["snapshots"][url_key] = digest
+                    mark(item, digest, state)
+                    log.info("Baseline fingerprint saved; no retroactive post: %s", item.get("title"))
+                    continue
+
+                draft = extract_with_ai(body, item["title"], item["url"])
 
                 # Never queue title-only, unreadable, non-vacancy or uncertain candidates.
                 if draft.get("status") != "ai_draft":
