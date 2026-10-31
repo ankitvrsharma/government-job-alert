@@ -29,7 +29,7 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
 </style>
 </head>
 <body>
-<header><div class="brand">Government Job Alert</div><h1>Admin Review & Share</h1><p>Review detected notices, verify against the official PDF, then share to WhatsApp.</p></header>
+<header><div class="brand">Government Job Alert</div><h1>Admin Review & Share</h1><p>Only complete vacancy notices are queued. Verify the official notification, then share to WhatsApp.</p></header>
 <main>
 <section id="loginPanel" class="auth-wrap">
   <div class="brand">Restricted access</div>
@@ -52,11 +52,11 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
   </section>
   <section class="toolbar">
     <input id="search" type="search" placeholder="Search organisation, post, keyword…" aria-label="Search notices">
-    <select id="filter" aria-label="Filter notices"><option value="all">All notices</option><option value="pending">Pending review</option><option value="draft">AI draft available</option><option value="verified">Verified this session</option></select>
+    <select id="filter" aria-label="Filter notices"><option value="all">All vacancy posts</option><option value="pending">Pending review</option><option value="draft">AI draft available</option><option value="verified">Verified this session</option></select>
     <button class="refresh" id="refresh" type="button">↻ Refresh queue</button>
   </section>
   <div id="jobs" class="jobs"><div class="empty">Loading secure queue…</div></div>
-  <div class="footer">Private queue: Supabase database · Row Level Security · AI extraction is an unverified draft · Always follow the official notification.</div>
+  <div class="footer">Protected vacancy queue · AI-extracted details require human verification · Always follow the official notification.</div>
 </section>
 </main>
 <script type="module">
@@ -75,7 +75,7 @@ const summaryOf=r=>draftOf(r).summary||'';
 const endDate=r=>draftOf(r).application_end_date||'';
 const hasVacancyContent=r=>{const d=draftOf(r);return d.is_recruitment_notice===true&&Array.isArray(d.post_names)&&d.post_names.some(x=>String(x).trim())&&String(d.recruitment_evidence||'').trim()&&String(d.summary||'').trim().length>=40;};
 function shareText(r){
- const d=draftOf(r),lines=['📢 GOVERNMENT JOB / EXAM UPDATE','',titleOf(r),'Organisation: '+(d.organisation||r.source_name||'Not stated')];
+ const d=draftOf(r),lines=['📢 GOVERNMENT VACANCY ALERT','',titleOf(r),'Organisation: '+(d.organisation||r.source_name||'Not stated')];
  if(d.vacancy_count)lines.push('Vacancies: '+d.vacancy_count);
  if(d.qualification)lines.push('Qualification: '+d.qualification);
  if(d.age_limit)lines.push('Age limit: '+d.age_limit);
