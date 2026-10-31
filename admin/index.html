@@ -294,75 +294,78 @@ async function loadPostTemplates(){
 }
 function templateFor(r){const kind=String(r.post_type||'new').toLowerCase();return postTemplates[kind]||postTemplates[kind==='new'?'new':'update']||postTemplates.new||{start:'#0c355b',middle:'#12253c',end:'#0d5657',accent:'#9fe7ff'};}
 function baseTemplateCanvas(r){
- const kind=String(r.post_type||'new').toLowerCase(),key=postTemplates[kind]?kind:(kind==='new'?'new':'update');
+ const raw=String(r.post_type||'new').toLowerCase(),key=postTemplates[raw]?raw:(raw==='new'?'new':'update');
  if(templateCanvasCache.has(key))return templateCanvasCache.get(key);
  const t=templateFor(r),canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
  const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1200,420);
- g.addColorStop(0,t.start||'#0c355b');g.addColorStop(.58,t.middle||'#12253c');g.addColorStop(1,t.end||'#0d5657');
+ g.addColorStop(0,t.start||'#17283d');g.addColorStop(.52,t.middle||'#0b2340');g.addColorStop(1,t.end||'#59401f');
  ctx.fillStyle=g;ctx.fillRect(0,0,1200,420);
- // Reusable branded background for each post type: soft light, layered geometry and accent rail.
- const glow=ctx.createRadialGradient(1080,72,12,1080,72,370);
+ const glow=ctx.createRadialGradient(1030,185,20,1030,185,380);
  glow.addColorStop(0,'rgba(255,255,255,.17)');glow.addColorStop(1,'rgba(255,255,255,0)');
- ctx.fillStyle=glow;ctx.fillRect(700,0,500,420);
- ctx.fillStyle='rgba(255,255,255,.045)';ctx.beginPath();ctx.moveTo(850,0);ctx.lineTo(1200,0);ctx.lineTo(1200,420);ctx.lineTo(1030,420);ctx.closePath();ctx.fill();
- ctx.fillStyle='rgba(255,255,255,.035)';ctx.beginPath();ctx.arc(1100,390,240,0,Math.PI*2);ctx.fill();
- ctx.fillStyle=t.accent||'#9fe7ff';ctx.fillRect(0,0,12,420);
+ ctx.fillStyle=glow;ctx.fillRect(650,0,550,420);
+ // Elegant flowing gold/navy accents create a consistent visual identity across post types.
+ ctx.fillStyle='rgba(255,255,255,.045)';ctx.beginPath();ctx.moveTo(700,0);ctx.quadraticCurveTo(930,150,1200,28);ctx.lineTo(1200,0);ctx.closePath();ctx.fill();
+ ctx.fillStyle='rgba(255,255,255,.035)';ctx.beginPath();ctx.moveTo(0,335);ctx.quadraticCurveTo(260,280,520,420);ctx.lineTo(0,420);ctx.closePath();ctx.fill();
+ ctx.fillStyle=t.accent||'#f5cf58';ctx.fillRect(0,0,12,420);
  templateCanvasCache.set(key,canvas);return canvas;
 }
 function makePostCanvas(r){
  const d=draftOf(r),kind=postLabel(r),title=titleOf(r),org=d.organisation||r.source_name||'Government Recruitment';
  const facts=[];
  const addFact=(label,value)=>{if(value!==undefined&&value!==null&&String(value).trim()&&facts.length<3)facts.push([label,String(value).trim()]);};
- if(d.vacancy_count)addFact('TOTAL VACANCIES',d.vacancy_count);
+ if(d.vacancy_count)addFact('VACANCIES',d.vacancy_count);
  if(d.application_end_date)addFact('LAST DATE',d.application_end_date);
- if(d.event_date)addFact('EXAM / EVENT DATE',d.event_date);
- if(d.application_start_date&&!d.application_end_date)addFact('APPLICATION OPENS',d.application_start_date);
- if(d.advertisement_number)addFact('ADVERTISEMENT NO.',d.advertisement_number);
- if(d.exam_name&&!title.toLowerCase().includes(String(d.exam_name).toLowerCase()))addFact('EXAMINATION',d.exam_name);
+ if(d.event_date)addFact('EXAM DATE',d.event_date);
+ if(d.application_start_date&&!d.application_end_date)addFact('OPENS',d.application_start_date);
+ if(d.advertisement_number)addFact('NOTICE NO.',d.advertisement_number);
  const signature=JSON.stringify([r.post_type,kind,title,org,facts,'The Educator Career Updates']);
  const cached=postImageCache.get(r.id);
  if(cached&&cached.signature===signature)return cached.canvas;
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
- const ctx=canvas.getContext('2d'),t=templateFor(r),accent=t.accent||'#9fe7ff';
+ const ctx=canvas.getContext('2d'),t=templateFor(r),accent=t.accent||'#f5cf58';
  ctx.drawImage(baseTemplateCanvas(r),0,0);
  const wrap=(value,max,font)=>{ctx.font=font;const words=String(value||'').split(/\\s+/),out=[];let line='';for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){out.push(line);line=word;}else line=test;}if(line)out.push(line);return out;};
- const fitTitle=(value,maxWidth,maxLines)=>{
-  let size=58,lines=[];
-  while(size>=39){lines=wrap(value,maxWidth,'700 '+size+'px Arial');if(lines.length<=maxLines)break;size-=2;}
+ const fit=(value,maxWidth,maxLines,maxSize,minSize)=>{
+  let size=maxSize,lines=[];
+  while(size>=minSize){lines=wrap(value,maxWidth,'800 '+size+'px Arial');if(lines.length<=maxLines)break;size-=2;}
   return {size,lines:lines.slice(0,maxLines)};
  };
- // Top-left type label is intentionally secondary to the actual notice headline.
- ctx.fillStyle='rgba(255,255,255,.13)';ctx.beginPath();ctx.roundRect(62,48,Math.min(360,Math.max(190,kind.length*17+46)),48,24);ctx.fill();
- ctx.fillStyle=accent;ctx.font='800 22px Arial';ctx.textBaseline='middle';ctx.fillText(kind,84,72);
- // Main headline and issuing organisation.
- const titleLayout=fitTitle(title,790,2);
- ctx.fillStyle='#fff';ctx.font='700 '+titleLayout.size+'px Arial';ctx.textBaseline='alphabetic';
- let y=titleLayout.lines.length===1?194:164;
- titleLayout.lines.forEach(line=>{ctx.fillText(line,70,y);y+=titleLayout.size+9;});
- ctx.fillStyle='rgba(239,245,255,.88)';ctx.font='30px Arial';
- const orgLines=wrap(org,790,'30px Arial').slice(0,1);
- if(orgLines[0])ctx.fillText(orgLines[0],72,Math.min(260,y+5));
- // Useful facts appear as compact, readable information chips; absent facts are omitted.
+ // Large headline: no duplicate post-type chip or redundant label.
+ ctx.fillStyle=accent;ctx.fillRect(66,76,7,210);
+ const titleLayout=fit(title,760,2,88,54);
+ ctx.fillStyle='#fff';ctx.font='800 '+titleLayout.size+'px Arial';ctx.textBaseline='alphabetic';
+ let titleY=titleLayout.lines.length===1?208:165;
+ titleLayout.lines.forEach(line=>{ctx.fillText(line,104,titleY);titleY+=titleLayout.size+5;});
+ // Organisation is a prominent secondary line, with a gold rule for hierarchy.
+ const orgLines=wrap(org,760,'500 45px Arial').slice(0,1);
+ ctx.fillStyle='rgba(247,249,255,.94)';ctx.font='500 45px Arial';
+ if(orgLines[0])ctx.fillText(orgLines[0],106,Math.min(300,titleY+8));
+ ctx.fillStyle=accent;ctx.fillRect(106,318,Math.min(490,Math.max(180,ctx.measureText(orgLines[0]||'').width*.72)),5);
+ // Facts are concise and only appear when supported by the notice.
  if(facts.length){
-  let x=70;const baseY=318;
+  let x=106;
   facts.forEach(([label,value])=>{
-   ctx.font='700 15px Arial';const labelW=ctx.measureText(label).width;
-   ctx.font='700 22px Arial';const valueW=ctx.measureText(value).width;
-   const chipW=Math.min(290,Math.max(170,Math.max(labelW,valueW)+34));
-   if(x+chipW>920)return;
-   ctx.fillStyle='rgba(4,12,24,.32)';ctx.beginPath();ctx.roundRect(x,baseY-37,chipW,68,12);ctx.fill();
-   ctx.fillStyle=accent;ctx.font='700 13px Arial';ctx.textBaseline='alphabetic';ctx.fillText(label,x+16,baseY-13);
-   ctx.fillStyle='#fff';ctx.font='700 20px Arial';ctx.fillText(value.length>23?value.slice(0,21)+'…':value,x+16,baseY+15);
-   x+=chipW+12;
+   const val=value.length>19?value.slice(0,17)+'…':value;
+   ctx.font='700 17px Arial';const w=Math.max(155,Math.min(250,ctx.measureText(label).width+ctx.measureText(val).width+44));
+   if(x+w>850)return;
+   ctx.fillStyle='rgba(4,13,27,.38)';ctx.beginPath();ctx.roundRect(x,344,w,55,12);ctx.fill();
+   ctx.fillStyle=accent;ctx.font='700 12px Arial';ctx.textBaseline='alphabetic';ctx.fillText(label,x+13,363);
+   ctx.fillStyle='#fff';ctx.font='700 17px Arial';ctx.fillText(val,x+13,386);
+   x+=w+10;
   });
  }
- // A subtle icon anchors the right-hand visual area without competing with the headline.
- ctx.fillStyle='rgba(255,255,255,.09)';ctx.beginPath();ctx.arc(1035,185,104,0,Math.PI*2);ctx.fill();
- ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='100px Arial';ctx.fillStyle='#fff';ctx.fillText(postIcon(r),1035,180);
- ctx.strokeStyle='rgba(255,255,255,.24)';ctx.lineWidth=2;ctx.beginPath();ctx.arc(1035,185,116,0,Math.PI*2);ctx.stroke();
- // Channel name stays in the lower-right corner as requested.
- ctx.textAlign='right';ctx.textBaseline='alphabetic';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='700 17px Arial';
- ctx.fillText('THE EDUCATOR CAREER UPDATES',1140,392);ctx.textAlign='left';
+ // The post-type symbol is a large visual anchor on the right.
+ ctx.fillStyle='rgba(255,255,255,.07)';ctx.beginPath();ctx.arc(1000,176,127,0,Math.PI*2);ctx.fill();
+ ctx.strokeStyle='rgba(255,255,255,.28)';ctx.lineWidth=2;ctx.beginPath();ctx.arc(1000,176,139,0,Math.PI*2);ctx.stroke();
+ ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='150px Arial';ctx.fillStyle='#fff';ctx.fillText(postIcon(r),1000,174);
+ // Consistent channel lockup: book symbol and name in a gold outlined pill.
+ ctx.fillStyle='rgba(7,20,37,.78)';ctx.strokeStyle=accent;ctx.lineWidth=3;
+ ctx.beginPath();ctx.roundRect(690,330,468,72,36);ctx.fill();ctx.stroke();
+ ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.font='43px Arial';ctx.fillText('♧',730,365);
+ ctx.fillStyle=accent;ctx.fillRect(765,347,2,36);
+ ctx.textAlign='left';ctx.fillStyle='#fff';ctx.font='700 20px Arial';
+ ctx.fillText('THE EDUCATOR CAREER UPDATES',784,366);
+ ctx.textAlign='left';ctx.textBaseline='alphabetic';
  postImageCache.set(r.id,{signature,canvas});return canvas;
 }
 function downloadPostImage(r){const canvas=makePostCanvas(r);const link=document.createElement('a');link.download='the-educator-career-updates-'+(r.post_type&&r.post_type!=='new'?'update':'new-vacancy')+'.png';link.href=canvas.toDataURL('image/png');link.click();}
