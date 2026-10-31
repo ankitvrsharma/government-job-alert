@@ -23,4 +23,36 @@ def load_sources():
     sources = payload.get("sources") if isinstance(payload, dict) else None
     if not isinstance(sources, list):
         raise ValueError("sources/sources.json must contain a 'sources' list")
-    return [s for s in sources if isinstance(s, dict) and s.get("enabled")]
+    merged = [s for s in sources if isinstance(s, dict) and s.get("enabled")]
+
+    # Admin-added URLs live in Supabase so an administrator can add them
+    # without committing source-code changes. The service key stays in Actions.
+    service_key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip()
+    if service_key:
+        import requests
+        base_url = os.getenv("SUPABASE_URL", "https://xmjstmebdbmplsdhrspt.supabase.co").rstrip("/")
+        response = requests.get(
+            f"{base_url}/rest/v1/tracked_sources",
+            params={"select": "name,url,category,allowed_domains,keywords,enabled", "enabled": "eq.true", "order": "created_at.asc", "limit": "500"},
+            headers={"apikey": service_key, "Authorization": f"Bearer {service_key}"},
+            timeout=15,
+        )
+        response.raise_for_status()
+        known = {str(x.get("url", "")).rstrip("/") for x in merged}
+        for row in response.json():
+            url = str(row.get("url", "")).strip()
+            if not url or url.rstrip("/") in known:
+                continue
+            merged.append({
+                "name": row.get("name") or url,
+                "url": url,
+                "category": row.get("category") or "Admin added",
+                "enabled": True,
+                "allowed_domains": row.get("allowed_domains") or [],
+                "keywords": row.get("keywords") or [],
+            })
+            known.add(url.rstrip("/"))
+        print(f"Loaded {len(response.json())} admin-managed source URLs from Supabase.")
+    else:
+        print("SUPABASE_SERVICE_ROLE_KEY not configured; admin-added source URLs will not be loaded in this scan.")
+    return merged
