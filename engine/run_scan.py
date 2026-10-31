@@ -1,4 +1,4 @@
-import csv, hashlib, json, logging, time
+import csv, hashlib, json, logging, os, time
 from datetime import datetime, timezone
 from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME_BUDGET_SECONDS
 from .collector import fetch_source, download_pdf, extract_web_text
@@ -78,8 +78,11 @@ def main():
     state = load_seen(seen_path)
     ids = {x["id"] for x in queue}
     added = candidates = errors = 0
+    bootstrap_existing = os.getenv("BOOTSTRAP_EXISTING_NOTICES", "false").strip().lower() == "true"
     started = time.monotonic()
     deadline = started + SCAN_TIME_BUDGET_SECONDS
+    if bootstrap_existing:
+        log.warning("BOOTSTRAP MODE: rechecking previously seen URLs for current/upcoming exam and recruitment lifecycle notices.")
     sources = load_sources()
     log.info("Scan started: %s enabled sources; Gemini model=%s", len(sources), GEMINI_MODEL)
 
@@ -112,7 +115,7 @@ def main():
                 previous_fingerprint = state.setdefault("snapshots", {}).get(url_key)
                 if previous_fingerprint == digest:
                     continue
-                if previous_fingerprint is None and url_key in state["urls"]:
+                if previous_fingerprint is None and url_key in state["urls"] and not bootstrap_existing:
                     state["snapshots"][url_key] = digest
                     mark(item, digest, state)
                     log.info("Baseline fingerprint saved; no retroactive post: %s", item.get("title"))
