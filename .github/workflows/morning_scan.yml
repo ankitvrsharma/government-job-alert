@@ -1,6 +1,9 @@
 name: Morning recruitment scan
 
 on:
+  push:
+    paths:
+      - "bootstrap/trigger.json"
   schedule:
     - cron: "30 2 * * *"
   workflow_dispatch:
@@ -40,6 +43,7 @@ jobs:
           GEMINI_FALLBACK_MODELS: ${{ vars.GEMINI_FALLBACK_MODELS }}
           MAX_AI_REQUESTS_PER_SCAN: "45"
           SCAN_TIME_BUDGET_SECONDS: "1320"
+          BOOTSTRAP_EXISTING_NOTICES: ${{ github.event_name == 'push' && 'true' || 'false' }}
         run: python -m engine.run_scan
       - name: Sync protected Supabase review queue
         if: success()
