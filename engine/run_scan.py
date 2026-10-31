@@ -4,7 +4,7 @@ from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME
 from .collector import fetch_source, download_pdf, extract_web_text
 from .pdf_text import extract_pdf_text
 from .ai_extract import extract_with_ai
-from .dedupe import load_seen, seen, mark
+from .dedupe import load_seen, seen, mark, norm
 
 logging.basicConfig(
     level=logging.INFO,
@@ -46,6 +46,23 @@ def is_complete_vacancy(row):
         and bool(str(draft.get("recruitment_evidence") or "").strip())
         and len(str(draft.get("summary") or "").strip()) >= 40
     )
+
+def notice_key(draft):
+    ad = str(draft.get('advertisement_number') or '').strip().lower()
+    org = str(draft.get('organisation') or '').strip().lower()
+    posts = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('post_names') or []) if str(x).strip()))
+    identity = ad or posts
+    return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
+
+def changed_fields(old, new):
+    labels = {'vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process'}
+    changes = []
+    for field, label in labels.items():
+        before = str(old.get(field) or '').strip()
+        after = str(new.get(field) or '').strip()
+        if before != after and after:
+            changes.append(label + ': ' + (before or 'Not stated') + ' -> ' + after)
+    return changes
 
 def main():
     queue_path, seen_path = DATA / "review_queue.json", DATA / "seen_items.json"
