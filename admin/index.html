@@ -127,7 +127,7 @@ function render(){
   (d.application_url?'<a href="'+esc(d.application_url)+'" target="_blank" rel="noopener">Application portal ↗</a>':'')+
   (r.source_page?'<a href="'+esc(r.source_page)+'" target="_blank" rel="noopener">Source website ↗</a>':'')+'</div>'+
   '<label class="verify"><input type="checkbox" data-verify="'+esc(r.id)+'" '+(ok?'checked':'')+'> <span><b>I have personally checked the official notification</b> and verified the organisation, post, eligibility, dates and links. This unlocks WhatsApp sharing for this session.</span></label>'+
-  '<div class="actions"><button class="share" type="button" data-share="'+esc(r.id)+'" '+(ok?'':'disabled')+'>↗ Share</button><button class="copy" type="button" data-edit="'+esc(r.id)+'">✎ Edit post</button></div><div class="edit-panel" id="edit-'+esc(r.id)+'" hidden><div class="edit-grid">'+[
+  '<div class="actions"><button class="share" type="button" data-share="'+esc(r.id)+'" '+(ok?'':'disabled')+'>↗ Share</button><button class="copy" type="button" data-edit="'+esc(r.id)+'">✎ Edit post</button><button class="source-delete" type="button" data-discard="'+esc(r.id)+'">✕ Discard</button></div><div class="edit-panel" id="edit-'+esc(r.id)+'" hidden><div class="edit-grid">'+[
 ['title','Post title',titleOf(r),'text'],['organisation','Organisation',d.organisation||r.source_name||'','text'],['summary','Post summary',d.summary||'','textarea'],['exam_name','Examination name',d.exam_name||'','text'],['event_date','Current / revised date',d.event_date||'','text'],['previous_event_date','Previous date',d.previous_event_date||'','text'],['change_reason','Reason / remarks',d.change_reason||'','text'],['vacancy_count','Vacancies',d.vacancy_count||'','text'],['qualification','Qualification',d.qualification||'','text'],['age_limit','Age limit',d.age_limit||'','text'],['application_start_date','Application start date',d.application_start_date||'','text'],['application_end_date','Last date',d.application_end_date||'','text'],['application_fee','Application fee',d.application_fee||'','text'],['selection_process','Selection process',d.selection_process||'','text'],['official_notification_url','Official notification URL',d.official_notification_url||r.candidate_url||'','url'],['application_url','Application URL',d.application_url||'','url'],['important_dates','Important dates (one per line)',(Array.isArray(d.important_dates)?d.important_dates:[]).join('\n'),'textarea'],['change_summary','What changed (one per line)',(Array.isArray(r.change_summary)?r.change_summary:[]).join('\n'),'textarea']
 ].map(x=>'<div class="edit-field '+(['summary','important_dates','change_summary'].includes(x[0])?'full':'')+'"><label>'+x[1]+'</label>'+(x[3]==='textarea'?'<textarea data-field="'+x[0]+'">'+esc(x[2])+'</textarea>':'<input data-field="'+x[0]+'" type="'+x[3]+'" value="'+esc(x[2])+'">')+'</div>').join('')+'</div><div class="edit-actions"><button class="save-edit" type="button" data-save="'+esc(r.id)+'">Save changes</button><button class="cancel-edit" type="button" data-cancel="'+esc(r.id)+'">Cancel</button></div><div class="summary" data-edit-status="'+esc(r.id)+'" aria-live="polite"></div></div></article>';
  }).join('');
@@ -250,6 +250,18 @@ function openEditor(id){
  const panel=$('edit-'+id);if(panel)panel.hidden=false;
 }
 function closeEditor(id){const panel=$('edit-'+id);if(panel)panel.hidden=true;}
+async function discardPost(id){
+ const r=records.find(x=>x.id===id);if(!r)return;
+ if(!confirm('Discard this post from the review queue? Use this when it is not useful or you have already posted it on social media. It will be removed from the queue and will not be re-added by future scans.'))return;
+ const button=jobsEl.querySelector('[data-discard="'+CSS.escape(id)+'"]');if(button)button.disabled=true;
+ const {data:userData,error:userError}=await sb.auth.getUser();
+ if(userError||!userData.user){if(button)button.disabled=false;alert('Your admin session could not be verified. Please sign in again.');return;}
+ const {error:markError}=await sb.from('dismissed_job_posts').upsert({id,dismissed_by:userData.user.id,reason:'discarded_by_admin'},{onConflict:'id'});
+ if(markError){if(button)button.disabled=false;alert('Could not record the discard: '+markError.message);return;}
+ const {data,error}=await sb.from('job_alert_queue').delete().eq('id',id).select('id').maybeSingle();
+ if(error){if(button)button.disabled=false;alert('Discard was recorded, but the queue row could not be removed: '+error.message+'. It will be suppressed on the next scan; refresh the queue shortly.');return;}
+ records=records.filter(x=>x.id!==id);verified.delete(id);render();
+}
 async function saveEditor(id,button){
  const r=records.find(x=>x.id===id);if(!r)return;
  const panel=$('edit-'+id),status=panel.querySelector('[data-edit-status]');
@@ -272,7 +284,8 @@ async function saveEditor(id,button){
  const reopened=$('edit-'+id);if(reopened){reopened.hidden=false;const msg=reopened.querySelector('[data-edit-status]');if(msg)msg.textContent='Changes saved. Please verify the edited official details again before sharing.';}
 }
 jobsEl.addEventListener('click',async e=>{
- const edit=e.target.closest('[data-edit]'),cancel=e.target.closest('[data-cancel]'),save=e.target.closest('[data-save]'),share=e.target.closest('[data-share]');
+ const edit=e.target.closest('[data-edit]'),cancel=e.target.closest('[data-cancel]'),save=e.target.closest('[data-save]'),share=e.target.closest('[data-share]'),discard=e.target.closest('[data-discard]');
+ if(discard){await discardPost(discard.dataset.discard);return;}
  if(edit){openEditor(edit.dataset.edit);return;}
  if(cancel){closeEditor(cancel.dataset.cancel);return;}
  if(save){await saveEditor(save.dataset.save,save);return;}
