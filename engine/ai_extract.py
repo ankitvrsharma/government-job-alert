@@ -40,7 +40,7 @@ def extract_with_ai(text, title, url):
 
     prompt = f"""Extract facts from this official Indian recruitment notice.
 Return only facts supported by the text. Never guess; use null or [] when absent.
-This queue is ONLY for actual employment vacancies. Set is_recruitment_notice=true only if this document itself advertises paid employment posts and invites applications/interviews. Exam notices (including UGC-NET/JRF/Assistant Professor eligibility), exam calendars, results, answer keys, admit cards, admissions, academic fellowships, training, internships, proposals, EoIs, consultancy, general announcements and generic career pages are NOT job vacancies. A post title or keyword alone is not proof. For true recruitment, provide named post_names and recruitment_evidence quoting the document's invitation to apply/interview. If uncertain, set false. Extract all available recruitment details and write a useful factual summary.
+Classify this as a government recruitment/examination lifecycle notice when it contains a concrete official update relevant to a government job, recruitment process or competitive examination. Supported categories: vacancy, exam_calendar, exam_schedule, exam_date_change, exam_postponed, exam_cancelled, admit_card, application_update, corrigendum, answer_key, result, scorecard, cut_off, interview_schedule, selection_update, document_verification, other_recruitment_update. Exclude admissions, academic course calendars, generic career pages, unrelated announcements, coaching promotions and non-government events. A title/keyword alone is not proof. Extract the exact event, affected exam/recruitment, dates, changed-from/to details and official evidence. For vacancy notices, require named employment posts and explicit invitation to apply/interview. For all other categories, require event_evidence that supports the specific update. If uncertain or unrelated, set is_relevant_notice=false. Write a useful factual summary without guessing.
 Title: {title}
 URL: {url}
 DOCUMENT:
@@ -49,7 +49,16 @@ DOCUMENT:
     schema = types.Schema(
         type=types.Type.OBJECT,
         properties={
+            "is_relevant_notice": types.Schema(type=types.Type.BOOLEAN),
             "is_recruitment_notice": types.Schema(type=types.Type.BOOLEAN),
+            "post_category": types.Schema(type=types.Type.STRING, nullable=True),
+            "event_type": types.Schema(type=types.Type.STRING, nullable=True),
+            "event_evidence": types.Schema(type=types.Type.STRING, nullable=True),
+            "exam_name": types.Schema(type=types.Type.STRING, nullable=True),
+            "related_notice": types.Schema(type=types.Type.STRING, nullable=True),
+            "event_date": types.Schema(type=types.Type.STRING, nullable=True),
+            "previous_event_date": types.Schema(type=types.Type.STRING, nullable=True),
+            "change_reason": types.Schema(type=types.Type.STRING, nullable=True),
             "recruitment_evidence": types.Schema(type=types.Type.STRING, nullable=True),
             "notice_type": types.Schema(type=types.Type.STRING, nullable=True),
             "organisation": types.Schema(type=types.Type.STRING, nullable=True),
@@ -68,7 +77,7 @@ DOCUMENT:
             "summary": types.Schema(type=types.Type.STRING, nullable=True),
             "uncertainties": types.Schema(type=types.Type.ARRAY, items=types.Schema(type=types.Type.STRING)),
         },
-        required=["is_recruitment_notice", "post_names", "important_dates", "uncertainties"]
+        required=["is_relevant_notice", "is_recruitment_notice", "post_names", "important_dates", "uncertainties"]
     )
 
     client = genai.Client(api_key=GEMINI_API_KEY)
