@@ -315,11 +315,13 @@ function makePostCanvas(r){
  ctx.fillStyle=accent;ctx.font='800 27px Arial';ctx.textBaseline='alphabetic';
  ctx.fillText(kind,78,112);
  ctx.fillStyle='#fff';ctx.font='700 57px Arial';
- const titleLines=wrap(title,850,'700 57px Arial').slice(0,2);
+ const titleLines=wrap(title,790,'700 57px Arial').slice(0,2);
  let y=205;titleLines.forEach(line=>{ctx.fillText(line,78,y);y+=66;});
  ctx.fillStyle='#e7edf6';ctx.font='36px Arial';
- const orgLines=wrap(org,860,'36px Arial').slice(0,2);
+ const orgLines=wrap(org,800,'36px Arial').slice(0,2);
  orgLines.forEach(line=>{ctx.fillText(line,80,y+2);y+=44;});
+ // A restrained type-relevant symbol balances the title without adding extra copy.
+ ctx.textAlign='center';ctx.font='112px Arial';ctx.fillStyle='#fff';ctx.fillText(postIcon(r),1030,230);
  // Channel attribution is deliberately small and anchored at the lower-right corner.
  ctx.textAlign='right';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='700 20px Arial';
  ctx.fillText('THE EDUCATOR CAREER UPDATES',1120,350);ctx.textAlign='left';
