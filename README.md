@@ -73,3 +73,12 @@ To sync each scan into the protected Supabase admin queue:
 4. Run **Actions → Morning recruitment scan → Run workflow** (or wait for the scheduled scan).
 
 The workflow syncs only complete vacancy records to the protected Supabase table and removes stale records. If the secret is absent, the sync step safely skips database syncing.
+
+
+## Change-driven post generation
+
+The scanner fingerprints the readable content of each tracked candidate URL on every scheduled scan. Unchanged content is ignored. Existing URLs from the pre-change tracker are baselined once, so the first run does not create retroactive posts for old notices. After baselining, a post is created only when a new vacancy notice is discovered or a tracked notice changes materially.
+
+Recruitment notices are matched by organisation plus advertisement number (or post names when no advertisement number exists). Material changes to post names, vacancy count, qualification, age limit, application dates, fee, selection process or application link create an update post linked to the previous post. Application deadline changes are labelled separately as deadline-extension updates. Non-recruitment content and changes that do not alter recruitment details are not posted.
+
+The admin review page generates branded 1080×1080 PNG artwork for each post: a new-vacancy design, an update design, or a deadline-extension design. Admins can download the image or use the device share sheet where image sharing is supported. WhatsApp text sharing remains behind the manual verification checkbox; nothing is auto-published.
