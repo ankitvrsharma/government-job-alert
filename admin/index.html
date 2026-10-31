@@ -64,7 +64,12 @@ button,.btn{border:0;border-radius:10px;padding:11px 15px;font:600 14px system-u
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.57.0';
 const SUPABASE_URL = 'https://xmjstmebdbmplsdhrspt.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_pQ7D0FUOoF3t-SJf6bhLBw_G8vBy2z3';
-const sb = createClient(SUPABASE_URL, SUPABASE_KEY, { auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true} });
+// Keep the Supabase refresh-token session in persistent browser storage.
+ // Use the standard project auth key so existing signed-in browsers keep their session.
+ const sb = createClient(SUPABASE_URL, SUPABASE_KEY, { auth:{
+  persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,
+  storage:window.localStorage,storageKey:'sb-xmjstmebdbmplsdhrspt-auth-token'
+ } });
 let adminAccessToken=null;
 const $=id=>document.getElementById(id);
 async function protectedRest(path,timeoutMs=18000){
@@ -396,8 +401,40 @@ jobsEl.addEventListener('click',async e=>{
  if(share){const r=records.find(x=>x.id===share.dataset.share);if(r)await prepareWhatsAppChannelPost(r);}
 });
 
-sb.auth.getSession().then(({data})=>{if(data.session)enterDashboard(data.session);});
-sb.auth.onAuthStateChange((_event,session)=>{adminAccessToken=session?.access_token||null;if(!session){dashboard.style.display='none';loginPanel.style.display='block';}});
+let dashboardSessionUser=null,sessionBootstrapDone=false;
+sb.auth.onAuthStateChange((event,session)=>{
+ adminAccessToken=session?.access_token||null;
+ if(!session){
+  dashboardSessionUser=null;
+  dashboard.style.display='none';loginPanel.style.display='block';
+  return;
+ }
+ // Supabase emits INITIAL_SESSION after restoring the persisted browser session.
+ if(event==='INITIAL_SESSION'||event==='SIGNED_IN'||event==='TOKEN_REFRESHED'){
+  if(dashboardSessionUser!==session.user.id){
+   dashboardSessionUser=session.user.id;
+   setTimeout(()=>enterDashboard(session),0);
+  }
+ }
+});
+(async()=>{
+ try{
+  const {data,error}=await withTimeout(sb.auth.getSession(),12000,'Session restore');
+  if(error)throw error;
+  if(data.session){
+   if(dashboardSessionUser!==data.session.user.id){
+    dashboardSessionUser=data.session.user.id;
+    await enterDashboard(data.session);
+   }
+  }else{
+   loginPanel.style.display='block';dashboard.style.display='none';
+  }
+ }catch(error){
+  loginPanel.style.display='block';dashboard.style.display='none';
+  authMessage.textContent='Could not restore your saved admin session: '+(error.message||String(error))+' Sign in again once; keep browser site storage enabled.';
+ }
+ sessionBootstrapDone=true;
+})();
 </script>
 </body>
 </html>
