@@ -162,7 +162,7 @@ def main():
                     "local_pdf": str(local.relative_to(DATA)) if local else None,
                     "review_status": "pending_review",
                     "human_verified": False,
-                    "post_type": "update" if prior else "new",
+                    "post_type": ("deadline_extension" if any(change.startswith("Last date:") for change in changes) else "update") if prior else "new",
                     "previous_post_id": prior.get("id") if prior else None,
                     "change_summary": changes,
                     "ai_draft": draft
