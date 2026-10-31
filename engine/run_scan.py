@@ -72,7 +72,13 @@ def main():
                              "note": "Page-specific HTML extraction is not implemented yet."}
                 ident = hashlib.sha256((item["url"] + (digest or "")).encode()).hexdigest()[:16]
                 if ident in ids:
-                    mark(item, digest, state)
+                    existing = next((row for row in queue if row.get("id") == ident), None)
+                    old_draft = existing.get("ai_draft", {}) if existing else {}
+                    if existing and isinstance(old_draft, dict) and old_draft.get("status") in ("ai_quota_exceeded", "ai_error") and draft.get("status") == "ai_draft":
+                        existing["ai_draft"] = draft
+                        log.info("Updated AI draft for previously queued candidate: %s", ident)
+                    if draft.get("status") != "ai_quota_exceeded":
+                        mark(item, digest, state)
                     continue
                 queue.append({
                     "id": ident,
@@ -88,7 +94,10 @@ def main():
                     "ai_draft": draft
                 })
                 ids.add(ident)
-                mark(item, digest, state)
+                if draft.get("status") != "ai_quota_exceeded":
+                    mark(item, digest, state)
+                else:
+                    log.info("Candidate queued for later AI retry after quota reset: %s", ident)
                 added += 1
             except Exception as exc:
                 errors += 1
