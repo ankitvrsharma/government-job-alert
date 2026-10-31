@@ -1,0 +1,40 @@
+name: Validate recruitment scanner and admin UI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "engine/**"
+      - "admin/index.html"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Python modules
+        run: python -m compileall -q engine
+      - name: Validate admin JavaScript syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path("admin/index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r'<script type="module">(.*?)</script>', html, re.S)
+          if len(scripts) != 1:
+              raise SystemExit(f"Expected one module script, found {len(scripts)}")
+          Path("/tmp/admin-check.mjs").write_text(scripts[0], encoding="utf-8")
+          PY
+          node --check /tmp/admin-check.mjs
+      - name: Validate tracked state and queue JSON
+        run: |
+          python -m json.tool data/seen_items.json > /dev/null
+          python -m json.tool data/review_queue.json > /dev/null
