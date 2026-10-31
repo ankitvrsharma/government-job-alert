@@ -67,12 +67,13 @@ const sb = createClient(SUPABASE_URL, SUPABASE_KEY, { auth:{persistSession:true,
 const $=id=>document.getElementById(id);
 const loginPanel=$('loginPanel'), dashboard=$('dashboard'), authMessage=$('authMessage'), jobsEl=$('jobs');
 let records=[],verified=new Set();
-const clean=v=>v===null||v===undefined||v===''?'Not stated':String(v);
+const clean=v=>v===null||v===undefined||v===''?'':String(v);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const draftOf=r=>r.ai_draft&&typeof r.ai_draft==='object'?r.ai_draft:{};
 const titleOf=r=>{const d=draftOf(r);return(d.post_names&&d.post_names.length?d.post_names.join(', '):'')||r.candidate_title||d.notice_type||'Recruitment notice';};
-const summaryOf=r=>draftOf(r).summary||draftOf(r).note||'Open the official notification to review complete details.';
-const endDate=r=>draftOf(r).application_end_date||'Not stated';
+const summaryOf=r=>draftOf(r).summary||'';
+const endDate=r=>draftOf(r).application_end_date||'';
+const hasVacancyContent=r=>{const d=draftOf(r);return d.is_recruitment_notice===true&&Array.isArray(d.post_names)&&d.post_names.some(x=>String(x).trim())&&String(d.recruitment_evidence||'').trim()&&String(d.summary||'').trim().length>=40;};
 function shareText(r){
  const d=draftOf(r),lines=['📢 GOVERNMENT JOB / EXAM UPDATE','',titleOf(r),'Organisation: '+(d.organisation||r.source_name||'Not stated')];
  if(d.vacancy_count)lines.push('Vacancies: '+d.vacancy_count);
@@ -92,6 +93,7 @@ function render(){
  const q=$('search').value.trim().toLowerCase(),f=$('filter').value;
  const filtered=records.filter(r=>{
   const d=draftOf(r),ok=verified.has(r.id),hay=[r.source_name,r.candidate_title,r.candidate_url,d.organisation,d.notice_type,d.summary,(d.post_names||[]).join(' ')].join(' ').toLowerCase();
+  if(!hasVacancyContent(r))return false;
   if(q&&!hay.includes(q))return false;
   if(f==='pending'&&r.human_verified===true)return false;
   if(f==='draft'&&d.status!=='ai_draft')return false;
@@ -104,11 +106,13 @@ function render(){
  if(!filtered.length){jobsEl.innerHTML='<div class="empty">No matching notices found.</div>';return;}
  jobsEl.innerHTML=filtered.map(r=>{
   const d=draftOf(r),ok=verified.has(r.id),official=d.official_notification_url||r.candidate_url;
-  const dates=Array.isArray(d.important_dates)?d.important_dates.slice(0,3).join(' · '):'';
-  return '<article class="job"><div class="jobtop"><div><div class="org">'+esc(d.organisation||r.source_name||'Source not stated')+'</div><h2>'+esc(titleOf(r))+'</h2></div><span class="pill">'+esc(d.status||r.review_status||'pending review')+'</span></div>'+
-  '<p class="summary">'+esc(summaryOf(r))+'</p><div class="details">'+
-  '<div class="detail"><small>Vacancies</small><b>'+esc(clean(d.vacancy_count))+'</b></div><div class="detail"><small>Last date</small><b>'+esc(endDate(r))+'</b></div><div class="detail"><small>Advertisement no.</small><b>'+esc(clean(d.advertisement_number))+'</b></div></div>'+
-  (dates?'<p class="summary"><b>Important dates:</b> '+esc(dates)+'</p>':'')+
+  const fields=[['Vacancies',d.vacancy_count],['Advertisement no.',d.advertisement_number],['Qualification',d.qualification],['Age limit',d.age_limit],['Application starts',d.application_start_date],['Last date',d.application_end_date],['Application fee',d.application_fee],['Selection process',d.selection_process]].filter(x=>clean(x[1]));
+  const dates=Array.isArray(d.important_dates)?d.important_dates.filter(Boolean):[];
+  return '<article class="job"><div class="jobtop"><div><div class="org">'+esc(d.organisation||r.source_name||'Organisation')+'</div><h2>'+esc(titleOf(r))+'</h2></div><span class="pill">Vacancy notice</span></div>'+
+  '<p class="summary">'+esc(summaryOf(r))+'</p><div class="details">'+fields.map(x=>'<div class="detail"><small>'+esc(x[0])+'</small><b>'+esc(x[1])+'</b></div>').join('')+'</div>'+
+  (dates.length?'<p class="summary"><b>Important dates</b><br>'+dates.map(esc).join('<br>')+'</p>':'')+
+  (d.recruitment_evidence?'<p class="summary"><b>Recruitment evidence</b><br>'+esc(d.recruitment_evidence)+'</p>':'')+
+  (Array.isArray(d.uncertainties)&&d.uncertainties.length?'<p class="summary"><b>Points to verify</b><br>'+d.uncertainties.map(esc).join('<br>')+'</p>':'')+
   '<div class="links">'+(official?'<a href="'+esc(official)+'" target="_blank" rel="noopener">Open official notice ↗</a>':'')+
   (d.application_url?'<a href="'+esc(d.application_url)+'" target="_blank" rel="noopener">Application portal ↗</a>':'')+
   (r.source_page?'<a href="'+esc(r.source_page)+'" target="_blank" rel="noopener">Source website ↗</a>':'')+'</div>'+
@@ -120,7 +124,7 @@ async function loadQueue(){
  jobsEl.innerHTML='<div class="empty">Loading secure queue…</div>';
  const {data,error}=await sb.from('job_alert_queue').select('payload').order('updated_at',{ascending:false}).limit(1000);
  if(error){jobsEl.innerHTML='<div class="empty">Could not load protected queue: '+esc(error.message)+'</div>';return;}
- records=(data||[]).map(x=>x.payload);render();
+ records=(data||[]).map(x=>x.payload).filter(hasVacancyContent);render();
 }
 async function enterDashboard(session){
  const {data:admin,error}=await sb.from('admin_users').select('user_id,email').eq('user_id',session.user.id).maybeSingle();
