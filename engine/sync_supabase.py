@@ -34,6 +34,16 @@ def main():
                 and (vacancy or draft.get("event_type") or draft.get("post_category"))):
             valid.append({"id": row["id"], "payload": row})
 
+    dismissed_response = requests.get(
+        f"{BASE_URL}/rest/v1/dismissed_job_posts",
+        params={"select": "id", "limit": "5000"},
+        headers=headers,
+        timeout=30,
+    )
+    dismissed_response.raise_for_status()
+    dismissed_ids = {row["id"] for row in dismissed_response.json()}
+    valid = [row for row in valid if row["id"] not in dismissed_ids]
+
     # Upsert current records first, so a transient cleanup failure never loses current data.
     for start in range(0, len(valid), 50):
         batch = valid[start:start + 50]
@@ -64,7 +74,7 @@ def main():
             timeout=30,
         )
         response.raise_for_status()
-    print(f"Supabase queue sync complete: {len(valid)} complete recruitment/exam notices; {len(stale)} stale records removed.")
+    print(f"Supabase queue sync complete: {len(valid)} active recruitment/exam notices; {len(dismissed_ids)} admin-dismissed posts suppressed; {len(stale)} stale records removed.")
 
 if __name__ == "__main__":
     try:
