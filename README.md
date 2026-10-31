@@ -89,3 +89,8 @@ The admin review page generates branded 1080×1080 PNG artwork for each post: ev
 Administrators can add, pause, enable or remove official websites from **Admin → Add websites to monitor**. Add the organisation name and an HTTPS recruitment/notices page URL. The URL is saved in the protected Supabase `tracked_sources` table; no source-code edit or GitHub commit is needed. New active URLs are picked up automatically by the next morning/evening scan. Existing built-in sources remain unchanged.
 
 Only HTTPS URLs are accepted. The scanner derives the allowed host from the submitted URL, follows same-host links, checks `robots.txt`, and applies the system's recruitment/exam keywords and human-review rules. A newly added source is not scanned immediately; it enters the next scheduled run. Pausing or removing a source prevents future scans but does not delete already queued posts. The Supabase service-role key is used only in GitHub Actions and is never exposed to the browser.
+
+
+### Discarding reviewed queue posts
+
+Administrators can discard a notice from its review card when it is irrelevant or has already been shared. The item is removed from the live queue and a protected dismissal marker is retained in Supabase, so scheduled scans do not re-import the same post from the repository queue. Dismissal markers are only visible to authorised administrators and the scanner service role.
