@@ -12,7 +12,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
 # Ordered newest-to-older fallback chain. Override with GEMINI_FALLBACK_MODELS if needed.
 _DEFAULT_FALLBACKS = ["gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
 GEMINI_FALLBACK_MODELS = [
-    model.strip() for model in os.getenv("GEMINI_FALLBACK_MODELS", ",".join(_DEFAULT_FALLBACKS)).split(",")
+    model.strip() for model in (os.getenv("GEMINI_FALLBACK_MODELS", "").strip() or ",".join(_DEFAULT_FALLBACKS)).split(",")
     if model.strip() and model.strip() != GEMINI_MODEL
 ]
 MAX_AI_REQUESTS_PER_SCAN = max(1, int(os.getenv("MAX_AI_REQUESTS_PER_SCAN", "45")))
