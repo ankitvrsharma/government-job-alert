@@ -20,6 +20,12 @@ Never put the API key in a repository file.
 ## Run manually
 Open **Actions**, choose Morning or Evening recruitment scan, select **Run workflow**, and run it on `main`.
 
+## Admin panel and WhatsApp sharing
+
+A responsive review dashboard is available at `/admin/` when GitHub Pages is enabled. It reads the latest public review queue, supports search and filters, and provides WhatsApp share/copy-message actions. Sharing is locked until the reviewer confirms they checked the official notification. The confirmation is session-only and does not write back to the queue. WhatsApp opens a prefilled message; a person must press Send.
+
+To publish the dashboard, set **Settings → Pages → Build and deployment → Source: GitHub Actions**, then run the **Deploy admin panel** workflow. The panel and queue are public because this repository is public. Do not add credentials or private data.
+
 ## Review
 Inspect `data/review_queue.csv` or `data/review_queue.json`. Verify every field against the official notification before changing its review status. No social channel is automatically posted to.
 
