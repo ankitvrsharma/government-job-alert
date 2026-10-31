@@ -36,9 +36,25 @@ def write_json(path, value):
     tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     tmp.replace(path)
 
+def is_complete_vacancy(row):
+    draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
+    posts = draft.get("post_names")
+    return (
+        draft.get("status") == "ai_draft"
+        and draft.get("is_recruitment_notice") is True
+        and isinstance(posts, list) and any(str(post).strip() for post in posts)
+        and bool(str(draft.get("recruitment_evidence") or "").strip())
+        and len(str(draft.get("summary") or "").strip()) >= 40
+    )
+
 def main():
     queue_path, seen_path = DATA / "review_queue.json", DATA / "seen_items.json"
-    queue, state = read_queue(queue_path), load_seen(seen_path)
+    old_queue = read_queue(queue_path)
+    queue = [row for row in old_queue if is_complete_vacancy(row)]
+    removed = len(old_queue) - len(queue)
+    if removed:
+        log.info("Removed %s incomplete/non-vacancy records from the review queue.", removed)
+    state = load_seen(seen_path)
     ids = {x["id"] for x in queue}
     added = candidates = errors = 0
     started = time.monotonic()
