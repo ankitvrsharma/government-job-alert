@@ -1,7 +1,7 @@
 import csv, hashlib, json, logging, time
 from datetime import datetime, timezone
 from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME_BUDGET_SECONDS
-from .collector import fetch_source, download_pdf
+from .collector import fetch_source, download_pdf, extract_web_text
 from .pdf_text import extract_pdf_text
 from .ai_extract import extract_with_ai
 from .dedupe import load_seen, seen, mark
@@ -74,10 +74,23 @@ def main():
                     body = extract_pdf_text(local)
                     draft = extract_with_ai(body, item["title"], item["url"])
                 else:
-                    body = f"Discovered page: {item['title']}\n{item['url']}"
-                    draft = {"status": "needs_source_adapter",
-                             "raw_text_excerpt": body,
-                             "note": "Page-specific HTML extraction is not implemented yet."}
+                    body = extract_web_text(item)
+                    draft = extract_with_ai(body, item["title"], item["url"])
+
+                # Never queue title-only, unreadable, non-vacancy or uncertain candidates.
+                if draft.get("status") != "ai_draft":
+                    log.info("Not queued: extraction incomplete for %s (%s)", item.get("title"), draft.get("status"))
+                    continue
+                posts = draft.get("post_names")
+                evidence = str(draft.get("recruitment_evidence") or "").strip()
+                summary = str(draft.get("summary") or "").strip()
+                if (draft.get("is_recruitment_notice") is not True
+                        or not isinstance(posts, list) or not any(str(p).strip() for p in posts)
+                        or not evidence or len(summary) < 40):
+                    log.info("Not queued: no verifiable vacancy evidence/content for %s", item.get("title"))
+                    mark(item, digest, state)
+                    continue
+
                 ident = hashlib.sha256((item["url"] + (digest or "")).encode()).hexdigest()[:16]
                 if ident in ids:
                     existing = next((row for row in queue if row.get("id") == ident), None)
