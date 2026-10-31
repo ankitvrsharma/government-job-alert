@@ -254,28 +254,34 @@ const WHATSAPP_CHANNEL_URL='https://whatsapp.com/channel/0029VbDHMMX11ulVHstCUr3
 async function prepareWhatsAppChannelPost(r){
  const status=jobsEl.querySelector('[data-channel-status="'+CSS.escape(r.id)+'"]');
  const text=shareText(r),canvas=makePostCanvas(r);
- // Open the channel immediately in the click gesture so Chrome does not block the popup.
- const channelTab=window.open(WHATSAPP_CHANNEL_URL,'_blank','noopener');
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
  if(!blob){if(status)status.textContent='Could not prepare the post image. Please try again.';return;}
  const slug=String(r.post_type||'vacancy').toLowerCase().replace(/[^a-z0-9-]+/g,'-');
- const link=document.createElement('a');
- link.download='educator-career-updates-'+slug+'.png';
- const objectUrl=URL.createObjectURL(blob);link.href=objectUrl;
+ const file=new File([blob],'educator-career-updates-'+slug+'.png',{type:'image/png'});
+ // Chrome's native share sheet is the only supported browser route to pass an image and caption together.
+ if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+  try{
+   await navigator.share({files:[file],title:postLabel(r),text});
+   if(status)status.textContent='Shared to the app you selected. If WhatsApp offers your channel as a destination, select it and confirm the update there. The admin panel cannot preselect a channel or press Publish for you.';
+   return;
+  }catch(error){
+   if(error.name==='AbortError'){if(status)status.textContent='Sharing cancelled. Nothing was published.';return;}
+   console.warn('Native file sharing unavailable; using manual preparation fallback.',error);
+  }
+ }
+ // Fallback for Chrome/browser contexts that cannot share files.
+ const channelTab=window.open(WHATSAPP_CHANNEL_URL,'_blank','noopener');
+ const link=document.createElement('a'),objectUrl=URL.createObjectURL(blob);
+ link.download='educator-career-updates-'+slug+'.png';link.href=objectUrl;
  document.body.appendChild(link);link.click();link.remove();
  setTimeout(()=>URL.revokeObjectURL(objectUrl),30000);
- let copied=false;
- try{await navigator.clipboard.writeText(text);copied=true;}catch(error){console.warn('Clipboard write unavailable',error);}
+ let copied=false;try{await navigator.clipboard.writeText(text);copied=true;}catch(error){console.warn('Clipboard write unavailable',error);}
  if(status){
-  status.innerHTML='';
-  const message=document.createElement('div');
-  message.textContent=copied
-   ?'Caption copied. Image download started. In the WhatsApp Channel tab, attach the downloaded PNG and paste the caption before publishing.'
-   :'Image download started. Chrome did not allow automatic caption copying; use the Copy caption button, then attach the PNG in your channel.';
-  status.appendChild(message);
-  const linkEl=document.createElement('a');linkEl.href=WHATSAPP_CHANNEL_URL;linkEl.target='_blank';linkEl.rel='noopener';linkEl.textContent=channelTab?'Open WhatsApp Channel':'Open WhatsApp Channel (if the tab did not open)';
-  linkEl.style.cssText='display:inline-block;margin-top:7px;color:#7dd3fc';
-  status.appendChild(linkEl);
+  status.textContent=copied
+   ?'This Chrome context cannot share image files directly. Caption copied and image downloaded. Open the WhatsApp Channel, attach the PNG and paste the caption.'
+   :'Image downloaded. Use Copy Caption, then attach the PNG in your WhatsApp Channel.';
+  const linkEl=document.createElement('a');linkEl.href=WHATSAPP_CHANNEL_URL;linkEl.target='_blank';linkEl.rel='noopener';linkEl.textContent=channelTab?'Open WhatsApp Channel':'Open WhatsApp Channel';
+  linkEl.style.cssText='display:inline-block;margin-top:7px;color:#7dd3fc';status.appendChild(document.createTextNode(' '));status.appendChild(linkEl);
  }
 }
 function openEditor(id){
