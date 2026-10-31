@@ -36,26 +36,30 @@ def write_json(path, value):
     tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     tmp.replace(path)
 
-def is_complete_vacancy(row):
+def is_complete_notice(row):
     draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
-    posts = draft.get("post_names")
+    category = str(draft.get("post_category") or "").strip().lower()
+    vacancy = category == "vacancy" or draft.get("is_recruitment_notice") is True
+    evidence = draft.get("recruitment_evidence") if vacancy else draft.get("event_evidence")
     return (
         draft.get("status") == "ai_draft"
-        and draft.get("is_recruitment_notice") is True
-        and isinstance(posts, list) and any(str(post).strip() for post in posts)
-        and bool(str(draft.get("recruitment_evidence") or "").strip())
+        and (draft.get("is_relevant_notice") is True or draft.get("is_recruitment_notice") is True)
+        and bool(evidence and str(evidence).strip())
         and len(str(draft.get("summary") or "").strip()) >= 40
+        and (not vacancy or (isinstance(draft.get("post_names"), list) and any(str(p).strip() for p in draft["post_names"])))
+        and (vacancy or bool(draft.get("event_type") or category))
     )
 
 def notice_key(draft):
     ad = str(draft.get('advertisement_number') or '').strip().lower()
     org = str(draft.get('organisation') or '').strip().lower()
     posts = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('post_names') or []) if str(x).strip()))
-    identity = ad or posts
+    subject = str(draft.get('exam_name') or draft.get('related_notice') or '').strip().lower()
+    identity = ad or posts or subject
     return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
 
 def changed_fields(old, new):
-    labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link'}
+    labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link','event_type':'Event type','event_date':'New event date','previous_event_date':'Previous event date','change_reason':'Reason','exam_name':'Examination','important_dates':'Important dates','related_notice':'Related notice'}
     changes = []
     for field, label in labels.items():
         before = '; '.join(old.get(field) or []) if isinstance(old.get(field), list) else str(old.get(field) or '').strip()
@@ -67,7 +71,7 @@ def changed_fields(old, new):
 def main():
     queue_path, seen_path = DATA / "review_queue.json", DATA / "seen_items.json"
     old_queue = read_queue(queue_path)
-    queue = [row for row in old_queue if is_complete_vacancy(row)]
+    queue = [row for row in old_queue if is_complete_notice(row)]
     removed = len(old_queue) - len(queue)
     if removed:
         log.info("Removed %s incomplete/non-vacancy records from the review queue.", removed)
@@ -123,9 +127,12 @@ def main():
                 posts = draft.get("post_names")
                 evidence = str(draft.get("recruitment_evidence") or "").strip()
                 summary = str(draft.get("summary") or "").strip()
-                if (draft.get("is_recruitment_notice") is not True
-                        or not isinstance(posts, list) or not any(str(p).strip() for p in posts)
-                        or not evidence or len(summary) < 40):
+                is_vacancy = draft.get("post_category") == "vacancy" or draft.get("is_recruitment_notice") is True
+                proof = evidence if is_vacancy else str(draft.get("event_evidence") or "").strip()
+                if ((draft.get("is_relevant_notice") is not True and not is_vacancy)
+                        or (is_vacancy and (not isinstance(posts, list) or not any(str(p).strip() for p in posts)))
+                        or not proof or len(summary) < 40
+                        or (not is_vacancy and not (draft.get("event_type") or draft.get("post_category")))):
                     log.info("Not queued: no verifiable vacancy evidence/content for %s", item.get("title"))
                     state["snapshots"][url_key] = digest
                     mark(item, digest, state)
@@ -162,7 +169,7 @@ def main():
                     "local_pdf": str(local.relative_to(DATA)) if local else None,
                     "review_status": "pending_review",
                     "human_verified": False,
-                    "post_type": ("deadline_extension" if any(change.startswith("Last date:") for change in changes) else "update") if prior else "new",
+                    "post_type": (("deadline_extension" if any(change.startswith("Last date:") for change in changes) else "update") if prior else "new") if is_vacancy else (str(draft.get("event_type") or draft.get("post_category") or "recruitment_update").lower()),
                     "previous_post_id": prior.get("id") if prior else None,
                     "change_summary": changes,
                     "ai_draft": draft
