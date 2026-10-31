@@ -1,6 +1,6 @@
-import csv, hashlib, json, logging
+import csv, hashlib, json, logging, os, time
 from datetime import datetime, timezone
-from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL
+from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME_BUDGET_SECONDS
 from .collector import fetch_source, download_pdf
 from .pdf_text import extract_pdf_text
 from .ai_extract import extract_with_ai
@@ -41,10 +41,15 @@ def main():
     queue, state = read_queue(queue_path), load_seen(seen_path)
     ids = {x["id"] for x in queue}
     added = candidates = errors = 0
+    started = time.monotonic()
+    deadline = started + SCAN_TIME_BUDGET_SECONDS
     sources = load_sources()
     log.info("Scan started: %s enabled sources; Gemini model=%s", len(sources), GEMINI_MODEL)
 
     for source in sources:
+        if time.monotonic() >= deadline:
+            log.warning("Scan time budget reached; stopping discovery safely before the workflow timeout.")
+            break
         name = source.get("name", "(unnamed source)")
         try:
             items = fetch_source(source)
@@ -53,6 +58,9 @@ def main():
             log.exception("Source failed %s: %s", name, exc)
             continue
         for item in items:
+            if time.monotonic() >= deadline:
+                log.warning("Scan time budget reached while processing %s; remaining items will be rediscovered next run.", name)
+                break
             candidates += 1
             try:
                 if seen(item, None, state):
@@ -74,10 +82,10 @@ def main():
                 if ident in ids:
                     existing = next((row for row in queue if row.get("id") == ident), None)
                     old_draft = existing.get("ai_draft", {}) if existing else {}
-                    if existing and isinstance(old_draft, dict) and old_draft.get("status") in ("ai_quota_exceeded", "ai_error") and draft.get("status") == "ai_draft":
+                    if existing and isinstance(old_draft, dict) and old_draft.get("status") in ("ai_quota_exceeded", "ai_error", "ai_deferred") and draft.get("status") == "ai_draft":
                         existing["ai_draft"] = draft
                         log.info("Updated AI draft for previously queued candidate: %s", ident)
-                    if draft.get("status") != "ai_quota_exceeded":
+                    if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred"):
                         mark(item, digest, state)
                     continue
                 queue.append({
@@ -94,10 +102,10 @@ def main():
                     "ai_draft": draft
                 })
                 ids.add(ident)
-                if draft.get("status") != "ai_quota_exceeded":
+                if draft.get("status") not in ("ai_quota_exceeded", "ai_deferred"):
                     mark(item, digest, state)
                 else:
-                    log.info("Candidate queued for later AI retry after quota reset: %s", ident)
+                    log.info("Candidate retained for later AI retry (%s): %s", draft.get("status"), ident)
                 added += 1
             except Exception as exc:
                 errors += 1
@@ -115,8 +123,8 @@ def main():
             draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
             writer.writerow({**{k: row.get(k) for k in columns[:7]},
                              **{k: draft.get(k) for k in columns[7:]}})
-    log.info("Scan complete: candidates=%s added=%s queue=%s errors=%s",
-             candidates, added, len(queue), errors)
+    log.info("Scan complete: candidates=%s added=%s queue=%s errors=%s elapsed_seconds=%.1f",
+             candidates, added, len(queue), errors, time.monotonic() - started)
 
 if __name__ == "__main__":
     main()
