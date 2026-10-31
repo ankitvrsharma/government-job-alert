@@ -42,7 +42,7 @@ jobs:
           SCAN_TIME_BUDGET_SECONDS: "1320"
         run: python -m engine.run_scan
       - name: Sync protected Supabase review queue
-        if: success() && env.SUPABASE_SERVICE_ROLE_KEY != ''
+        if: success()
         env:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python -m engine.sync_supabase
