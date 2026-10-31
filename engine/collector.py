@@ -80,6 +80,24 @@ def fetch_source(source):
     time.sleep(1)
     return items
 
+
+def extract_web_text(item, max_chars=60000):
+    """Fetch readable page content; never send a title/URL-only placeholder to AI."""
+    if not robots_allowed(item["url"]):
+        raise PermissionError("robots.txt does not permit this page URL")
+    response = HTTP.get(item["url"], timeout=(6, 18))
+    response.raise_for_status()
+    content_type = response.headers.get("Content-Type", "").lower()
+    if "html" not in content_type and not response.text.lstrip().startswith("<"):
+        raise ValueError("Candidate page is not HTML")
+    soup = BeautifulSoup(response.text, "html.parser")
+    for node in soup(["script", "style", "noscript", "nav", "footer", "header"]):
+        node.decompose()
+    page_text = " ".join(soup.get_text(" ", strip=True).split())
+    if len(page_text) < 250:
+        raise ValueError("Candidate page contains too little readable text")
+    return page_text[:max_chars]
+
 def download_pdf(item, folder, max_bytes=25 * 1024 * 1024):
     if not robots_allowed(item["url"]):
         raise PermissionError("robots.txt does not permit this PDF URL")
