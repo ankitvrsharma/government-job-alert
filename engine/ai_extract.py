@@ -80,7 +80,7 @@ DOCUMENT:
             "summary": types.Schema(type=types.Type.STRING, nullable=True),
             "uncertainties": types.Schema(type=types.Type.ARRAY, items=types.Schema(type=types.Type.STRING)),
         },
-        required=["is_relevant_notice", "is_recruitment_notice", "post_names", "important_dates", "uncertainties"]
+        required=["is_relevant_notice", "is_recruitment_notice", "post_title", "post_names", "important_dates", "uncertainties"]
     )
 
     client = genai.Client(api_key=GEMINI_API_KEY)
