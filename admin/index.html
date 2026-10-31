@@ -65,7 +65,21 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.57.0';
 const SUPABASE_URL = 'https://xmjstmebdbmplsdhrspt.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_pQ7D0FUOoF3t-SJf6bhLBw_G8vBy2z3';
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY, { auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true} });
+let adminAccessToken=null;
 const $=id=>document.getElementById(id);
+async function protectedRest(path,timeoutMs=18000){
+ if(!adminAccessToken)throw new Error('Your administrator session is not ready. Sign out and sign in again.');
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
+ try{
+  const response=await fetch(SUPABASE_URL+'/rest/v1/'+path,{method:'GET',headers:{apikey:SUPABASE_KEY,Authorization:'Bearer '+adminAccessToken,Accept:'application/json'},cache:'no-store',signal:controller.signal});
+  const body=await response.text();
+  if(!response.ok)throw new Error('Supabase HTTP '+response.status+': '+body.slice(0,350));
+  return body?JSON.parse(body):[];
+ }catch(error){
+  if(error.name==='AbortError')throw new Error('Supabase REST request timed out after '+Math.round(timeoutMs/1000)+' seconds.');
+  throw error;
+ }finally{clearTimeout(timer);}
+}
 const loginPanel=$('loginPanel'), dashboard=$('dashboard'), authMessage=$('authMessage'), jobsEl=$('jobs');
 let records=[],verified=new Set(),trackedSources=[];
 const clean=v=>v===null||v===undefined||v===''?'':String(v);
@@ -146,9 +160,8 @@ async function loadQueue(){
  jobsEl.innerHTML='<div class="empty">Loading secure queue…</div>';
  try{
   await withTimeout(loadPostTemplates(),12000,'Artwork templates');
-  const result=await withTimeout(sb.from('job_alert_queue').select('payload').order('updated_at',{ascending:false}).limit(1000),18000,'Secure queue request');
-  if(result.error)throw result.error;
-  records=(result.data||[]).map(x=>x.payload).filter(hasVacancyContent);
+  const rows=await protectedRest('job_alert_queue?select=payload&order=updated_at.desc&limit=1000');
+  records=(rows||[]).map(x=>x.payload).filter(hasVacancyContent);
   render();
  }catch(error){
   jobsEl.innerHTML='<div class="empty">Queue could not be loaded: '+esc(error.message||String(error))+'<br><br>Check your connection, then tap “Refresh queue”. If this repeats, send this error message to the site administrator.</div>';
@@ -164,6 +177,7 @@ async function enterDashboard(session){
  try{
   // Authorization comes from Supabase's server-controlled app_metadata claim.
   // This avoids a second PostgREST request during sign-in and is enforced again by RLS.
+  adminAccessToken=session.access_token||null;
   if(session.user.app_metadata?.role!=='admin'){
    await sb.auth.signOut();
    loginPanel.style.display='block';dashboard.style.display='none';
@@ -208,9 +222,8 @@ async function loadTrackedSources(){
  const list=$('sourceList'),status=$('sourceStatus');
  list.innerHTML='<div class="empty">Loading tracked websites…</div>';
  try{
-  const result=await withTimeout(sb.from('tracked_sources').select('id,name,url,category,enabled,created_at').order('created_at',{ascending:false}).limit(500),18000,'Tracked websites request');
-  if(result.error)throw result.error;
-  trackedSources=result.data||[];
+  const rows=await protectedRest('tracked_sources?select=id,name,url,category,enabled,created_at&order=created_at.desc&limit=500');
+  trackedSources=rows||[];
   if(!trackedSources.length){list.innerHTML='<div class="empty">No custom websites added yet. Existing built-in sources continue to run.</div>';return;}
   list.innerHTML=trackedSources.map(x=>'<div class="source-row"><div><b>'+esc(x.name)+'</b> <span class="pill">'+(x.enabled?'Active':'Paused')+'</span><small>'+esc(x.url)+'</small></div><div class="actions"><button class="source-toggle" type="button" data-source-toggle="'+esc(x.id)+'" data-enabled="'+String(x.enabled)+'">'+(x.enabled?'Pause':'Enable')+'</button><button class="source-delete" type="button" data-source-delete="'+esc(x.id)+'">Remove</button></div></div>').join('');
  }catch(error){
@@ -391,7 +404,7 @@ jobsEl.addEventListener('click',async e=>{
 });
 
 sb.auth.getSession().then(({data})=>{if(data.session)enterDashboard(data.session);});
-sb.auth.onAuthStateChange((_event,session)=>{if(!session){dashboard.style.display='none';loginPanel.style.display='block';}});
+sb.auth.onAuthStateChange((_event,session)=>{adminAccessToken=session?.access_token||null;if(!session){dashboard.style.display='none';loginPanel.style.display='block';}});
 </script>
 </body>
 </html>
