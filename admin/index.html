@@ -90,7 +90,11 @@ let records=[],verified=new Set(),trackedSources=[];
 const clean=v=>v===null||v===undefined||v===''?'':String(v);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const draftOf=r=>r.ai_draft&&typeof r.ai_draft==='object'?r.ai_draft:{};
-const titleOf=r=>{const d=draftOf(r);return(d.post_names&&d.post_names.length?d.post_names.join(', '):'')||r.candidate_title||d.notice_type||'Recruitment notice';};
+const titleOf=r=>{
+ const d=draftOf(r);
+ const raw=d.post_title||((d.post_names&&d.post_names.length)?d.post_names.join(', '):'')||r.candidate_title||d.exam_name||d.notice_type||'Recruitment notice';
+ return String(raw).replace(/\\s+/g,' ').replace(/\\s*[,;|]\\s*/g,', ').trim().replace(/^(latest|official)\\s+(update|notice)[: -]*/i,'');
+};
 const summaryOf=r=>draftOf(r).summary||'';
 const endDate=r=>draftOf(r).application_end_date||'';
 const hasVacancyContent=r=>{const d=draftOf(r),vacancy=d.post_category==='vacancy'||d.is_recruitment_notice===true,proof=vacancy?d.recruitment_evidence:d.event_evidence;return (d.is_relevant_notice===true||vacancy)&&!!String(proof||'').trim()&&String(d.summary||'').trim().length>=40&&(vacancy?(Array.isArray(d.post_names)&&d.post_names.some(x=>String(x).trim())):!!(d.event_type||d.post_category));};
@@ -268,7 +272,7 @@ jobsEl.addEventListener('input',e=>{
  if(e.target.matches('[data-caption-preview]')){draftOf(r).custom_caption=e.target.value;return;}
  const key=e.target.dataset.field;if(!key)return;
  const d={...draftOf(r)},value=e.target.value;
- if(key==='title')d.post_names=[value];
+ if(key==='title'){d.post_title=value;d.post_names=[value];}
  else if(key==='organisation'||key==='summary'||['exam_name','event_date','previous_event_date','change_reason','vacancy_count','qualification','age_limit','application_start_date','application_end_date','application_fee','selection_process','official_notification_url','application_url'].includes(key))d[key]=value;
  else if(key==='important_dates')d.important_dates=value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
  else if(key==='change_summary')r.change_summary=value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
@@ -384,6 +388,7 @@ async function saveEditor(id,button){
  const panel=$('edit-'+id),status=panel.querySelector('[data-edit-status]');
  const val=k=>panel.querySelector('[data-field="'+k+'"]')?.value.trim()||'';
  const d={...draftOf(r)};
+ d.post_title=val('title');
  d.post_names=[val('title')].filter(Boolean);
  d.organisation=val('organisation');
  d.summary=val('summary');
