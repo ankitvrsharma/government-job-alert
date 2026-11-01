@@ -183,7 +183,10 @@
     "https://www.ugc.gov.in/pdfnews/0831363_Public-Notice---Summer-Internship-in-USA.pdf",
     "https://www.ugc.gov.in/pdfnews/7145009_INCP2-Letter.pdf",
     "https://ncs.gov.in/assets/pdf/Jobseeker registration flowchart 1.pdf",
-    "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf"
+    "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf",
+    "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf",
+    "https://ncs.gov.in/assets/pdf/Indian Staffing Federation (ISF Registration Flow).pdf",
+    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -368,10 +371,16 @@
     "c383b4fabb26fa4f0dedd0d50c86693ffbcb3c1c69ed40fa732527a9d237f4b1",
     "86c73e93cf63516ef2c8640817f189efd44d6c1285de2b0fcffef06e11067064",
     "dd19395ececf51117745f4b8ebdfbbfa555093a8b9dde41c4fc5d857ecb10bd9",
-    "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba"
+    "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba",
+    "ee9ac2ef9a95ebcb86819b01fcac6ad7774f570120a1c9cd7a610c57c6b15a4d",
+    "5124f76a27644e210e49d71be51a100e6536d8addc76768b7a451c84c92e7ebd",
+    "8f143624019bc9a242842337c5f9e35b513fe9499da7e053f9721cf717651189",
+    "e1f887a427f012c0232ab361618e4a905fd8687f72beba694bbf522c185422b5",
+    "235067b577a288384c51536b6e70d724f6dcbfcab2f34b6d50dfe97f04877247",
+    "b090ea71f994f5e49974840088679490ef91f4831cb4ce5d14d11f965db6d084"
   ],
   "snapshots": {
-    "https://nta.ac.in": "d72e0eccbb26a6e46516ff4824ea4b0dadf6866ed990b9be9ade3bbd4b702f89",
+    "https://nta.ac.in": "ee9ac2ef9a95ebcb86819b01fcac6ad7774f570120a1c9cd7a610c57c6b15a4d",
     "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf": "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
     "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf": "6dc3b0379b42a405aa8f3bab63851ac718d392ec049732eb60088e52b4128a19",
     "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf": "d24733397846ca61d0ef44f7ab3eda31f09851b48e9a661d95953f37561b53c3",
@@ -519,9 +528,9 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "ca49ed008c95946477b0d3a7c24751292ed68fcff619357ab3c8b4dc9f4bd3e6",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "275e61d4f07195dba7ab6c1ccfeeb8a281cebc19c631840286351c135bf11a24",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "773b825913b43c7d21eb137d4231d8761cf570dc5650d7623905fbdb8de62477",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "cc4bece845a8c853bebae2e235cde82a58ecb4838740e6ae67a5e2ca628b3a3f",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "1ba4dd04222139a3cf370f51194988f581ed9e6ae1cbabc26234413cb365c887",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "e1f887a427f012c0232ab361618e4a905fd8687f72beba694bbf522c185422b5",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "235067b577a288384c51536b6e70d724f6dcbfcab2f34b6d50dfe97f04877247",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "b090ea71f994f5e49974840088679490ef91f4831cb4ce5d14d11f965db6d084",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "92ddfc6ed272f97b1224f6fc2d717dd36f84ce73b290c3d3fe9b456dfecf9c55",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "b4c0026d574e01e105a28ea0c799da4add254e21ce5d3d498a5456d981f9748b",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "5e8a9f47df7a18969071b9e427058cf5add1500ff3508dc5c23d795a32a7331f",
@@ -551,7 +560,10 @@
     "https://sbi.bank.in/web/careers/our-legacy": "c383b4fabb26fa4f0dedd0d50c86693ffbcb3c1c69ed40fa732527a9d237f4b1",
     "https://sbi.bank.in/web/careers/our-leaders": "86c73e93cf63516ef2c8640817f189efd44d6c1285de2b0fcffef06e11067064",
     "https://sbi.bank.in/web/careers/download-forms": "dd19395ececf51117745f4b8ebdfbbfa555093a8b9dde41c4fc5d857ecb10bd9",
-    "https://sbi.bank.in/web/careers/roles-sbi": "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba"
+    "https://sbi.bank.in/web/careers/roles-sbi": "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba",
+    "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf": "5124f76a27644e210e49d71be51a100e6536d8addc76768b7a451c84c92e7ebd",
+    "https://ncs.gov.in/assets/pdf/Indian Staffing Federation (ISF Registration Flow).pdf": "8f143624019bc9a242842337c5f9e35b513fe9499da7e053f9721cf717651189",
+    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "0a051113eb34cf1166b77493294650deec74d0da224742ebca638ff895456b1e"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -1177,6 +1189,131 @@
         "model": "gemini-3.1-flash-lite"
       },
       "updated_at": "2026-10-31T10:07:07.042846+00:00"
+    },
+    "1a1bd9ac37522a42c58e9ec0b1b32af09dbfa597cd34493565096b4507e71f1e": {
+      "id": "a6036526a8c2382a",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "application_update",
+        "event_type": "fee_payment_extension",
+        "event_evidence": "The last date for successful transaction of the examination fee for candidates who have already submitted their Online Application Form is extended up to 01 November 2026 (up to 11:50 PM).",
+        "exam_name": "UGC-NET December 2026 Examination",
+        "related_notice": "Public Notice dated 27.10.2026",
+        "event_date": "2026-11-01",
+        "previous_event_date": "2026-10-31",
+        "change_reason": "In interest of candidates who have completed and submitted their Online Application Forms but could not complete the fee payment within the stipulated timeline",
+        "recruitment_evidence": null,
+        "notice_type": "Public Notice",
+        "post_title": "UGC NET December 2026 Fee Payment Deadline Extended",
+        "organisation": "National Testing Agency",
+        "post_names": [
+          "Junior Research Fellowship",
+          "Assistant Professor"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-10-31",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf",
+        "application_url": "https://ugcnet.nta.nic.in",
+        "important_dates": [
+          "2026-10-31: Last date for online application form submission (closed at 11:50 PM)",
+          "2026-11-01: Revised last date for fee payment for submitted forms (up to 11:50 PM)"
+        ],
+        "summary": "The National Testing Agency has extended the deadline for examination fee payment for the UGC-NET December 2026 Examination until November 1, 2026 (11:50 PM). This extension is strictly limited to candidates who submitted their online application form on or before October 31, 2026, as no further extension is granted for new registrations or form submissions.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-01T09:40:24.309037+00:00"
+    },
+    "fe885a62b11ff478b464e552ac7cb65692f8b748dcbbf422d5d69f0c7be19e00": {
+      "id": "9e3eda5913f915b6",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति (वॉक-इन इंटरव्यू 12/11/2026)",
+        "exam_name": null,
+        "related_notice": null,
+        "event_date": "2026-11-12",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-टीकेडीएल यूनिट, नई दिल्ली में प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "Walk-in Interview",
+        "post_title": "CSIR TKDL Project Staff Walk-in Interview 2026",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Project Staff (Forestry and Ecology)",
+          "Project Staff (Environmental Sciences)"
+        ],
+        "advertisement_number": "GAP-000001",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-12: Walk-in Interview"
+        ],
+        "summary": "CSIR TKDL Unit, New Delhi has announced a walk-in interview for the engagement of project staff in Forestry & Ecology and Environmental Sciences under Project GAP-000001. The walk-in interview is scheduled to take place on November 12, 2026.",
+        "uncertainties": [
+          "Detailed eligibility criteria, vacancy counts, and reporting time are contained in the linked PDF advertisements and not detailed in the page text."
+        ],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-01T09:55:32.462769+00:00"
+    },
+    "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
+      "id": "ae77900642606e28",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "result",
+        "event_type": "interview_result",
+        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (सोवा रिग्पा) के संदर्भ में 15.10.2026 को आयोजित साक्षात्कार का परिणाम।",
+        "exam_name": "CSIR TKDL/08/2026 (Sowa Rigpa) Interview",
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "विज्ञापन संख्या TKDL/08/2026 (सोवा रिग्पा) के संदर्भ में 15.10.2026 को आयोजित साक्षात्कार का परिणाम।",
+        "notice_type": "Result",
+        "post_title": "CSIR TKDL/08/2026 Sowa Rigpa Interview Result Declared",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Sowa Rigpa"
+        ],
+        "advertisement_number": "TKDL/08/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Interview",
+        "official_notification_url": null,
+        "application_url": null,
+        "important_dates": [
+          "Interview Date: 2026-10-15"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has declared the results of the interview held on October 15, 2026, under Advertisement No. TKDL/08/2026 (Sowa Rigpa). Candidates who appeared for the interview can check their selection status via the official portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-01T09:58:17.563795+00:00"
     }
   }
 }
