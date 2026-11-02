@@ -1,5 +1,6 @@
 import unittest
 
+from engine.collector import ATTACHMENT_TYPES
 from engine.run_scan import changed_fields, notice_key
 from engine.sync_supabase import clean, exam_identity, exam_names, is_complete_notice
 
@@ -90,6 +91,12 @@ class ExamLifecycleTests(unittest.TestCase):
 
     def test_text_normalization_collapses_whitespace(self):
         self.assertEqual(clean("  National   Testing" + chr(10) + " Agency  "), "National Testing Agency")
+
+    def test_supported_official_attachment_types(self):
+        self.assertEqual(ATTACHMENT_TYPES[".pdf"], "application/pdf")
+        self.assertIn(".xlsx", ATTACHMENT_TYPES)
+        self.assertIn(".docx", ATTACHMENT_TYPES)
+        self.assertIn(".zip", ATTACHMENT_TYPES)
 
 if __name__ == "__main__":
     unittest.main()
