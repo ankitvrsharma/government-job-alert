@@ -1,8 +1,12 @@
+import hashlib
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 from engine.collector import ATTACHMENT_TYPES
 from engine.run_scan import changed_fields, notice_key
-from engine.sync_supabase import clean, exam_identity, exam_names, is_complete_notice
+from engine.sync_supabase import clean, exam_identity, exam_names, is_complete_notice, upload_attachment
 
 
 class ExamLifecycleTests(unittest.TestCase):
@@ -118,6 +122,29 @@ class ExamLifecycleTests(unittest.TestCase):
         self.assertIn(".xlsx", ATTACHMENT_TYPES)
         self.assertIn(".docx", ATTACHMENT_TYPES)
         self.assertIn(".zip", ATTACHMENT_TYPES)
+
+    def test_attachment_upload_uses_content_hash_and_skips_duplicate_upload(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            file_path = root / "downloads" / "result.pdf"
+            file_path.parent.mkdir()
+            data = b"%PDF-1.4\\nsmall test pdf"
+            file_path.write_bytes(data)
+            digest = hashlib.sha256(data).hexdigest()
+            row = {
+                "local_attachment": "downloads/result.pdf",
+                "attachment_sha256": digest,
+                "attachment_mime_type": "application/pdf",
+                "candidate_title": "Result notice",
+            }
+            with patch("engine.sync_supabase.DATA", root), patch("engine.sync_supabase.requests.head") as head, patch("engine.sync_supabase.requests.post") as post:
+                head.return_value.status_code = 200
+                path, url, name, mime = upload_attachment(row, {"post_title": "Exam Result"})
+            self.assertEqual(path, digest[:2] + "/" + digest + ".pdf")
+            self.assertIn(path, url)
+            self.assertEqual(mime, "application/pdf")
+            self.assertTrue(name.endswith(".pdf"))
+            post.assert_not_called()
 
 if __name__ == "__main__":
     unittest.main()
