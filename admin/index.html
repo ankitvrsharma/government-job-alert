@@ -136,6 +136,7 @@ function postLabel(r){const d=draftOf(r),t=String(r.post_type||'new').toLowerCas
 function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({deadline_extension:'⏰',exam_calendar:'🗓️',exam_schedule:'📅',exam_date_change:'🔄',exam_postponed:'⚠️',exam_cancelled:'❌',admit_card:'🎫',application_update:'📝',corrigendum:'📌',answer_key:'🗝️',result:'🏆',scorecard:'📊',cut_off:'📈',interview_schedule:'🤝',selection_update:'✅',document_verification:'📄'})[t]||((t==='update')?'🔔':'🏛️');}
 function shareText(r){
  const d=draftOf(r),title=titleOf(r),summary=String(d.summary||'').replace(/\s+/g,' ').trim();
+ if(typeof d.custom_caption==='string'&&d.custom_caption.trim())return d.custom_caption;
  const type=String(r.post_type||d.event_type||d.post_category||'update').toLowerCase();
  const lines=['*'+title+'*'];
  if(summary)lines.push('',summary);
