@@ -390,7 +390,11 @@ function baseTemplateCanvas(r){
  const rect=(x,y,w,h,r=12)=>{ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.stroke();};
  const motif=t.motif||'launch';
  // Distinct, low-contrast illustration language for each post category.
- if(motif==='calendar'){
+ if(motif==='launch'){
+  circle(190,210,100);circle(190,210,66);
+  line(130,270,285,115);line(235,115,285,115);line(285,115,285,165);
+  line(82,115,120,153);line(82,115,132,115);
+ }else if(motif==='calendar'){
   rect(75,72,230,250,20);line(75,128,305,128);
   for(let x=112;x<290;x+=44)line(x,145,x,298);
   for(let y=170;y<300;y+=42)line(92,y,290,y);
