@@ -6,6 +6,8 @@ on:
     paths:
       - "engine/**"
       - "admin/index.html"
+      - "admin/post-templates.json"
+      - "tests/**"
       - ".github/workflows/validate.yml"
   workflow_dispatch:
 
@@ -20,8 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install project dependencies
+        run: pip install -r requirements.txt
       - name: Compile Python modules
         run: python -m compileall -q engine
+      - name: Test exam lifecycle and update deduplication
+        run: python -m unittest discover -s tests -v
       - name: Validate admin JavaScript syntax
         run: |
           python - <<'PY'
@@ -38,3 +44,4 @@ jobs:
         run: |
           python -m json.tool data/seen_items.json > /dev/null
           python -m json.tool data/review_queue.json > /dev/null
+          python -m json.tool admin/post-templates.json > /dev/null
