@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "canvas": {
     "width": 1200,
     "height": 420
@@ -9,109 +9,141 @@
       "start": "#0c355b",
       "middle": "#12253c",
       "end": "#0d5657",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "launch"
     },
     "update": {
       "start": "#3b2a16",
       "middle": "#18283c",
       "end": "#62451e",
-      "accent": "#ffe19a"
+      "accent": "#ffe19a",
+      "motif": "pulse"
     },
     "deadline_extension": {
       "start": "#493313",
       "middle": "#30251a",
       "end": "#73521b",
-      "accent": "#ffe19a"
+      "accent": "#ffe19a",
+      "motif": "clock"
     },
     "exam_calendar": {
       "start": "#123b63",
       "middle": "#182b47",
       "end": "#17616a",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "calendar"
     },
     "exam_schedule": {
       "start": "#123b63",
       "middle": "#182b47",
       "end": "#17616a",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "timeline"
     },
     "exam_date_change": {
       "start": "#493313",
       "middle": "#302b24",
       "end": "#66501e",
-      "accent": "#ffe19a"
+      "accent": "#ffe19a",
+      "motif": "arrows"
     },
     "exam_postponed": {
       "start": "#572626",
       "middle": "#29243c",
       "end": "#713d28",
-      "accent": "#ffb4a8"
+      "accent": "#ffb4a8",
+      "motif": "warning"
     },
     "exam_cancelled": {
       "start": "#572626",
       "middle": "#29243c",
       "end": "#713d28",
-      "accent": "#ffb4a8"
+      "accent": "#ffb4a8",
+      "motif": "cross"
     },
     "admit_card": {
       "start": "#173f58",
       "middle": "#18283c",
       "end": "#245c68",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "ticket"
     },
     "application_update": {
       "start": "#123b63",
       "middle": "#182b47",
       "end": "#17616a",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "form"
     },
     "corrigendum": {
       "start": "#493313",
       "middle": "#30251a",
       "end": "#73521b",
-      "accent": "#ffe19a"
+      "accent": "#ffe19a",
+      "motif": "edit"
     },
     "answer_key": {
       "start": "#173f39",
       "middle": "#18283c",
       "end": "#38552b",
-      "accent": "#b8f2c2"
+      "accent": "#b8f2c2",
+      "motif": "key"
     },
     "result": {
       "start": "#173f39",
       "middle": "#18283c",
       "end": "#38552b",
-      "accent": "#b8f2c2"
+      "accent": "#b8f2c2",
+      "motif": "laurel"
     },
     "scorecard": {
       "start": "#173f39",
       "middle": "#18283c",
       "end": "#38552b",
-      "accent": "#b8f2c2"
+      "accent": "#b8f2c2",
+      "motif": "bars"
     },
     "cut_off": {
       "start": "#173f39",
       "middle": "#18283c",
       "end": "#38552b",
-      "accent": "#b8f2c2"
+      "accent": "#b8f2c2",
+      "motif": "gauge"
     },
     "interview_schedule": {
       "start": "#173f58",
       "middle": "#18283c",
       "end": "#245c68",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "conversation"
     },
     "selection_update": {
       "start": "#173f39",
       "middle": "#18283c",
       "end": "#38552b",
-      "accent": "#b8f2c2"
+      "accent": "#b8f2c2",
+      "motif": "check"
     },
     "document_verification": {
       "start": "#173f58",
       "middle": "#18283c",
       "end": "#245c68",
-      "accent": "#9fe7ff"
+      "accent": "#9fe7ff",
+      "motif": "document"
+    },
+    "exam_city_intimation": {
+      "start": "#123b63",
+      "middle": "#182b47",
+      "end": "#17616a",
+      "accent": "#9fe7ff",
+      "motif": "pin"
+    },
+    "fee_payment_extension": {
+      "start": "#123b63",
+      "middle": "#182b47",
+      "end": "#17616a",
+      "accent": "#9fe7ff",
+      "motif": "clock"
     }
   }
 }
