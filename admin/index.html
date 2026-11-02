@@ -183,12 +183,23 @@ function shareText(r){
  }
  if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('','*Update details*',...r.change_summary.slice(0,4).map(x=>'• '+x));
  const notice=d.official_notification_url||r.candidate_url;
+ const portal=d.result_url||d.application_url||notice;
  if(d.attachment_url){
-  const label=type==='result'||d.result_declared?'Download result PDF':type==='answer_key'?'Download answer key':type==='admit_card'?'Download admit card':'Download official PDF';
+  const labels={result:'Download result PDF',answer_key:'Download answer key',admit_card:'Download admit card',scorecard:'Download scorecard',cut_off:'Download cut-off list',exam_calendar:'Download exam calendar',exam_schedule:'Download exam schedule',interview_schedule:'Download interview schedule'};
+  const label=type==='result'||d.result_declared?'Download result PDF':(labels[type]||'Download official document');
   lines.push('','*'+label+'*',d.attachment_url);
  }else if(type==='result'||d.result_declared){
-  const resultUrl=d.result_url||d.application_url||notice;
-  if(resultUrl)lines.push('','*Check result online*',resultUrl);
+  if(portal)lines.push('','*Check result online*',portal);
+ }else if(type==='answer_key'&&portal){
+  lines.push('','*Open answer key / objection portal*',portal);
+ }else if(type==='admit_card'&&portal){
+  lines.push('','*Download admit card*',portal);
+ }else if(type==='exam_city_intimation'&&portal){
+  lines.push('','*Check exam city*',portal);
+ }else if(type==='scorecard'&&portal){
+  lines.push('','*Download scorecard*',portal);
+ }else if(type==='cut_off'&&portal){
+  lines.push('','*View cut-off list*',portal);
  }else if(d.result_url){
   lines.push('','*Open official portal*',d.result_url);
  }
