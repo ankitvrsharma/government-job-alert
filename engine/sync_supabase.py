@@ -40,17 +40,20 @@ def api_get(table, params):
 
 
 def api_upsert(table, rows, conflict):
-    if not rows:
-        return []
-    response = requests.post(
-        f"{BASE_URL}/rest/v1/{table}",
-        params={"on_conflict": conflict},
-        headers=headers({"Prefer": "resolution=merge-duplicates,return=representation"}),
-        json=rows,
-        timeout=45,
-    )
-    response.raise_for_status()
-    return response.json()
+    returned = []
+    for start in range(0, len(rows), 50):
+        batch = rows[start:start + 50]
+        response = requests.post(
+            f"{BASE_URL}/rest/v1/{table}",
+            params={"on_conflict": conflict},
+            headers=headers({"Prefer": "resolution=merge-duplicates,return=representation"}),
+            json=batch,
+            timeout=45,
+        )
+        response.raise_for_status()
+        if response.content:
+            returned.extend(response.json())
+    return returned
 
 
 def clean(value):
