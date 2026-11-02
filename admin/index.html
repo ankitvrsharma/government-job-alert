@@ -185,7 +185,7 @@ function shareText(r){
  const notice=d.official_notification_url||r.candidate_url;
  const portal=d.result_url||d.application_url||notice;
  if(d.attachment_url){
-  const isPdf=String(d.attachment_mime_type||'').toLowerCase()==='application/pdf'||/\\.pdf(?:$|\\?)/i.test(String(d.attachment_name||d.attachment_url));
+  const isPdf=String(d.attachment_mime_type||'').toLowerCase()==='application/pdf'||/\.pdf(?:$|\?)/i.test(String(d.attachment_name||d.attachment_url));
   const labels={answer_key:'Download answer key',admit_card:'Download admit card',scorecard:'Download scorecard',cut_off:'Download cut-off list',exam_calendar:'Download exam calendar',exam_schedule:'Download exam schedule',interview_schedule:'Download interview schedule'};
   const label=type==='result'||d.result_declared?(isPdf?'Download result PDF':'Download result file'):(labels[type]||'Download official document');
   lines.push('','*'+label+'*',d.attachment_url);
