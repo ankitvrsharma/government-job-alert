@@ -16,6 +16,22 @@ class ExamLifecycleTests(unittest.TestCase):
             ["UGC NET December 2026", "JEE Main 2027 Session 1", "CSIR NET June 2027"],
         )
 
+    def test_vacancy_tracking_uses_specific_recruitment_title(self):
+        draft = {
+            "is_recruitment_notice": True,
+            "post_title": "CSIR CGCRI Kolkata Director Recruitment 2026",
+            "post_names": ["Director"],
+        }
+        self.assertEqual(exam_names(draft), ["CSIR CGCRI Kolkata Director Recruitment 2026"])
+
+    def test_result_tracking_uses_post_and_advertisement_cycle(self):
+        draft = {
+            "is_recruitment_notice": False,
+            "post_names": ["Additional Director General"],
+            "cycle_label": "Advt. No. ICMRHQ/01/2026",
+        }
+        self.assertEqual(exam_names(draft), ["Additional Director General"])
+
     def test_exam_key_is_stable_and_cycle_specific(self):
         key_a, org, cycle = exam_identity("JEE Main 2027 Session 1", {
             "organisation": "National Testing Agency",
