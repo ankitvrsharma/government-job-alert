@@ -132,7 +132,7 @@ const titleOf=r=>{
 const summaryOf=r=>draftOf(r).summary||'';
 const endDate=r=>draftOf(r).application_end_date||'';
 const hasVacancyContent=r=>{const d=draftOf(r),vacancy=d.post_category==='vacancy'||d.is_recruitment_notice===true,proof=vacancy?d.recruitment_evidence:d.event_evidence;return (d.is_relevant_notice===true||vacancy)&&!!String(proof||'').trim()&&String(d.summary||'').trim().length>=40&&(vacancy?(Array.isArray(d.post_names)&&d.post_names.some(x=>String(x).trim())):!!(d.event_type||d.post_category));};
-function postLabel(r){const d=draftOf(r),t=String(r.post_type||'new').toLowerCase();const labels={new:'NEW VACANCY',update:'VACANCY UPDATED',deadline_extension:'DEADLINE EXTENDED',exam_calendar:'EXAM CALENDAR',exam_schedule:'EXAM SCHEDULE',exam_date_change:'EXAM DATE CHANGED',exam_postponed:'EXAM POSTPONED',exam_cancelled:'EXAM CANCELLED',admit_card:'ADMIT CARD UPDATE',application_update:'APPLICATION UPDATE',corrigendum:'CORRIGENDUM',answer_key:'ANSWER KEY',result:'RESULT DECLARED',scorecard:'SCORECARD',cut_off:'CUT-OFF UPDATE',interview_schedule:'INTERVIEW SCHEDULE',selection_update:'SELECTION UPDATE',document_verification:'DOCUMENT VERIFICATION'};return labels[t]||String(d.event_type||d.post_category||'RECRUITMENT UPDATE').replaceAll('_',' ').toUpperCase();}
+function postLabel(r){const d=draftOf(r),t=String(r.post_type||'new').toLowerCase();const labels={new:'NEW VACANCY',update:'VACANCY UPDATED',deadline_extension:'DEADLINE EXTENDED',exam_calendar:'EXAM CALENDAR',exam_schedule:'EXAM SCHEDULE',exam_date_change:'EXAM DATE CHANGED',exam_postponed:'EXAM POSTPONED',exam_cancelled:'EXAM CANCELLED',admit_card:'ADMIT CARD UPDATE',application_update:'APPLICATION UPDATE',corrigendum:'CORRIGENDUM',answer_key:'ANSWER KEY',result:'RESULT DECLARED',scorecard:'SCORECARD',cut_off:'CUT-OFF UPDATE',interview_schedule:'INTERVIEW SCHEDULE',selection_update:'SELECTION UPDATE',document_verification:'DOCUMENT VERIFICATION',exam_city_intimation:'EXAM CITY INTIMATION',fee_payment_extension:'FEE PAYMENT EXTENSION',other_recruitment_update:'RECRUITMENT UPDATE'};return labels[t]||String(d.event_type||d.post_category||'RECRUITMENT UPDATE').replaceAll('_',' ').toUpperCase();}
 function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({deadline_extension:'⏰',exam_calendar:'🗓️',exam_schedule:'📅',exam_date_change:'🔄',exam_postponed:'⚠️',exam_cancelled:'❌',admit_card:'🎫',application_update:'📝',corrigendum:'📌',answer_key:'🗝️',result:'🏆',scorecard:'📊',cut_off:'📈',interview_schedule:'🤝',selection_update:'✅',document_verification:'📄'})[t]||((t==='update')?'🔔':'🏛️');}
 function shareText(r){
  const d=draftOf(r),title=titleOf(r),summary=String(d.summary||'').replace(/\s+/g,' ').trim();
@@ -271,7 +271,7 @@ async function loadTrackedExams(){
  try{
   const [rows,links]=await Promise.all([
    protectedRest('tracked_exams?select=id,exam_key,exam_name,organisation,cycle_label,official_url,is_following,lifecycle_status,first_seen_at,last_update_at,result_declared_at,archive_after&order=last_update_at.desc&limit=500'),
-   protectedRest('exam_update_exams?select=exam_id,exam_updates(id,title,post_type,detected_at,attachment_url,result_url,review_status)&limit=2000')
+   protectedRest('exam_update_exams?select=exam_id,exam_updates(id,title,post_type,detected_at,attachment_url,result_url,source_url,review_status)&limit=2000')
   ]);
   trackedExams=rows||[];
   const history={};(links||[]).forEach(x=>{const id=x.exam_id,u=x.exam_updates;if(!id||!u)return;(history[id] ||= []).push(u);});
@@ -280,7 +280,7 @@ async function loadTrackedExams(){
   list.innerHTML=ordered.map(x=>{
    const updates=(history[x.id]||[]).sort((a,b)=>String(b.detected_at||'').localeCompare(String(a.detected_at||'')));
    const status=x.lifecycle_status==='result_declared'?'Result declared':x.lifecycle_status==='archived'?'Archived':'Active';
-   const hist=updates.length?'<details class="exam-history"><summary>'+updates.length+' linked official update(s)</summary>'+updates.slice(0,12).map(u=>'<a href="'+esc(u.attachment_url||u.result_url||'#')+'" target="_blank" rel="noopener">'+esc(u.title||u.post_type)+' · '+esc(u.review_status||'pending')+'</a>').join('')+'</details>':'<div class="exam-meta">No linked updates yet</div>';
+   const hist=updates.length?'<details class="exam-history"><summary>'+updates.length+' linked official update(s)</summary>'+updates.slice(0,12).map(u=>'<a href="'+esc(u.attachment_url||u.result_url||u.source_url||'#')+'" target="_blank" rel="noopener">'+esc(u.title||u.post_type)+' · '+esc(u.review_status||'pending')+'</a>').join('')+'</details>':'<div class="exam-meta">No linked updates yet</div>';
    return '<div class="exam-row"><div class="exam-row-head"><div><b>'+esc(x.exam_name)+'</b><small>'+esc([x.organisation,x.cycle_label].filter(Boolean).join(' · '))+'</small></div><span class="pill">'+status+(x.is_following?' · Following':' · Paused')+'</span></div><div class="exam-meta">Last update: '+esc(x.last_update_at?new Date(x.last_update_at).toLocaleDateString():'Not yet scanned')+' · '+updates.length+' update(s)</div>'+hist+'<div class="exam-row-actions"><button type="button" class="source-toggle" data-exam-follow="'+esc(x.id)+'" data-following="'+String(x.is_following)+'">'+(x.is_following?'Stop following':'Follow again')+'</button>'+(x.lifecycle_status==='result_declared'?'<button type="button" class="source-toggle" data-exam-reactivate="'+esc(x.id)+'">Reopen tracking</button>':'<button type="button" class="source-toggle" data-exam-result="'+esc(x.id)+'">Mark result declared</button>')+'<button type="button" class="source-delete" data-exam-archive="'+esc(x.id)+'">Archive</button></div></div>';
   }).join('');
  }catch(error){list.innerHTML='<div class="empty">Exam tracker could not be loaded: '+esc(error.message||String(error))+'</div>';}
@@ -301,7 +301,7 @@ $('examList').addEventListener('click',async e=>{
  const id=button.dataset.examFollow||button.dataset.examResult||button.dataset.examReactivate||button.dataset.examArchive;
  let patch={};
  if(follow)patch={is_following:follow.dataset.following!=='true'};
- if(result){if(!confirm('Mark this exam result as officially declared? This will stop active tracking after the archive period.'))return;const now=new Date();patch={lifecycle_status:'result_declared',result_declared_at:now.toISOString(),archive_after:new Date(now.getTime()+180*86400000).toISOString()};}
+ if(result){if(!confirm('Mark this exam result as officially declared? This will stop active tracking after the archive period.'))return;const now=new Date();patch={lifecycle_status:'result_declared',is_following:false,result_declared_at:now.toISOString(),archive_after:new Date(now.getTime()+180*86400000).toISOString()};}
  if(react)patch={lifecycle_status:'active',result_declared_at:null,archive_after:null};
  if(archive){if(!confirm('Archive this exam from the active tracking list? Its compact history will be retained.'))return;patch={lifecycle_status:'archived',is_following:false};}
  button.disabled=true;const {error}=await sb.from('tracked_exams').update(patch).eq('id',id);
@@ -448,7 +448,7 @@ function makePostCanvas(r){
   exam_postponed:'Exam Postponed',exam_cancelled:'Exam Cancelled',admit_card:'Admit Card',
   application_update:'Application Update',corrigendum:'Corrigendum',answer_key:'Answer Key',
   result:'Results',scorecard:'Scorecard',cut_off:'Cut-off Update',interview_schedule:'Interview Schedule',
-  selection_update:'Selection Update',document_verification:'Document Verification'
+  selection_update:'Selection Update',document_verification:'Document Verification',exam_city_intimation:'Exam City Intimation',fee_payment_extension:'Fee Payment Extension',other_recruitment_update:'Recruitment Update'
  };
  const title=categoryTitles[String(r.post_type||'new').toLowerCase()]||
   kind.toLowerCase().replace(/\b\w/g,ch=>ch.toUpperCase());
