@@ -4,6 +4,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -78,6 +79,7 @@ def exam_identity(name, draft):
     organisation = clean(draft.get("organisation"))
     cycle = clean(draft.get("cycle_label"))
     key_text = "|".join((organisation.casefold(), name.casefold(), cycle.casefold()))
+    key_text = "".join(ch for ch in unicodedata.normalize("NFKD", key_text) if not unicodedata.combining(ch))
     key = re.sub(r"[^a-z0-9]+", "-", key_text).strip("-")[:200]
     return key, organisation, cycle
 
