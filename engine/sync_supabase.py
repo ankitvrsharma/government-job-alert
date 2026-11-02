@@ -81,7 +81,7 @@ def exam_names(draft):
         else:
             identity = clean(draft.get("post_title"))
             identity = re.sub(
-                r"\\s+(result|result released|result declared|answer key released|final answer key|admit card released|scorecard released|cut-off marks released)$",
+                r"\s+(result|result released|result declared|answer key released|final answer key|admit card released|scorecard released|cut-off marks released)$",
                 "",
                 identity,
                 flags=re.IGNORECASE,
