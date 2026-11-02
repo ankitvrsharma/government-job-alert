@@ -300,7 +300,7 @@ $('examList').addEventListener('click',async e=>{
  const button=follow||result||react||archive;if(!button)return;
  const id=button.dataset.examFollow||button.dataset.examResult||button.dataset.examReactivate||button.dataset.examArchive;
  let patch={};
- if(follow)patch={is_following:follow.dataset.following!=='true'};
+ if(follow){const resume=follow.dataset.following!=='true';patch=resume?{is_following:true,lifecycle_status:'active',result_declared_at:null,archive_after:null}:{is_following:false};}
  if(result){if(!confirm('Mark this exam result as officially declared? This will stop active tracking after the archive period.'))return;const now=new Date();patch={lifecycle_status:'result_declared',is_following:false,result_declared_at:now.toISOString(),archive_after:new Date(now.getTime()+180*86400000).toISOString()};}
  if(react)patch={lifecycle_status:'active',result_declared_at:null,archive_after:null};
  if(archive){if(!confirm('Archive this exam from the active tracking list? Its compact history will be retained.'))return;patch={lifecycle_status:'archived',is_following:false};}
