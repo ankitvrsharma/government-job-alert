@@ -57,7 +57,7 @@ def api_upsert(table, rows, conflict):
 
 
 def clean(value):
-    return re.sub(r"\\s+", " ", str(value or "")).strip()
+    return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
 def exam_names(draft):
@@ -301,14 +301,28 @@ def main():
     dismissed_response.raise_for_status()
     dismissed_ids = {row["id"] for row in dismissed_response.json()}
 
-    # Save compact lifecycle history and official files before pruning the transient review queue.
+    # Preserve compact lifecycle history before pruning full review payloads.
     active_ids, exam_count, update_count = sync_exam_lifecycle(rows, dismissed_ids)
     archived_exams, purged_files = archive_completed_exams()
 
-    valid = []
+    # Keep the full review queue short-lived; old items remain as compact exam history.
+    cutoff = datetime.now(timezone.utc) - timedelta(days=QUEUE_RETENTION_DAYS)
+    retained = []
+    pruned_count = 0
     for row in rows:
-        draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
-        if row.get("id") not in dismissed_ids and is_complete_notice(row):
+        detected = row.get("detected_at_utc")
+        try:
+            age = datetime.fromisoformat(str(detected).replace("Z", "+00:00"))
+        except (TypeError, ValueError):
+            age = datetime.now(timezone.utc)
+        if row.get("id") in dismissed_ids or age < cutoff:
+            pruned_count += 1
+            continue
+        retained.append(row)
+
+    valid = []
+    for row in retained:
+        if is_complete_notice(row):
             valid.append({"id": row["id"], "payload": row})
 
     for start in range(0, len(valid), 50):
@@ -341,21 +355,7 @@ def main():
         )
         response.raise_for_status()
 
-    # The review queue is deliberately short-lived. The lifecycle tables keep a compact history.
-    cutoff = datetime.now(timezone.utc) - timedelta(days=QUEUE_RETENTION_DAYS)
-    retained = []
-    archived = 0
-    for row in rows:
-        detected = row.get("detected_at_utc")
-        try:
-            age = datetime.fromisoformat(str(detected).replace("Z", "+00:00"))
-        except (TypeError, ValueError):
-            age = datetime.now(timezone.utc)
-        if row.get("id") in dismissed_ids or age < cutoff:
-            archived += 1
-            continue
-        retained.append(row)
-    if len(retained) != len(rows):
+    if pruned_count:
         temp = QUEUE.with_suffix(".json.tmp")
         temp.write_text(json.dumps(retained, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         temp.replace(QUEUE)
@@ -369,11 +369,12 @@ def main():
                 draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
                 writer.writerow({**{k: row.get(k) for k in columns[:7]},
                                  **{k: draft.get(k) for k in columns[7:]}})
-        print(f"Pruned {len(rows) - len(retained)} dismissed or older-than-{QUEUE_RETENTION_DAYS}-day queue records; compact exam history retained.")
+        print(f"Pruned {pruned_count} dismissed or older-than-{QUEUE_RETENTION_DAYS}-day queue records; compact exam history retained.")
+
     print(
         f"Supabase sync complete: pending={len(valid)}; tracked_exams={exam_count}; "
         f"exam_updates={update_count}; stale_queue_rows_removed={len(stale)}; "
-        f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={archived}; "
+        f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={pruned_count}; "
         f"completed_exams_archived={archived_exams}; old_attachments_purged={purged_files}."
     )
 
