@@ -259,8 +259,7 @@ $('signupBtn').addEventListener('click',async()=>{
 });
 $('logoutBtn').addEventListener('click',async()=>{await sb.auth.signOut();records=[];verified.clear();dashboard.style.display='none';loginPanel.style.display='block';authMessage.textContent='You have signed out.';});
 function examKey(name,org,cycle){
- const raw=[org||'',name||'',cycle||''].join('|').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9|]+/g,' ').trim();
- return Array.from(new TextEncoder().encode(raw)).reduce((h,b)=>((h*31+b)>>>0),2166136261).toString(16).padStart(8,'0')+'-'+raw.replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,150);
+ return [org||'',name||'',cycle||''].join('|').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,200);
 }
 async function loadTrackedExams(){
  const list=$('examList');list.innerHTML='<div class="empty">Loading exams…</div>';
