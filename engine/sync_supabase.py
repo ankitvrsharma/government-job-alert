@@ -1,3 +1,4 @@
+import csv
 import hashlib
 import json
 import os
@@ -355,6 +356,16 @@ def main():
         temp = QUEUE.with_suffix(".json.tmp")
         temp.write_text(json.dumps(retained, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         temp.replace(QUEUE)
+        columns = ["id", "detected_at_utc", "source_name", "candidate_title", "candidate_url",
+                   "review_status", "human_verified", "notice_type", "organisation",
+                   "advertisement_number", "vacancy_count", "application_end_date", "summary"]
+        with (DATA / "review_queue.csv").open("w", newline="", encoding="utf-8-sig") as handle:
+            writer = csv.DictWriter(handle, fieldnames=columns)
+            writer.writeheader()
+            for row in retained:
+                draft = row.get("ai_draft") if isinstance(row.get("ai_draft"), dict) else {}
+                writer.writerow({**{k: row.get(k) for k in columns[:7]},
+                                 **{k: draft.get(k) for k in columns[7:]}})
         print(f"Pruned {len(rows) - len(retained)} dismissed or older-than-{QUEUE_RETENTION_DAYS}-day queue records; compact exam history retained.")
     print(
         f"Supabase sync complete: pending={len(valid)}; tracked_exams={exam_count}; "
