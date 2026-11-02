@@ -76,8 +76,7 @@ class ExamLifecycleTests(unittest.TestCase):
         self.assertIn("Result link:", changed_fields(before, after)[0])
 
     def test_text_normalization_collapses_whitespace(self):
-        self.assertEqual(clean("  National   Testing\n Agency  "), "National Testing Agency")
-
+        self.assertEqual(clean("  National   Testing" + chr(10) + " Agency  "), "National Testing Agency")
 
 if __name__ == "__main__":
     unittest.main()
