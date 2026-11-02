@@ -74,7 +74,8 @@ def exam_identity(name, draft):
     organisation = clean(draft.get("organisation"))
     cycle = clean(draft.get("cycle_label"))
     key_text = "|".join((organisation.casefold(), name.casefold(), cycle.casefold()))
-    return hashlib.sha256(key_text.encode("utf-8")).hexdigest(), organisation, cycle
+    key = re.sub(r"[^a-z0-9]+", "-", key_text).strip("-")[:200]
+    return key, organisation, cycle
 
 
 def upload_attachment(row, payload, draft):
