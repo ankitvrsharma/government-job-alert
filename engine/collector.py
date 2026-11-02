@@ -114,11 +114,16 @@ def download_attachment(item, folder, max_bytes=25 * 1024 * 1024):
         raise PermissionError("robots.txt does not permit this attachment URL")
     from pathlib import Path
     extension = Path(urlparse(item["url"]).path).suffix.lower()
-    mime = ATTACHMENT_TYPES.get(extension)
-    if not mime:
-        raise ValueError("Unsupported official attachment type")
+    if not extension and item.get("kind") == "pdf":
+        extension = ".pdf"
     with HTTP.get(item["url"], timeout=(6, 25), stream=True) as response:
         response.raise_for_status()
+        if not extension:
+            content_type = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+            extension = next((ext for ext, mime_type in ATTACHMENT_TYPES.items() if mime_type == content_type), "")
+        mime = ATTACHMENT_TYPES.get(extension)
+        if not mime:
+            raise ValueError("Unsupported official attachment type")
         size = response.headers.get("Content-Length")
         if size and int(size) > max_bytes:
             raise ValueError("Official attachment exceeds 25 MB download limit")
