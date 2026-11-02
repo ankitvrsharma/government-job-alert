@@ -56,7 +56,7 @@ def notice_key(draft):
     posts = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('post_names') or []) if str(x).strip()))
     related = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('related_exams') or []) if str(x).strip()))
     subject = str(draft.get('exam_name') or draft.get('related_notice') or '').strip().lower()
-    identity = ad or posts or subject or related
+    identity = ad or subject or posts or related
     return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
 
 def changed_fields(old, new):
