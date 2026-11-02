@@ -83,7 +83,7 @@ def exam_identity(name, draft):
 
 
 def upload_attachment(row, payload, draft):
-    relative = clean(row.get("local_pdf"))
+    relative = clean(row.get("local_attachment") or row.get("local_pdf"))
     if not relative:
         return None, None, None, None
     path = (DATA / relative).resolve()
@@ -99,8 +99,18 @@ def upload_attachment(row, payload, draft):
         print(f"Attachment skipped (size {size} bytes): {relative}")
         return None, None, None, None
     digest = clean(row.get("attachment_sha256") or row.get("document_sha256")) or hashlib.sha256(path.read_bytes()).hexdigest()
-    object_path = f"{digest[:2]}/{digest}.pdf"
-    mime = "application/pdf"
+    extension = path.suffix.lower()
+    mime_types = {
+        ".pdf": "application/pdf",
+        ".zip": "application/zip",
+        ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ".csv": "text/csv",
+    }
+    mime = clean(row.get("attachment_mime_type")) or mime_types.get(extension)
+    if not mime or extension not in mime_types:
+        raise ValueError("Unsupported official attachment type for storage")
+    object_path = f"{digest[:2]}/{digest}{extension}"
     response = requests.post(
         f"{BASE_URL}/storage/v1/object/{BUCKET}/{object_path}",
         headers=headers({"Content-Type": mime, "x-upsert": "true"}),
@@ -109,8 +119,8 @@ def upload_attachment(row, payload, draft):
     )
     response.raise_for_status()
     public_url = f"{BASE_URL}/storage/v1/object/public/{BUCKET}/{object_path}"
-    filename = re.sub(r"[^A-Za-z0-9._-]+", "-", clean(row.get("candidate_title")) or "official-notice")
-    filename = filename[:90].strip("-") + ".pdf"
+    filename = re.sub(r"[^A-Za-z0-9._-]+", "-", clean(draft.get("post_title") or row.get("candidate_title")) or "official-notice")
+    filename = filename[:90].strip("-") + extension
     return object_path, public_url, filename, mime
 
 
