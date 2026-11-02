@@ -239,7 +239,7 @@ def sync_exam_lifecycle(rows, dismissed_ids):
 
 
 def purge_dismissed_updates(dismissed_ids):
-    removed = 0
+    removed_updates, removed_files = 0, 0
     ids = list(dismissed_ids)
     for start in range(0, len(ids), 100):
         batch = ids[start:start + 100]
@@ -267,7 +267,7 @@ def purge_dismissed_updates(dismissed_ids):
             patch = {"review_status": "rejected"}
             if deleted:
                 patch.update({"attachment_path": None, "attachment_url": None})
-                removed += len(paths)
+                removed_files += len(paths)
             response = requests.patch(
                 f"{BASE_URL}/rest/v1/exam_updates",
                 params={"id": "in.(" + ",".join(update_ids) + ")"},
@@ -363,7 +363,7 @@ def main():
 
     # Preserve compact lifecycle history before pruning full review payloads.
     active_ids, exam_count, update_count = sync_exam_lifecycle(rows, dismissed_ids)
-    rejected_updates = purge_dismissed_updates(dismissed_ids)
+    rejected_updates, rejected_files = purge_dismissed_updates(dismissed_ids)
     archived_exams, purged_files = archive_completed_exams()
 
     # Keep the full review queue short-lived; old items remain as compact exam history.
@@ -436,8 +436,8 @@ def main():
         f"Supabase sync complete: pending={len(valid)}; tracked_exams={exam_count}; "
         f"exam_updates={update_count}; stale_queue_rows_removed={len(stale)}; "
         f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={pruned_count}; "
-        f"rejected_updates_cleaned={rejected_updates}; completed_exams_archived={archived_exams}; "
-        f"old_attachments_purged={purged_files}."
+        f"rejected_updates_marked={rejected_updates}; discarded_files_purged={rejected_files}; "
+        f"completed_exams_archived={archived_exams}; old_attachments_purged={purged_files}."
     )
 
 
