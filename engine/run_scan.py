@@ -63,8 +63,13 @@ def changed_fields(old, new):
     labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link','event_type':'Event type','event_date':'New event date','previous_event_date':'Previous event date','change_reason':'Reason','exam_name':'Examination','important_dates':'Important dates','related_notice':'Related notice','cycle_label':'Exam cycle','related_exams':'Related exams','result_url':'Result link','result_declared':'Result status'}
     changes = []
     for field, label in labels.items():
-        before = '; '.join(old.get(field) or []) if isinstance(old.get(field), list) else str(old.get(field) or '').strip()
-        after = '; '.join(new.get(field) or []) if isinstance(new.get(field), list) else str(new.get(field) or '').strip()
+        before_value, after_value = old.get(field), new.get(field)
+        if field == 'related_exams':
+            before = '; '.join(sorted(str(x).strip() for x in (before_value or []) if str(x).strip()))
+            after = '; '.join(sorted(str(x).strip() for x in (after_value or []) if str(x).strip()))
+        else:
+            before = '; '.join(before_value or []) if isinstance(before_value, list) else str(before_value or '').strip()
+            after = '; '.join(after_value or []) if isinstance(after_value, list) else str(after_value or '').strip()
         if before != after and after:
             changes.append(label + ': ' + (before or 'Not stated') + ' -> ' + after)
     return changes
