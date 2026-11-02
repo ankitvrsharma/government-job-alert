@@ -276,7 +276,9 @@ def purge_dismissed_updates(dismissed_ids):
                 timeout=30,
             )
             response.raise_for_status()
-    return removed
+            removed_updates += len(rows)
+    return removed_updates, removed_files
+
 
 def archive_completed_exams():
     now = datetime.now(timezone.utc).isoformat()
