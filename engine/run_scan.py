@@ -54,8 +54,9 @@ def notice_key(draft):
     ad = str(draft.get('advertisement_number') or '').strip().lower()
     org = str(draft.get('organisation') or '').strip().lower()
     posts = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('post_names') or []) if str(x).strip()))
+    related = '|'.join(sorted(str(x).strip().lower() for x in (draft.get('related_exams') or []) if str(x).strip()))
     subject = str(draft.get('exam_name') or draft.get('related_notice') or '').strip().lower()
-    identity = ad or posts or subject
+    identity = ad or posts or subject or related
     return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
 
 def changed_fields(old, new):
@@ -146,9 +147,17 @@ def main():
                 prior = registry.get(stable_key) if stable_key else None
                 changes = changed_fields(prior.get("draft", {}) if prior else {}, draft) if prior else []
                 if prior and not changes:
+                    # If the same official update was first found as a webpage and a linked PDF
+                    # is discovered later, attach that PDF to the existing single post.
+                    existing = next((row for row in queue if row.get("id") == prior.get("id")), None)
+                    if existing and item.get("kind") == "pdf" and not existing.get("local_pdf") and local:
+                        existing["local_pdf"] = str(local.relative_to(DATA))
+                        existing["attachment_sha256"] = digest
+                        existing["attachment_source_url"] = item.get("url")
+                        log.info("Attached official PDF to existing update %s: %s", existing.get("id"), item.get("url"))
                     state["snapshots"][url_key] = digest
                     mark(item, digest, state)
-                    log.info("Content changed but recruitment details did not; no post generated: %s", item.get("title"))
+                    log.info("Same recruitment/exam update; merged source file into existing post: %s", item.get("title"))
                     continue
 
                 ident = hashlib.sha256((item["url"] + (digest or "")).encode()).hexdigest()[:16]
@@ -170,6 +179,8 @@ def main():
                     "candidate_url": item.get("url"),
                     "document_sha256": digest,
                     "local_pdf": str(local.relative_to(DATA)) if local else None,
+                    "attachment_sha256": digest if local else None,
+                    "attachment_source_url": item.get("url") if local else None,
                     "review_status": "pending_review",
                     "human_verified": False,
                     "post_type": (("deadline_extension" if any(change.startswith("Last date:") for change in changes) else "update") if prior else "new") if is_vacancy else (str(draft.get("event_type") or draft.get("post_category") or "recruitment_update").lower()),
