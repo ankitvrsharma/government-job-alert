@@ -224,6 +224,39 @@ def sync_exam_lifecycle(rows, dismissed_ids):
     return active_ids, len(exam_rows), len(updates)
 
 
+def purge_dismissed_updates(dismissed_ids):
+    removed = 0
+    ids = list(dismissed_ids)
+    for start in range(0, len(ids), 100):
+        batch = ids[start:start + 100]
+        rows = api_get("exam_updates", {
+            "select": "id,attachment_path",
+            "id": "in.(" + ",".join(batch) + ")",
+            "limit": "100",
+        })
+        paths = [x["attachment_path"] for x in rows if x.get("attachment_path")]
+        if paths:
+            response = requests.delete(
+                f"{BASE_URL}/storage/v1/object/{BUCKET}",
+                headers=headers(),
+                json={"prefixes": paths},
+                timeout=45,
+            )
+            response.raise_for_status()
+        if rows:
+            update_ids = [x["id"] for x in rows]
+            response = requests.patch(
+                f"{BASE_URL}/rest/v1/exam_updates",
+                params={"id": "in.(" + ",".join(update_ids) + ")"},
+                headers=headers({"Prefer": "return=minimal"}),
+                json={"review_status": "rejected", "attachment_path": None, "attachment_url": None},
+                timeout=30,
+            )
+            response.raise_for_status()
+            removed += len(rows)
+    return removed
+
+
 def archive_completed_exams():
     now = datetime.now(timezone.utc).isoformat()
     completed = api_get("tracked_exams", {
@@ -303,6 +336,7 @@ def main():
 
     # Preserve compact lifecycle history before pruning full review payloads.
     active_ids, exam_count, update_count = sync_exam_lifecycle(rows, dismissed_ids)
+    rejected_updates = purge_dismissed_updates(dismissed_ids)
     archived_exams, purged_files = archive_completed_exams()
 
     # Keep the full review queue short-lived; old items remain as compact exam history.
@@ -375,7 +409,8 @@ def main():
         f"Supabase sync complete: pending={len(valid)}; tracked_exams={exam_count}; "
         f"exam_updates={update_count}; stale_queue_rows_removed={len(stale)}; "
         f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={pruned_count}; "
-        f"completed_exams_archived={archived_exams}; old_attachments_purged={purged_files}."
+        f"rejected_updates_cleaned={rejected_updates}; completed_exams_archived={archived_exams}; "
+        f"old_attachments_purged={purged_files}."
     )
 
 
