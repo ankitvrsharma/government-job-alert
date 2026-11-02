@@ -1,7 +1,7 @@
 import csv, hashlib, json, logging, os, time
 from datetime import datetime, timezone
 from .config import DATA, LOGS, DOWNLOADS, load_sources, GEMINI_MODEL, SCAN_TIME_BUDGET_SECONDS
-from .collector import fetch_source, download_pdf, extract_web_text
+from .collector import fetch_source, download_pdf, download_attachment, extract_web_text
 from .pdf_text import extract_pdf_text
 from .ai_extract import extract_with_ai
 from .dedupe import load_seen, seen, mark, norm
@@ -105,10 +105,15 @@ def main():
             candidates += 1
             try:
                 url_key = norm(item["url"])
-                digest = local = None
+                digest = local = attachment_mime = None
                 if item["kind"] == "pdf":
                     local, digest = download_pdf(item, DOWNLOADS)
+                    attachment_mime = "application/pdf"
                     body = extract_pdf_text(local)
+                elif item["kind"] == "file":
+                    local, digest, attachment_mime = download_attachment(item, DOWNLOADS)
+                    page_url = item.get("source_url") or item["url"]
+                    body = extract_web_text({**item, "url": page_url})
                 else:
                     body = extract_web_text(item)
                     digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
@@ -150,9 +155,11 @@ def main():
                     # If the same official update was first found as a webpage and a linked PDF
                     # is discovered later, attach that PDF to the existing single post.
                     existing = next((row for row in queue if row.get("id") == prior.get("id")), None)
-                    if existing and item.get("kind") == "pdf" and not existing.get("local_pdf") and local:
-                        existing["local_pdf"] = str(local.relative_to(DATA))
+                    if existing and item.get("kind") in ("pdf", "file") and not existing.get("local_attachment") and local:
+                        existing["local_attachment"] = str(local.relative_to(DATA))
+                        existing["local_pdf"] = str(local.relative_to(DATA)) if local.suffix.lower() == ".pdf" else None
                         existing["attachment_sha256"] = digest
+                        existing["attachment_mime_type"] = attachment_mime
                         existing["attachment_source_url"] = item.get("url")
                         log.info("Attached official PDF to existing update %s: %s", existing.get("id"), item.get("url"))
                     state["snapshots"][url_key] = digest
@@ -178,8 +185,10 @@ def main():
                     "candidate_title": item.get("title"),
                     "candidate_url": item.get("url"),
                     "document_sha256": digest,
-                    "local_pdf": str(local.relative_to(DATA)) if local else None,
+                    "local_pdf": str(local.relative_to(DATA)) if local and local.suffix.lower() == ".pdf" else None,
+                    "local_attachment": str(local.relative_to(DATA)) if local else None,
                     "attachment_sha256": digest if local else None,
+                    "attachment_mime_type": attachment_mime,
                     "attachment_source_url": item.get("url") if local else None,
                     "review_status": "pending_review",
                     "human_verified": False,
