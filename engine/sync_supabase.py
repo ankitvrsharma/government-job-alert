@@ -99,7 +99,7 @@ def exam_identity(name, draft):
     return key, organisation, cycle
 
 
-def upload_attachment(row, payload, draft):
+def upload_attachment(row, draft):
     relative = clean(row.get("local_attachment") or row.get("local_pdf"))
     if not relative:
         return None, None, None, None
@@ -184,7 +184,7 @@ def sync_exam_lifecycle(rows, dismissed_ids):
 
         attachment_path = attachment_url = attachment_name = attachment_mime = None
         try:
-            attachment_path, attachment_url, attachment_name, attachment_mime = upload_attachment(row, row, draft)
+            attachment_path, attachment_url, attachment_name, attachment_mime = upload_attachment(row, draft)
         except Exception as exc:
             print(f"Attachment upload failed for {row.get('id')}: {exc}; official URL retained.")
         if attachment_url:
