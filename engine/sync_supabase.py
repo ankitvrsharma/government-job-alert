@@ -249,27 +249,34 @@ def purge_dismissed_updates(dismissed_ids):
             "limit": "100",
         })
         paths = [x["attachment_path"] for x in rows if x.get("attachment_path")]
+        deleted = True
         if paths:
-            response = requests.delete(
-                f"{BASE_URL}/storage/v1/object/{BUCKET}",
-                headers=headers(),
-                json={"prefixes": paths},
-                timeout=45,
-            )
-            response.raise_for_status()
+            try:
+                response = requests.delete(
+                    f"{BASE_URL}/storage/v1/object/{BUCKET}",
+                    headers=headers(),
+                    json={"prefixes": paths},
+                    timeout=45,
+                )
+                response.raise_for_status()
+            except Exception as exc:
+                deleted = False
+                print(f"Could not purge one or more discarded attachments; will retry next scan: {exc}")
         if rows:
             update_ids = [x["id"] for x in rows]
+            patch = {"review_status": "rejected"}
+            if deleted:
+                patch.update({"attachment_path": None, "attachment_url": None})
+                removed += len(paths)
             response = requests.patch(
                 f"{BASE_URL}/rest/v1/exam_updates",
                 params={"id": "in.(" + ",".join(update_ids) + ")"},
                 headers=headers({"Prefer": "return=minimal"}),
-                json={"review_status": "rejected", "attachment_path": None, "attachment_url": None},
+                json=patch,
                 timeout=30,
             )
             response.raise_for_status()
-            removed += len(rows)
     return removed
-
 
 def archive_completed_exams():
     now = datetime.now(timezone.utc).isoformat()
@@ -282,21 +289,13 @@ def archive_completed_exams():
     if not completed:
         return 0, 0
     ids = [x["id"] for x in completed]
-    response = requests.patch(
-        f"{BASE_URL}/rest/v1/tracked_exams",
-        params={"id": "in.(" + ",".join(ids) + ")"},
-        headers=headers({"Prefer": "return=minimal"}),
-        json={"lifecycle_status": "archived", "is_following": False},
-        timeout=30,
-    )
-    response.raise_for_status()
     update_ids = set()
     for exam_id in ids:
         for link in api_get("exam_update_exams", {
             "select": "update_id", "exam_id": "eq." + exam_id, "limit": "5000"
         }):
             update_ids.add(link["update_id"])
-    purged_files = 0
+    purged_files, failed_exam_ids = 0, set()
     for update_id in update_ids:
         links = api_get("exam_update_exams", {
             "select": "exam_id", "update_id": "eq." + update_id, "limit": "100"
@@ -306,21 +305,26 @@ def archive_completed_exams():
             "select": "id,lifecycle_status", "id": "in.(" + ",".join(linked_ids) + ")",
             "limit": "100",
         }) if linked_ids else []
-        if states and any(x["lifecycle_status"] != "archived" for x in states):
+        if states and any(x["lifecycle_status"] != "archived" and x["id"] not in ids for x in states):
             continue
         rows = api_get("exam_updates", {
             "select": "attachment_path", "id": "eq." + update_id, "limit": "1"
         })
         path = rows[0].get("attachment_path") if rows else None
         if path:
-            delete = requests.delete(
-                f"{BASE_URL}/storage/v1/object/{BUCKET}",
-                headers=headers(),
-                json={"prefixes": [path]},
-                timeout=30,
-            )
-            delete.raise_for_status()
-            purged_files += 1
+            try:
+                delete = requests.delete(
+                    f"{BASE_URL}/storage/v1/object/{BUCKET}",
+                    headers=headers(),
+                    json={"prefixes": [path]},
+                    timeout=30,
+                )
+                delete.raise_for_status()
+                purged_files += 1
+            except Exception as exc:
+                failed_exam_ids.update(x for x in linked_ids if x in ids)
+                print(f"Attachment cleanup failed for archived exam update {update_id}; will retry: {exc}")
+                continue
         patch = requests.patch(
             f"{BASE_URL}/rest/v1/exam_updates",
             params={"id": "eq." + update_id},
@@ -329,8 +333,17 @@ def archive_completed_exams():
             timeout=30,
         )
         patch.raise_for_status()
-    return len(ids), purged_files
-
+    archive_ids = [x for x in ids if x not in failed_exam_ids]
+    if archive_ids:
+        response = requests.patch(
+            f"{BASE_URL}/rest/v1/tracked_exams",
+            params={"id": "in.(" + ",".join(archive_ids) + ")"},
+            headers=headers({"Prefer": "return=minimal"}),
+            json={"lifecycle_status": "archived", "is_following": False},
+            timeout=30,
+        )
+        response.raise_for_status()
+    return len(archive_ids), purged_files
 
 def main():
     if not KEY:
