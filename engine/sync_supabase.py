@@ -220,6 +220,67 @@ def sync_exam_lifecycle(rows, dismissed_ids):
     return active_ids, len(exam_rows), len(updates)
 
 
+def archive_completed_exams():
+    now = datetime.now(timezone.utc).isoformat()
+    completed = api_get("tracked_exams", {
+        "select": "id",
+        "lifecycle_status": "eq.result_declared",
+        "archive_after": "lte." + now,
+        "limit": "1000",
+    })
+    if not completed:
+        return 0, 0
+    ids = [x["id"] for x in completed]
+    response = requests.patch(
+        f"{BASE_URL}/rest/v1/tracked_exams",
+        params={"id": "in.(" + ",".join(ids) + ")"},
+        headers=headers({"Prefer": "return=minimal"}),
+        json={"lifecycle_status": "archived", "is_following": False},
+        timeout=30,
+    )
+    response.raise_for_status()
+    update_ids = set()
+    for exam_id in ids:
+        for link in api_get("exam_update_exams", {
+            "select": "update_id", "exam_id": "eq." + exam_id, "limit": "5000"
+        }):
+            update_ids.add(link["update_id"])
+    purged_files = 0
+    for update_id in update_ids:
+        links = api_get("exam_update_exams", {
+            "select": "exam_id", "update_id": "eq." + update_id, "limit": "100"
+        })
+        linked_ids = [x["exam_id"] for x in links]
+        states = api_get("tracked_exams", {
+            "select": "id,lifecycle_status", "id": "in.(" + ",".join(linked_ids) + ")",
+            "limit": "100",
+        }) if linked_ids else []
+        if states and any(x["lifecycle_status"] != "archived" for x in states):
+            continue
+        rows = api_get("exam_updates", {
+            "select": "attachment_path", "id": "eq." + update_id, "limit": "1"
+        })
+        path = rows[0].get("attachment_path") if rows else None
+        if path:
+            delete = requests.delete(
+                f"{BASE_URL}/storage/v1/object/{BUCKET}",
+                headers=headers(),
+                json={"prefixes": [path]},
+                timeout=30,
+            )
+            delete.raise_for_status()
+            purged_files += 1
+        patch = requests.patch(
+            f"{BASE_URL}/rest/v1/exam_updates",
+            params={"id": "eq." + update_id},
+            headers=headers({"Prefer": "return=minimal"}),
+            json={"review_status": "archived", "attachment_path": None, "attachment_url": None},
+            timeout=30,
+        )
+        patch.raise_for_status()
+    return len(ids), purged_files
+
+
 def main():
     if not KEY:
         print("SUPABASE_SERVICE_ROLE_KEY is not configured; skipping database sync.")
@@ -238,6 +299,7 @@ def main():
 
     # Save compact lifecycle history and official files before pruning the transient review queue.
     active_ids, exam_count, update_count = sync_exam_lifecycle(rows, dismissed_ids)
+    archived_exams, purged_files = archive_completed_exams()
 
     valid = []
     for row in rows:
@@ -297,7 +359,8 @@ def main():
     print(
         f"Supabase sync complete: pending={len(valid)}; tracked_exams={exam_count}; "
         f"exam_updates={update_count}; stale_queue_rows_removed={len(stale)}; "
-        f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={archived}."
+        f"dismissed_ids_suppressed={len(dismissed_ids)}; local_queue_pruned={archived}; "
+        f"completed_exams_archived={archived_exams}; old_attachments_purged={purged_files}."
     )
 
 
