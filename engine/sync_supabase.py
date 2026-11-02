@@ -371,6 +371,7 @@ def main():
     # Keep the full review queue short-lived; old items remain as compact exam history.
     cutoff = datetime.now(timezone.utc) - timedelta(days=QUEUE_RETENTION_DAYS)
     retained = []
+    expired_ids = []
     pruned_count = 0
     for row in rows:
         detected = row.get("detected_at_utc")
@@ -378,7 +379,11 @@ def main():
             age = datetime.fromisoformat(str(detected).replace("Z", "+00:00"))
         except (TypeError, ValueError):
             age = datetime.now(timezone.utc)
-        if row.get("id") in dismissed_ids or age < cutoff:
+        if row.get("id") in dismissed_ids:
+            pruned_count += 1
+            continue
+        if age < cutoff:
+            expired_ids.append(row["id"])
             pruned_count += 1
             continue
         retained.append(row)
@@ -417,6 +422,18 @@ def main():
             timeout=30,
         )
         response.raise_for_status()
+
+    for start in range(0, len(expired_ids), 100):
+        batch = expired_ids[start:start + 100]
+        if batch:
+            response = requests.patch(
+                f"{BASE_URL}/rest/v1/exam_updates",
+                params={"id": "in.(" + ",".join(batch) + ")", "review_status": "eq.pending_review"},
+                headers=headers({"Prefer": "return=minimal"}),
+                json={"review_status": "archived"},
+                timeout=30,
+            )
+            response.raise_for_status()
 
     if pruned_count:
         temp = QUEUE.with_suffix(".json.tmp")
