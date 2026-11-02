@@ -94,3 +94,21 @@ Only HTTPS URLs are accepted. The scanner derives the allowed host from the subm
 ### Discarding reviewed queue posts
 
 Administrators can discard a notice from its review card when it is irrelevant or has already been shared. The item is removed from the live queue and a protected dismissal marker is retained in Supabase, so scheduled scans do not re-import the same post from the repository queue. Dismissal markers are only visible to authorised administrators and the scanner service role.
+
+## Exam lifecycle tracking and official attachments
+
+- Every official source file or distinct notice/update is represented by one review post. If the same update is discovered as an HTML page and a linked PDF, the PDF is attached to the existing post instead of creating a second post.
+- Gemini extracts the exam/recruitment name, cycle, related exams for multi-exam calendars, result status and result-check URL. One source document can be linked to several tracked exams without duplicating the post.
+- Supabase stores compact lifecycle records in `tracked_exams`, `exam_updates` and `exam_update_exams`. The admin panel lets the reviewer follow/pause exams, inspect their update history, mark a result as declared, reopen tracking or archive an exam.
+- Official PDFs up to 25 MB are deduplicated by SHA-256 and stored in the public `official-updates` bucket. Only the service-role scanner can upload/delete objects; public read access is limited to this bucket because these files originate from official public notifications. WhatsApp preparation attempts to share the banner and official PDF together. If no PDF is available, the post carries the official result-check page URL instead.
+- The transient review queue is pruned after 45 days or when dismissed. Compact exam/update history remains available. When an exam is manually marked result-declared, it is archived after 180 days and its attached file is removed if no other active exam uses it. The small historical update metadata remains.
+- The scanner never treats an AI-detected result as human-verified. The admin must check the official result and mark the exam's result as declared in the tracker.
+
+## Release 1.2 work
+
+- Added lifecycle tracking for examinations and recruitment cycles.
+- Added exam-to-update relationships, including multi-exam calendars.
+- Added official PDF upload, deduplication and WhatsApp file-sharing support.
+- Added per-category visual banner motifs while keeping the channel title lockup consistent.
+- Added automatic short-term review-queue retention and post-result attachment cleanup.
+- Added regression tests for exam identity, multi-exam mapping and one-update deduplication.
