@@ -95,7 +95,7 @@ def upload_attachment(row, payload, draft):
     if size <= 0 or size > MAX_ATTACHMENT_BYTES:
         print(f"Attachment skipped (size {size} bytes): {relative}")
         return None, None, None, None
-    digest = clean(row.get("document_sha256")) or hashlib.sha256(path.read_bytes()).hexdigest()
+    digest = clean(row.get("attachment_sha256") or row.get("document_sha256")) or hashlib.sha256(path.read_bytes()).hexdigest()
     object_path = f"{digest[:2]}/{digest}.pdf"
     mime = "application/pdf"
     response = requests.post(
