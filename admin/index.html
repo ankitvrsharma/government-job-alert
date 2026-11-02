@@ -336,7 +336,7 @@ $('examForm').addEventListener('submit',async e=>{
  if(url){try{if(new URL(url).protocol!=='https:')throw new Error();}catch{status.textContent='Official URL must be a valid HTTPS link.';return;}}
  status.textContent='Adding exam to tracking list…';
  const key=examKey(name,org,cycle);
- const {error}=await sb.from('tracked_exams').upsert({exam_key:key,exam_name:name,organisation:org||null,cycle_label:cycle||null,official_url:url||null,is_following:true,lifecycle_status:'active'},{onConflict:'exam_key'});
+ const {error}=await sb.from('tracked_exams').upsert({exam_key:key,exam_name:name,organisation:org||null,cycle_label:cycle||null,official_url:url||null,is_following:true,lifecycle_status:'active',result_declared_at:null,archive_after:null},{onConflict:'exam_key'});
  if(error){status.textContent='Could not follow this exam: '+error.message;return;}
  $('examForm').reset();status.textContent='Exam added to your tracking list.';await loadTrackedExams();
 });
