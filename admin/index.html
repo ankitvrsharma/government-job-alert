@@ -136,33 +136,65 @@ function postLabel(r){const d=draftOf(r),t=String(r.post_type||'new').toLowerCas
 function postIcon(r){const t=String(r.post_type||'').toLowerCase();return ({deadline_extension:'⏰',exam_calendar:'🗓️',exam_schedule:'📅',exam_date_change:'🔄',exam_postponed:'⚠️',exam_cancelled:'❌',admit_card:'🎫',application_update:'📝',corrigendum:'📌',answer_key:'🗝️',result:'🏆',scorecard:'📊',cut_off:'📈',interview_schedule:'🤝',selection_update:'✅',document_verification:'📄'})[t]||((t==='update')?'🔔':'🏛️');}
 function shareText(r){
  const d=draftOf(r),title=titleOf(r),summary=String(d.summary||'').replace(/\s+/g,' ').trim();
- if(d.custom_caption&&d.custom_caption.trim())return d.custom_caption;
- const lines=['*'+title+'*'];if(summary)lines.push('',summary);
+ const type=String(r.post_type||d.event_type||d.post_category||'update').toLowerCase();
+ const lines=['*'+title+'*'];
+ if(summary)lines.push('',summary);
+ const contains=(a,b)=>String(a||'').toLowerCase().includes(String(b||'').toLowerCase());
  const org=d.organisation||r.source_name||'';
- const hasOrg=org&&(summary.toLowerCase().includes(org.toLowerCase())||title.toLowerCase().includes(org.toLowerCase()));
- if(org&&!hasOrg)lines.push('','Organisation: '+org);
- if(d.exam_name&&!summary.toLowerCase().includes(String(d.exam_name).toLowerCase())&&!title.toLowerCase().includes(String(d.exam_name).toLowerCase()))lines.push('Examination: '+d.exam_name);
- if(d.vacancy_count)lines.push('Vacancies: '+d.vacancy_count);
- if(d.advertisement_number)lines.push('Advertisement No.: '+d.advertisement_number);
+ if(org&&!contains(summary,org)&&!contains(title,org))lines.push('','Organisation: '+org);
+ const vacancy=d.is_recruitment_notice===true||d.post_category==='vacancy';
+ if(vacancy){
+  if(Array.isArray(d.post_names)&&d.post_names.length)lines.push('*Posts*',...d.post_names.filter(Boolean).slice(0,8).map(x=>'• '+x));
+  if(d.vacancy_count)lines.push('*Vacancies:* '+d.vacancy_count);
+ }
  const dates=[];
  const add=(label,value)=>{if(value)dates.push('• '+label+': '+value);};
- if(d.event_date)add('Event',d.event_date);
- if(d.previous_event_date)add('Previous date',d.previous_event_date);
+ if(d.event_date)add(d.previous_event_date?'Revised date':'Event date',d.event_date);
+ if(d.previous_event_date)add('Earlier date',d.previous_event_date);
  if(d.application_start_date)add('Applications open',d.application_start_date);
- if(d.application_end_date)add('Last date to apply',d.application_end_date);
+ if(d.application_end_date)add(type==='deadline_extension'||type==='fee_payment_extension'?'Extended last date':'Last date to apply',d.application_end_date);
  if(Array.isArray(d.exam_date_details))d.exam_date_details.forEach(x=>{if(x&&x.exam&&x.date)add(x.exam,x.date+(x.shift?' · '+x.shift:''));});
- else if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,12).forEach(x=>{const v=String(x);if(v.includes(':')){const p=v.split(':');add(p.shift().trim(),p.join(':').trim());}else if(d.exam_name)add(d.exam_name,v);});
+ else if(Array.isArray(d.important_dates))d.important_dates.filter(Boolean).slice(0,12).forEach(x=>{
+  const v=String(x).trim();
+  if(v.includes(':')){const p=v.split(':');add(p.shift().trim(),p.join(':').trim());}
+  else if(d.exam_name&&type!=='exam_calendar'&&type!=='exam_schedule')add(d.exam_name,v);
+ });
+ if((type==='exam_calendar'||type==='exam_schedule')&&Array.isArray(d.related_exams)&&d.related_exams.length){
+  lines.push('','*Examinations covered*',...d.related_exams.slice(0,12).map(x=>'• '+x));
+ }
  if(dates.length)lines.push('','*Important dates*',...dates);
- const elig=[];if(d.qualification)elig.push('Qualification: '+d.qualification);if(d.age_limit)elig.push('Age limit: '+d.age_limit);if(d.application_fee)elig.push('Application fee: '+d.application_fee);if(d.selection_process)elig.push('Selection: '+d.selection_process);
- if(elig.length)lines.push('','*Eligibility & selection*',...elig.map(x=>'• '+x));
- if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('','*What has changed*',...r.change_summary.slice(0,3).map(x=>'• '+x));
+ if(type==='application_update'||type==='deadline_extension'||type==='fee_payment_extension'){
+  if(d.previous_event_date&&d.application_end_date)lines.push('','The application deadline has been revised. Please use the updated date above.');
+  if(d.change_reason)lines.push('Reason: '+d.change_reason);
+ }
+ if(vacancy){
+  const eligibility=[];
+  if(d.qualification)eligibility.push('Qualification: '+d.qualification);
+  if(d.age_limit)eligibility.push('Age limit: '+d.age_limit);
+  if(d.application_fee)eligibility.push('Application fee: '+d.application_fee);
+  if(d.selection_process)eligibility.push('Selection: '+d.selection_process);
+  if(eligibility.length)lines.push('','*Eligibility & selection*',...eligibility.map(x=>'• '+x));
+ }
+ if(type==='corrigendum'&&d.change_reason)lines.push('','*Correction*',d.change_reason);
+ if(type==='interview_schedule'||type==='document_verification'||type==='selection_update'){
+  if(d.selection_process)lines.push('','*Next stage*',d.selection_process);
+  if(d.qualification)lines.push('Documents / eligibility: '+d.qualification);
+ }
+ if(Array.isArray(r.change_summary)&&r.change_summary.length)lines.push('','*Update details*',...r.change_summary.slice(0,4).map(x=>'• '+x));
  const notice=d.official_notification_url||r.candidate_url;
- if(notice)lines.push('','*Official notification*',notice);
- if(d.attachment_url)lines.push('*Official document*',d.attachment_url);
- const resultUrl=d.result_url||(String(r.post_type||'').toLowerCase()==='result'&&!d.attachment_url?(d.application_url||notice):'');
- if(resultUrl)lines.push('*Check result*',resultUrl);
- if(d.application_url&&d.application_url!==resultUrl)lines.push('*Apply online*',d.application_url);
- lines.push('','Please refer to the official notice for complete details.','','*The Educator Career Updates*');return lines.join('\n');
+ if(d.attachment_url){
+  const label=type==='result'||d.result_declared?'Download result PDF':type==='answer_key'?'Download answer key':type==='admit_card'?'Download admit card':'Download official PDF';
+  lines.push('','*'+label+'*',d.attachment_url);
+ }else if(type==='result'||d.result_declared){
+  const resultUrl=d.result_url||d.application_url||notice;
+  if(resultUrl)lines.push('','*Check result online*',resultUrl);
+ }else if(d.result_url){
+  lines.push('','*Open official portal*',d.result_url);
+ }
+ if(notice&&!contains(lines.join(' '),notice))lines.push('','*Official notification*',notice);
+ if(d.application_url&&!contains(lines.join(' '),d.application_url))lines.push('*Apply / candidate portal*',d.application_url);
+ lines.push('','Please check the official source for complete instructions and any later changes.','','*The Educator Career Updates*');
+ return lines.join('\n');
 }
 function render(){
  const q=$('search').value.trim().toLowerCase(),f=$('filter').value;
