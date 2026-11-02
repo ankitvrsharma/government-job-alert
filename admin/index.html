@@ -373,16 +373,67 @@ function baseTemplateCanvas(r){
  const raw=String(r.post_type||'new').toLowerCase(),key=postTemplates[raw]?raw:(raw==='new'?'new':'update');
  if(templateCanvasCache.has(key))return templateCanvasCache.get(key);
  const t=templateFor(r),canvas=document.createElement('canvas');canvas.width=1200;canvas.height=420;
- const ctx=canvas.getContext('2d'),g=ctx.createLinearGradient(0,0,1200,420);
+ const ctx=canvas.getContext('2d'),accent=t.accent||'#9fe7ff';
+ const g=ctx.createLinearGradient(0,0,1200,420);
  g.addColorStop(0,t.start||'#17283d');g.addColorStop(.52,t.middle||'#0b2340');g.addColorStop(1,t.end||'#59401f');
  ctx.fillStyle=g;ctx.fillRect(0,0,1200,420);
- const glow=ctx.createRadialGradient(1030,185,20,1030,185,380);
- glow.addColorStop(0,'rgba(255,255,255,.17)');glow.addColorStop(1,'rgba(255,255,255,0)');
- ctx.fillStyle=glow;ctx.fillRect(650,0,550,420);
- // Elegant flowing gold/navy accents create a consistent visual identity across post types.
- ctx.fillStyle='rgba(255,255,255,.045)';ctx.beginPath();ctx.moveTo(700,0);ctx.quadraticCurveTo(930,150,1200,28);ctx.lineTo(1200,0);ctx.closePath();ctx.fill();
- ctx.fillStyle='rgba(255,255,255,.035)';ctx.beginPath();ctx.moveTo(0,335);ctx.quadraticCurveTo(260,280,520,420);ctx.lineTo(0,420);ctx.closePath();ctx.fill();
- ctx.fillStyle=t.accent||'#f5cf58';ctx.fillRect(0,0,12,420);
+ const glow=ctx.createRadialGradient(600,190,20,600,190,620);
+ glow.addColorStop(0,'rgba(255,255,255,.08)');glow.addColorStop(1,'rgba(255,255,255,0)');
+ ctx.fillStyle=glow;ctx.fillRect(0,0,1200,420);
+ ctx.save();ctx.globalAlpha=.17;ctx.strokeStyle=accent;ctx.fillStyle=accent;ctx.lineWidth=3;
+ const line=(x1,y1,x2,y2)=>{ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();};
+ const circle=(x,y,r)=>{ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.stroke();};
+ const rect=(x,y,w,h,r=12)=>{ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.stroke();};
+ const motif=t.motif||'launch';
+ // Distinct, low-contrast illustration language for each post category.
+ if(motif==='calendar'){
+  rect(75,72,230,250,20);line(75,128,305,128);
+  for(let x=112;x<290;x+=44)line(x,145,x,298);
+  for(let y=170;y<300;y+=42)line(92,y,290,y);
+  for(let x=112;x<290;x+=44)for(let y=170;y<300;y+=42)circle(x,y,3);
+ }else if(motif==='timeline'){
+  line(105,210,1095,210);for(let i=0;i<7;i++){const x=130+i*155;circle(x,210,i===3?19:11);line(x,210,x,i%2?125:290);}
+ }else if(motif==='clock'){
+  circle(190,210,112);circle(190,210,92);line(190,210,190,135);line(190,210,248,238);
+  for(let i=0;i<12;i++){const a=i*Math.PI/6;line(190+Math.cos(a)*96,210+Math.sin(a)*96,190+Math.cos(a)*106,210+Math.sin(a)*106);}
+ }else if(motif==='arrows'){
+  line(80,145,320,145);line(290,115,320,145);line(290,175,320,145);
+  line(1120,275,880,275);line(910,245,880,275);line(910,305,880,275);
+ }else if(motif==='warning'){
+  ctx.beginPath();ctx.moveTo(190,72);ctx.lineTo(320,310);ctx.lineTo(60,310);ctx.closePath();ctx.stroke();
+  line(190,145,190,235);circle(190,275,5);
+ }else if(motif==='cross'){
+  circle(190,210,118);line(120,140,260,280);line(260,140,120,280);
+ }else if(motif==='ticket'){
+  rect(65,125,285,170,20);for(let y=148;y<280;y+=24)line(270,y,270,y+12);circle(270,125,9);circle(270,295,9);
+ }else if(motif==='form'||motif==='document'||motif==='edit'){
+  rect(75,65,235,285,12);line(110,125,275,125);line(110,165,260,165);line(110,205,275,205);line(110,245,235,245);
+  if(motif==='edit'){line(215,290,300,205);line(202,303,215,290);}
+  if(motif==='document'){line(245,65,310,130);line(245,65,245,130);line(245,130,310,130);}
+ }else if(motif==='key'){
+  circle(150,190,70);circle(150,190,23);line(220,190,350,190);line(310,190,310,225);line(345,190,345,215);
+ }else if(motif==='laurel'){
+  circle(190,210,82);for(let i=0;i<8;i++){const a=-Math.PI/2+i*Math.PI/7;circle(190+Math.cos(a)*118,210+Math.sin(a)*118,13);}
+  line(190,292,155,340);line(190,292,225,340);
+ }else if(motif==='bars'||motif==='gauge'){
+  line(70,320,350,320);line(90,320,90,250);line(150,320,150,195);line(210,320,210,150);line(270,320,270,95);
+  if(motif==='gauge'){ctx.beginPath();ctx.arc(205,300,115,Math.PI,Math.PI*2);ctx.stroke();line(205,300,275,220);}
+ }else if(motif==='conversation'){
+  rect(70,100,220,145,24);line(125,245,100,280);rect(175,205,160,110,22);
+ }else if(motif==='check'){
+  circle(190,210,118);line(120,215,175,270);line(175,270,275,150);
+ }else if(motif==='pin'){
+  circle(190,175,90);circle(190,175,32);ctx.beginPath();ctx.moveTo(125,245);ctx.lineTo(190,355);ctx.lineTo(255,245);ctx.stroke();
+ }else if(motif==='pulse'){
+  line(60,220,130,220);line(130,220,165,155);line(165,155,220,285);line(220,285,265,190);line(265,190,330,190);
+ }else{
+  for(let i=0;i<6;i++){const x=80+i*48;line(x,95,x,320);line(x+22,95,x+22,320);}
+  rect(80,95,280,225,16);
+ }
+ // A restrained frame and corner accents distinguish each category without crowding the title.
+ ctx.globalAlpha=.11;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(28,24,1144,372,30);ctx.stroke();
+ ctx.globalAlpha=.5;ctx.fillRect(0,0,10,420);
+ ctx.restore();
  templateCanvasCache.set(key,canvas);return canvas;
 }
 function makePostCanvas(r){
