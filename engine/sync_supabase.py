@@ -67,13 +67,28 @@ def exam_names(draft):
         name = clean(value)
         if name and name.casefold() not in {x.casefold() for x in names}:
             names.append(name)
-    # Vacancy-only notices are tracked under their advertised post/recruitment.
-    if not names and draft.get("is_recruitment_notice"):
+    if not names:
         posts = [clean(x) for x in draft.get("post_names", []) if clean(x)]
-        if posts:
+        # An advertisement/cycle number plus post name is a stronger stable key
+        # than a generic label such as "Director" or "Project Staff".
+        if draft.get("cycle_label") and posts:
             names.append(" / ".join(posts[:3]))
+        elif draft.get("is_recruitment_notice"):
+            identity = clean(draft.get("recruitment_name") or draft.get("post_title"))
+            names.append(identity or " / ".join(posts[:3]))
+        elif posts:
+            names.append(" / ".join(posts[:3]))
+        else:
+            identity = clean(draft.get("post_title"))
+            identity = re.sub(
+                r"\\s+(result|result released|result declared|answer key released|final answer key|admit card released|scorecard released|cut-off marks released)$",
+                "",
+                identity,
+                flags=re.IGNORECASE,
+            ).strip()
+            if identity:
+                names.append(identity)
     return names[:20]
-
 
 def exam_identity(name, draft):
     organisation = clean(draft.get("organisation"))
