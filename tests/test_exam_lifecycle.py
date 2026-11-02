@@ -59,6 +59,11 @@ class ExamLifecycleTests(unittest.TestCase):
         }
         self.assertEqual(notice_key(vacancy), notice_key(result))
 
+    def test_related_exam_order_does_not_create_a_duplicate_update(self):
+        first = {"related_exams": ["JEE Main 2027", "UGC NET December 2026"]}
+        second = {"related_exams": ["UGC NET December 2026", "JEE Main 2027"]}
+        self.assertEqual(changed_fields(first, second), [])
+
     def test_complete_official_notice_is_retained(self):
         row = {"ai_draft": {
             "status": "ai_draft",
