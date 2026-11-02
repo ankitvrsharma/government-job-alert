@@ -67,13 +67,16 @@ def fetch_source(source):
         if urlparse(url).scheme not in ("http", "https") or not allowed(url, domains):
             continue
         title = " ".join(a.get_text(" ", strip=True).split()) or url.rsplit("/", 1)[-1]
-        pdf = urlparse(url).path.lower().endswith(".pdf")
-        if not (pdf or any(k in (title + " " + url).lower() for k in keywords)):
+        extension = urlparse(url).path.lower().rsplit(".", 1)[-1] if "." in urlparse(url).path else ""
+        file_extensions = {"pdf", "zip", "xlsx", "docx", "csv"}
+        is_file = extension in file_extensions
+        if not (is_file or any(k in (title + " " + url).lower() for k in keywords)):
             continue
         if url in found:
             continue
         found.add(url)
-        items.append({"title": title[:300], "url": url, "kind": "pdf" if pdf else "web",
+        kind = "pdf" if extension == "pdf" else "file" if is_file else "web"
+        items.append({"title": title[:300], "url": url, "kind": kind,
                       "source_name": name, "source_url": source_url})
         if len(items) >= 80:
             break
@@ -98,14 +101,27 @@ def extract_web_text(item, max_chars=60000):
         raise ValueError("Candidate page contains too little readable text")
     return page_text[:max_chars]
 
-def download_pdf(item, folder, max_bytes=25 * 1024 * 1024):
+ATTACHMENT_TYPES = {
+    ".pdf": "application/pdf",
+    ".zip": "application/zip",
+    ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ".csv": "text/csv",
+}
+
+def download_attachment(item, folder, max_bytes=25 * 1024 * 1024):
     if not robots_allowed(item["url"]):
-        raise PermissionError("robots.txt does not permit this PDF URL")
+        raise PermissionError("robots.txt does not permit this attachment URL")
+    from pathlib import Path
+    extension = Path(urlparse(item["url"]).path).suffix.lower()
+    mime = ATTACHMENT_TYPES.get(extension)
+    if not mime:
+        raise ValueError("Unsupported official attachment type")
     with HTTP.get(item["url"], timeout=(6, 25), stream=True) as response:
         response.raise_for_status()
         size = response.headers.get("Content-Length")
         if size and int(size) > max_bytes:
-            raise ValueError("PDF exceeds 25 MB download limit")
+            raise ValueError("Official attachment exceeds 25 MB download limit")
         digest = hashlib.sha256()
         chunks, total = [], 0
         for chunk in response.iter_content(65536):
@@ -113,13 +129,22 @@ def download_pdf(item, folder, max_bytes=25 * 1024 * 1024):
                 continue
             total += len(chunk)
             if total > max_bytes:
-                raise ValueError("PDF exceeds 25 MB download limit")
+                raise ValueError("Official attachment exceeds 25 MB download limit")
             digest.update(chunk)
             chunks.append(chunk)
     data = b"".join(chunks)
-    if not data.startswith(b"%PDF"):
+    if extension == ".pdf" and not data.startswith(b"%PDF"):
         raise ValueError("Response is not a PDF")
+    if extension != ".pdf" and data.lstrip().startswith(b"<html"):
+        raise ValueError("Attachment URL returned an HTML page instead of a file")
     hexdigest = digest.hexdigest()
-    path = folder / (hexdigest[:20] + ".pdf")
+    path = folder / (hexdigest[:20] + extension)
     path.write_bytes(data)
-    return path, hexdigest
+    return path, hexdigest, mime
+
+
+def download_pdf(item, folder, max_bytes=25 * 1024 * 1024):
+    path, digest, _ = download_attachment(item, folder, max_bytes)
+    if path.suffix.lower() != ".pdf":
+        raise ValueError("Candidate is not a PDF")
+    return path, digest
