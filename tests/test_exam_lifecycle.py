@@ -45,6 +45,19 @@ class ExamLifecycleTests(unittest.TestCase):
         }
         self.assertEqual(notice_key(first), notice_key(second))
 
+    def test_vacancy_and_later_result_share_the_same_exam_identity(self):
+        vacancy = {
+            "organisation": "State Bank of India",
+            "exam_name": "SBI Specialist Cadre Officers Recruitment 2026-27",
+            "post_names": ["Specialist Cadre Officers"],
+        }
+        result = {
+            "organisation": "State Bank of India",
+            "exam_name": "SBI Specialist Cadre Officers Recruitment 2026-27",
+            "post_names": [],
+        }
+        self.assertEqual(notice_key(vacancy), notice_key(result))
+
     def test_complete_official_notice_is_retained(self):
         row = {"ai_draft": {
             "status": "ai_draft",
