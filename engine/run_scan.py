@@ -60,7 +60,7 @@ def notice_key(draft):
     return hashlib.sha256((org + '|' + identity).encode('utf-8')).hexdigest() if org and identity else ''
 
 def changed_fields(old, new):
-    labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link','event_type':'Event type','event_date':'New event date','previous_event_date':'Previous event date','change_reason':'Reason','exam_name':'Examination','important_dates':'Important dates','related_notice':'Related notice'}
+    labels = {'post_names':'Posts','vacancy_count':'Vacancy count','qualification':'Qualification','age_limit':'Age limit','application_start_date':'Application start date','application_end_date':'Last date','application_fee':'Application fee','selection_process':'Selection process','application_url':'Application link','event_type':'Event type','event_date':'New event date','previous_event_date':'Previous event date','change_reason':'Reason','exam_name':'Examination','important_dates':'Important dates','related_notice':'Related notice','cycle_label':'Exam cycle','related_exams':'Related exams','result_url':'Result link','result_declared':'Result status'}
     changes = []
     for field, label in labels.items():
         before = '; '.join(old.get(field) or []) if isinstance(old.get(field), list) else str(old.get(field) or '').strip()
