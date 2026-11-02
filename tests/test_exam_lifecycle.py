@@ -1,7 +1,7 @@
 import unittest
 
 from engine.run_scan import changed_fields, notice_key
-from engine.sync_supabase import exam_identity, exam_names, is_complete_notice
+from engine.sync_supabase import clean, exam_identity, exam_names, is_complete_notice
 
 
 class ExamLifecycleTests(unittest.TestCase):
@@ -69,6 +69,14 @@ class ExamLifecycleTests(unittest.TestCase):
     def test_no_change_means_no_second_post(self):
         draft = {"exam_name": "JEE Main 2027", "event_type": "result", "important_dates": ["10 May 2027"]}
         self.assertEqual(changed_fields(draft, dict(draft)), [])
+
+    def test_result_link_change_is_a_new_update(self):
+        before = {"exam_name": "JEE Main 2027", "event_type": "result", "result_url": "https://official.gov.in/result"}
+        after = {**before, "result_url": "https://official.gov.in/result-check"}
+        self.assertIn("Result link:", changed_fields(before, after)[0])
+
+    def test_text_normalization_collapses_whitespace(self):
+        self.assertEqual(clean("  National   Testing\\n Agency  "), "National Testing Agency")
 
 
 if __name__ == "__main__":
