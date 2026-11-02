@@ -110,5 +110,6 @@ Administrators can discard a notice from its review card when it is irrelevant o
 - Added exam-to-update relationships, including multi-exam calendars.
 - Added official PDF upload, deduplication and WhatsApp file-sharing support.
 - Added per-category visual banner motifs while keeping the channel title lockup consistent.
+- Added type-specific WhatsApp caption structures and official result/admit-card/answer-key/scorecard links.
 - Added automatic short-term review-queue retention and post-result attachment cleanup.
 - Added regression tests for exam identity, multi-exam mapping and one-update deduplication.
