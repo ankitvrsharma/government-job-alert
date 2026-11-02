@@ -111,14 +111,16 @@ def upload_attachment(row, payload, draft):
     if not mime or extension not in mime_types:
         raise ValueError("Unsupported official attachment type for storage")
     object_path = f"{digest[:2]}/{digest}{extension}"
-    response = requests.post(
-        f"{BASE_URL}/storage/v1/object/{BUCKET}/{object_path}",
-        headers=headers({"Content-Type": mime, "x-upsert": "true"}),
-        data=path.read_bytes(),
-        timeout=90,
-    )
-    response.raise_for_status()
     public_url = f"{BASE_URL}/storage/v1/object/public/{BUCKET}/{object_path}"
+    exists = requests.head(public_url, timeout=20)
+    if exists.status_code != 200:
+        response = requests.post(
+            f"{BASE_URL}/storage/v1/object/{BUCKET}/{object_path}",
+            headers=headers({"Content-Type": mime, "x-upsert": "true"}),
+            data=path.read_bytes(),
+            timeout=90,
+        )
+        response.raise_for_status()
     filename = re.sub(r"[^A-Za-z0-9._-]+", "-", clean(draft.get("post_title") or row.get("candidate_title")) or "official-notice")
     filename = filename[:90].strip("-") + extension
     return object_path, public_url, filename, mime
