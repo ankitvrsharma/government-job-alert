@@ -113,3 +113,21 @@ Administrators can discard a notice from its review card when it is irrelevant o
 - Added type-specific WhatsApp caption structures and official result/admit-card/answer-key/scorecard links.
 - Added automatic short-term review-queue retention and post-result attachment cleanup.
 - Added regression tests for exam identity, multi-exam mapping and one-update deduplication.
+
+
+
+## Expanded national and state recruitment coverage
+
+The built-in official-source registry in `sources/sources.json` has been expanded to **92 configured sources**. It now includes:
+- National recruitment and examination bodies, central education / health / research organisations, selected defence services, regulators and public-sector employers.
+- All 28 State Public Service Commission portals.
+- Major state subordinate, police, education and health recruitment boards, plus selected Union Territory authorities.
+- A wider job-family keyword set covering administration, clerical services, police, teaching, counselling / psychology, health, engineering, agriculture, research, legal services, forestry, transport and public-sector roles.
+
+### Coverage is source-based, not a guarantee of every vacancy
+
+The scanner can only discover notices exposed by configured pages and accessible same-host links. The source list is a monitored starting set, not a complete census of every district office, university, municipal body, court, autonomous institution, PSU subsidiary or department. Some portals use JavaScript, CAPTCHA, external application hosts or scanned PDFs and may need dedicated adapters / OCR. Review the scan logs and manual-review queue; a green workflow run does not prove complete vacancy coverage.
+
+Administrators can extend coverage at any time through **Admin → Add websites to monitor**. Add the official recruitment / notices URL (not an unofficial job aggregator). For broad coverage, add separate official recruitment pages for state police, education, health, technical services, universities, courts, municipal bodies and state PSUs where they are not already represented. The scanner's existing manual verification requirement remains in force.
+
+The directory document `India_Government_Job_and_Recruitment_Directory.docx` is a career-guidance reference; the operational source of truth for automated monitoring is `sources/sources.json` plus the protected Supabase `tracked_sources` table.
