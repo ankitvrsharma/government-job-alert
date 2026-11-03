@@ -1,0 +1,93 @@
+﻿name,url,category,enabled,host,allowed_domains_count,keywords_count,issues
+UPSC,https://upsc.gov.in/recruitment/recruitment-advertisements,Central recruitment,True,upsc.gov.in,1,24,none
+SSC,https://ssc.gov.in/,Central recruitment,True,ssc.gov.in,1,24,none
+NTA,https://nta.ac.in/,Examinations and recruitment,True,nta.ac.in,1,24,none
+UGC,https://www.ugc.gov.in/,Higher education,True,www.ugc.gov.in,1,24,none
+NCS,https://www.ncs.gov.in/,Government employment portal,True,www.ncs.gov.in,1,24,none
+Employment News,https://employmentnews.gov.in/,Government employment publication,True,employmentnews.gov.in,1,24,none
+KVS,https://kvsangathan.nic.in/,Education,True,kvsangathan.nic.in,1,24,none
+NVS,https://navodaya.gov.in/,Education,True,navodaya.gov.in,1,24,none
+CBSE,https://www.cbse.gov.in/,Education,True,www.cbse.gov.in,1,24,none
+CSIR,https://www.csir.res.in/,Research,True,www.csir.res.in,1,24,none
+ICMR,https://www.icmr.gov.in/,Research and health,True,www.icmr.gov.in,1,24,none
+DRDO,https://www.drdo.gov.in/,Defence and research,True,www.drdo.gov.in,1,24,none
+RBI,https://www.rbi.org.in/,Banking and finance,True,www.rbi.org.in,1,24,none
+IBPS,https://www.ibps.in/,Banking,True,www.ibps.in,1,24,none
+SBI Careers,https://sbi.co.in/web/careers,Banking,True,sbi.co.in,1,24,none
+Railway Recruitment Boards,https://www.rrbapply.gov.in/,Railways,True,www.rrbapply.gov.in,1,24,none
+NIELIT,https://www.nielit.gov.in/,Central recruitment,True,www.nielit.gov.in,1,24,none
+NIOS,https://nios.ac.in/,Education,True,nios.ac.in,1,24,none
+UPSC Active Examinations,https://cms.upsc.gov.in/active-examinations/,Examination lifecycle,True,cms.upsc.gov.in,2,22,none
+UPSC Examination Calendar,https://upsc.gov.in/examination-calendar,Examination calendar,True,upsc.gov.in,1,22,none
+SSC Examination Calendar,https://ssc.gov.in/,Examination calendar,True,ssc.gov.in,1,22,duplicate_url
+IBPS Examination and Recruitment Updates,https://www.ibps.in/,Banking examinations,True,www.ibps.in,1,22,duplicate_url
+Andhra Pradesh PSC,https://psc.ap.gov.in/,State PSC,True,psc.ap.gov.in,1,75,none
+Arunachal Pradesh PSC,https://appsc.gov.in/,State PSC,True,appsc.gov.in,1,75,none
+Assam PSC,https://apsc.nic.in/,State PSC,True,apsc.nic.in,1,75,none
+Bihar PSC,https://bpsc.bihar.gov.in/,State PSC,True,bpsc.bihar.gov.in,1,75,none
+Chhattisgarh PSC,https://psc.cg.gov.in/,State PSC,True,psc.cg.gov.in,1,75,none
+Goa PSC,https://gpsc.goa.gov.in/,State PSC,True,gpsc.goa.gov.in,1,75,none
+Gujarat PSC,https://gpsc.gujarat.gov.in/,State PSC,True,gpsc.gujarat.gov.in,1,75,none
+Haryana PSC,https://hpsc.gov.in/,State PSC,True,hpsc.gov.in,1,75,none
+Himachal Pradesh PSC,https://hppsc.hp.gov.in/,State PSC,True,hppsc.hp.gov.in,1,75,none
+Jharkhand PSC,https://jpsc.gov.in/,State PSC,True,jpsc.gov.in,1,75,none
+Karnataka PSC,https://kpsc.kar.nic.in/,State PSC,True,kpsc.kar.nic.in,1,75,none
+Kerala PSC,https://www.keralapsc.gov.in/,State PSC,True,www.keralapsc.gov.in,1,75,none
+Madhya Pradesh PSC,https://mppsc.mp.gov.in/,State PSC,True,mppsc.mp.gov.in,1,75,none
+Maharashtra PSC,https://mpsc.gov.in/,State PSC,True,mpsc.gov.in,1,75,none
+Manipur PSC,https://mpscmanipur.gov.in/,State PSC,True,mpscmanipur.gov.in,1,75,none
+Meghalaya PSC,https://mpsc.nic.in/,State PSC,True,mpsc.nic.in,1,75,none
+Mizoram PSC,https://mpsc.mizoram.gov.in/,State PSC,True,mpsc.mizoram.gov.in,1,75,none
+Nagaland PSC,https://npsc.nagaland.gov.in/,State PSC,True,npsc.nagaland.gov.in,1,75,none
+Odisha PSC,https://opsc.gov.in/,State PSC,True,opsc.gov.in,1,75,none
+Punjab PSC,https://ppsc.gov.in/,State PSC,True,ppsc.gov.in,1,75,none
+Rajasthan PSC,https://rpsc.rajasthan.gov.in/,State PSC,True,rpsc.rajasthan.gov.in,1,75,none
+Sikkim PSC,https://spsc.sikkim.gov.in/,State PSC,True,spsc.sikkim.gov.in,1,75,none
+Tamil Nadu PSC,https://www.tnpsc.gov.in/,State PSC,True,www.tnpsc.gov.in,1,75,none
+Telangana PSC,https://www.tgpsc.gov.in/,State PSC,True,www.tgpsc.gov.in,1,75,none
+Tripura PSC,https://tpsc.tripura.gov.in/,State PSC,True,tpsc.tripura.gov.in,1,75,none
+Uttar Pradesh PSC,https://uppsc.up.nic.in/,State PSC,True,uppsc.up.nic.in,1,75,none
+Uttarakhand PSC,https://psc.uk.gov.in/,State PSC,True,psc.uk.gov.in,1,75,none
+West Bengal PSC,https://psc.wb.gov.in/,State PSC,True,psc.wb.gov.in,1,75,none
+Bihar Staff Selection Commission,https://bssc.bihar.gov.in/,State subordinate recruitment,True,bssc.bihar.gov.in,1,75,none
+Bihar Technical Service Commission,https://btsc.bihar.gov.in/,State technical recruitment,True,btsc.bihar.gov.in,1,23,none
+Bihar Police Subordinate Services Commission,https://bpssc.bihar.gov.in/,State police recruitment,True,bpssc.bihar.gov.in,1,75,none
+Central Selection Board of Constable Bihar,https://csbc.bihar.gov.in/,State police recruitment,True,csbc.bihar.gov.in,1,75,none
+Jharkhand Staff Selection Commission,https://jssc.jharkhand.gov.in/,State subordinate recruitment,True,jssc.jharkhand.gov.in,1,75,none
+Odisha Staff Selection Commission,https://ossc.gov.in/,State subordinate recruitment,True,ossc.gov.in,1,75,none
+Odisha Sub-ordinate Staff Selection Commission,https://osssc.gov.in/,State subordinate recruitment,True,osssc.gov.in,1,75,none
+Rajasthan Staff Selection Board,https://rssb.rajasthan.gov.in/,State subordinate recruitment,True,rssb.rajasthan.gov.in,1,75,none
+Madhya Pradesh Employees Selection Board,https://esb.mp.gov.in/,State subordinate recruitment,True,esb.mp.gov.in,1,75,none
+Uttar Pradesh Subordinate Services Selection Commission,https://upsssc.gov.in/,State subordinate recruitment,True,upsssc.gov.in,1,75,none
+Uttar Pradesh Police Recruitment and Promotion Board,https://uppbpb.gov.in/,State police recruitment,True,uppbpb.gov.in,1,75,none
+Haryana Staff Selection Commission,https://hssc.gov.in/,State subordinate recruitment,True,hssc.gov.in,1,75,none
+Gujarat Subordinate Service Selection Board,https://gsssb.gujarat.gov.in/,State subordinate recruitment,True,gsssb.gujarat.gov.in,1,75,none
+Punjab Subordinate Services Selection Board,https://sssb.punjab.gov.in/,State subordinate recruitment,True,sssb.punjab.gov.in,1,75,none
+Tamil Nadu Teachers Recruitment Board,https://trb.tn.gov.in/,State education recruitment,True,trb.tn.gov.in,1,75,none
+Tamil Nadu Medical Services Recruitment Board,https://mrbonline.in/,State health recruitment,True,mrbonline.in,1,75,none
+West Bengal School Service Commission,https://www.westbengalssc.com/,State education recruitment,True,www.westbengalssc.com,1,75,none
+West Bengal Health Recruitment Board,https://www.wbhrb.in/,State health recruitment,True,www.wbhrb.in,1,75,none
+Kerala Devaswom Recruitment Board,https://kdrb.kerala.gov.in/,State institutional recruitment,True,kdrb.kerala.gov.in,1,23,none
+Karnataka Examination Authority,https://cetonline.karnataka.gov.in/kea/,State recruitment and examinations,True,cetonline.karnataka.gov.in,1,23,none
+Delhi Subordinate Services Selection Board,https://dsssb.delhi.gov.in/,UT subordinate recruitment,True,dsssb.delhi.gov.in,1,75,none
+Jammu and Kashmir Services Selection Board,https://jkssb.nic.in/,UT subordinate recruitment,True,jkssb.nic.in,1,75,none
+Ladakh Subordinate Services Recruitment Board,https://ladakh.gov.in/,UT recruitment,True,ladakh.gov.in,1,75,none
+NESTS / EMRS,https://nests.tribal.gov.in/,Central education recruitment,True,nests.tribal.gov.in,1,75,none
+AIIMS recruitment,https://www.aiimsexams.ac.in/,Central health recruitment,True,www.aiimsexams.ac.in,1,75,none
+ESIC recruitment,https://www.esic.gov.in/recruitments,Central health and social security,True,www.esic.gov.in,1,75,none
+NABARD careers,https://www.nabard.org/careers-notices1.aspx,Banking and development finance,True,www.nabard.org,1,23,none
+SEBI careers,https://www.sebi.gov.in/,Financial regulator recruitment,True,www.sebi.gov.in,1,23,none
+Indian Coast Guard,https://joinindiancoastguard.cdac.in/,Defence and maritime security,True,joinindiancoastguard.cdac.in,1,23,none
+Indian Army recruitment,https://joinindianarmy.nic.in/,Defence recruitment,True,joinindianarmy.nic.in,1,23,none
+Indian Navy recruitment,https://www.joinindiannavy.gov.in/,Defence recruitment,True,www.joinindiannavy.gov.in,1,23,none
+Indian Air Force recruitment,https://agnipathvayu.cdac.in/,Defence recruitment,True,agnipathvayu.cdac.in,1,23,none
+AAI careers,https://www.aai.aero/en/careers,Central PSU / aviation,True,www.aai.aero,1,75,none
+FCI recruitment,https://fci.gov.in/,Central public-sector recruitment,True,fci.gov.in,1,23,none
+ONGC careers,https://ongcindia.com/,Central PSU / energy,True,ongcindia.com,1,75,none
+IOCL careers,https://iocl.com/,Central PSU / energy,True,iocl.com,1,75,none
+NTPC careers,https://ntpc.co.in/,Central PSU / power,True,ntpc.co.in,1,75,none
+POWERGRID careers,https://www.powergrid.in/,Central PSU / power,True,www.powergrid.in,1,75,none
+BHEL careers,https://www.bhel.com/,Central PSU / engineering,True,www.bhel.com,1,75,none
+GAIL careers,https://gailonline.com/,Central PSU / energy,True,gailonline.com,1,75,none
+SAIL careers,https://sail.co.in/,Central PSU / steel,True,sail.co.in,1,75,none
+NHAI recruitment,https://nhai.gov.in/,Central infrastructure,True,nhai.gov.in,1,75,none
