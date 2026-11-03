@@ -1,17 +1,13 @@
 name: Evening recruitment scan
-
 on:
   schedule:
     - cron: "30 12 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: government-job-alert-scan
   cancel-in-progress: false
-
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -33,6 +29,8 @@ jobs:
           python -m json.tool sources/sources.json > /dev/null
           python -m json.tool data/review_queue.json > /dev/null
           python -m json.tool data/seen_items.json > /dev/null
+      - name: Run source registry coverage audit
+        run: python -m engine.source_audit
       - name: Run recruitment scan
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -46,13 +44,13 @@ jobs:
         env:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python -m engine.sync_supabase
-      - name: Commit review queue and logs
+      - name: Commit review queue and coverage report
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/review_queue.json data/seen_items.json
+          git add data/review_queue.json data/seen_items.json data/source_registry_audit.json data/source_registry_audit.csv
           if [ -f data/review_queue.csv ]; then git add data/review_queue.csv; fi
-          git diff --cached --quiet || git commit -m "Update recruitment review queue"
+          git diff --cached --quiet || git commit -m "Update recruitment queue and source coverage audit"
           git pull --rebase origin main
           git push
