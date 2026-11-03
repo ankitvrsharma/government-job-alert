@@ -131,3 +131,14 @@ The scanner can only discover notices exposed by configured pages and accessible
 Administrators can extend coverage at any time through **Admin → Add websites to monitor**. Add the official recruitment / notices URL (not an unofficial job aggregator). For broad coverage, add separate official recruitment pages for state police, education, health, technical services, universities, courts, municipal bodies and state PSUs where they are not already represented. The scanner's existing manual verification requirement remains in force.
 
 The directory document `India_Government_Job_and_Recruitment_Directory.docx` is a career-guidance reference; the operational source of truth for automated monitoring is `sources/sources.json` plus the protected Supabase `tracked_sources` table.
+
+
+## Source registry quality and coverage audit
+
+Every morning and evening scan now generates:
+- `data/source_registry_audit.json` — timestamped summary, enabled/disabled counts, category coverage and configuration issues.
+- `data/source_registry_audit.csv` — source-by-source details, including official host, category, enabled state, keyword count and missing configuration.
+
+The audit checks registry quality (HTTPS URL, name, category, allowed domains, keywords and duplicate URLs). It is intentionally a **static configuration audit**: it does not claim that a site was reachable, that robots.txt allowed crawling, or that every vacancy was discovered. Review source scan logs for actual runtime failures and add dedicated adapters for sites that require JavaScript, CAPTCHA handling or OCR.
+
+The audit runs in both scheduled workflows and in CI validation. It is committed alongside the review queue after each scheduled scan.
