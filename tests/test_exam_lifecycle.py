@@ -139,7 +139,7 @@ class ExamLifecycleTests(unittest.TestCase):
             }
             with patch("engine.sync_supabase.DATA", root), patch("engine.sync_supabase.requests.head") as head, patch("engine.sync_supabase.requests.post") as post:
                 head.return_value.status_code = 200
-                path, url, name, mime = upload_attachment(row, row, {"post_title": "Exam Result"})
+                path, url, name, mime = upload_attachment(row, {"post_title": "Exam Result"})
             self.assertEqual(path, digest[:2] + "/" + digest + ".pdf")
             self.assertIn(path, url)
             self.assertEqual(mime, "application/pdf")
