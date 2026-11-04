@@ -233,7 +233,24 @@
     "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf",
     "https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf",
     "https://www.keralapsc.gov.in/selection-pending-want",
-    "https://www.keralapsc.gov.in/list-scheduled-castes-kerala-state"
+    "https://www.keralapsc.gov.in/list-scheduled-castes-kerala-state",
+    "https://jpsc.gov.in/info_rti.php",
+    "https://jpsc.gov.in/data/RTI_Policy.pdf",
+    "https://jpsc.gov.in/sam_question_paper.php",
+    "https://jpsc.gov.in",
+    "https://jpsc.gov.in/data/FAQ.pdf",
+    "https://jpsc.gov.in/Examination-Links.php",
+    "https://jpsc.gov.in?click=yes",
+    "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_09_07_2026.pdf",
+    "https://jpsc.gov.in/data/Press_Release_01_26_dated_09_07_2026.pdf",
+    "https://jpsc.gov.in/data/Press_Release_01_26_dated_14_07_2026.pdf",
+    "https://jpsc.gov.in/data/Press_Release_04_24_dated_14_07_2026.pdf",
+    "https://jpsc.gov.in/data/Press_Release_03_24_dated_14_07_2026.pdf",
+    "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf",
+    "https://jpsc.gov.in/data/Press_Release_03_24_dated_10_08_2026.pdf",
+    "https://jpsc.gov.in/data/Notice.pdf",
+    "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php",
+    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -546,7 +563,31 @@
     "c95732e5215fd20434e434431ee36443cbbc7c295830ebc8ed53c4a1530a6f5b",
     "47510b7ebcc27b49b18568af2c4600dcc72ab148962a55eb0e060040777e1586",
     "5b5beb3126e6fdc8ce1ee5a83d8afbe5e41c35d2c9453a85047e8801851d59a9",
-    "65c44e3d8d17a185f56ad5769a902cf8505a34d848ab109e59e807e75014bf81"
+    "65c44e3d8d17a185f56ad5769a902cf8505a34d848ab109e59e807e75014bf81",
+    "8069fb563db74ca398f26ddc7443b3fc5749644403e07f5f4f8b41cbcb6d88aa",
+    "50e853eb74a89084e3cb617a10fab5f44dc775faa65d18fc23e9cacdeb44c2cf",
+    "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
+    "b1867f083cc21deac0fa5433063c803bce52545ce6df867897c72eab64ace206",
+    "b45adb1f4289123f31854274a287f17f306951cc9056cc045143dd2f7cf80af8",
+    "09153d00382d26f71e5dc1d21053f5b3aba6852039512a7b5ad2c162f7fbcc0c",
+    "b4408f021fd1db930e4023d7a7c2fe43af996a45791e97a1d269f8cc7c09a301",
+    "f592dcb48f262649a5a6d4d23800b4bc9a3c1518ab0a811548ba0cd40dff740e",
+    "d106729f97e5374ece9b38d27d89ae4d8bc8295ebb8df7d3f3ccb256f7497334",
+    "0203f816db3a2491fa2e60e803a65111c981a3d2b299026f4d08f7ac96b9e85c",
+    "4a31bed242b1c6a13b031b707bd0cfac48289e2f15846eaf6f20692b3adac99a",
+    "445f836786ba25e7b6666c29004e6c0377022f655ef50d47c96eaaa594fc4621",
+    "9516108a036996e5e26f06157b8417a7d7953d29c4f6a90338ec7169b70652ed",
+    "9431285acca086a4e81f3e9d9c72042a4b9641026d62cd5219773eb81552e634",
+    "d29619f9f64dfd1a14983a18f5475165e82e5756c0ebc67dbcb5441c93003bd9",
+    "9111f7f275c107eca8717f7b9a0616a36b8d5cb38137f90562cacc0c876c07ee",
+    "971c192760aa328ffab47814b5a7641788c53ab157e63b439959b8a2c5ea9c09",
+    "f20e378fdc33c5c9778c3e9b60e0a8188e60e2012438fc056ee10100b1136c58",
+    "44e2c28af52e9355132c9b2359dda3ad990a6388fcd8f7f7e60134ff0eec875b",
+    "ed6209f2ea9adb072062293bccd7a1fca7e54b0fcb68d8b0c5e25bf1325730c7",
+    "cac06b326b7c2033b2fce6af689a1dcff67d36a42a1bd8d8f416a9173b013555",
+    "0eee4a4f2945256659d665858478620e85b834808f4d5d25949326b9248cd9e0",
+    "8c48bec1d517f95675c5e1fa0ecd8e8e55aa3f350f8b784ca86ddceef198051e",
+    "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe"
   ],
   "snapshots": {
     "https://nta.ac.in": "f792d206e8403cbcf45b84e473fe4f4a85599638ac1f193d0996b7b5dcaf4304",
@@ -697,14 +738,14 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "f376e170d02b5eef0bf616124f57acd628381624ad1ceec04176032c8e8f5550",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "1431f693749cec1a13b3f9ee70d25fa0ac88c8413cbac2fa8b7f68408db34e66",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "8069fb563db74ca398f26ddc7443b3fc5749644403e07f5f4f8b41cbcb6d88aa",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "50e853eb74a89084e3cb617a10fab5f44dc775faa65d18fc23e9cacdeb44c2cf",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "57c4245f9ff83168be75e50a3d31ef817fadfe58512eba9ecae7c21202291617",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "88035087e916caa0d4cbfadd2f0b6b57e5312e360143d43e72f86acee7bab9e6",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "38e33f830e3295feb3a2d681b34b91c16db68c0f2dea0bcc8380fd4d7f5d5675",
-    "https://www.csir.res.in/hi/career-opportunities": "898f46c6d6a607e91e5041547014c193fbc042570e78832157bfe009ad2d6126",
-    "https://www.csir.res.in/hi/notification": "00e795e0fe05c534b68677fff9a5ebf892cff0f864bbdcb6982b56c07f6621b9",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "b1867f083cc21deac0fa5433063c803bce52545ce6df867897c72eab64ace206",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "b45adb1f4289123f31854274a287f17f306951cc9056cc045143dd2f7cf80af8",
+    "https://www.csir.res.in/hi/career-opportunities": "09153d00382d26f71e5dc1d21053f5b3aba6852039512a7b5ad2c162f7fbcc0c",
+    "https://www.csir.res.in/hi/notification": "b4408f021fd1db930e4023d7a7c2fe43af996a45791e97a1d269f8cc7c09a301",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
     "https://www.icmr.gov.in/employment-opportunities": "181119e2ce16b4d0058e59e9c6c72f0b990e88251ffbfd484ab3cc4c26b3ff6a",
     "https://www.icmr.gov.in/career-results": "18f9aafdccd976b32aa884d7a282be210456e989371afaf4378d03b6f962af8f",
@@ -779,7 +820,24 @@
     "https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf": "c95732e5215fd20434e434431ee36443cbbc7c295830ebc8ed53c4a1530a6f5b",
     "https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf": "47510b7ebcc27b49b18568af2c4600dcc72ab148962a55eb0e060040777e1586",
     "https://www.keralapsc.gov.in/selection-pending-want": "5b5beb3126e6fdc8ce1ee5a83d8afbe5e41c35d2c9453a85047e8801851d59a9",
-    "https://www.keralapsc.gov.in/list-scheduled-castes-kerala-state": "65c44e3d8d17a185f56ad5769a902cf8505a34d848ab109e59e807e75014bf81"
+    "https://www.keralapsc.gov.in/list-scheduled-castes-kerala-state": "65c44e3d8d17a185f56ad5769a902cf8505a34d848ab109e59e807e75014bf81",
+    "https://jpsc.gov.in/info_rti.php": "f592dcb48f262649a5a6d4d23800b4bc9a3c1518ab0a811548ba0cd40dff740e",
+    "https://jpsc.gov.in/data/RTI_Policy.pdf": "d106729f97e5374ece9b38d27d89ae4d8bc8295ebb8df7d3f3ccb256f7497334",
+    "https://jpsc.gov.in/sam_question_paper.php": "0203f816db3a2491fa2e60e803a65111c981a3d2b299026f4d08f7ac96b9e85c",
+    "https://jpsc.gov.in": "4a31bed242b1c6a13b031b707bd0cfac48289e2f15846eaf6f20692b3adac99a",
+    "https://jpsc.gov.in/data/FAQ.pdf": "445f836786ba25e7b6666c29004e6c0377022f655ef50d47c96eaaa594fc4621",
+    "https://jpsc.gov.in/Examination-Links.php": "9516108a036996e5e26f06157b8417a7d7953d29c4f6a90338ec7169b70652ed",
+    "https://jpsc.gov.in?click=yes": "9431285acca086a4e81f3e9d9c72042a4b9641026d62cd5219773eb81552e634",
+    "https://jpsc.gov.in/data/Exam_Calendar_2026_dtd_09_07_2026.pdf": "d29619f9f64dfd1a14983a18f5475165e82e5756c0ebc67dbcb5441c93003bd9",
+    "https://jpsc.gov.in/data/Press_Release_01_26_dated_09_07_2026.pdf": "9111f7f275c107eca8717f7b9a0616a36b8d5cb38137f90562cacc0c876c07ee",
+    "https://jpsc.gov.in/data/Press_Release_01_26_dated_14_07_2026.pdf": "971c192760aa328ffab47814b5a7641788c53ab157e63b439959b8a2c5ea9c09",
+    "https://jpsc.gov.in/data/Press_Release_04_24_dated_14_07_2026.pdf": "f20e378fdc33c5c9778c3e9b60e0a8188e60e2012438fc056ee10100b1136c58",
+    "https://jpsc.gov.in/data/Press_Release_03_24_dated_14_07_2026.pdf": "44e2c28af52e9355132c9b2359dda3ad990a6388fcd8f7f7e60134ff0eec875b",
+    "https://jpsc.gov.in/data/Press_Release_dated_18_12_2025.pdf": "ed6209f2ea9adb072062293bccd7a1fca7e54b0fcb68d8b0c5e25bf1325730c7",
+    "https://jpsc.gov.in/data/Press_Release_03_24_dated_10_08_2026.pdf": "cac06b326b7c2033b2fce6af689a1dcff67d36a42a1bd8d8f416a9173b013555",
+    "https://jpsc.gov.in/data/Notice.pdf": "0eee4a4f2945256659d665858478620e85b834808f4d5d25949326b9248cd9e0",
+    "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php": "8c48bec1d517f95675c5e1fa0ecd8e8e55aa3f350f8b784ca86ddceef198051e",
+    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf": "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -2807,13 +2865,13 @@
       "updated_at": "2026-11-03T10:04:02.158203+00:00"
     },
     "83444441786789b6cb4a7d2e6beb6619bc95660874ae5ac67774a63e23e8c451": {
-      "id": "d46a0fa1428038d5",
+      "id": "b0bd9f5f42af9f45",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "vacancy",
-        "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "event_type": "advertisement",
+        "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन",
         "exam_name": "CSIR CGCRI Director Recruitment 2026",
         "cycle_label": "2026",
         "related_exams": [
@@ -2826,14 +2884,14 @@
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन",
-        "notice_type": "Advertisement",
-        "post_title": "CSIR CGCRI Director Recruitment 2026",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "CSIR CGCRI Director Post Recruitment 2026",
         "organisation": "Council of Scientific & Industrial Research (CSIR)",
         "post_names": [
           "निदेशक (Director)"
         ],
         "advertisement_number": null,
-        "vacancy_count": null,
+        "vacancy_count": "1",
         "qualification": null,
         "age_limit": null,
         "application_start_date": null,
@@ -2843,14 +2901,14 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana",
         "application_url": null,
         "important_dates": [
-          "Last Date: 2026-11-30"
+          "Application End Date: 30/11/2026"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released an advertisement for the Director post at the CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata. Eligible candidates can submit their applications until November 30, 2026.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the position of Director at CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata. Eligible candidates can submit their applications until November 30, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-03T19:48:37.379935+00:00"
+      "updated_at": "2026-11-04T20:09:28.791198+00:00"
     },
     "8f1ea1de02a5d43a1a29ae7663d0e2d46bf523ced87e1d719ca106a6eb975f27": {
       "id": "fe1cff44df8c9239",
@@ -4126,6 +4184,474 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-04T09:59:27.009896+00:00"
+    },
+    "fc038d0302917a1a77493b6d11865f1d5f27ae3d5557f670300353cc0eff50bb": {
+      "id": "f914bb3d7cb95a33",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "CSIR Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR Director Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "The Council of Scientific & Industrial Research (CSIR) has released advertisement notices for Director posts at CSIR-CGCRI (Advt. No. 05/2026) and CSIR-NCL (Advt. No. 04/2026), as well as Project Personnel positions at CSIR-TKDL (Advt. No. TKDL/09/2026).",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "CSIR Director Recruitment 2026",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Director",
+          "Project Personnel"
+        ],
+        "advertisement_number": "04/2026, 05/2026, TKDL/09/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Walk-in Interview for Project Personnel",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-12: Walk-in interview date for CSIR-TKDL Project Personnel",
+          "2026-11-30: Last date to apply for Director posts at CSIR-CGCRI Kolkata and CSIR-NCL Pune"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the post of Director at CSIR-CGCRI Kolkata and CSIR-NCL Pune, alongside Project Personnel positions at CSIR-TKDL Unit. Interested candidates must submit their applications for Director posts by November 30, 2026, while the walk-in interview for Project Personnel is scheduled for November 12, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-04T20:06:26.613342+00:00"
+    },
+    "0fd3ebc7ebb2b0d0a554ce1faaca942a9a41c0ef30da470c425dbea5c61a9ee4": {
+      "id": "21c3d8f970ef6ee3",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "वॉक-इन इंटरव्यू 12/11/2026",
+        "exam_name": "CSIR TKDL Unit Project Personnel Walk-in Interview 2026",
+        "cycle_label": "Project GAP-000001",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-12",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में वॉक-इन इंटरव्यू के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "Walk-in Interview Notice",
+        "post_title": "CSIR TKDL Unit Project Personnel Walk-In Interview 2026",
+        "organisation": "Council of Scientific & Industrial Research - Traditional Knowledge Digital Library Unit (CSIR-TKDL Unit)",
+        "post_names": [
+          "Project Personnel (Forestry & Ecology and Environmental Sciences)"
+        ],
+        "advertisement_number": "GAP-000001",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0",
+        "application_url": null,
+        "important_dates": [
+          "Walk-in Interview Date: 12/11/2026"
+        ],
+        "summary": "CSIR-TKDL Unit, New Delhi has announced a walk-in interview for project personnel recruitment under Project GAP-000001 in Forestry & Ecology and Environmental Sciences. The interview is scheduled for 12/11/2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:07:50.294266+00:00"
+    },
+    "0696cdcf8a660ffd8971bd5bbdca59f31cb1fc4acdb350d9394a2c6c406b27e2": {
+      "id": "42a46d228bca1d96",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "प्रोजेक्ट कर्मियों की नियुक्ति के लिए वॉक-इन-इंटरव्यू का विज्ञापन [दिनांक: 03/11/2026]",
+        "exam_name": null,
+        "cycle_label": null,
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "प्रोजेक्ट कर्मियों की नियुक्ति के लिए वॉक-इन-इंटरव्यू का विज्ञापन",
+        "notice_type": "Walk-in-Interview Advertisement",
+        "post_title": "CSIR Project Personnel Walk-in-Interview Advertisement",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Project Personnel"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in-Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina",
+        "application_url": null,
+        "important_dates": [
+          "Advertisement Date: 03/11/2026"
+        ],
+        "summary": "The Council of Scientific and Industrial Research (CSIR) has released an advertisement for a walk-in-interview to recruit project personnel. Candidates can check the official notification for further details regarding posts and interview schedules.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:08:23.888207+00:00"
+    },
+    "7a48776db406b7eeb74879caf3e69b6ba9a682f71c4ac2651cb32a9e377f6826": {
+      "id": "43e91d8d884a0048",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "application_deadline",
+        "event_evidence": "अंतिम तिथि: 30/11/2026",
+        "exam_name": "CSIR-NCL Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR-NCL Director Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "CSIR NCL Pune Director Post Recruitment 2026",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+        "application_url": null,
+        "important_dates": [
+          "Application End Date: 30/11/2026"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the position of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:09:43.306860+00:00"
+    },
+    "9a6c65dc1fb85af6b5ac647f23cfcea552edd68517e3958ffbcb97f49d80ec17": {
+      "id": "189cb92f5a697cef",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "exam_date_change",
+        "event_type": "exam_date_change",
+        "event_evidence": "Jharkhand Combined Civil Services Main (Written) Competitive Examination-2025 (Advt. No. 01/2026), Jharkhand Combined Civil Services Main (Written) Backlog Competitive Examination-2025 (Advt. No. 05/2026), and Jharkhand Combined Civil Services Main (Written) Backlog Competitive Examination-2023 (Advt. No. 06/2026) exam dates have been revised.",
+        "exam_name": "Jharkhand Combined Civil Services Main Examination 2025",
+        "cycle_label": "2025",
+        "related_exams": [
+          "Jharkhand Combined Civil Services Main (Written) Competitive Examination-2025 (Advt. No. 01/2026)",
+          "Jharkhand Combined Civil Services Main (Written) Backlog Competitive Examination-2025 (Advt. No. 05/2026)",
+          "Jharkhand Combined Civil Services Main (Written) Backlog Competitive Examination-2023 (Advt. No. 06/2026)"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "Press Release",
+        "post_title": "JPSC Combined Civil Services Main Exam Dates Revised",
+        "organisation": "Jharkhand Public Service Commission",
+        "post_names": [
+          "Combined Civil Services"
+        ],
+        "advertisement_number": "01/2026, 05/2026, 06/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://jpsc.gov.in/data/Press_Release_01_26_dated_09_07_2026.pdf",
+        "application_url": null,
+        "important_dates": [],
+        "summary": "Jharkhand Public Service Commission has revised the exam dates for the Combined Civil Services Main Examinations under advertisement numbers 01/2026, 05/2026, and 06/2026. All other terms and conditions for online and offline applications remain unchanged.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:04.868434+00:00"
+    },
+    "6ca95ae266246fa0c8f73f1960dd7748794e16195c77e9045c548c2bd72cd974": {
+      "id": "c4a726896ea7db15",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "admit_card",
+        "event_type": "admit_card",
+        "event_evidence": "Jharkhand Combined Civil Services Main (Written) Competitive Examination-2025 (Advt. No. 01/2026) admit cards will be available for download from 21-07-2026 to 24-07-2026.",
+        "exam_name": "Jharkhand Combined Civil Services Main Examination 2025",
+        "cycle_label": "Advt. No. 01/2026",
+        "related_exams": [
+          "Jharkhand Combined Civil Services Main (Written) Competitive Examination-2025"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-07-25",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "Admit Card & Exam Schedule Notice",
+        "post_title": "JPSC Combined Civil Services Main Exam 2025 Admit Card and Schedule",
+        "organisation": "Jharkhand Public Service Commission (JPSC)",
+        "post_names": [
+          "Civil Services"
+        ],
+        "advertisement_number": "01/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Main (Written) Examination",
+        "official_notification_url": "https://jpsc.gov.in/data/Press_Release_01_26_dated_14_07_2026.pdf",
+        "application_url": null,
+        "important_dates": [
+          "Admit Card Download Start Date: 2026-07-21",
+          "Admit Card Download End Date: 2026-07-24",
+          "Exam Date: 2026-07-25 to 2026-07-27"
+        ],
+        "summary": "Jharkhand Public Service Commission has released the exam schedule and admit card download details for the Combined Civil Services Main Examination 2025 (Advt. No. 01/2026). The written examination is scheduled to be held from July 25 to July 27, 2026, and candidates can download their admit cards from the official website between July 21 and July 24, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:08.511702+00:00"
+    },
+    "b2da04b96b34311f1f00cfe1cf16387087f875639aac32051cfe6f5d77d908cb": {
+      "id": "e92579f5521b0698",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "exam_date_change",
+        "event_type": "exam_date_change",
+        "event_evidence": "vifjgk;Z dkj.kksa ls “kkjhfjd ijh{k.k gsrq fnukad&28-07-2026 ,oa fnukad&29-07-2026 dks ifjorZu djrs gq,, fnukad&17-08-2026 ,oa 18-08-2026 dks fu/kkZfjr dh tkrh gSA",
+        "exam_name": "Jharkhand Assistant Conservator of Forest Main (Written) Competitive Examination 2024",
+        "cycle_label": "Advt. No. 03/2024",
+        "related_exams": [
+          "Jharkhand Assistant Conservator of Forest Main (Written) Competitive Examination 2024"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": "Kkikad&2219, fnukad&07-07-2026",
+        "event_date": "17-08-2026 and 18-08-2026",
+        "previous_event_date": "28-07-2026 and 29-07-2026",
+        "change_reason": "vifjgk;Z dkj.kksa (unavoidable reasons)",
+        "recruitment_evidence": null,
+        "notice_type": "Exam Date Change Notice",
+        "post_title": "JPSC Assistant Conservator of Forest Exam 2024 Physical Test Date Rescheduled",
+        "organisation": "Jharkhand Public Service Commission",
+        "post_names": [
+          "Assistant Conservator of Forest"
+        ],
+        "advertisement_number": "03/2024",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://jpsc.gov.in/data/Press_Release_03_24_dated_14_07_2026.pdf",
+        "application_url": null,
+        "important_dates": [
+          "Physical Test Date (Previous): 28-07-2026 and 29-07-2026",
+          "Physical Test Date (Revised): 17-08-2026 and 18-08-2026"
+        ],
+        "summary": "The Jharkhand Public Service Commission has rescheduled the physical test dates for the Assistant Conservator of Forest Main Competitive Examination 2024 due to unavoidable reasons. The physical tests, originally scheduled for 28-07-2026 and 29-07-2026, will now be conducted on 17-08-2026 and 18-08-2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:16.272660+00:00"
+    },
+    "e424b7ae31b059c4bd8c278c21b5dba6a1e9ae2f8d7baeccf7d825152b16767e": {
+      "id": "96db1494e34b7df3",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "exam_postponed",
+        "event_type": "exam_postponed",
+        "event_evidence": "Jharkhand Forest Range Officer Competitive Examination (Advt. No. 04/2024) physical test scheduled from 11-08-2026 to 13-08-2026 and Jharkhand Assistant Conservator of Forest Competitive Examination (Advt. No. 03/2024) physical test scheduled on 17-08-2026 and 18-08-2026 are postponed until further orders due to unavoidable reasons.",
+        "exam_name": "Jharkhand Forest Range Officer and Assistant Conservator of Forest Examination 2024",
+        "cycle_label": "2024",
+        "related_exams": [
+          "Jharkhand Forest Range Officer Competitive Examination Advt. No. 04/2024",
+          "Jharkhand Assistant Conservator of Forest Competitive Examination Advt. No. 03/2024"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": "Press Release Memo No. 2308 dated 14-07-2026 and Memo No. 2309 dated 14-07-2026",
+        "event_date": "2026-08-10",
+        "previous_event_date": "11-08-2026 to 18-08-2026",
+        "change_reason": "Due to unavoidable reasons",
+        "recruitment_evidence": "Jharkhand Public Service Commission notice regarding physical test postponement for Advt. No. 04/2024 and 03/2024",
+        "notice_type": "exam_postponed",
+        "post_title": "JPSC Forest Range Officer and Assistant Conservator Exam 2024 Physical Test Postponed",
+        "organisation": "Jharkhand Public Service Commission (JPSC)",
+        "post_names": [
+          "Forest Range Officer",
+          "Assistant Conservator of Forest"
+        ],
+        "advertisement_number": "04/2024 and 03/2024",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Physical Measurement and Test",
+        "official_notification_url": "https://jpsc.gov.in/data/Press_Release_03_24_dated_10_08_2026.pdf",
+        "application_url": null,
+        "important_dates": [
+          "11-08-2026 to 13-08-2026 (Previously scheduled physical test for Advt. No. 04/2024)",
+          "17-08-2026 and 18-08-2026 (Previously scheduled physical test for Advt. No. 03/2024)",
+          "10-08-2026 (Notice date)"
+        ],
+        "summary": "The Jharkhand Public Service Commission has postponed the physical tests for the Forest Range Officer and Assistant Conservator of Forest examinations until further orders. The physical test was previously scheduled to be held from August 11 to 18, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:27.216553+00:00"
+    },
+    "c9b942db5588d32507d9e60d3bbbb480115ecaad08cd3e2bc05dd478f4628fa8": {
+      "id": "03827d978d9277e0",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "other_recruitment_update",
+        "event_type": "investigation_notice",
+        "event_evidence": "Jharkhand Combined Civil Services Examination-2025 preliminary qualified candidates are requested to submit carbon copies of their OMR sheets for Paper-1 and Paper-2 to the CID Jharkhand between 30-07-2026 and 05-08-2026 in connection with CID Case No. 16/2026.",
+        "exam_name": "Jharkhand Combined Civil Services Examination 2025",
+        "cycle_label": "Advt. No. 01/2026",
+        "related_exams": [
+          "Jharkhand Combined Civil Services Examination 2025"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-07-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "investigation notice",
+        "post_title": "Jharkhand Combined Civil Services Examination 2025 OMR Sheet Submission Notice",
+        "organisation": "Jharkhand Public Service Commission (JPSC) / CID Jharkhand",
+        "post_names": [
+          "Combined Civil Services"
+        ],
+        "advertisement_number": "01/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://jpsc.gov.in/data/Notice.pdf",
+        "application_url": null,
+        "important_dates": [
+          "Submission Start Date: 30-07-2026",
+          "Submission End Date: 05-08-2026"
+        ],
+        "summary": "Candidates who qualified the preliminary exam for the Jharkhand Combined Civil Services Examination 2025 are requested by the CID Jharkhand to submit carbon copies of their OMR sheets for Paper 1 and Paper 2. Submissions can be made via WhatsApp or email between July 30, 2026, and August 5, 2026, to assist with an ongoing inquiry regarding alleged irregularities.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:31.223866+00:00"
+    },
+    "354135f8527938f166d764dc2a9cfd5eb92bafa3ee4fa7c9225ce33c744a3c63": {
+      "id": "3e0a91563b1a0ce9",
+      "draft": {
+        "is_relevant_notice": false,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "Jharkhand Civil Judge Junior Division Exam 2023",
+        "cycle_label": "Advt. No. 22/2023",
+        "related_exams": [
+          "Jharkhand Civil Judge Junior Division Exam 2023"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Jharkhand Public Service Commission Ranchi Registered User Login Recruitment of Civil Judge (Junior Division) Regular , Advt. No. 22/2023",
+        "notice_type": "application_update",
+        "post_title": "JPSC Civil Judge Junior Division Main Exam 2023 Application Form Download",
+        "organisation": "Jharkhand Public Service Commission",
+        "post_names": [
+          "Civil Judge (Junior Division)"
+        ],
+        "advertisement_number": "22/2023",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": "21st August 2023",
+        "application_end_date": "21st September 2023",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php",
+        "application_url": "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php",
+        "important_dates": [
+          "Commencement of registration: 21st August 2023, 05:00 PM",
+          "Last date of registration: 21st September 2023, 05:00 PM",
+          "Last date of depositing examination fee: 27th September 2023, 05:00 PM"
+        ],
+        "summary": "The application window and registration portal for the Jharkhand Public Service Commission Civil Judge Junior Division Recruitment 2023 are closed, with past deadlines in August and September 2023.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-04T20:15:37.141781+00:00"
     }
   }
 }
