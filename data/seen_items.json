@@ -250,7 +250,9 @@
     "https://jpsc.gov.in/data/Press_Release_03_24_dated_10_08_2026.pdf",
     "https://jpsc.gov.in/data/Notice.pdf",
     "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php",
-    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf"
+    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf",
+    "https://www.icmr.gov.in/post/result-of-the-call-for-expression-of-interest-eoi-for-saransh-3",
+    "https://www.keralapsc.gov.in/index.php/answerkey_omrexams"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -587,7 +589,15 @@
     "cac06b326b7c2033b2fce6af689a1dcff67d36a42a1bd8d8f416a9173b013555",
     "0eee4a4f2945256659d665858478620e85b834808f4d5d25949326b9248cd9e0",
     "8c48bec1d517f95675c5e1fa0ecd8e8e55aa3f350f8b784ca86ddceef198051e",
-    "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe"
+    "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe",
+    "e4ea6d5f471ec25c6e3302c9ff6b7a762561e95851de5eaab009523b271b8b7e",
+    "ed6b687fca98e81089730c22258eac2fbe17ae8b42b946272f3ec8042b2cdc07",
+    "cd5fa2953e0cc715051dd95a6d95685e59b1f5bd07004fb994623b133bdb3174",
+    "3924275a51e82bcfded10fa41e469a8d62d63905df6a6f54cfc896218fcef882",
+    "88eb1d53d72b30d879e6df97c0e95478731aff1baa1995a38660a070ffca0694",
+    "7a8f759665e8ca970f97558a6d6c5717fd74af2d499f10520d8e3ca311a4464a",
+    "525b2892a0bbcae852bd1f816f3b7d4863de3df9e72c6f861788ca2d887e756a",
+    "3ff45751d8241aa7596e669ab6178c80a3a99013e6b2fc44d35928e949d874d9"
   ],
   "snapshots": {
     "https://nta.ac.in": "f792d206e8403cbcf45b84e473fe4f4a85599638ac1f193d0996b7b5dcaf4304",
@@ -738,14 +748,14 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "8069fb563db74ca398f26ddc7443b3fc5749644403e07f5f4f8b41cbcb6d88aa",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "50e853eb74a89084e3cb617a10fab5f44dc775faa65d18fc23e9cacdeb44c2cf",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "e4ea6d5f471ec25c6e3302c9ff6b7a762561e95851de5eaab009523b271b8b7e",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "ed6b687fca98e81089730c22258eac2fbe17ae8b42b946272f3ec8042b2cdc07",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "b1867f083cc21deac0fa5433063c803bce52545ce6df867897c72eab64ace206",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "b45adb1f4289123f31854274a287f17f306951cc9056cc045143dd2f7cf80af8",
-    "https://www.csir.res.in/hi/career-opportunities": "09153d00382d26f71e5dc1d21053f5b3aba6852039512a7b5ad2c162f7fbcc0c",
-    "https://www.csir.res.in/hi/notification": "b4408f021fd1db930e4023d7a7c2fe43af996a45791e97a1d269f8cc7c09a301",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "cd5fa2953e0cc715051dd95a6d95685e59b1f5bd07004fb994623b133bdb3174",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "3924275a51e82bcfded10fa41e469a8d62d63905df6a6f54cfc896218fcef882",
+    "https://www.csir.res.in/hi/career-opportunities": "88eb1d53d72b30d879e6df97c0e95478731aff1baa1995a38660a070ffca0694",
+    "https://www.csir.res.in/hi/notification": "7a8f759665e8ca970f97558a6d6c5717fd74af2d499f10520d8e3ca311a4464a",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
     "https://www.icmr.gov.in/employment-opportunities": "181119e2ce16b4d0058e59e9c6c72f0b990e88251ffbfd484ab3cc4c26b3ff6a",
     "https://www.icmr.gov.in/career-results": "18f9aafdccd976b32aa884d7a282be210456e989371afaf4378d03b6f962af8f",
@@ -837,7 +847,9 @@
     "https://jpsc.gov.in/data/Press_Release_03_24_dated_10_08_2026.pdf": "cac06b326b7c2033b2fce6af689a1dcff67d36a42a1bd8d8f416a9173b013555",
     "https://jpsc.gov.in/data/Notice.pdf": "0eee4a4f2945256659d665858478620e85b834808f4d5d25949326b9248cd9e0",
     "https://www.jpsc.gov.in/Civil_judge_junior_division_22_2023/login.php": "8c48bec1d517f95675c5e1fa0ecd8e8e55aa3f350f8b784ca86ddceef198051e",
-    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf": "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe"
+    "https://jpsc.gov.in/data/Press_Release_22_23_dated_17_07_2026.pdf": "7e1156e51db1faf85eff752087750119da483b522cb7c14a6742cd9635d800fe",
+    "https://www.icmr.gov.in/post/result-of-the-call-for-expression-of-interest-eoi-for-saransh-3": "525b2892a0bbcae852bd1f816f3b7d4863de3df9e72c6f861788ca2d887e756a",
+    "https://www.keralapsc.gov.in/index.php/answerkey_omrexams": "3ff45751d8241aa7596e669ab6178c80a3a99013e6b2fc44d35928e949d874d9"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -2350,13 +2362,13 @@
       "updated_at": "2026-11-02T09:57:33.463307+00:00"
     },
     "8454bb71809e82b3e5d5e09114d7c0808e8c01d6a69e1bcb2344417449b52478": {
-      "id": "fb11f18ed11e3788",
+      "id": "2822ae180ecaf462",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
         "event_type": null,
-        "event_evidence": null,
+        "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
         "exam_name": "CSIR-CGCRI Director Recruitment 2026",
         "cycle_label": "2026",
         "related_exams": [],
@@ -2366,9 +2378,9 @@
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
-        "notice_type": "recruitment_notification",
-        "post_title": "CSIR-CGCRI Kolkata Director Recruitment 2026",
+        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन",
+        "notice_type": "Recruitment Notification",
+        "post_title": "CSIR CGCRI Director Recruitment 2026",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
           "Director"
@@ -2384,14 +2396,14 @@
         "official_notification_url": null,
         "application_url": null,
         "important_dates": [
-          "Application Deadline: 2026-11-30"
+          "Application deadline: 2026-11-30"
         ],
-        "summary": "The Council of Scientific & Industrial Research has released an advertisement for recruitment to the post of Director at CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata. Eligible candidates can submit their applications through the designated process until November 30, 2026.",
+        "summary": "CSIR has issued an advertisement for recruitment to the post of Director at CSIR-Central Glass & Ceramic Research Institute (CSIR-CGCRI), Kolkata. Candidates interested in the position can apply on or before November 30, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-02T09:57:46.680321+00:00"
+      "updated_at": "2026-11-05T09:57:01.996983+00:00"
     },
     "946ca6ec2cc9a39e14cd21d17dfa6740489a899e5bba5f6809999c7e543ee247": {
       "id": "ee20e4d767208d6f",
@@ -3701,32 +3713,39 @@
       "updated_at": "2026-11-04T09:52:30.641685+00:00"
     },
     "97daa77d877c8328483d097f5abfa8b981867782bd34e1648ec24916a116a9bb": {
-      "id": "50071841f62b190d",
+      "id": "fa4faf998e16c1f1",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
         "post_category": "answer_key",
-        "event_type": "answer_key_released",
-        "event_evidence": "Kerala Public Service Commission has uploaded provisional and final answer keys for various OMR examinations on its official portal.",
+        "event_type": "answer_key",
+        "event_evidence": "The Kerala Public Service Commission has released multiple provisional and final answer keys for various OMR-based recruitment examinations conducted between September and November 2026.",
         "exam_name": "Kerala PSC OMR Examinations 2026",
-        "cycle_label": null,
+        "cycle_label": "2026",
         "related_exams": [
-          "Kerala PSC Village Field Assistant (Cat. No. 571/2025)",
-          "Kerala PSC Junior Lab Assistant (Cat. No. 733/2025)",
-          "Kerala PSC Special Branch Assistant (Cat. No. 017/2025)",
-          "Kerala PSC Assistant Universities in Kerala (Cat. No. 454/2025)"
+          "Technical Assistant (Drugs Control Dept)",
+          "Village Field Assistant",
+          "Junior Lab Assistant (Medical Education Service)",
+          "Special Branch Assistant (SBCID)",
+          "Clerk/Amenities Assistant/Security Guard/Sales Assistant/Attender/Office",
+          "Superintendent of Survey and Land Records",
+          "Electricity Worker",
+          "Tradesman - Masonary",
+          "Inspector of Legal Metrology",
+          "Assistant (Universities in Kerala)"
         ],
-        "result_url": null,
+        "result_url": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
         "result_declared": false,
         "related_notice": null,
-        "event_date": "2026-11-03",
+        "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": null,
         "notice_type": "answer_key",
-        "post_title": "Kerala PSC OMR Exams Answer Keys Released",
+        "post_title": "Kerala PSC OMR Exam Answer Keys Released",
         "organisation": "Kerala Public Service Commission",
         "post_names": [
+          "Technical Assistant",
           "Village Field Assistant",
           "Junior Lab Assistant",
           "Special Branch Assistant",
@@ -3735,12 +3754,12 @@
           "Security Guard",
           "Sales Assistant",
           "Attender",
+          "Office Attendant",
           "Superintendent of Survey and Land Records",
           "Electricity Worker",
           "Tradesman - Masonary",
           "Inspector of Legal Metrology",
-          "Assistant",
-          "Assistant Engineer"
+          "Assistant (Universities in Kerala)"
         ],
         "advertisement_number": null,
         "vacancy_count": null,
@@ -3750,18 +3769,15 @@
         "application_end_date": null,
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": "https://www.keralapsc.gov.in/answerkey_omrexams",
+        "official_notification_url": "https://www.keralapsc.gov.in/index.php/answerkey_omrexams",
         "application_url": null,
-        "important_dates": [
-          "2026-10-31: Test date for Village Field Assistant",
-          "2026-11-03: Provisional answer key released for Village Field Assistant"
-        ],
-        "summary": "The Kerala Public Service Commission has released provisional and final OMR answer keys for various examinations, including Village Field Assistant, Special Branch Assistant, and Junior Lab Assistant. Candidates can view and download the answer keys from the official Kerala PSC web portal.",
+        "important_dates": [],
+        "summary": "The Kerala Public Service Commission has published provisional and final answer keys for various OMR examinations held between September and November 2026. Candidates can download the answer keys for posts including Village Field Assistant, Technical Assistant, and Junior Lab Assistant from the official KPSC website.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.1-flash-lite"
       },
-      "updated_at": "2026-11-04T09:55:52.631358+00:00"
+      "updated_at": "2026-11-05T10:08:43.028161+00:00"
     },
     "7cae3f043eaff77f5b4147cba8e9f74a3f705e531c942de47689684369436f17": {
       "id": "143fe42c1d9a4f7d",
@@ -4322,27 +4338,25 @@
       "updated_at": "2026-11-04T20:08:23.888207+00:00"
     },
     "7a48776db406b7eeb74879caf3e69b6ba9a682f71c4ac2651cb32a9e377f6826": {
-      "id": "43e91d8d884a0048",
+      "id": "64103cb0516c35de",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "application_deadline",
-        "event_evidence": "अंतिम तिथि: 30/11/2026",
+        "event_type": "vacancy",
+        "event_evidence": "Advertisement for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune.",
         "exam_name": "CSIR-NCL Director Recruitment 2026",
         "cycle_label": "2026",
-        "related_exams": [
-          "CSIR-NCL Director Recruitment 2026"
-        ],
+        "related_exams": [],
         "result_url": null,
         "result_declared": false,
         "related_notice": null,
-        "event_date": "2026-11-30",
+        "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन",
-        "notice_type": "Recruitment Advertisement",
-        "post_title": "CSIR NCL Pune Director Post Recruitment 2026",
+        "recruitment_evidence": "Official advertisement published on CSIR website for the Director position.",
+        "notice_type": "vacancy",
+        "post_title": "CSIR-National Chemical Laboratory Director Recruitment 2026",
         "organisation": "Council of Scientific & Industrial Research (CSIR)",
         "post_names": [
           "Director"
@@ -4358,14 +4372,16 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
         "application_url": null,
         "important_dates": [
-          "Application End Date: 30/11/2026"
+          "Application deadline: 2026-11-30"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the position of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
-        "uncertainties": [],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the position of Director at the National Chemical Laboratory (CSIR-NCL), Pune. Interested candidates must submit their applications by November 30, 2026.",
+        "uncertainties": [
+          "The notice does not specify the application submission method (online/offline) or detailed eligibility criteria."
+        ],
         "status": "ai_draft",
-        "model": "gemini-3.5-flash-lite"
+        "model": "gemini-3.1-flash-lite"
       },
-      "updated_at": "2026-11-04T20:09:43.306860+00:00"
+      "updated_at": "2026-11-05T09:58:16.805466+00:00"
     },
     "9a6c65dc1fb85af6b5ac647f23cfcea552edd68517e3958ffbcb97f49d80ec17": {
       "id": "189cb92f5a697cef",
@@ -4652,6 +4668,101 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-04T20:15:37.141781+00:00"
+    },
+    "15e753fff2b49bd683c4e24b8da9fed8bae0bc8244191509e7791b4895124418": {
+      "id": "f2edcdebe32e4152",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "recruitment",
+        "event_evidence": "Official CSIR recruitment portal listing active vacancies for Project Personnel and Director positions.",
+        "exam_name": null,
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Official CSIR recruitment portal listing active vacancies for Project Personnel and Director positions.",
+        "notice_type": "vacancy",
+        "post_title": "CSIR Recruitment 2026 Vacancies for Project Personnel and Directors",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Project Personnel",
+          "Director (CSIR-CGCRI)",
+          "Director (CSIR-NCL)"
+        ],
+        "advertisement_number": "TKDL/09/2026, 05/2026, 04/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Walk-in interview for Project Personnel; application-based selection for Director positions.",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-12: Walk-in interview for Project Personnel (TKDL/09/2026)",
+          "2026-11-30: Last date for Director (CSIR-CGCRI) applications",
+          "2026-11-30: Last date for Director (CSIR-NCL) applications"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has announced recruitment for Project Personnel at the TKDL Unit and Director positions at CSIR-CGCRI and CSIR-NCL. Interested candidates can apply for the Director posts by November 30, 2026, while the walk-in interview for project personnel is scheduled for November 12, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "updated_at": "2026-11-05T09:53:09.045709+00:00"
+    },
+    "fd0900574bb6079bc6cab77414637971215201550733c7a40acc45f49288716b": {
+      "id": "cef269e0905bc0dc",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "interview_schedule",
+        "event_type": "walk_in_interview",
+        "event_evidence": "वॉक-इन इंटरव्यू 12/11/2026",
+        "exam_name": "CSIR TKDL Project Personnel Recruitment 2026",
+        "cycle_label": "Project GAP-000001",
+        "related_exams": [
+          "CSIR TKDL Project Personnel Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-12",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "interview_schedule",
+        "post_title": "CSIR TKDL Unit Project Personnel Walk-in Interview 2026",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Project Personnel (Forestry & Ecology)",
+          "Project Personnel (Environmental Sciences)"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0",
+        "application_url": null,
+        "important_dates": [
+          "Walk-in Interview Date: 2026-11-12"
+        ],
+        "summary": "CSIR-TKDL Unit, New Delhi will conduct a walk-in interview for the recruitment of Project Personnel in Forestry & Ecology and Environmental Sciences under Project GAP-000001. Eligible candidates can appear for the walk-in interview scheduled for November 12, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-05T09:54:39.704312+00:00"
     }
   }
 }
