@@ -718,7 +718,12 @@
     "ef6d8d69599d3a53353c9c195d1146c51554286ed12939d58d79e341ed18cbe1",
     "39ea1b0ada70173be3e2fd69d2f2ac8a15758b92a7ee59c1f7a7d8215b7a40a3",
     "261ff7de2ffdeb76ffc67ec000da344b509399466388c2872289cf24929d8484",
-    "3e7992279e38c586c5167e4bf8d49953d91ae8948ff13398e015e3459fe4149e"
+    "3e7992279e38c586c5167e4bf8d49953d91ae8948ff13398e015e3459fe4149e",
+    "0f6e950cd63ec578ea123435058d53c0572989677a524bdb52a1b54774fdda13",
+    "29ae41836a1dfa607b1465343f87d11d815bd54e76a64a9ec6c6557b74f960c9",
+    "e126fbd0221cb4fcf75a48f105a42d6a3ab1c06113105b2af65abd8f12370729",
+    "73ddc0108fccefed32df160c375087959db29d2156163443807ec706dee88793",
+    "58f61437e5177d660a32a7db02274fed5fdff1ec86c16240faf6279f78aec568"
   ],
   "snapshots": {
     "https://nta.ac.in": "7d943fb27199f5fb46942fd5c035993718b8a8e64610e627e6b04290b61f42bb",
@@ -869,12 +874,12 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "f0177e9da745c52d729bfe131f752e7e2cd36eda32c5293e122d90adda459439",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "6fcc235b4199e75c96ecb31aa2582db4da2cbae7fda087258ef0ef391a243725",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "0f6e950cd63ec578ea123435058d53c0572989677a524bdb52a1b54774fdda13",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "e126fbd0221cb4fcf75a48f105a42d6a3ab1c06113105b2af65abd8f12370729",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "9491bdfe81bf55ad677a21590857754551e4f3d0685e173f9b7af4572faf27ba",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "ef6d8d69599d3a53353c9c195d1146c51554286ed12939d58d79e341ed18cbe1",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "73ddc0108fccefed32df160c375087959db29d2156163443807ec706dee88793",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "58f61437e5177d660a32a7db02274fed5fdff1ec86c16240faf6279f78aec568",
     "https://www.csir.res.in/hi/career-opportunities": "39ea1b0ada70173be3e2fd69d2f2ac8a15758b92a7ee59c1f7a7d8215b7a40a3",
     "https://www.csir.res.in/hi/notification": "261ff7de2ffdeb76ffc67ec000da344b509399466388c2872289cf24929d8484",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
@@ -972,7 +977,7 @@
     "https://www.icmr.gov.in/post/result-of-the-call-for-expression-of-interest-eoi-for-saransh-3": "2ab06531b8063f6016c8f787b57df6aa060ad06b4a92c4dbadb75c28fde1bab0",
     "https://www.keralapsc.gov.in/index.php/answerkey_omrexams": "3ff45751d8241aa7596e669ab6178c80a3a99013e6b2fc44d35928e949d874d9",
     "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1793943861_publicnoticeforinvitingsuggestionsonasdrct.pdf": "02e790e8ef4a3e5b91ce5a52d43cef396f03260c401521a95a600a9ac4e18278",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae": "4b01805229e707402b28ea43be26b735c0f575d894140482171d16f0b7d72555",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae": "29ae41836a1dfa607b1465343f87d11d815bd54e76a64a9ec6c6557b74f960c9",
     "https://mpscmanipur.gov.in/files/Annexure_IV_P_II.pdf": "cb62fc9141836a8399d4b228df8f7783f6bab5039c91388b4d9112a9c778c6ab",
     "https://mpscmanipur.gov.in/files/Annexure_V_P_III.pdf": "4d5e63ee81dfc7f23de162e2a38d2515a8b0e5d54eb00f5b00feaaac35fec873",
     "https://mpscmanipur.gov.in/files/Annexure_VI_P_IV.pdf": "a9f1276b343116c4f63d8ba9912758ab82138fdffecaf0d7772dabaf3bff22d0",
@@ -1717,14 +1722,14 @@
       "updated_at": "2026-11-03T19:48:27.771196+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "e7bb2d043c691d5b",
+      "id": "165d1333aa324fb0",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
-        "post_category": null,
+        "post_category": "result",
         "event_type": "result",
         "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (यूनानी और पेटेंट) के संदर्भ में 16.10.2026 और 23.10.2026 को आयोजित साक्षात्कार का परिणाम",
-        "exam_name": "CSIR TKDL Recruitment 2026",
+        "exam_name": "CSIR TKDL Recruitment Advt TKDL/08/2026 (Unani & Patent)",
         "cycle_label": "Advt. No. TKDL/08/2026",
         "related_exams": [],
         "result_url": null,
@@ -1735,12 +1740,9 @@
         "change_reason": null,
         "recruitment_evidence": null,
         "notice_type": null,
-        "post_title": "CSIR TKDL Advt 08/2026 Interview Result Released",
+        "post_title": "CSIR TKDL 2026 Interview Result Declared",
         "organisation": "Council of Scientific & Industrial Research",
-        "post_names": [
-          "Unani",
-          "Patent"
-        ],
+        "post_names": [],
         "advertisement_number": "TKDL/08/2026",
         "vacancy_count": null,
         "qualification": null,
@@ -1748,40 +1750,45 @@
         "application_start_date": null,
         "application_end_date": null,
         "application_fee": null,
-        "selection_process": "Interview",
+        "selection_process": null,
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae",
         "application_url": null,
         "important_dates": [
-          "2026-10-16: Interview date",
-          "2026-10-23: Interview date",
-          "2026-11-08: Result notice published"
+          "2026-10-16: Interview Date",
+          "2026-10-23: Interview Date",
+          "2026-11-08: Result Notification Published"
         ],
-        "summary": "CSIR has released the interview results for Unani and Patent posts under advertisement number TKDL/08/2026. The interviews were conducted on October 16 and October 23, 2026. Candidates can download the result document from the official CSIR website.",
+        "summary": "The Council of Scientific & Industrial Research has declared the interview results for Unani and Patent positions under advertisement number TKDL/08/2026. The interviews were conducted on 16 October 2026 and 23 October 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-08T09:32:18.284275+00:00"
+      "updated_at": "2026-11-08T18:10:58.139825+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
-      "id": "bc87727814b638e4",
+      "id": "93a181eb53912f63",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
-        "post_category": "vacancy",
-        "event_type": "walk-in interview",
-        "event_evidence": "वॉक-इन इंटरव्यू 12/11/2026",
-        "exam_name": null,
+        "post_category": "interview_schedule",
+        "event_type": "Walk-in Interview",
+        "event_evidence": "फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति (वॉक-इन इंटरव्यू 12/11/2026)",
+        "exam_name": "CSIR TKDL Unit Project Staff Recruitment 2026",
+        "cycle_label": "Project GAP-000001",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
         "related_notice": null,
         "event_date": "2026-11-12",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
-        "notice_type": "recruitment_advertisement",
-        "post_title": "CSIR TKDL Unit Project Staff Recruitment 2026",
+        "recruitment_evidence": "सीएसआईआर-टीकेडीएल यूनिट, नई दिल्ली में प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "Interview Schedule",
+        "post_title": "CSIR TKDL Project Staff Walk-in Interview 2026",
         "organisation": "CSIR-TKDL Unit, New Delhi",
         "post_names": [
-          "Project Staff"
+          "Project Staff (Forestry & Ecology)",
+          "Project Staff (Environmental Sciences)"
         ],
         "advertisement_number": "GAP-000001",
         "vacancy_count": null,
@@ -1794,14 +1801,16 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0",
         "application_url": null,
         "important_dates": [
-          "Walk-in Interview: 2026-11-12"
+          "2026-11-12: Walk-in Interview"
         ],
-        "summary": "CSIR-TKDL Unit, New Delhi is inviting candidates for a walk-in interview for the recruitment of Project Staff under Project GAP-000001 in Forestry & Ecology and Environmental Sciences. The walk-in interview is scheduled to take place on November 12, 2026.",
-        "uncertainties": [],
+        "summary": "CSIR-TKDL Unit, New Delhi will conduct a walk-in interview on 12 November 2026 for the recruitment of project staff under Project GAP-000001 in Forestry & Ecology and Environmental Sciences.",
+        "uncertainties": [
+          "Detailed qualifications, vacancy numbers, and timings are specified in the linked notification files."
+        ],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-01T18:12:27.156542+00:00"
+      "updated_at": "2026-11-08T18:12:38.300855+00:00"
     },
     "535af798e4008cfdf152a3b833f2601db8d3d0b3fd5a86f9141b7ba969721e7f": {
       "id": "be1b3a924da73c37",
@@ -6807,6 +6816,96 @@
         "model": "gemini-3.8-flash"
       },
       "updated_at": "2026-11-08T09:47:51.567175+00:00"
+    },
+    "786b3d20468aa7e01f32e46d5241d743de97b0e3b93a4894e8d16bbabf4d6686": {
+      "id": "44b5558cefc6ba4a",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "CSIR CGCRI Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "CSIR CGCRI Director Recruitment 2026",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana",
+        "application_url": null,
+        "important_dates": [
+          "Application deadline: 2026-11-30"
+        ],
+        "summary": "The Council of Scientific and Industrial Research has invited applications for the post of Director at CSIR-Central Glass and Ceramic Research Institute, Kolkata. Eligible candidates can submit their applications until November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-08T18:17:45.570785+00:00"
+    },
+    "2b66ce491270b4373f02dc0b030dcdf83175c2b7a7cf506781a9341c4d60af71": {
+      "id": "037a8b5ec35d057a",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "exam_name": "CSIR-NCL Pune Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "CSIR NCL Pune Director Recruitment 2026",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": null,
+        "important_dates": [
+          "Application deadline: 2026-11-30"
+        ],
+        "summary": "Council of Scientific & Industrial Research (CSIR) has announced the recruitment advertisement for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
+        "uncertainties": [
+          "Full notification PDF details such as eligibility criteria, age limit, application fee, and exact vacancy count are contained in the attached document advert_director_csir-ncl_hnd.pdf."
+        ],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-08T18:22:19.120811+00:00"
     }
   }
 }
