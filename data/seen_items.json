@@ -767,10 +767,12 @@
     "4cd8fa7c516283cea4239b6b95020498ba8f9f8c7c63b6c5c61c7b393650b9f1",
     "f5c2ff9f8105255830b426000fa6b0e558d132e931fed0c51ce0328f11afce3f",
     "2d4d263fdb6f54459b70c40398e7689efaaaf1fde88ede21c4e19423f70a1694",
-    "a84ca0b792779a2fb0b7d9fb19f378cc988e2c8588d049afb14e7fc8874c6b40"
+    "a84ca0b792779a2fb0b7d9fb19f378cc988e2c8588d049afb14e7fc8874c6b40",
+    "109980df26cc76611ac923b4bf668a8b27013e60ab4bf93c7ccb00e21cc8fbda",
+    "059385b1c3d763d4455c08911eff6b3ed517e88c1cb00e0a90e3deed99014c1a"
   ],
   "snapshots": {
-    "https://nta.ac.in": "8b3eea9b7f9b1a7003b98cdb44469f3068a1916f90d2098a5dea5239681e237e",
+    "https://nta.ac.in": "109980df26cc76611ac923b4bf668a8b27013e60ab4bf93c7ccb00e21cc8fbda",
     "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf": "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
     "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf": "6dc3b0379b42a405aa8f3bab63851ac718d392ec049732eb60088e52b4128a19",
     "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf": "d24733397846ca61d0ef44f7ab3eda31f09851b48e9a661d95953f37561b53c3",
@@ -918,7 +920,7 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "1ba69568dc12b80913022432c22ccfaf2032eeaaf5124b38984aa3ae2f149db9",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "059385b1c3d763d4455c08911eff6b3ed517e88c1cb00e0a90e3deed99014c1a",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "7b5b983743c02810990f2b25424ddf1fca3c66e4b2df6c6e30980d106136be72",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
