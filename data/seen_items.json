@@ -289,7 +289,12 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam",
     "https://www.keralapsc.gov.in/index.php/notifications",
     "https://www.ugc.gov.in/recruitment",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu"
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+    "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf",
+    "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf",
+    "https://www.ibps.in/index.php/careers",
+    "https://www.ibps.in/index.php/rural-bank-xv",
+    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -786,7 +791,33 @@
     "408617a0e82f336b6a2daa94ffc524495e49f5c831d17e7ec7bf19ec6c40cb0b",
     "29856f6739d0db993a42bf53f21411aaf87426d012e15dbaffecc0d95872382e",
     "08580ce395beecc59612f9056b6f38fc08df23add3f81b8c61e50d325cb87913",
-    "787c68fcd810c451f48d83ab589db481497fb61dbb15bed34ea9007f8d29e40d"
+    "787c68fcd810c451f48d83ab589db481497fb61dbb15bed34ea9007f8d29e40d",
+    "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
+    "c019fb11b1ca729e21840301d7959460d7f9f3b42e0b4f8f8a10acf93be25c43",
+    "ad5049fc450f7e63bcb7a225349b50fbbb317338c25ea35143b137a7e51838df",
+    "492d5eac9cf29ba82e6389bd209f8f56a32f02c1d14026fa91e52fc43d9181b6",
+    "de15f39ab12f06838d93dfee8691371cda0a0ca78a3c9619f5c21e8493b0b37e",
+    "16f7cad36026db39d49b7945faedfeafb65bbd188d788f1bfc05cc751e49830c",
+    "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
+    "f6279acacfe7938b872f58c15b74c719067318d50f70521cb3a6f73a43445dc6",
+    "5d655ddcdca9a6494e601493c0f9ae3927e230ca0a162867d555a48b0eb87255",
+    "1f30842279c48c367ccdb7d09daa588f397110a88454cdf3ec78deb3e68e104c",
+    "f48b0efc4d2ce0314cbb1a869a0a1cdd248936363c36e2ac0322cb3931f887fe",
+    "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
+    "23fa0291cf48f067a5b677f99963200565276341b6bcf4ff0dedcecd63757705",
+    "b8614d1693ebedfc0dbf76d52d1ea0ffcb9e4d68e1644acfa6d08321cf576a5b",
+    "3c4db5acefe86a7bd87f090760a3f0959d5068d748b97c0a247eb360e48b34b2",
+    "d0e3b66bb0bc131897974bf6c39d0e4be374bdb156262716ff89f0699cb0a34b",
+    "b1fdec0dfadbdbae77ee9d5f52863f5fa24c292d5e92a947cb7752f1775e977a",
+    "9a31dcd2776300e10292ea07ea8dbe1bd76322186bd88c2409c4eb976c876657",
+    "73c8503eb44aff1f2116d546f640cf7386ce81c54972b8ea9d419b27afb6d500",
+    "f05956bf52a09ade32b7168fa3295e245c63488aef3cdce096e0475d4a33051a",
+    "d1f32029f6f719bffda1dd2af163ab050554b0443d0b64aa4eed6c05501df3f1",
+    "c58c3177c6b5117d8a05c58b872186a92c8ec9db0aa2ea438b9cbc2101b98d20",
+    "cf8de9b10811ce8adcf16577cb8889cace64ad407793a49ef9da1e032a8553e0",
+    "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
+    "7d5917319dc6202a3d39acb3f5d408b3f01e3825e631eafa3bf26d807478d407",
+    "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe"
   ],
   "snapshots": {
     "https://nta.ac.in": "29856f6739d0db993a42bf53f21411aaf87426d012e15dbaffecc0d95872382e",
@@ -931,29 +962,29 @@
     "https://www.ugc.gov.in/pdfnews/4043441_India_france-year-of-innovation.pdf": "f6d33ad1fed2360f0396a0808d2dcd6733832b771afd0dcab2ce4a05f0ee39a2",
     "https://www.ugc.gov.in/pdfnews/7145009_INCP2-Letter.pdf": "a74f72ebc101db2ee0c730fe06791018a96edbd43f9773fccb3cfb84c77b07ad",
     "https://ncs.gov.in/assets/pdf/Jobseeker registration flowchart 1.pdf": "9eda25d8d8b02f2b7468c1f765fd848ee855d4762fbbf701381eb4d7fda84efc",
-    "https://ncs.gov.in": "c8cabca537e33c9b1bdbd01c2a45a4cc4e88399433e1f2f586c76fc9f4279980",
-    "https://ncs.gov.in/career-counsellors": "6d84f20b52f402c6e1d29b7c4d05a6ecf6d7691264bb9afa628c2f7840d6eba1",
+    "https://ncs.gov.in": "c019fb11b1ca729e21840301d7959460d7f9f3b42e0b4f8f8a10acf93be25c43",
+    "https://ncs.gov.in/career-counsellors": "ad5049fc450f7e63bcb7a225349b50fbbb317338c25ea35143b137a7e51838df",
     "https://ncs.gov.in/career-center": "085f48ee9e7a8ec45259d5cdbfa6591b5a58261ac77dd24bb629b8804850c8ce",
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "08580ce395beecc59612f9056b6f38fc08df23add3f81b8c61e50d325cb87913",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "20804405a07e01ce3c61eba3c84cd7c75336b7b04a5a371c9c85662f34c21339",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "492d5eac9cf29ba82e6389bd209f8f56a32f02c1d14026fa91e52fc43d9181b6",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "942585c594684c05703123032f46539db8c839ba4d624df9747ba5c08eb9dc64",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "e607976e3a39553e7fefcbb5754c70f494fc5781607b92e09eb2a0186b8623be",
-    "https://www.csir.res.in/hi/career-opportunities": "9d3a8b3901fcc5a4b4b890cd46fa2aea577670aa653df5d6cf891a27fe5365fd",
-    "https://www.csir.res.in/hi/notification": "408617a0e82f336b6a2daa94ffc524495e49f5c831d17e7ec7bf19ec6c40cb0b",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "f6279acacfe7938b872f58c15b74c719067318d50f70521cb3a6f73a43445dc6",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "5d655ddcdca9a6494e601493c0f9ae3927e230ca0a162867d555a48b0eb87255",
+    "https://www.csir.res.in/hi/career-opportunities": "1f30842279c48c367ccdb7d09daa588f397110a88454cdf3ec78deb3e68e104c",
+    "https://www.csir.res.in/hi/notification": "f48b0efc4d2ce0314cbb1a869a0a1cdd248936363c36e2ac0322cb3931f887fe",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
-    "https://www.icmr.gov.in/employment-opportunities": "d90a1f3344aad6db1b5414352c11c0322fc946fb3fefc547d1ba309fd4410f9d",
-    "https://www.icmr.gov.in/career-results": "072036004cd6385f015b2183e5896e01df76559d11c77e8dd8f3734d2826f8cc",
-    "https://www.icmr.gov.in/post/recruitment-no-icmr-r-pcell-deputation-adg-a-of-assistant-director-general-admin-pay-level-12-on-deputation-basis-including-short-term-contract-at-icmr-headquarters": "e25ca3a057cccc7f0e7de7ea564cd4fe625c9d936b25b732cb77bf4cfff7ef6c",
-    "https://www.icmr.gov.in/post/result-for-the-post-of-director-national-institute-of-one-health-nioh-nagpur-on-direct-recruitment-basis-advt-no-icmr-dir-sc-h-nioh-ngp-01-2026-pers": "fcd4363423f8a80a1373aebd18e35f8eef1a59a9170837552cfd50cc355fdf83",
+    "https://www.icmr.gov.in/employment-opportunities": "23fa0291cf48f067a5b677f99963200565276341b6bcf4ff0dedcecd63757705",
+    "https://www.icmr.gov.in/career-results": "b8614d1693ebedfc0dbf76d52d1ea0ffcb9e4d68e1644acfa6d08321cf576a5b",
+    "https://www.icmr.gov.in/post/recruitment-no-icmr-r-pcell-deputation-adg-a-of-assistant-director-general-admin-pay-level-12-on-deputation-basis-including-short-term-contract-at-icmr-headquarters": "b1fdec0dfadbdbae77ee9d5f52863f5fa24c292d5e92a947cb7752f1775e977a",
+    "https://www.icmr.gov.in/post/result-for-the-post-of-director-national-institute-of-one-health-nioh-nagpur-on-direct-recruitment-basis-advt-no-icmr-dir-sc-h-nioh-ngp-01-2026-pers": "73c8503eb44aff1f2116d546f640cf7386ce81c54972b8ea9d419b27afb6d500",
     "https://www.icmr.gov.in/post/applications-are-invited-for-dissertation-training-6-months-for-students-who-are-pursuing-post-graduate-studies-all-branches-of-life-sciences-including-public-health-bioinformatics-in-universities-institutes-last-date-november-06-2026": "a3503ffabf8307e6eef75330819488ad4cd8045cc7d8ad95abbfbcc8147e1656",
-    "https://www.icmr.gov.in/post/advertisement-adv-no-icmr-nie-01-2026-rpcell-for-recruitment-of-08-scientific-positions-at-school-of-public-health-icmr-nie-chennai-the-registration-will-start-on-icmr-recruitment-portal-from-15-10-2026-last-date-november-26-2026": "4cd8fa7c516283cea4239b6b95020498ba8f9f8c7c63b6c5c61c7b393650b9f1",
-    "https://www.icmr.gov.in/post/advertisement-no-adv-no-icmr-nine-01-2026-rpcell-for-recruitment-to-the-post-of-scientist-d-at-icmr-national-institute-of-ncd-epidemiology-icmr-nine-last-date-november-16-2026": "f5c2ff9f8105255830b426000fa6b0e558d132e931fed0c51ce0328f11afce3f",
-    "https://www.icmr.gov.in/post/advertisement-no-icmr-nireh-estt-assistant-01-2026-for-recruitment-to-the-post-of-assistant-on-deputation-basis-at-icmr-nireh-bhopal-last-date-extended-november-18-2026": "2d4d263fdb6f54459b70c40398e7689efaaaf1fde88ede21c4e19423f70a1694",
+    "https://www.icmr.gov.in/post/advertisement-adv-no-icmr-nie-01-2026-rpcell-for-recruitment-of-08-scientific-positions-at-school-of-public-health-icmr-nie-chennai-the-registration-will-start-on-icmr-recruitment-portal-from-15-10-2026-last-date-november-26-2026": "d1f32029f6f719bffda1dd2af163ab050554b0443d0b64aa4eed6c05501df3f1",
+    "https://www.icmr.gov.in/post/advertisement-no-adv-no-icmr-nine-01-2026-rpcell-for-recruitment-to-the-post-of-scientist-d-at-icmr-national-institute-of-ncd-epidemiology-icmr-nine-last-date-november-16-2026": "c58c3177c6b5117d8a05c58b872186a92c8ec9db0aa2ea438b9cbc2101b98d20",
+    "https://www.icmr.gov.in/post/advertisement-no-icmr-nireh-estt-assistant-01-2026-for-recruitment-to-the-post-of-assistant-on-deputation-basis-at-icmr-nireh-bhopal-last-date-extended-november-18-2026": "cf8de9b10811ce8adcf16577cb8889cace64ad407793a49ef9da1e032a8553e0",
     "https://sbi.bank.in/web/careers": "56fbd5f728c8ff69270a9dc324f18c314865665920f888c5882900cb3c1b2cc4",
     "https://sbi.bank.in/web/careers/post-your-query": "33991ee5f051bc7faa3e4fefe49e665b0df807b64a238bcfab95a7a55ec15332",
     "https://sbi.bank.in/web/careers/current-openings": "9da8b73eb967c2aec060dafe46e958e142d6b94c05381acc8229d74a7ae6787a",
@@ -972,7 +1003,7 @@
     "https://sbi.bank.in/web/careers/roles-sbi": "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba",
     "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf": "5124f76a27644e210e49d71be51a100e6536d8addc76768b7a451c84c92e7ebd",
     "https://ncs.gov.in/assets/pdf/Indian Staffing Federation (ISF Registration Flow).pdf": "8f143624019bc9a242842337c5f9e35b513fe9499da7e053f9721cf717651189",
-    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "c8cabca537e33c9b1bdbd01c2a45a4cc4e88399433e1f2f586c76fc9f4279980",
+    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "c019fb11b1ca729e21840301d7959460d7f9f3b42e0b4f8f8a10acf93be25c43",
     "https://www.csir.res.in/sites/default/files/2025-09/security-audit-2025_d10.pdf": "67f72071c007fd9042cf8eca438088a1a5ec8c7992fbbce85efcea9f2f953a45",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1791972387_carassistivetechcall_v2.pdf": "cf8c637bb2245c1c30254bb63865a674cb431e45df19b73d91af937109fe56c1",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1790596857_calln_rdhr.pdf": "24abb00705351667dfb0689478316eb7b6387bae4c8dc68a8650ac35812c630d",
@@ -983,7 +1014,7 @@
     "https://www.icmr.gov.in/icmrobject/uploads/Static/1728969262_nie_course.pdf": "2c1ee1bd9bbb57fbb0874eb45762f20e52bef6773d11b6b18ff2adbb56c57d9d",
     "https://www.icmr.gov.in/post/result-call-for-investigator-initiated-research-proposals-for-icmr-follow-on-small-extramural-grants-icmr-follow-on-anveshan-extramural-grants-2026-call-released-on-december-19-2025": "b7784cba04ab93a70e9c051cc5c4bdea98826f6fd28afd2196fe0cd3d1f763fa",
     "https://www.icmr.gov.in/post/result-call-for-investigator-initiated-research-proposals-for-icmr-small-extramural-grants-icmr-anveshan-extramural-grants-2026-call-released-on-december-19-2025": "116ec49284a74555c618a51d56ac01ac7e2febaa4694a3c64716b7a8ec7fb264",
-    "https://www.icmr.gov.in/post/result-of-the-expression-of-interest-eoi-for-establishing-technical-resource-centres-trcs-in-the-north-eastern-region-under-the-centre-for-evidence-based-guidelines-dhr": "3e0ee389d3592e697ff378648f71736d705efe9828020b72d9aa0ae2df46a6f1",
+    "https://www.icmr.gov.in/post/result-of-the-expression-of-interest-eoi-for-establishing-technical-resource-centres-trcs-in-the-north-eastern-region-under-the-centre-for-evidence-based-guidelines-dhr": "d0e3b66bb0bc131897974bf6c39d0e4be374bdb156262716ff89f0699cb0a34b",
     "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-medical-under-crmch-new-chandrapur-ref-advt-no-icmr-adv-no-icmr-rectt-crmch-01-2026-rpcell": "950b6933a2d45966f68e41837e488129370d617c9a5975404dcab6a2b75e2a02",
     "https://www.icmr.gov.in/post/result-icmr-collaborating-centre-of-excellence-icmr-ccoe-2026": "a7f4bc01975e9754dc2bac5627e2c0065eddab4ba543dc1803b7fcf5becf164f",
     "https://www.icmr.gov.in/post/result-for-36-vacancies-of-scientist-b-non-medical-through-advt-no-377-2025-dated-02-02-2026": "66dcea4b504192e048b38d543ec8d7165a04cdbd0c8549abe019debc26600bf8",
@@ -993,12 +1024,12 @@
     "https://sbi.bank.in/en/web/careers/recruitment-results": "a50024c88c16c1c50feb53a4a2d63d0ca8104270c52e15f781196f68586f6bbd",
     "https://sbi.bank.in/en/web/careers/recruitment-results-archive": "9d87ebf844bbf1d28627b951881c0099ea28df7f17ec38703a60fec238e90a0d",
     "https://sbi.bank.in/en/web/careers/download-forms": "dd19395ececf51117745f4b8ebdfbbfa555093a8b9dde41c4fc5d857ecb10bd9",
-    "https://www.icmr.gov.in/post/result-for-the-post-of-additional-director-general-to-head-the-intramural-research-wing-at-icmr-hqrs-new-delhi-against-advt-no-icmrhq-addl-dg-im-01-2026-rpcell-dated-28-07-2026": "42699f2ea7a2b256371a2b71e0c490f33951e554c91d78c19c86f5d5080dfd9f",
+    "https://www.icmr.gov.in/post/result-for-the-post-of-additional-director-general-to-head-the-intramural-research-wing-at-icmr-hqrs-new-delhi-against-advt-no-icmrhq-addl-dg-im-01-2026-rpcell-dated-28-07-2026": "9a31dcd2776300e10292ea07ea8dbe1bd76322186bd88c2409c4eb976c876657",
     "https://sbi.bank.in/en/web/careers/best-in-class-benefits": "6ff1913d2de48823e142985ba121389b7c768cc2c939f5bf07e53f5953032364",
     "https://sbi.bank.in/en/web/careers/growth-oriented-culture": "1177ecc47a8c82d8243e2059cabe7b7d8dc92118cf972794805bc4f72fd35dce",
     "https://nta.ac.in/Download/Notice/Notice_20261102150155.pdf": "46230e1c5d3d1e89e4045ce0f52503481e965b6e5924472b4ff0ea56526d68c1",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1793593939_webinar3_2026_medicalmasterclassseries_poster.pdf": "a603d668a575e3ae9b99e1230c0725efcc5d180fc0b5b2f88e8bdd700c98d0ec",
-    "https://www.icmr.gov.in/post/notification-for-the-posts-of-directors-at-icmr-institutes-advt-no-icmr-dir-02-2026-r-pcell-last-date-30-11-2026-till-5-30-pm-the-link-for-online-application-on-the-recruitment-portal-https-recruitment-icmr-org-in-shall-be-live-shortly": "77e69cec0fe86209fb1c0eaec42fe2bb7dc152edf7ae7d1f7320210edcc3537b",
+    "https://www.icmr.gov.in/post/notification-for-the-posts-of-directors-at-icmr-institutes-advt-no-icmr-dir-02-2026-r-pcell-last-date-30-11-2026-till-5-30-pm-the-link-for-online-application-on-the-recruitment-portal-https-recruitment-icmr-org-in-shall-be-live-shortly": "3c4db5acefe86a7bd87f090760a3f0959d5068d748b97c0a247eb360e48b34b2",
     "https://www.icmr.gov.in/post/notice-for-interview-for-the-post-of-scientist-b-non-medical-under-crmch-new-chandrapur-advt-no-icmr-rectt-crmch-01-2026-rpcell-dated-03-06-2026-date-november-4-2026": "ea717bcf1dda8b9eaa14a242419b9a1d9f4b239d590a00a65dcdf360a2a53bd6",
     "https://www.keralapsc.gov.in/sites/default/files/inline-files/authorised-signatory-1.pdf": "082c81862ac5efcce7e72207a1a8a75bb229a176e902fff08562ce1ce5434826",
     "https://www.csir.res.in/sites/default/files/2026-11/ipu_lecture_nov.pdf": "51f678f8c2bf35fd12815b43c33a9bb89a30fd08879a0ca2b282f40fdb135d0c",
@@ -1040,7 +1071,7 @@
     "https://www.icmr.gov.in/post/result-of-the-call-for-expression-of-interest-eoi-for-saransh-3": "12c501f45a84930ab19704a368e4809eb25230166d37720e589236f2e0fb4f45",
     "https://www.keralapsc.gov.in/index.php/answerkey_omrexams": "a84ca0b792779a2fb0b7d9fb19f378cc988e2c8588d049afb14e7fc8874c6b40",
     "https://www.icmr.gov.in/icmrobject/uploads/WhatsNew/1793943861_publicnoticeforinvitingsuggestionsonasdrct.pdf": "02e790e8ef4a3e5b91ce5a52d43cef396f03260c401521a95a600a9ac4e18278",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae": "334b9c9846959379db647b4ea2515a8b2dfcf257d608268faa34320083fa9a95",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae": "16f7cad36026db39d49b7945faedfeafb65bbd188d788f1bfc05cc751e49830c",
     "https://mpscmanipur.gov.in/files/Annexure_IV_P_II.pdf": "cb62fc9141836a8399d4b228df8f7783f6bab5039c91388b4d9112a9c778c6ab",
     "https://mpscmanipur.gov.in/files/Annexure_V_P_III.pdf": "4d5e63ee81dfc7f23de162e2a38d2515a8b0e5d54eb00f5b00feaaac35fec873",
     "https://mpscmanipur.gov.in/files/Annexure_VI_P_IV.pdf": "a9f1276b343116c4f63d8ba9912758ab82138fdffecaf0d7772dabaf3bff22d0",
@@ -1070,12 +1101,17 @@
     "https://opsc.gov.in/Public/Pages/View_Content.aspx?id=iQvy8ONZ1XeCyxFZaY2SfA==": "c6b99751b5e3335ac4260ced6a0e8f345950090b1c2197e4b66a5918de775da6",
     "https://nta.ac.in/Download/Notice/Notice_20261107190901.pdf": "663b86ec99e3b5c2510c66841732bdc2f6c8ebdfaef1ac296069923047708084",
     "https://nta.ac.in/Download/Notice/Notice_20261107190824.pdf": "ac160480c767d96781702c1b13a7685eca89b0464fc7cd8996d7e6c1ac5e1175",
-    "https://www.icmr.gov.in/post/recruitment-for-the-post-of-assistant-pay-level-6-on-deputation-basis-at-icmr-nirbi-kolkata-ref-no-icmr-nirbi-estt-2026-deputation-last-date-extended-november-23-2026": "9e18414879f57f945653d2492ab20ce7394db9baf74a3cbdfbd1696b779b547b",
+    "https://www.icmr.gov.in/post/recruitment-for-the-post-of-assistant-pay-level-6-on-deputation-basis-at-icmr-nirbi-kolkata-ref-no-icmr-nirbi-estt-2026-deputation-last-date-extended-november-23-2026": "f05956bf52a09ade32b7168fa3295e245c63488aef3cdce096e0475d4a33051a",
     "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams": "3e7992279e38c586c5167e4bf8d49953d91ae8948ff13398e015e3459fe4149e",
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "787c68fcd810c451f48d83ab589db481497fb61dbb15bed34ea9007f8d29e40d"
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "de15f39ab12f06838d93dfee8691371cda0a0ca78a3c9619f5c21e8493b0b37e",
+    "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
+    "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
+    "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
+    "https://www.ibps.in/index.php/rural-bank-xv": "7d5917319dc6202a3d39acb3f5d408b3f01e3825e631eafa3bf26d807478d407",
+    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf": "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -1745,14 +1781,14 @@
       "updated_at": "2026-11-01T09:40:24.309037+00:00"
     },
     "fe885a62b11ff478b464e552ac7cb65692f8b748dcbbf422d5d69f0c7be19e00": {
-      "id": "b78200e8f4ba8ae7",
+      "id": "dc86431a6b2502a4",
       "draft": {
-        "is_relevant_notice": true,
+        "is_relevant_notice": false,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "interview_schedule",
+        "event_type": null,
         "event_evidence": "वॉक-इन इंटरव्यू 12/11/2026",
-        "exam_name": "CSIR TKDL Unit Project Personnel Walk-In Interview 2026",
+        "exam_name": "CSIR TKDL Unit Project Staff Recruitment 2026",
         "cycle_label": "Project GAP-000001",
         "related_exams": [],
         "result_url": null,
@@ -1761,16 +1797,17 @@
         "event_date": "2026-11-12",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
-        "notice_type": "Walk-in Interview Notice",
-        "post_title": "CSIR-TKDL Unit Project Personnel Walk-In Interview 2026",
+        "recruitment_evidence": "सीएसआईआर-टीकेडीएल यूनिट, नई दिल्ली में प्रोजेक्ट GAP-000001 के अंतर्गत फॉरेस्ट्री एंड इकोलॉजी और एनवायर्नमेंटल साइंसेज में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "recruitment_advertisement",
+        "post_title": "CSIR TKDL Unit Project Staff Recruitment 2026",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
-          "Project Personnel"
+          "Project Personnel (Forestry & Ecology)",
+          "Project Personnel (Environmental Sciences)"
         ],
         "advertisement_number": "GAP-000001",
         "vacancy_count": null,
-        "qualification": "Forestry and Ecology / Environmental Sciences",
+        "qualification": null,
         "age_limit": null,
         "application_start_date": null,
         "application_end_date": null,
@@ -1779,27 +1816,27 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0",
         "application_url": null,
         "important_dates": [
-          "Walk-In Interview Date: 2026-11-12"
+          "Walk-in Interview: 2026-11-12"
         ],
-        "summary": "CSIR-TKDL Unit, New Delhi has announced a walk-in interview for project personnel recruitment under Project GAP-000001 in Forestry & Ecology and Environmental Sciences. The walk-in interview is scheduled for November 12, 2026.",
+        "summary": "CSIR TKDL Unit conducted a walk-in interview for the recruitment of Project Personnel in Forestry & Ecology and Environmental Sciences under Project GAP-000001 on November 12, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.5-flash-lite"
+        "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-11T09:55:04.834088+00:00"
+      "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "c1c60ba3a4a5173c",
+      "id": "81334a674f8a66e2",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
         "post_category": "result",
-        "event_type": "result",
+        "event_type": "interview_result",
         "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (यूनानी और पेटेंट) के संदर्भ में 16.10.2026 और 23.10.2026 को आयोजित साक्षात्कार का परिणाम",
-        "exam_name": "CSIR TKDL Advt. TKDL/08/2026",
-        "cycle_label": "TKDL/08/2026",
+        "exam_name": "CSIR TKDL Recruitment 2026",
+        "cycle_label": "Advt. No. TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Advt. TKDL/08/2026"
+          "CSIR TKDL Recruitment 2026"
         ],
         "result_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae",
         "result_declared": true,
@@ -1808,12 +1845,10 @@
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": null,
-        "notice_type": "Result",
-        "post_title": "CSIR TKDL Advt 08/2026 Unani and Patent Interview Result",
+        "notice_type": "result",
+        "post_title": "CSIR TKDL 2026 Interview Result Declared for Advt TKDL/08/2026",
         "organisation": "Council of Scientific & Industrial Research",
-        "post_names": [
-          "Unani and Patent Post"
-        ],
+        "post_names": [],
         "advertisement_number": "TKDL/08/2026",
         "vacancy_count": null,
         "qualification": null,
@@ -1825,15 +1860,14 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae",
         "application_url": null,
         "important_dates": [
-          "16.10.2026",
-          "23.10.2026"
+          "Interview dates: 16 October 2026 and 23 October 2026"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the interview results for Advertisement Number TKDL/08/2026 under the Unani and Patent category. The interviews were conducted on October 16, 2026, and October 23, 2026.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the interview results under Advertisement No. TKDL/08/2026 for Unani and Patent disciplines. The interviews were conducted on 16 October 2026 and 23 October 2026.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.5-flash-lite"
+        "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-12T20:27:16.345018+00:00"
+      "updated_at": "2026-11-13T20:12:11.316795+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -2361,11 +2395,11 @@
       "updated_at": "2026-11-02T04:13:17.120102+00:00"
     },
     "d931969241f4a56b3a8a074ca1f42f2645c844549d8ae6da39c4b17aa964ba4d": {
-      "id": "1b13f17a4b15d7c6",
+      "id": "d722793213932bea",
       "draft": {
         "is_relevant_notice": true,
-        "is_recruitment_notice": false,
-        "post_category": null,
+        "is_recruitment_notice": true,
+        "post_category": "result",
         "event_type": "result",
         "event_evidence": "Result for the post of Additional Director General to head the Intramural Research Wing at ICMR Hqrs., New Delhi, against Advt. No. ICMRHQ/Addl.DG(IM)/01/2026-RPCell dated 28.07.2026",
         "exam_name": "ICMR Additional Director General Recruitment 2026",
@@ -2379,12 +2413,12 @@
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": null,
-        "notice_type": "result",
-        "post_title": "ICMR Additional Director General Result 2026 Released",
+        "recruitment_evidence": "Advt. No. ICMRHQ/Addl.DG(IM)/01/2026-RPCell dated 28.07.2026",
+        "notice_type": "Result",
+        "post_title": "ICMR Additional Director General Result 2026 Announced",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
-          "Additional Director General"
+          "Additional Director General to head the Intramural Research Wing"
         ],
         "advertisement_number": "ICMRHQ/Addl.DG(IM)/01/2026-RPCell",
         "vacancy_count": null,
@@ -2397,12 +2431,12 @@
         "official_notification_url": "https://www.icmr.gov.in/post/result-for-the-post-of-additional-director-general-to-head-the-intramural-research-wing-at-icmr-hqrs-new-delhi-against-advt-no-icmrhq-addl-dg-im-01-2026-rpcell-dated-28-07-2026",
         "application_url": null,
         "important_dates": [],
-        "summary": "The Indian Council of Medical Research has released the selection result for the post of Additional Director General (Intramural Research Wing) at ICMR Hqrs., New Delhi. Candidates can check the official portal to view the result issued against Advt. No. ICMRHQ/Addl.DG(IM)/01/2026-RPCell.",
+        "summary": "The Indian Council of Medical Research has released the selection result for the Additional Director General position to head the Intramural Research Wing at ICMR Headquarters, New Delhi, under advertisement number ICMRHQ/Addl.DG(IM)/01/2026-RPCell.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-11T10:00:27.637983+00:00"
+      "updated_at": "2026-11-13T20:16:26.576295+00:00"
     },
     "16bbe63c50c0076df29f94d19bc0bf95eb764e32aa0a0e794f8842ca7ce50c8a": {
       "id": "e802252d7faf37c9",
@@ -2590,12 +2624,12 @@
       "updated_at": "2026-11-02T09:57:33.463307+00:00"
     },
     "8454bb71809e82b3e5d5e09114d7c0808e8c01d6a69e1bcb2344417449b52478": {
-      "id": "2822ae180ecaf462",
+      "id": "ef7b575c053b1034",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
-        "post_category": "vacancy",
-        "event_type": null,
+        "post_category": null,
+        "event_type": "vacancy",
         "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
         "exam_name": "CSIR-CGCRI Director Recruitment 2026",
         "cycle_label": "2026",
@@ -2606,9 +2640,9 @@
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन",
-        "notice_type": "Recruitment Notification",
-        "post_title": "CSIR CGCRI Director Recruitment 2026",
+        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "recruitment",
+        "post_title": "CSIR CGCRI Director Recruitment 2026 Announcement",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
           "Director"
@@ -2624,14 +2658,14 @@
         "official_notification_url": null,
         "application_url": null,
         "important_dates": [
-          "Application deadline: 2026-11-30"
+          "Application End Date: 2026-11-30"
         ],
-        "summary": "CSIR has issued an advertisement for recruitment to the post of Director at CSIR-Central Glass & Ceramic Research Institute (CSIR-CGCRI), Kolkata. Candidates interested in the position can apply on or before November 30, 2026.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has released an advertisement for the post of Director at the CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI) in Kolkata. The last date to submit applications for this position is November 30, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-05T09:57:01.996983+00:00"
+      "updated_at": "2026-11-13T20:13:31.540636+00:00"
     },
     "946ca6ec2cc9a39e14cd21d17dfa6740489a899e5bba5f6809999c7e543ee247": {
       "id": "ee20e4d767208d6f",
@@ -2787,14 +2821,14 @@
       "updated_at": "2026-11-02T10:00:13.237708+00:00"
     },
     "64fec78f42fcb417e7146671ce3c6d00fa921f3dcb2f3e5453bed81c0543f3cd": {
-      "id": "2f5eb270cd8a9c77",
+      "id": "43bed5708c1735f0",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": null,
-        "event_evidence": null,
-        "exam_name": "ICMR Assistant Director General (Admin) Deputation Recruitment",
+        "event_type": "vacancy",
+        "event_evidence": "Recruitment (No. ICMR/R&PCell/ Deputation /ADG(A)) of Assistant Director General (Admin) (Pay Level-12) on Deputation Basis (including short term contract) at ICMR Headquarters",
+        "exam_name": "ICMR Assistant Director General Admin Deputation Recruitment 2026",
         "cycle_label": null,
         "related_exams": [],
         "result_url": null,
@@ -2803,9 +2837,9 @@
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "ICMR has released an advertisement and application form for the recruitment of Assistant Director General (Admin) on a deputation basis at ICMR Headquarters.",
-        "notice_type": "Recruitment Notification",
-        "post_title": "ICMR Assistant Director General Admin Recruitment",
+        "recruitment_evidence": "Recruitment of Assistant Director General (Admin) (Pay Level-12) on Deputation Basis (including short term contract) at ICMR Headquarters",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "ICMR Assistant Director General Admin Deputation Recruitment",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
           "Assistant Director General (Admin)"
@@ -2819,14 +2853,14 @@
         "application_fee": null,
         "selection_process": null,
         "official_notification_url": "https://www.icmr.gov.in/post/recruitment-no-icmr-r-pcell-deputation-adg-a-of-assistant-director-general-admin-pay-level-12-on-deputation-basis-including-short-term-contract-at-icmr-headquarters",
-        "application_url": null,
+        "application_url": "https://www.icmr.gov.in/post/recruitment-no-icmr-r-pcell-deputation-adg-a-of-assistant-director-general-admin-pay-level-12-on-deputation-basis-including-short-term-contract-at-icmr-headquarters",
         "important_dates": [],
-        "summary": "The Indian Council of Medical Research has invited applications for the post of Assistant Director General (Admin) in Pay Level-12 on a deputation basis (including short-term contract) at ICMR Headquarters. Interested candidates can access the advertisement and application forms in English and Hindi on the official website.",
+        "summary": "The Indian Council of Medical Research has invited applications for the post of Assistant Director General (Admin) at ICMR Headquarters on a deputation basis, including short-term contracts. Interested candidates can access the advertisement and application form directly from the official portal.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-11T10:00:02.821827+00:00"
+      "updated_at": "2026-11-13T20:16:23.077340+00:00"
     },
     "4c3235384ed42738ba2633db3d2aeaca48bc8bcbff128f830889d3db8e0cbdb3": {
       "id": "044a7893a28806ef",
@@ -2873,12 +2907,12 @@
       "updated_at": "2026-11-06T19:42:27.795787+00:00"
     },
     "cf1afb715f3048d0f3d2b58665d3c6b2794a918570f35a4ddcaa79023abdaadd": {
-      "id": "511745af658f0b0a",
+      "id": "e426f41000ce9983",
       "draft": {
         "is_relevant_notice": true,
-        "is_recruitment_notice": false,
+        "is_recruitment_notice": true,
         "post_category": "result",
-        "event_type": "result_declared",
+        "event_type": "result",
         "event_evidence": "Result for the post of Director, National Institute of One Health (NIOH), Nagpur on direct recruitment basis (Advt. No. ICMR/DIR(Sc-H)/NIOH-NGP/01/2026-Pers).",
         "exam_name": "ICMR Director NIOH Nagpur Recruitment 2026",
         "cycle_label": "Advt. No. ICMR/DIR(Sc-H)/NIOH-NGP/01/2026-Pers",
@@ -2891,12 +2925,12 @@
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": null,
-        "notice_type": "result",
-        "post_title": "ICMR Director NIOH Nagpur Result 2026 Declared",
+        "recruitment_evidence": "Result for the post of Director, National Institute of One Health (NIOH), Nagpur on direct recruitment basis (Advt. No. ICMR/DIR(Sc-H)/NIOH-NGP/01/2026-Pers).",
+        "notice_type": "Result",
+        "post_title": "ICMR Director NIOH Nagpur Result 2026",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
-          "Director"
+          "Director, National Institute of One Health (NIOH), Nagpur"
         ],
         "advertisement_number": "ICMR/DIR(Sc-H)/NIOH-NGP/01/2026-Pers",
         "vacancy_count": null,
@@ -2909,12 +2943,12 @@
         "official_notification_url": "https://www.icmr.gov.in/post/result-for-the-post-of-director-national-institute-of-one-health-nioh-nagpur-on-direct-recruitment-basis-advt-no-icmr-dir-sc-h-nioh-ngp-01-2026-pers",
         "application_url": null,
         "important_dates": [],
-        "summary": "The Indian Council of Medical Research has published the recruitment result for the post of Director at the National Institute of One Health (NIOH), Nagpur. Candidates who participated in the selection process under Advt. No. ICMR/DIR(Sc-H)/NIOH-NGP/01/2026-Pers can now check the official selection outcome.",
+        "summary": "The Indian Council of Medical Research has released the selection result for the Director post at the National Institute of One Health, Nagpur.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-11T10:00:40.984562+00:00"
+      "updated_at": "2026-11-13T20:16:29.686823+00:00"
     },
     "7a11d73a5a5d7e4566e293e626410fcc9bebbf129197d1f00edd89369cecb429": {
       "id": "9b8cd021365aac00",
@@ -3463,17 +3497,17 @@
       "updated_at": "2026-11-03T19:49:05.247137+00:00"
     },
     "98011690574b870d216fa07058204574f480fb6afca156841276f11bfa40f4fc": {
-      "id": "c956cfeb291fcbe3",
+      "id": "c81b2ee1e472ee0a",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "application_window",
-        "event_evidence": "Notification for the posts of Directors at ICMR Institutes (Advt. No. ICMR/DIR/02/2026-R&PCell) Last Date: 30.11.2026 till 5:30 PM. The link for online application on the recruitment portal (https://recruitment.icmr.org.in) shall be live shortly.",
-        "exam_name": "ICMR Directors Recruitment 2026",
+        "event_type": "vacancy",
+        "event_evidence": "Notification for the posts of Directors at ICMR Institutes (Advt. No. ICMR/DIR/02/2026-R&PCell)",
+        "exam_name": "ICMR Director Recruitment 2026",
         "cycle_label": "Advt. No. ICMR/DIR/02/2026-R&PCell",
         "related_exams": [
-          "ICMR Directors Recruitment 2026"
+          "ICMR Director Recruitment 2026"
         ],
         "result_url": null,
         "result_declared": false,
@@ -3482,8 +3516,8 @@
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": "Notification for the posts of Directors at ICMR Institutes (Advt. No. ICMR/DIR/02/2026-R&PCell)",
-        "notice_type": "advertisement",
-        "post_title": "ICMR Directors Recruitment 2026",
+        "notice_type": "vacancy",
+        "post_title": "ICMR Director Recruitment 2026 Notification",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
           "Director"
@@ -3493,43 +3527,43 @@
         "qualification": null,
         "age_limit": null,
         "application_start_date": null,
-        "application_end_date": "2026-11-30",
+        "application_end_date": "2026-11-30T17:30:00",
         "application_fee": null,
         "selection_process": null,
         "official_notification_url": "https://www.icmr.gov.in/post/notification-for-the-posts-of-directors-at-icmr-institutes-advt-no-icmr-dir-02-2026-r-pcell-last-date-30-11-2026-till-5-30-pm-the-link-for-online-application-on-the-recruitment-portal-https-recruitment-icmr-org-in-shall-be-live-shortly",
         "application_url": "https://recruitment.icmr.org.in",
         "important_dates": [
-          "2026-11-30: Last date to apply (till 5:30 PM)"
+          "Application deadline: 2026-11-30 till 5:30 PM"
         ],
-        "summary": "The Indian Council of Medical Research has announced recruitment for the posts of Directors at various ICMR Institutes under advertisement ICMR/DIR/02/2026-R&PCell. Online applications are accepted through the official recruitment portal until November 30, 2026, 5:30 PM.",
+        "summary": "The Indian Council of Medical Research (ICMR) has invited applications for the post of Director at various ICMR Institutes under Advt. No. ICMR/DIR/02/2026-R&PCell. Interested candidates can submit their applications through the official recruitment portal by November 30, 2026, 5:30 PM.",
         "uncertainties": [
-          "Exact vacancy count, eligibility criteria, and fee structure are detailed in the full notification document"
+          "The online application link is stated to be live shortly, but is not currently active."
         ],
         "status": "ai_draft",
-        "model": "gemini-3.8-flash"
+        "model": "gemini-3.1-flash-lite"
       },
-      "updated_at": "2026-11-11T09:58:17.011369+00:00"
+      "updated_at": "2026-11-13T20:16:17.012136+00:00"
     },
     "5489a5716d994211d5a0b162d0c9bff24f851449ceea6c7ff3736342d065ad5d": {
-      "id": "d07c4611390fd373",
+      "id": "3162b1c39300974f",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "advertisement",
-        "event_evidence": "Advertisement (Adv. No. ICMR/NIE/01/2026-RPCell) for recruitment of 08 scientific positions at School of Public Health, ICMR-NIE, Chennai",
-        "exam_name": "ICMR NIE Scientific Positions Advt No ICMR/NIE/01/2026-RPCell",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "ICMR-NIE Scientific Positions Recruitment 2026",
         "cycle_label": "Adv. No. ICMR/NIE/01/2026-RPCell",
         "related_exams": [],
         "result_url": null,
         "result_declared": false,
         "related_notice": null,
-        "event_date": "2026-11-26",
+        "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "Advertisement for recruitment of 08 scientific positions at School of Public Health, ICMR-NIE, Chennai",
-        "notice_type": "Recruitment Advertisement",
-        "post_title": "ICMR NIE Chennai Scientific Positions Recruitment 2026",
+        "recruitment_evidence": "Advertisement (Adv. No. ICMR/NIE/01/2026-RPCell) for recruitment of 08 scientific positions at School of Public Health, ICMR-NIE, Chennai",
+        "notice_type": "vacancy",
+        "post_title": "ICMR-NIE Chennai Scientific Positions Recruitment 2026",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
           "Scientific Positions"
@@ -3546,27 +3580,27 @@
         "application_url": null,
         "important_dates": [
           "Application Start Date: 2026-10-15",
-          "Application Last Date: 2026-11-26"
+          "Application End Date: 2026-11-26"
         ],
-        "summary": "The Indian Council of Medical Research has invited applications for 08 scientific positions at the School of Public Health, ICMR-NIE, Chennai. Eligible candidates can submit their applications on the ICMR recruitment portal until November 26, 2026.",
+        "summary": "The Indian Council of Medical Research has invited applications for 08 scientific positions at the School of Public Health, ICMR-NIE, Chennai. Interested candidates can apply online through the ICMR recruitment portal until November 26, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-03T19:49:48.621470+00:00"
+      "updated_at": "2026-11-13T20:16:36.159231+00:00"
     },
     "fda8d90ea665e23e16a36300ee8dc36c4e4bbac0f4fd9e281d88eaa2fe163db1": {
-      "id": "edc7e072b38a9702",
+      "id": "13226c18f94c7197",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "vacancy",
+        "event_type": "recruitment_notification",
         "event_evidence": "Advertisement (No. Adv. No. ICMR/NINE/01/2026-RPCell ) for recruitment to the post of Scientist-D at ICMR-National Institute of NCD Epidemiology (ICMR-NINE) Last Date: November 16, 2026",
-        "exam_name": "ICMR Scientist-D Recruitment 2026",
+        "exam_name": "ICMR NINE Scientist-D Recruitment 2026",
         "cycle_label": "Adv. No. ICMR/NINE/01/2026-RPCell",
         "related_exams": [
-          "ICMR Scientist-D Recruitment 2026"
+          "ICMR NINE Scientist-D Recruitment 2026"
         ],
         "result_url": null,
         "result_declared": false,
@@ -3574,9 +3608,9 @@
         "event_date": "2026-11-16",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "Advertisement (No. Adv. No. ICMR/NINE/01/2026-RPCell ) for recruitment to the post of Scientist-D at ICMR-National Institute of NCD Epidemiology (ICMR-NINE)",
-        "notice_type": "vacancy",
-        "post_title": "ICMR Scientist-D Recruitment 2026",
+        "recruitment_evidence": "Advertisement for recruitment to the post of Scientist-D at ICMR-National Institute of NCD Epidemiology (ICMR-NINE)",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "ICMR NINE Scientist-D Recruitment 2026",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
           "Scientist-D"
@@ -3592,14 +3626,14 @@
         "official_notification_url": "https://www.icmr.gov.in/post/advertisement-no-adv-no-icmr-nine-01-2026-rpcell-for-recruitment-to-the-post-of-scientist-d-at-icmr-national-institute-of-ncd-epidemiology-icmr-nine-last-date-november-16-2026",
         "application_url": null,
         "important_dates": [
-          "Last Date: November 16, 2026"
+          "Application closing date: November 16, 2026"
         ],
         "summary": "The Indian Council of Medical Research has invited applications for the Scientist-D post at the ICMR-National Institute of NCD Epidemiology. Eligible candidates can submit their applications until November 16, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-06T19:42:47.730590+00:00"
+      "updated_at": "2026-11-13T20:16:39.132644+00:00"
     },
     "704fb10bd4592fa4bbed12416d1ebca15df06c63d9f78da884259625262d1adf": {
       "id": "77b873fbfddca347",
@@ -7225,13 +7259,13 @@
       "updated_at": "2026-11-11T09:56:24.848381+00:00"
     },
     "bd070a6e6cf34c882210abf542eecf6fba4c7d057db9b21dc4a0d5682317cc91": {
-      "id": "344389c61d4d8758",
+      "id": "42f251e10d1e66af",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "application_update",
-        "event_evidence": "Last Date extended: Novemeber 23, 2026",
+        "event_type": "application_date_change",
+        "event_evidence": "Last date extended: November 23, 2026",
         "exam_name": "ICMR NIRBI Assistant Deputation 2026",
         "cycle_label": "2026",
         "related_exams": [
@@ -7244,11 +7278,11 @@
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": "Recruitment for the post of Assistant (Pay Level-6) on Deputation Basis at ICMR- NIRBI, Kolkata",
-        "notice_type": "application_update",
+        "notice_type": "Application Deadline Extension",
         "post_title": "ICMR NIRBI Assistant Deputation 2026 Last Date Extended",
         "organisation": "Indian Council of Medical Research",
         "post_names": [
-          "Assistant (Pay Level-6)"
+          "Assistant"
         ],
         "advertisement_number": "ICMR-NIRBI/Estt./2026/Deputation/",
         "vacancy_count": null,
@@ -7261,14 +7295,14 @@
         "official_notification_url": "https://www.icmr.gov.in/post/recruitment-for-the-post-of-assistant-pay-level-6-on-deputation-basis-at-icmr-nirbi-kolkata-ref-no-icmr-nirbi-estt-2026-deputation-last-date-extended-november-23-2026",
         "application_url": null,
         "important_dates": [
-          "Application last date extended to November 23, 2026"
+          "Last Date Extended: November 23, 2026"
         ],
-        "summary": "The Indian Council of Medical Research (ICMR) has extended the application deadline for the Assistant post on a deputation basis at ICMR-NIRBI, Kolkata. Eligible candidates can now submit their applications until November 23, 2026.",
+        "summary": "The application deadline for the Assistant post on a deputation basis at ICMR-NIRBI, Kolkata has been extended to November 23, 2026. Interested candidates can submit their applications based on the updated timeline.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-11T10:01:00.822129+00:00"
+      "updated_at": "2026-11-13T20:16:33.106574+00:00"
     },
     "be02bc38fefa8d9a4308b1c9d5a9aa2b640882286e70406fa81c0263cee22fb5": {
       "id": "9e48315e40235a92",
@@ -7668,6 +7702,351 @@
         "model": "gemini-3.6-flash"
       },
       "updated_at": "2026-11-13T10:17:24.717873+00:00"
+    },
+    "ce96821306061f7449608f773c6e8145e83228a96467b5fc44aec62dabafc81f": {
+      "id": "e9d8fab6d96f75d3",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "CSIR Director and Project Staff Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "CSIR has invited applications/walk-in interviews for Director posts at CSIR-CGCRI Kolkata (Advt 05/2026), CSIR-NCL Pune (Advt 04/2026), and Project Staff at CSIR-HRDG New Delhi (Advt HRDG/JIGYASA/01/2026) with a deadline of 30-11-2026.",
+        "notice_type": "Vacancy Notice",
+        "post_title": "CSIR Recruitment 2026 for Director and Project Staff Posts",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Director",
+          "Project Staff"
+        ],
+        "advertisement_number": "04/2026, 05/2026, HRDG/JIGYASA/01/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Walk-in Interview (for Project Staff)",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "Application deadline / Walk-in Interview: 2026-11-30"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has announced recruitment for Director positions at CSIR-CGCRI Kolkata and CSIR-NCL Pune, as well as Project Staff positions at CSIR-HRDG New Delhi. Interested candidates must submit applications or attend the walk-in interview by 30 November 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-13T20:05:38.541291+00:00"
+    },
+    "ca90edd8ac1320cf087c91fd077ebcd6e77a58d4aba5d5e01b0ba98dc41314fb": {
+      "id": "af7f87b531603bd2",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "interview_schedule",
+        "event_type": "walk_in_interview",
+        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+        "exam_name": "CSIR HRDG Project Staff Recruitment 2026",
+        "cycle_label": "Project HCP002601",
+        "related_exams": [
+          "CSIR HRDG Project Staff Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "recruitment_notice",
+        "post_title": "CSIR HRDG Project Staff Walk in Interview 2026",
+        "organisation": "CSIR Human Resource Development Group",
+        "post_names": [
+          "Project Staff"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-30: Walk-in Interview"
+        ],
+        "summary": "CSIR-HRDG, New Delhi will conduct a walk-in interview for the engagement of Project Staff under the CSIR Jigyasa project (HCP002601). The walk-in interview is scheduled to be held on November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-13T20:11:22.749879+00:00"
+    },
+    "460b0d568dc64a52878f72a52b3b7ea3b53e34a3f17886aa368a205c1502b3d6": {
+      "id": "0049102f8af9972b",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": null,
+        "event_type": "vacancy_advertisement",
+        "event_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "exam_name": "CSIR NCL Pune Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "job_notification",
+        "post_title": "CSIR NCL Pune Director Recruitment 2026",
+        "organisation": "CSIR - National Chemical Laboratory (NCL), Pune",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+        "application_url": null,
+        "important_dates": [
+          "Application End Date: 2026-11-30"
+        ],
+        "summary": "Council of Scientific & Industrial Research (CSIR) has released an advertisement for recruitment to the post of Director at CSIR-National Chemical Laboratory (NCL), Pune. Eligible candidates can submit their applications by November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-13T20:14:04.675607+00:00"
+    },
+    "0096c7600b1e906f28210d175c3d75357de43173028ffa17e8ffd2f0d4c7baa0": {
+      "id": "fa853da35533bcef",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "ICMR Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "ICMR Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "List of Recruitment Advertisements for Various ICMR Institutes including Director, Scientist-D, Scientific Positions, Senior Consultant, Young Professional-III, and Assistant posts.",
+        "notice_type": "Recruitment Advertisement",
+        "post_title": "ICMR Employment Opportunities 2026",
+        "organisation": "Indian Council of Medical Research",
+        "post_names": [
+          "Senior Consultant",
+          "Young Professional-III",
+          "Director",
+          "Scientist-D",
+          "Assistant",
+          "Medical Scientist"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-12-10",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.icmr.gov.in/employment-opportunities",
+        "application_url": "https://recruitment.icmr.org.in",
+        "important_dates": [
+          "2026-11-16: Application deadline for Scientist-D at ICMR-NINE",
+          "2026-11-18: Application deadline for Assistant at ICMR-NIREH",
+          "2026-11-19: Application deadline for Senior Consultant (Hindi) at ICMR-NIRWoH",
+          "2026-11-23: Application deadline for Assistant at ICMR-NIRBI",
+          "2026-11-26: Application deadline for Scientific Positions at ICMR-NIE",
+          "2026-11-30: Application deadline for Senior Consultant (EMR) and Directors at ICMR Institutes",
+          "2026-12-04: Application deadline for Young Professional-III at ICMR-IJMR",
+          "2026-12-06: Application deadline for Medical Scientist at MRHRU",
+          "2026-12-10: Application deadline for Senior Consultant at ICMR-Hqrs"
+        ],
+        "summary": "The Indian Council of Medical Research is inviting applications for several open positions across its headquarters and regional institutes, including Director, Scientist-D, Senior Consultant, Young Professional-III, and Assistant roles. Depending on the specific post, online applications and submissions close on dates ranging between November 16 and December 10, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-13T20:15:34.587678+00:00"
+    },
+    "e33ffbf741cec7b4d63e6daa0e97f635f5c10710805078631c7268db881722da": {
+      "id": "011190162d264361",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "application_update",
+        "event_evidence": "Advertisement (No. ICMR-NIREH/Estt/Assistant/01/2026) for recruitment to the post of Assistant on deputation basis at ICMR-NIREH Bhopal (Last date extended: November 18, 2026)",
+        "exam_name": "ICMR-NIREH Assistant Deputation Recruitment 2026",
+        "cycle_label": "Advt. No. ICMR-NIREH/Estt/Assistant/01/2026",
+        "related_exams": [
+          "ICMR-NIREH Assistant Deputation Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-18",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Advertisement (No. ICMR-NIREH/Estt/Assistant/01/2026) for recruitment to the post of Assistant on deputation basis at ICMR-NIREH Bhopal",
+        "notice_type": "Application Deadline Extension Notice",
+        "post_title": "ICMR NIREH Assistant Deputation Recruitment 2026 Deadline Extended",
+        "organisation": "Indian Council of Medical Research - National Institute for Research in Environmental Health (ICMR-NIREH)",
+        "post_names": [
+          "Assistant"
+        ],
+        "advertisement_number": "ICMR-NIREH/Estt/Assistant/01/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-18",
+        "application_fee": null,
+        "selection_process": "Deputation basis",
+        "official_notification_url": "https://www.icmr.gov.in/post/advertisement-no-icmr-nireh-estt-assistant-01-2026-for-recruitment-to-the-post-of-assistant-on-deputation-basis-at-icmr-nireh-bhopal-last-date-extended-november-18-2026",
+        "application_url": null,
+        "important_dates": [
+          "Last Date Extended: 2026-11-18"
+        ],
+        "summary": "The Indian Council of Medical Research (ICMR-NIREH) has extended the application deadline for the Assistant position on a deputation basis at ICMR-NIREH Bhopal. Interested candidates can now submit their applications until November 18, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-13T20:16:42.390418+00:00"
+    },
+    "e5ec5bd26448cebb64ba27bcdfa918214da5ff1bfc0f12e8f3b4f9255b1a1a62": {
+      "id": "61eed2283fb6fdc9",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "other_recruitment_update",
+        "event_type": "pre_examination_training",
+        "event_evidence": "Link for Online Pre-Examination Training for Candidates who Opted for PET for Officers -Scale I under CRP-RRBs-XV",
+        "exam_name": "CRP-RRBs-XV Officer Scale I",
+        "cycle_label": "CRP-RRBs-XV",
+        "related_exams": [
+          "CRP-RRBs-XV Officer Scale I"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-11",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Common Recruitment Process for CRP-RRBs-XV",
+        "notice_type": "Pre-Examination Training Link",
+        "post_title": "IBPS CRP RRBs XV Officer Scale I Pre Examination Training Link",
+        "organisation": "Institute of Banking Personnel Selection",
+        "post_names": [
+          "Officer Scale I"
+        ],
+        "advertisement_number": "CRP-RRBs-XV",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.ibps.in/index.php/rural-bank-xv/",
+        "application_url": null,
+        "important_dates": [
+          "PET Link Date: 11 Nov 2026"
+        ],
+        "summary": "IBPS has released the online pre-examination training link for candidates who opted for PET under the CRP-RRBs-XV Officer Scale I recruitment. Eligible candidates can access the training link through the official portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-13T20:16:53.491347+00:00"
+    },
+    "cc532cdc8d0fa8a06ef4b750f7097a807722bc7d2173f715b820432467453f9a": {
+      "id": "3dae77e82569a3d7",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "application_start",
+        "event_evidence": "Applications are invited from eligible and interested candidates aspiring to join as a Probationary Officer/ Management Trainee in any of the Participating Public Sector Banks listed at (A) for the Common Recruitment Process (CRP- PO/MT-XVI) for vacancies of 2027-2028.",
+        "exam_name": "IBPS CRP PO/MT XVI",
+        "cycle_label": "CRP PO/MT-XVI (2027-28)",
+        "related_exams": [
+          "IBPS CRP PO/MT XVI"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "01-07-2026",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Applications are invited from eligible and interested candidates aspiring to join as a Probationary Officer/ Management Trainee in any of the Participating Public Sector Banks listed at (A) for the Common Recruitment Process (CRP- PO/MT-XVI) for vacancies of 2027-2028.",
+        "notice_type": "Detailed Notification",
+        "post_title": "IBPS CRP PO/MT XVI Recruitment 2026",
+        "organisation": "Institute of Banking Personnel Selection (IBPS)",
+        "post_names": [
+          "Probationary Officer",
+          "Management Trainee"
+        ],
+        "advertisement_number": "CRP PO/MT-XVI",
+        "vacancy_count": null,
+        "qualification": "A Degree (Graduation) in any discipline from a University recognised by the Govt. Of India or any equivalent qualification recognized as such by the Central Government.",
+        "age_limit": "Minimum: 20 years Maximum: 30 years (As on 01.07.2026)",
+        "application_start_date": "01-07-2026",
+        "application_end_date": "21-07-2026",
+        "application_fee": "Rs. 175/- (inclusive of GST) for SC/ST/PwBD candidates, Rs. 850/- (inclusive of GST) for all others.",
+        "selection_process": "Online Preliminary Examination, Online Main Examination, Personality Test, and Common Interview.",
+        "official_notification_url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
+        "application_url": "https://www.ibps.in",
+        "important_dates": [
+          "Online Registration including Edit/Modification of Application by candidates: 01-07-2026 to 21-07-2026 (Tentative)",
+          "Payment of Application Fees/Intimation Charges (Online): 01-07-2026 to 21-07-2026 (Tentative)",
+          "Edit window for Modification of Application by Candidates: For 2 days after closing of Registration (Tentative)",
+          "Conduct of Pre-Examination Training (PET): August, 2026 (Tentative)",
+          "Download of call letters for Online examination – Preliminary: August, 2026 (Tentative)",
+          "Online Examination – Preliminary: August, 2026 (Tentative)",
+          "Result of Online examination – Preliminary: September, 2026 (Tentative)",
+          "Download of Call letter for Online examination – Main: September, 2026 (Tentative)",
+          "Online Examination – Main: October, 2026 (Tentative)",
+          "Declaration of Result- Main Examination: November, 2026 (Tentative)",
+          "Personality Test: November, 2026 (Tentative)",
+          "Conduct of Interview: November/ December, 2026 (Tentative)",
+          "Provisional Allotment: January, 2027 (Tentative)"
+        ],
+        "summary": "IBPS has released the detailed notification for the Common Recruitment Process for Probationary Officers and Management Trainees (CRP PO/MT-XVI) for vacancies of 2027-28. Eligible graduate candidates can apply online from July 1, 2026, to July 21, 2026. The preliminary online examination is tentatively scheduled for August 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-13T20:17:03.669695+00:00"
     }
   }
 }
