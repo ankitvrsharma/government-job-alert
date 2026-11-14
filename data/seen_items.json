@@ -294,7 +294,8 @@
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf",
     "https://www.ibps.in/index.php/careers",
     "https://www.ibps.in/index.php/rural-bank-xv",
-    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf"
+    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
+    "https://nta.ac.in/Download/Notice/Notice_20261114165715.pdf"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -817,10 +818,14 @@
     "cf8de9b10811ce8adcf16577cb8889cace64ad407793a49ef9da1e032a8553e0",
     "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
     "7d5917319dc6202a3d39acb3f5d408b3f01e3825e631eafa3bf26d807478d407",
-    "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe"
+    "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe",
+    "99c1f4e1975757f2b064b0478d566187caa59c34bd14b98fd7d9eaa49e7a3d76",
+    "bd5f2eaaf214a38d2da6af6fdb07dc2cf41c87008b01e22f0a2d2ad3038d62e5",
+    "18d2557b49994c19991bc4e745698e5447861da1a4c2293891204fef2d262590",
+    "ea5ca857b923a076059ceed7c9d33e1b2bd5a41af2dc00fe77eed5df674a7b48"
   ],
   "snapshots": {
-    "https://nta.ac.in": "29856f6739d0db993a42bf53f21411aaf87426d012e15dbaffecc0d95872382e",
+    "https://nta.ac.in": "99c1f4e1975757f2b064b0478d566187caa59c34bd14b98fd7d9eaa49e7a3d76",
     "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf": "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
     "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf": "6dc3b0379b42a405aa8f3bab63851ac718d392ec049732eb60088e52b4128a19",
     "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf": "d24733397846ca61d0ef44f7ab3eda31f09851b48e9a661d95953f37561b53c3",
@@ -968,7 +973,7 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "492d5eac9cf29ba82e6389bd209f8f56a32f02c1d14026fa91e52fc43d9181b6",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "18d2557b49994c19991bc4e745698e5447861da1a4c2293891204fef2d262590",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
@@ -1106,12 +1111,13 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "de15f39ab12f06838d93dfee8691371cda0a0ca78a3c9619f5c21e8493b0b37e",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "ea5ca857b923a076059ceed7c9d33e1b2bd5a41af2dc00fe77eed5df674a7b48",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
     "https://www.ibps.in/index.php/rural-bank-xv": "7d5917319dc6202a3d39acb3f5d408b3f01e3825e631eafa3bf26d807478d407",
-    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf": "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe"
+    "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf": "9379acfcad5750585ead182b5b0660fde89b324a8a2fa79dce9a9a9e69f73ebe",
+    "https://nta.ac.in/Download/Notice/Notice_20261114165715.pdf": "bd5f2eaaf214a38d2da6af6fdb07dc2cf41c87008b01e22f0a2d2ad3038d62e5"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -8047,6 +8053,52 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-13T20:17:03.669695+00:00"
+    },
+    "6a25d2a172826b6173dacbf67cb511c06129d28aea3f1d6f30a72244ebb3c6a8": {
+      "id": "a47c4e34347edbe5",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+        "exam_name": "CSIR-HRDG Jigyasa Project Staff Recruitment 2026",
+        "cycle_label": "HCP002601",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "Recruitment Notification",
+        "post_title": "CSIR HRDG Project Staff Recruitment 2026",
+        "organisation": "CSIR - Human Resource Development Group (CSIR-HRDG)",
+        "post_names": [
+          "Project Staff"
+        ],
+        "advertisement_number": "HCP002601",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-30: Walk-in Interview"
+        ],
+        "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview for the engagement of Project Staff under the CSIR Jigyasa project (HCP002601). The walk-in interview is scheduled to be conducted on November 30, 2026.",
+        "uncertainties": [
+          "Exact number of vacancies, eligibility criteria, and detailed post designations are specified in the linked advertisement PDF."
+        ],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-14T18:50:48.276727+00:00"
     }
   }
 }

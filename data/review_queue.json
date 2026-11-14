@@ -10476,5 +10476,66 @@
       "status": "ai_draft",
       "model": "gemini-3.5-flash-lite"
     }
+  },
+  {
+    "id": "a47c4e34347edbe5",
+    "detected_at_utc": "2026-11-14T18:50:48.276711+00:00",
+    "source_name": "CSIR",
+    "source_page": "https://www.csir.res.in/",
+    "candidate_title": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
+    "candidate_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+    "document_sha256": "ea5ca857b923a076059ceed7c9d33e1b2bd5a41af2dc00fe77eed5df674a7b48",
+    "local_pdf": null,
+    "local_attachment": null,
+    "attachment_sha256": null,
+    "attachment_mime_type": null,
+    "attachment_source_url": null,
+    "review_status": "pending_review",
+    "human_verified": false,
+    "post_type": "new",
+    "previous_post_id": null,
+    "change_summary": [],
+    "ai_draft": {
+      "is_relevant_notice": true,
+      "is_recruitment_notice": true,
+      "post_category": "vacancy",
+      "event_type": "interview_schedule",
+      "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+      "exam_name": "CSIR-HRDG Jigyasa Project Staff Recruitment 2026",
+      "cycle_label": "HCP002601",
+      "related_exams": [],
+      "result_url": null,
+      "result_declared": false,
+      "related_notice": null,
+      "event_date": "2026-11-30",
+      "previous_event_date": null,
+      "change_reason": null,
+      "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+      "notice_type": "Recruitment Notification",
+      "post_title": "CSIR HRDG Project Staff Recruitment 2026",
+      "organisation": "CSIR - Human Resource Development Group (CSIR-HRDG)",
+      "post_names": [
+        "Project Staff"
+      ],
+      "advertisement_number": "HCP002601",
+      "vacancy_count": null,
+      "qualification": null,
+      "age_limit": null,
+      "application_start_date": null,
+      "application_end_date": null,
+      "application_fee": null,
+      "selection_process": "Walk-in Interview",
+      "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+      "application_url": null,
+      "important_dates": [
+        "2026-11-30: Walk-in Interview"
+      ],
+      "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview for the engagement of Project Staff under the CSIR Jigyasa project (HCP002601). The walk-in interview is scheduled to be conducted on November 30, 2026.",
+      "uncertainties": [
+        "Exact number of vacancies, eligibility criteria, and detailed post designations are specified in the linked advertisement PDF."
+      ],
+      "status": "ai_draft",
+      "model": "gemini-3.8-flash"
+    }
   }
 ]
