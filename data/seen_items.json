@@ -323,7 +323,8 @@
     "https://www.tnpsc.gov.in/English/gro.html",
     "https://www.tnpsc.gov.in/English/scheme.html",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx",
-    "https://www.tnpsc.gov.in/English/Notification.aspx"
+    "https://www.tnpsc.gov.in/English/Notification.aspx",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -899,7 +900,10 @@
     "ede70faa9921c5a0ac1d9a46596ba897993eae1c76e36f03dfbfbc5e7f0831ca",
     "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
-    "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1"
+    "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
+    "eca5cdb3216e4b7fdc442dfccf27d0d82ae442e72df45370fcaca496d2c37eb5",
+    "5c1e35e20469f7355ae30d89a539e1fc2310eb23e2faa6cb540d57b8d3cdb01d",
+    "707acd380c68c52b5b2293a88d73f51a9f01e9a869547b3467d59df9979d09fc"
   ],
   "snapshots": {
     "https://nta.ac.in": "99c1f4e1975757f2b064b0478d566187caa59c34bd14b98fd7d9eaa49e7a3d76",
@@ -1050,7 +1054,7 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "6bd9132ac4d79fa2aa75dedd0c81ed1e69788a80e8a348e9693077a171fe7aaf",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "eca5cdb3216e4b7fdc442dfccf27d0d82ae442e72df45370fcaca496d2c37eb5",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
@@ -1188,7 +1192,7 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "59963fa035fd003d0e16b9401e4f6c088850447f0764fcc16084ced6a55fc789",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "707acd380c68c52b5b2293a88d73f51a9f01e9a869547b3467d59df9979d09fc",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
@@ -1222,7 +1226,8 @@
     "https://www.tnpsc.gov.in/English/gro.html": "ede70faa9921c5a0ac1d9a46596ba897993eae1c76e36f03dfbfbc5e7f0831ca",
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
-    "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1"
+    "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "5c1e35e20469f7355ae30d89a539e1fc2310eb23e2faa6cb540d57b8d3cdb01d"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -1937,19 +1942,19 @@
       "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "81334a674f8a66e2",
+      "id": "dcd788be41ff6edf",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
         "post_category": "result",
-        "event_type": "interview_result",
-        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (यूनानी और पेटेंट) के संदर्भ में 16.10.2026 और 23.10.2026 को आयोजित साक्षात्कार का परिणाम",
-        "exam_name": "CSIR TKDL Recruitment 2026",
-        "cycle_label": "Advt. No. TKDL/08/2026",
+        "event_type": "result",
+        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
+        "exam_name": "CSIR TKDL Advt TKDL/08/2026 Recruitment",
+        "cycle_label": "Advt. TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Recruitment 2026"
+          "CSIR TKDL Advt TKDL/08/2026 Recruitment"
         ],
-        "result_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae",
+        "result_url": null,
         "result_declared": true,
         "related_notice": null,
         "event_date": null,
@@ -1957,7 +1962,7 @@
         "change_reason": null,
         "recruitment_evidence": null,
         "notice_type": "result",
-        "post_title": "CSIR TKDL 2026 Interview Result Declared for Advt TKDL/08/2026",
+        "post_title": "CSIR TKDL Advt TKDL/08/2026 Ayurveda Interview Result Released",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [],
         "advertisement_number": "TKDL/08/2026",
@@ -1968,17 +1973,18 @@
         "application_end_date": null,
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-yauunaanai-aura-paetaenta-kae",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
         "application_url": null,
         "important_dates": [
-          "Interview dates: 16 October 2026 and 23 October 2026"
+          "2026-10-22: Interview Date",
+          "2026-11-16: Result Published Date"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the interview results under Advertisement No. TKDL/08/2026 for Unani and Patent disciplines. The interviews were conducted on 16 October 2026 and 23 October 2026.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has announced the interview results for recruitment under Advertisement No. TKDL/08/2026 (Ayurveda). The interview for the position was conducted on October 22, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-13T20:12:11.316795+00:00"
+      "updated_at": "2026-11-16T22:42:39.840479+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -9918,6 +9924,52 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-15T19:17:18.008882+00:00"
+    },
+    "43ca8a19ed4e9b49880806cda6d9698482c7237201de366070831434be820c3c": {
+      "id": "b9a41d4210ac2ecd",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+        "exam_name": "CSIR-HRDG Project Personnel Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR-HRDG Project Personnel Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "vacancy",
+        "post_title": "CSIR-HRDG Project Personnel Walk-in Interview 2026",
+        "organisation": "CSIR-HRDG",
+        "post_names": [
+          "Project Personnel"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "application_url": null,
+        "important_dates": [
+          "Walk-in Interview: 2026-11-30"
+        ],
+        "summary": "CSIR-HRDG, New Delhi is conducting a walk-in interview for Project Personnel positions under the CSIR Jigyasa project (HCP002601). The walk-in interview will take place on November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-16T22:52:37.522136+00:00"
     }
   }
 }
