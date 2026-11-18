@@ -916,7 +916,10 @@
     "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d",
     "da9f84abbe37a84a5b6fb21a48b30f98f410f7aec62c080302d4ee14fb692887",
     "fccb3b45af3c71f054844ed6ac153dc280c091bc14218381377a17436470d3cf",
-    "23897dd57fb3f8a90b792ccb6f9ab2aaa317b0e5168b2a2aebd1b9281d2c3697"
+    "23897dd57fb3f8a90b792ccb6f9ab2aaa317b0e5168b2a2aebd1b9281d2c3697",
+    "d7a935c2334160126d48d02dc1747f0d50ebb1c722582a1a20e9f337802ea094",
+    "9bd9f5743ca12b8bc6df1834752911ab22097219353e37335c40d1c08a29aec5",
+    "39f0d47ea286acf16b1b3667d0fddfea701e1eddf395b3794843a1617e0344a6"
   ],
   "snapshots": {
     "https://nta.ac.in": "e310d104465f54decc8db30944c49d8b22e89c586651a81a2662235cf5a4e24d",
@@ -1067,7 +1070,7 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "23897dd57fb3f8a90b792ccb6f9ab2aaa317b0e5168b2a2aebd1b9281d2c3697",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "d7a935c2334160126d48d02dc1747f0d50ebb1c722582a1a20e9f337802ea094",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
@@ -1205,7 +1208,7 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "e3893d0c196957061aca9a542cf15226a6fa6d81fc8e21eba52ab52953f72015",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "39f0d47ea286acf16b1b3667d0fddfea701e1eddf395b3794843a1617e0344a6",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
@@ -1240,7 +1243,7 @@
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
     "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "183e1e4c30cec1bc99d2b2bac93a7b45298e1e39b29b2f0e4fbfc9daeecd8712",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "9bd9f5743ca12b8bc6df1834752911ab22097219353e37335c40d1c08a29aec5",
     "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf": "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d"
   },
   "notice_registry": {
@@ -1956,17 +1959,17 @@
       "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "57c80dc860149b18",
+      "id": "3f497c3473b84919",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "result",
         "event_type": "result",
         "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
-        "exam_name": "CSIR TKDL Advt. 08/2026 Ayurveda",
-        "cycle_label": "Advt. 08/2026",
+        "exam_name": "CSIR TKDL Advt. TKDL/08/2026 Ayurveda",
+        "cycle_label": "TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Advt. 08/2026 Ayurveda"
+          "CSIR TKDL Advt. TKDL/08/2026 Ayurveda"
         ],
         "result_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
         "result_declared": true,
@@ -1974,9 +1977,9 @@
         "event_date": "2026-10-22",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम。",
+        "recruitment_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
         "notice_type": "Result Notice",
-        "post_title": "CSIR TKDL Ayurveda Advt 08 2026 Interview Result Released",
+        "post_title": "CSIR TKDL Ayurveda Advt TKDL 08 2026 Interview Result",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
           "Ayurveda Post"
@@ -1994,12 +1997,12 @@
         "important_dates": [
           "Interview Date: 2026-10-22"
         ],
-        "summary": "The Council of Scientific & Industrial Research has released the interview result for Advertisement No. TKDL/08/2026 under the Ayurveda discipline, following the interviews held on October 22, 2026.",
+        "summary": "Council of Scientific & Industrial Research (CSIR) has declared the interview result for Advertisement No. TKDL/08/2026 (Ayurveda), following the interviews held on October 22, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.5-flash-lite"
       },
-      "updated_at": "2026-11-17T11:06:14.141234+00:00"
+      "updated_at": "2026-11-18T20:53:09.519757+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -10031,6 +10034,50 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-17T11:06:26.879848+00:00"
+    },
+    "01e57bddf8c5429fde881bf7a5c4af0acfc00d92a2c707cecfd86924231a295d": {
+      "id": "d5b85db2310e4b04",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "interview_schedule",
+        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+        "exam_name": "CSIR Jigyasa Project Staff Walk-In Interview 2026",
+        "cycle_label": "HCP002601",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "Walk-in Interview Notice",
+        "post_title": "CSIR HRDG New Delhi Project Staff Walk In Interview 2026",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Project Staff"
+        ],
+        "advertisement_number": "HCP002601",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "application_url": null,
+        "important_dates": [
+          "Walk-in Interview Date: 2026-11-30"
+        ],
+        "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview for project personnel under the CSIR Jigyasa project HCP002601. Eligible candidates can attend the interview scheduled for November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-18T21:09:52.905573+00:00"
     }
   }
 }
