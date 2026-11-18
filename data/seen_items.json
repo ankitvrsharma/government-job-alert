@@ -324,7 +324,8 @@
     "https://www.tnpsc.gov.in/English/scheme.html",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx",
     "https://www.tnpsc.gov.in/English/Notification.aspx",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen"
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
+    "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -910,10 +911,15 @@
     "c961e2e85631791dcba9436221d439a6bb65e1d4e00d6c61fd4f7b99f11b42ff",
     "43559b525ac32f446907f26f53afed21cfb616a57753397ad8dbdee0e07546b3",
     "b21c25f6d2ec63bda24191e60c88e647768f9b2e31404caf3e2c7b6f5c06691a",
-    "237960255d31300cdae39ab9f703f0bfa7de7681be02c7dcea86ce92b172683c"
+    "237960255d31300cdae39ab9f703f0bfa7de7681be02c7dcea86ce92b172683c",
+    "e310d104465f54decc8db30944c49d8b22e89c586651a81a2662235cf5a4e24d",
+    "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d",
+    "da9f84abbe37a84a5b6fb21a48b30f98f410f7aec62c080302d4ee14fb692887",
+    "fccb3b45af3c71f054844ed6ac153dc280c091bc14218381377a17436470d3cf",
+    "23897dd57fb3f8a90b792ccb6f9ab2aaa317b0e5168b2a2aebd1b9281d2c3697"
   ],
   "snapshots": {
-    "https://nta.ac.in": "99c1f4e1975757f2b064b0478d566187caa59c34bd14b98fd7d9eaa49e7a3d76",
+    "https://nta.ac.in": "e310d104465f54decc8db30944c49d8b22e89c586651a81a2662235cf5a4e24d",
     "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf": "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
     "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf": "6dc3b0379b42a405aa8f3bab63851ac718d392ec049732eb60088e52b4128a19",
     "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf": "d24733397846ca61d0ef44f7ab3eda31f09851b48e9a661d95953f37561b53c3",
@@ -1055,13 +1061,13 @@
     "https://www.ugc.gov.in/pdfnews/4043441_India_france-year-of-innovation.pdf": "f6d33ad1fed2360f0396a0808d2dcd6733832b771afd0dcab2ce4a05f0ee39a2",
     "https://www.ugc.gov.in/pdfnews/7145009_INCP2-Letter.pdf": "a74f72ebc101db2ee0c730fe06791018a96edbd43f9773fccb3cfb84c77b07ad",
     "https://ncs.gov.in/assets/pdf/Jobseeker registration flowchart 1.pdf": "9eda25d8d8b02f2b7468c1f765fd848ee855d4762fbbf701381eb4d7fda84efc",
-    "https://ncs.gov.in": "c019fb11b1ca729e21840301d7959460d7f9f3b42e0b4f8f8a10acf93be25c43",
-    "https://ncs.gov.in/career-counsellors": "ad5049fc450f7e63bcb7a225349b50fbbb317338c25ea35143b137a7e51838df",
+    "https://ncs.gov.in": "da9f84abbe37a84a5b6fb21a48b30f98f410f7aec62c080302d4ee14fb692887",
+    "https://ncs.gov.in/career-counsellors": "fccb3b45af3c71f054844ed6ac153dc280c091bc14218381377a17436470d3cf",
     "https://ncs.gov.in/career-center": "085f48ee9e7a8ec45259d5cdbfa6591b5a58261ac77dd24bb629b8804850c8ce",
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "15b9dfe0f65a1441d7ee3aa8699c4d8f0ea503710559835b86625d3dc0e589f1",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "23897dd57fb3f8a90b792ccb6f9ab2aaa317b0e5168b2a2aebd1b9281d2c3697",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
@@ -1096,7 +1102,7 @@
     "https://sbi.bank.in/web/careers/roles-sbi": "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba",
     "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf": "5124f76a27644e210e49d71be51a100e6536d8addc76768b7a451c84c92e7ebd",
     "https://ncs.gov.in/assets/pdf/Indian Staffing Federation (ISF Registration Flow).pdf": "8f143624019bc9a242842337c5f9e35b513fe9499da7e053f9721cf717651189",
-    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "c019fb11b1ca729e21840301d7959460d7f9f3b42e0b4f8f8a10acf93be25c43",
+    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "da9f84abbe37a84a5b6fb21a48b30f98f410f7aec62c080302d4ee14fb692887",
     "https://www.csir.res.in/sites/default/files/2025-09/security-audit-2025_d10.pdf": "67f72071c007fd9042cf8eca438088a1a5ec8c7992fbbce85efcea9f2f953a45",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1791972387_carassistivetechcall_v2.pdf": "cf8c637bb2245c1c30254bb63865a674cb431e45df19b73d91af937109fe56c1",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1790596857_calln_rdhr.pdf": "24abb00705351667dfb0689478316eb7b6387bae4c8dc68a8650ac35812c630d",
@@ -1234,7 +1240,8 @@
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
     "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "183e1e4c30cec1bc99d2b2bac93a7b45298e1e39b29b2f0e4fbfc9daeecd8712"
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "183e1e4c30cec1bc99d2b2bac93a7b45298e1e39b29b2f0e4fbfc9daeecd8712",
+    "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf": "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
