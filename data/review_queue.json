@@ -13853,5 +13853,72 @@
       "status": "ai_draft",
       "model": "gemini-3.5-flash-lite"
     }
+  },
+  {
+    "id": "d5aededab1c1720e",
+    "detected_at_utc": "2026-11-19T11:03:53.195414+00:00",
+    "source_name": "CSIR",
+    "source_page": "https://www.csir.res.in/",
+    "candidate_title": "भर्ती",
+    "candidate_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+    "document_sha256": "f8af78760dfb25e5cea05426e616d089b67edf34aa3691a3210141283180490e",
+    "local_pdf": null,
+    "local_attachment": null,
+    "attachment_sha256": null,
+    "attachment_mime_type": null,
+    "attachment_source_url": null,
+    "review_status": "pending_review",
+    "human_verified": false,
+    "post_type": "new",
+    "previous_post_id": null,
+    "change_summary": [],
+    "ai_draft": {
+      "is_relevant_notice": true,
+      "is_recruitment_notice": true,
+      "post_category": "vacancy",
+      "event_type": "recruitment_announcements",
+      "event_evidence": "CSIR released recruitment advertisements for Director posts (Advt 04/2026 & 05/2026), walk-in interview for Project Personnel (Advt HRDG/JIGYASA/01/2026), and interview result for Advt TKDL/08/2026.",
+      "exam_name": "CSIR Recruitment 2026",
+      "cycle_label": "2026",
+      "related_exams": [
+        "CSIR TKDL Recruitment 2026",
+        "CSIR Jigyasa Project Personnel Recruitment 2026",
+        "CSIR-CGCRI Director Recruitment 2026",
+        "CSIR-NCL Director Recruitment 2026"
+      ],
+      "result_url": null,
+      "result_declared": true,
+      "related_notice": null,
+      "event_date": null,
+      "previous_event_date": null,
+      "change_reason": null,
+      "recruitment_evidence": "Official recruitment notifications published on CSIR career website for Director (CGCRI & NCL), Project Personnel (Jigyasa Project), and interview result declared for TKDL/08/2026.",
+      "notice_type": "Recruitment Notification",
+      "post_title": "CSIR Recruitment 2026: Director, Project Staff Posts and Interview Results",
+      "organisation": "Council of Scientific & Industrial Research",
+      "post_names": [
+        "Director",
+        "Project Personnel"
+      ],
+      "advertisement_number": "04/2026, 05/2026, HRDG/JIGYASA/01/2026, TKDL/08/2026",
+      "vacancy_count": null,
+      "qualification": null,
+      "age_limit": null,
+      "application_start_date": null,
+      "application_end_date": "2026-11-30",
+      "application_fee": null,
+      "selection_process": "Walk-in Interview, Interview",
+      "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+      "application_url": null,
+      "important_dates": [
+        "Walk-in Interview Date for Project Personnel: 2026-11-30",
+        "Last Date to Apply for CSIR-CGCRI Director Post: 2026-11-30",
+        "Last Date to Apply for CSIR-NCL Director Post: 2026-11-30"
+      ],
+      "summary": "The Council of Scientific & Industrial Research (CSIR) has announced recruitment for Director positions at CSIR-CGCRI Kolkata and CSIR-NCL Pune, alongside walk-in interviews for Project Personnel under the CSIR Jigyasa project scheduled for 30 November 2026. Additionally, CSIR declared the interview result for Ayurveda posts under Advt. TKDL/08/2026.",
+      "uncertainties": [],
+      "status": "ai_draft",
+      "model": "gemini-3.6-flash"
+    }
   }
 ]
