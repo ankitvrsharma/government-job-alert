@@ -979,7 +979,16 @@
     "4c6099acd97e7b2b2115cb943a432a65bcacc0ef80636cfd76ae4f20f1e662eb",
     "b483fadea39e7c29e831465e172dd1b0d9ca8d8eebe65fcc21d7eb24480adf21",
     "57d3733e0bed6c68e984ca61f08d49cde6a5a43e44354b0821ad155bca92a823",
-    "e645291a03f05cb01fd07f2d6a7b1f09542deada97a7be5ae8a99723ab70a5d3"
+    "e645291a03f05cb01fd07f2d6a7b1f09542deada97a7be5ae8a99723ab70a5d3",
+    "3f83e607380a5a45cdeb37571e411ed7549e40d54413b624bb5938cbc23d9b8c",
+    "8c808b5f180b332ba36cc7188c34e58f6c2e8ced09d7f6fcc817c31c52a5c93c",
+    "598ca4c8380bcdc6601250a0e809728474e916de24ccba5b6e29787c3447ca72",
+    "737689bf5a303b86cefe4784fba15568b771ce57caa12f2756c42d7d55ec2d8a",
+    "da204c51c22807b78568bc25ba99508bcf7ac0c76b4029df575af980abf5b449",
+    "fc5d55b6947bbcb4bc1b2aea5aa32a7199d2b12fd707aa59835317c67b114dd8",
+    "71a3c6e6d54c977a89465a05e4804bb85b987ac6755dada385082f548feef0c0",
+    "df0833929cf7fead73459e71c7bf3a557effd7e4ee12dfa562ea86459c154f2e",
+    "b9b2c406bb04fa6162cc5d3d29242c25fd693001916c7dcc990aa0c89a2d70ee"
   ],
   "snapshots": {
     "https://nta.ac.in": "f99ae988c27bf6c76a63f35d7e7bc13bd8894f1902f4dfd02884fd7eaf8ce358",
@@ -1130,14 +1139,14 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "d14dc4086e81395668033ee2231b9fdcfed159335b227f29f4fd42f54160d648",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "3f83e607380a5a45cdeb37571e411ed7549e40d54413b624bb5938cbc23d9b8c",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "c9c22f7108c5debc78be74da8bc05bc8f655080f0fdb5f1b8f86c084b75ba961",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "6f077272e13c4320f2672392cd5bea4b5b3fe484abf3db9d5ed5a0d5a5df4719",
-    "https://www.csir.res.in/hi/career-opportunities": "457b53be487c798189f9d806aff64c9105b85179632713e194eedff8dbe28a9a",
-    "https://www.csir.res.in/hi/notification": "5e7b433af42bc855bf987dcb74702bacf35bbb7d690f5d817f671e3c88824f76",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "737689bf5a303b86cefe4784fba15568b771ce57caa12f2756c42d7d55ec2d8a",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "da204c51c22807b78568bc25ba99508bcf7ac0c76b4029df575af980abf5b449",
+    "https://www.csir.res.in/hi/career-opportunities": "fc5d55b6947bbcb4bc1b2aea5aa32a7199d2b12fd707aa59835317c67b114dd8",
+    "https://www.csir.res.in/hi/notification": "71a3c6e6d54c977a89465a05e4804bb85b987ac6755dada385082f548feef0c0",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
     "https://www.icmr.gov.in/employment-opportunities": "fedbd06a9ce34ee8f02121dde2d4b48ba8349c7a5627a251faae16bdd8539edc",
     "https://www.icmr.gov.in/career-results": "c4bbb85aad9d24dab00becb9a02dab7e7a40dae6e121a4ca7706f3a3363d2acb",
@@ -1149,8 +1158,8 @@
     "https://www.icmr.gov.in/post/advertisement-no-icmr-nireh-estt-assistant-01-2026-for-recruitment-to-the-post-of-assistant-on-deputation-basis-at-icmr-nireh-bhopal-last-date-extended-november-18-2026": "cf8de9b10811ce8adcf16577cb8889cace64ad407793a49ef9da1e032a8553e0",
     "https://sbi.bank.in/web/careers": "56fbd5f728c8ff69270a9dc324f18c314865665920f888c5882900cb3c1b2cc4",
     "https://sbi.bank.in/web/careers/post-your-query": "33991ee5f051bc7faa3e4fefe49e665b0df807b64a238bcfab95a7a55ec15332",
-    "https://sbi.bank.in/web/careers/current-openings": "7a1c101da9c81abf8d80c5367087d61ef942edc0a20ef2625c7bbc7a715fd181",
-    "https://sbi.bank.in/web/careers/recruitment-results": "e0e6569f1968180514e7d3ad797a47f59be4fe3520fcfec40cb443f51607bd86",
+    "https://sbi.bank.in/web/careers/current-openings": "df0833929cf7fead73459e71c7bf3a557effd7e4ee12dfa562ea86459c154f2e",
+    "https://sbi.bank.in/web/careers/recruitment-results": "b9b2c406bb04fa6162cc5d3d29242c25fd693001916c7dcc990aa0c89a2d70ee",
     "https://sbi.bank.in/web/careers/recruitment-results-archive": "9d87ebf844bbf1d28627b951881c0099ea28df7f17ec38703a60fec238e90a0d",
     "https://sbi.bank.in/web/careers/what-are-we-looking-for": "bb3a87c764311595f84f10283f06e367d348a19866768996a92c20d4f430a69d",
     "https://sbi.bank.in/web/careers/world-of-opportunities": "6a7a64fbc1a37283be34524ba45fe3f8f656844169dc38df0f52fd2df82292c8",
@@ -1268,7 +1277,7 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "a6b23f78b3155668dd70d1a63aba67890fff2cf727cf8a34bc4cbaecd71ab58f",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "598ca4c8380bcdc6601250a0e809728474e916de24ccba5b6e29787c3447ca72",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
@@ -1303,7 +1312,7 @@
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
     "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "8d83f8cab9119339d0684d49ecf2ef8b75edd22a65036151310ca6937f83dd40",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "8c808b5f180b332ba36cc7188c34e58f6c2e8ced09d7f6fcc817c31c52a5c93c",
     "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf": "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d",
     "https://www.icmr.gov.in": "4953fc38ca619914fa2edde5c8445321a33f4d28a9327ab709f7bf57f0e0f920",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1795065073_flyer_webinar4_medicalmasterclassseries.pdf": "4e1482a23ddd92a82c0fb7ecb8104b26c983d2670fcb92f4bd98276c8a01e130",
@@ -2033,27 +2042,27 @@
       "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "01bd61cbf8c9a64f",
+      "id": "315c5b17ea1f575d",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
-        "post_category": "result",
-        "event_type": "interview_result",
+        "post_category": null,
+        "event_type": "result",
         "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम। result_tkdl_16112026.pdf",
-        "exam_name": "CSIR TKDL Advt TKDL/08/2026 (Ayurveda)",
-        "cycle_label": "Advt. No. TKDL/08/2026",
+        "exam_name": "CSIR TKDL Ayurveda Recruitment (Advt No. TKDL/08/2026)",
+        "cycle_label": "Advt No. TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Advt TKDL/08/2026 (Ayurveda)"
+          "CSIR TKDL Ayurveda Recruitment (Advt No. TKDL/08/2026)"
         ],
-        "result_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
+        "result_url": null,
         "result_declared": true,
         "related_notice": null,
-        "event_date": "2026-10-22",
+        "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": null,
-        "notice_type": "result",
-        "post_title": "CSIR TKDL Advt TKDL/08/2026 Ayurveda Interview Result Declared",
+        "notice_type": null,
+        "post_title": "CSIR TKDL Ayurveda Interview Result Declared (Advt TKDL/08/2026)",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [],
         "advertisement_number": "TKDL/08/2026",
@@ -2064,17 +2073,17 @@
         "application_end_date": null,
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
+        "official_notification_url": null,
         "application_url": null,
         "important_dates": [
-          "2026-10-22: Interview held"
+          "2026-10-22: Interview conducted"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the interview results for Advertisement No. TKDL/08/2026 (Ayurveda). The interviews were conducted on October 22, 2026, and candidates can download the official result PDF directly from the CSIR portal.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the results of the interview held on 22 October 2026 for recruitment under advertisement number TKDL/08/2026 (Ayurveda). Candidates can access the result document directly from the official portal.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-20T20:48:50.906021+00:00"
+      "updated_at": "2026-11-21T19:45:55.998024+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -8583,62 +8592,59 @@
       "updated_at": "2026-11-15T10:01:49.734660+00:00"
     },
     "e479ae914c525f16f8f5576fe1a39079404dda0fe41a8478e30cf24c1b07b6ac": {
-      "id": "a002f8ecd6110465",
+      "id": "7d921364673de447",
       "draft": {
         "is_relevant_notice": true,
-        "is_recruitment_notice": true,
-        "post_category": "vacancy",
-        "event_type": "application_window",
-        "event_evidence": "State Bank of India Current Openings portal displays active recruitment notices and online application links for SCO, PO, and Junior Associate posts under the 2026-27 cycle.",
+        "is_recruitment_notice": false,
+        "post_category": "result",
+        "event_type": "result_and_call_letter_release",
+        "event_evidence": "RECRUITMENT OF JUNIOR ASSOCIATES (CUSTOMER SUPPORT & SALES) ( PRELIMINARY EXAM RESULT & LINK FOR DOWNLOAD OF MAINS EXAMINATION CALL LETTER IS AVAILABLE NOW ) ADVERTISEMENT NO: CRPD/CR/2026-27/17 ... NOTICE: THE ONLINE MAINS EXAMINATION IS TENTATIVELY SCHEDULED ON 26.11.2026 AND 27.11.2026 ... RECRUITMENT OF PROBATIONARY OFFICERS (INTERVIEW CALL LETTER IS AVAILABLE TO DOWNLOAD) ADVERTISEMENT NO:CRPD/PO/2026-27/09 ... MAIN EXAMINATION RESULT (NEW ) DOWNLOAD INTERVIEW CALL LETTER (NEW)",
         "exam_name": "SBI Recruitment 2026-27",
         "cycle_label": "2026-27",
         "related_exams": [
-          "SBI Specialist Cadre Officers Recruitment 2026-27",
-          "SBI Probationary Officers Recruitment 2026-27",
-          "SBI Junior Associates Recruitment 2026-27"
+          "SBI Probationary Officers Recruitment 2026-27 (Advt No. CRPD/PO/2026-27/09)",
+          "SBI Junior Associates (Customer Support & Sales) Recruitment 2026-27 (Advt No. CRPD/CR/2026-27/17)",
+          "SBI Specialist Cadre Officer Recruitment 2026-27 (Advt No. CRPD/SCO/2026-27/10)",
+          "SBI Circle Based Officer Recruitment 2025-26 (Advt No. CRPD/CBO/2025-26/18)",
+          "SBI Junior Associates Recruitment 2025-26 (Advt No. CRPD/CR/2025-26/06)",
+          "SBI Lead Business Analyst Recruitment 2026-27 (Advt No. CRPD/SCO/2026-27/04)"
         ],
-        "result_url": null,
-        "result_declared": false,
+        "result_url": "https://sbi.bank.in/web/careers/recruitment-results",
+        "result_declared": true,
         "related_notice": null,
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "SBI is accepting online applications for multiple Specialist Cadre Officer roles (Advt CRPD/SCO/2026-27/26, 27, 28, 29, 30) with active application windows.",
-        "notice_type": "recruitment_notice",
-        "post_title": "SBI SCO and PO Recruitment 2026-27 Current Openings",
+        "recruitment_evidence": null,
+        "notice_type": null,
+        "post_title": "SBI Junior Associates and PO 2026 Exam Results and Call Letters",
         "organisation": "State Bank of India",
         "post_names": [
-          "Assistant Manager – Engineer (Fire)",
-          "Manager (Security)",
-          "Deputy Manager",
-          "Chief Manager (Product & Research - Forex & Rupee Derivatives)",
-          "Manager (Product & Research Analyst)",
-          "Risk Specialist",
           "Probationary Officer",
-          "Junior Associate (Customer Support & Sales)"
+          "Junior Associate (Customer Support & Sales)",
+          "Specialist Cadre Officer",
+          "Circle Based Officer",
+          "Lead Business Analyst"
         ],
         "advertisement_number": null,
         "vacancy_count": null,
         "qualification": null,
         "age_limit": null,
-        "application_start_date": "2026-11-02",
-        "application_end_date": "2026-11-25",
+        "application_start_date": null,
+        "application_end_date": null,
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": "https://sbi.bank.in/web/careers/current-openings",
-        "application_url": "https://sbi.bank.in/web/careers/current-openings",
+        "official_notification_url": "https://sbi.bank.in/web/careers/recruitment-results",
+        "application_url": null,
         "important_dates": [
-          "SCO (CRPD/SCO/2026-27/30) extended application deadline: 2026-11-16",
-          "SCO (CRPD/SCO/2026-27/26 & 27) application deadline: 2026-11-23",
-          "SCO (CRPD/SCO/2026-27/28 & 29) application deadline: 2026-11-25",
-          "SBI PO (CRPD/PO/2026-27/09) interview commencement: 2026-12-01"
+          "2026-11-26 to 2026-11-27 (Tentative): SBI Junior Associates Online Mains Examination"
         ],
-        "summary": "State Bank of India is inviting applications for several Specialist Cadre Officer positions under the 2026-27 recruitment cycle, with application deadlines spanning from November 16 to November 25, 2026. Furthermore, interviews for SBI Probationary Officers are scheduled to start on December 1, 2026, while preliminary exam admit cards are active for Junior Associates.",
+        "summary": "State Bank of India has released the preliminary exam results and mains admit cards for Junior Associates (Customer Support & Sales) under Advt No. CRPD/CR/2026-27/17, with the mains examination tentatively scheduled for 26 and 27 November 2026. Additionally, the main exam results and interview call letters have been issued for Probationary Officers (Advt No. CRPD/PO/2026-27/09).",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.6-flash"
+        "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-15T10:03:08.351107+00:00"
+      "updated_at": "2026-11-21T20:02:17.778475+00:00"
     },
     "737c61f096412c4bd1938e1713282a032f195fde65b349d0e9a7245b1c514738": {
       "id": "705d6e2e7b8d42df",
@@ -10793,6 +10799,194 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-20T20:53:14.780497+00:00"
+    },
+    "62773b83c70e8f869da8e0bf6fc5e8bfda475387e1b57020621cd8dd30f32c40": {
+      "id": "8813605ef13af1eb",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "application_deadline",
+        "event_evidence": "CSIR has issued recruitment notices for Director positions at CSIR-CGCRI and CSIR-NCL, Project Staff at CSIR-HRDG, and published interview results for TKDL/08/2026.",
+        "exam_name": "CSIR Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR TKDL/08/2026 (Ayurveda)",
+          "CSIR-HRDG Jigyasa Project Staff Recruitment 2026",
+          "CSIR-CGCRI Director Recruitment 2026",
+          "CSIR-NCL Director Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": true,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "CSIR is inviting applications for Director posts at CSIR-CGCRI Kolkata (Advt 05/2026) and CSIR-NCL Pune (Advt 04/2026) with last date 30-11-2026, and conducting a Walk-in Interview for Project Staff on 30-11-2026.",
+        "notice_type": "recruitment_and_result",
+        "post_title": "CSIR Director and Project Staff Recruitment 2026 Notices",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Director",
+          "Project Staff"
+        ],
+        "advertisement_number": "TKDL/08/2026, HRDG/JIGYASA/01/2026, 05/2026, 04/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Walk-in Interview / Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "2026-10-22: Interview held for Advt TKDL/08/2026",
+          "2026-11-30: Walk-in Interview for CSIR-HRDG Project Staff (Advt HRDG/JIGYASA/01/2026)",
+          "2026-11-30: Application deadline for Director posts at CSIR-CGCRI Kolkata and CSIR-NCL Pune"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has published updates regarding multiple recruitment drives. Applications for Director positions at CSIR-CGCRI Kolkata and CSIR-NCL Pune close on November 30, 2026, while a walk-in interview for Project Staff under the CSIR Jigyasa project is scheduled for November 30, 2026. Additionally, interview results for advertisement TKDL/08/2026 (Ayurveda) have been declared.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-21T19:41:53.324674+00:00"
+    },
+    "ae18ddfef5aa8b6b4a456967ab731266501427e7589e4f7f8e85732e67a40f93": {
+      "id": "1d58a931c2473ebb",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "recruitment",
+        "event_type": "walk_in_interview",
+        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
+        "exam_name": "CSIR HRDG Project Personnel Engagement 2026",
+        "cycle_label": "HCP002601",
+        "related_exams": [
+          "CSIR HRDG Project Personnel Engagement 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा' (HCP002601)",
+        "notice_type": "recruitment_notice",
+        "post_title": "CSIR HRDG Project Personnel Recruitment 2026 Walk in Interview",
+        "organisation": "CSIR-HRDG, New Delhi",
+        "post_names": [
+          "Project Personnel"
+        ],
+        "advertisement_number": "HCP002601",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": "Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-30: Walk-in Interview"
+        ],
+        "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview scheduled for November 30, 2026, for the engagement of Project Personnel. The engagement is under the project CSIR Jigyasa: Linking Scientists and School Students for R&D Outreach and Innovation (HCP002601).",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-21T19:46:21.859209+00:00"
+    },
+    "cf8d53b34d11350e64d91774b3cafc7355381bf74c4011b498d7f1e2299663ec": {
+      "id": "98bc3fa677d4e7b1",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "exam_name": "CSIR CGCRI Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR CGCRI Director Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "vacancy",
+        "post_title": "CSIR CGCRI Director Recruitment 2026 Notification",
+        "organisation": "CSIR-Central Glass and Ceramic Research Institute",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana",
+        "application_url": null,
+        "important_dates": [
+          "Application Deadline: 2026-11-30"
+        ],
+        "summary": "Council of Scientific & Industrial Research has released a recruitment advertisement for the post of Director at CSIR-Central Glass and Ceramic Research Institute, Kolkata. Eligible candidates must submit their applications on or before November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-21T19:46:55.169378+00:00"
+    },
+    "3c7aecc952017f626e8ef5e8480f9d790aeb9d778fc519246155b767d815cb71": {
+      "id": "911364b1a657a530",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "CSIR-NCL Pune Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": null,
+        "post_title": "CSIR NCL Pune Director Recruitment 2026",
+        "organisation": "Council of Scientific and Industrial Research - National Chemical Laboratory (CSIR-NCL)",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": null,
+        "important_dates": [
+          "Application deadline: 2026-11-30"
+        ],
+        "summary": "The Council of Scientific and Industrial Research (CSIR) has released an advertisement for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications on or before November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.8-flash"
+      },
+      "updated_at": "2026-11-21T19:49:59.528101+00:00"
     }
   }
 }
