@@ -339,7 +339,19 @@
     "https://cms.upsc.gov.in/previous-exam-details",
     "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/applicants-list",
     "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/notices",
-    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/scrutiny"
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/scrutiny",
+    "https://ibpsreg.ibps.in/manitboct26",
+    "https://ibpsreg.ibps.in/bpcljul26",
+    "https://ibpsreg.ibps.in/jkbvpocto26",
+    "https://ibpsreg.ibps.in/sbirscooct26",
+    "https://ibpsreg.ibps.in/sbiameoct26",
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/interview-schedules",
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/results",
+    "https://cms.upsc.gov.in/recruitment-tests/schedule-for-recruitment-tests-and-interviews",
+    "https://cms.upsc.gov.in/recruitment-tests/notice",
+    "https://cms.upsc.gov.in/recruitment-tests/results",
+    "https://cms.upsc.gov.in/recruitment-tests/cut-off-marks",
+    "https://cms.upsc.gov.in/recruitment-tests/result-details"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -988,7 +1000,28 @@
     "fc5d55b6947bbcb4bc1b2aea5aa32a7199d2b12fd707aa59835317c67b114dd8",
     "71a3c6e6d54c977a89465a05e4804bb85b987ac6755dada385082f548feef0c0",
     "df0833929cf7fead73459e71c7bf3a557effd7e4ee12dfa562ea86459c154f2e",
-    "b9b2c406bb04fa6162cc5d3d29242c25fd693001916c7dcc990aa0c89a2d70ee"
+    "b9b2c406bb04fa6162cc5d3d29242c25fd693001916c7dcc990aa0c89a2d70ee",
+    "2cc15d5de0970d258e96f5f3898e436aed898eadfc3283efb05c94061ce3f6c2",
+    "dc27732194fe77a30e60ba40e1e6e1743f3544fff05926da4d50d73a8afcc99b",
+    "b484c09a40c2ad53d68dd16ec8983616ed5b628d524a76c16d207d524d60f079",
+    "f0f5d25289e40d0f4225dcffd45dc25bda0c5235e2c5a392163f7aa82f71f2d2",
+    "87261f0f93c3d37065dd35356a87c6920fb6e6fbf0a6556143c560584052f1bd",
+    "6e494448f4e8a15109a15140e4119749ce8d3595ee2e32e6b46865738ff3b7c1",
+    "7c838d6e24a1f4469e6cd625dcdd08dbc1d57e32468bff98740b1d89dbd0d428",
+    "593f90097866b5e8eb835d415ef7cf67a3383d63e4687f8fda9bbe0c38bb632b",
+    "029f2e9d304db4ea45a6db5358049fed836b2ba46d9f94f21e6e944e1c5152d3",
+    "23b61242de8cae6d1bc649aac4abef55427c115413c27c22c073001645ddfc14",
+    "4758d91fcc89df2bd140cc61ed0cde55b1c5d836e210a1edb786c5b08917555d",
+    "613e4e1a156ac0695dca40e8819951782634a64512040c81fdae97c088365bcc",
+    "c89356e23820665bb20b61773049afe1c39b5be71453bfdc5018b9656f523a5a",
+    "6cfb39e37abf8d8f53c9e018ba5b234200188c4438f0e3eb3d0b89ba234027e4",
+    "4f3723253fbe6d8ef33c90dcc9120140d7e7729c22a031006189fd087c7594bb",
+    "46f7245dac3ed185f0da1a121afed4f2fe1ea75fef99c875f9d2a5bcb2a57cd7",
+    "697ed7f512abdae8eb46f0587bc41095ec9ee19e752707602665c694206e64b1",
+    "6db935635fb23ad2e57fc93e609ffea61516f8673b34ffee30acad6c0606c801",
+    "24e59134d5cf3d7cad5df21365ff62fd695cd7cc173c2ea9d95f5743dab73269",
+    "130c47b774912105236589ad62e3fcba4dd10ca9ff9a7cc7bbb099c2b10cd0b3",
+    "2706cb33f2381a1c8a8d6cd5fcd4e47f89ed1930282a0456863df226af4e4067"
   ],
   "snapshots": {
     "https://nta.ac.in": "f99ae988c27bf6c76a63f35d7e7bc13bd8894f1902f4dfd02884fd7eaf8ce358",
@@ -1133,20 +1166,20 @@
     "https://www.ugc.gov.in/pdfnews/4043441_India_france-year-of-innovation.pdf": "f6d33ad1fed2360f0396a0808d2dcd6733832b771afd0dcab2ce4a05f0ee39a2",
     "https://www.ugc.gov.in/pdfnews/7145009_INCP2-Letter.pdf": "a74f72ebc101db2ee0c730fe06791018a96edbd43f9773fccb3cfb84c77b07ad",
     "https://ncs.gov.in/assets/pdf/Jobseeker registration flowchart 1.pdf": "9eda25d8d8b02f2b7468c1f765fd848ee855d4762fbbf701381eb4d7fda84efc",
-    "https://ncs.gov.in": "b6e5856a21faedd2a0f13f98122c9e5f48397073c74b8fcb2233249996527fcb",
-    "https://ncs.gov.in/career-counsellors": "e53a6e45167b45a901186dfb50f631ad2747a8bfdb341415da0af26f730ffc84",
+    "https://ncs.gov.in": "2cc15d5de0970d258e96f5f3898e436aed898eadfc3283efb05c94061ce3f6c2",
+    "https://ncs.gov.in/career-counsellors": "dc27732194fe77a30e60ba40e1e6e1743f3544fff05926da4d50d73a8afcc99b",
     "https://ncs.gov.in/career-center": "085f48ee9e7a8ec45259d5cdbfa6591b5a58261ac77dd24bb629b8804850c8ce",
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "3f83e607380a5a45cdeb37571e411ed7549e40d54413b624bb5938cbc23d9b8c",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "b484c09a40c2ad53d68dd16ec8983616ed5b628d524a76c16d207d524d60f079",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "737689bf5a303b86cefe4784fba15568b771ce57caa12f2756c42d7d55ec2d8a",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "da204c51c22807b78568bc25ba99508bcf7ac0c76b4029df575af980abf5b449",
-    "https://www.csir.res.in/hi/career-opportunities": "fc5d55b6947bbcb4bc1b2aea5aa32a7199d2b12fd707aa59835317c67b114dd8",
-    "https://www.csir.res.in/hi/notification": "71a3c6e6d54c977a89465a05e4804bb85b987ac6755dada385082f548feef0c0",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "6e494448f4e8a15109a15140e4119749ce8d3595ee2e32e6b46865738ff3b7c1",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "7c838d6e24a1f4469e6cd625dcdd08dbc1d57e32468bff98740b1d89dbd0d428",
+    "https://www.csir.res.in/hi/career-opportunities": "593f90097866b5e8eb835d415ef7cf67a3383d63e4687f8fda9bbe0c38bb632b",
+    "https://www.csir.res.in/hi/notification": "029f2e9d304db4ea45a6db5358049fed836b2ba46d9f94f21e6e944e1c5152d3",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
     "https://www.icmr.gov.in/employment-opportunities": "fedbd06a9ce34ee8f02121dde2d4b48ba8349c7a5627a251faae16bdd8539edc",
     "https://www.icmr.gov.in/career-results": "c4bbb85aad9d24dab00becb9a02dab7e7a40dae6e121a4ca7706f3a3363d2acb",
@@ -1174,7 +1207,7 @@
     "https://sbi.bank.in/web/careers/roles-sbi": "3e18853bcd2e875d9e41a493168bdb1a269ad59a2b5a1e14ecbe4b5fc85a62ba",
     "https://nta.ac.in/Download/Notice/Notice_20261101103301.pdf": "5124f76a27644e210e49d71be51a100e6536d8addc76768b7a451c84c92e7ebd",
     "https://ncs.gov.in/assets/pdf/Indian Staffing Federation (ISF Registration Flow).pdf": "8f143624019bc9a242842337c5f9e35b513fe9499da7e053f9721cf717651189",
-    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "b6e5856a21faedd2a0f13f98122c9e5f48397073c74b8fcb2233249996527fcb",
+    "https://www.ncs.gov.in/_layouts/15/ncsp/calendar.aspx": "2cc15d5de0970d258e96f5f3898e436aed898eadfc3283efb05c94061ce3f6c2",
     "https://www.csir.res.in/sites/default/files/2025-09/security-audit-2025_d10.pdf": "67f72071c007fd9042cf8eca438088a1a5ec8c7992fbbce85efcea9f2f953a45",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1791972387_carassistivetechcall_v2.pdf": "cf8c637bb2245c1c30254bb63865a674cb431e45df19b73d91af937109fe56c1",
     "https://www.icmr.gov.in/icmrobject/uploads/Call/1790596857_calln_rdhr.pdf": "24abb00705351667dfb0689478316eb7b6387bae4c8dc68a8650ac35812c630d",
@@ -1277,7 +1310,7 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "598ca4c8380bcdc6601250a0e809728474e916de24ccba5b6e29787c3447ca72",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "87261f0f93c3d37065dd35356a87c6920fb6e6fbf0a6556143c560584052f1bd",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "16b860f8d4972062938d55165a24722d0794780c247697e8d4dca9cb09609473",
@@ -1312,7 +1345,7 @@
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
     "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "8c808b5f180b332ba36cc7188c34e58f6c2e8ced09d7f6fcc817c31c52a5c93c",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "f0f5d25289e40d0f4225dcffd45dc25bda0c5235e2c5a392163f7aa82f71f2d2",
     "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf": "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d",
     "https://www.icmr.gov.in": "4953fc38ca619914fa2edde5c8445321a33f4d28a9327ab709f7bf57f0e0f920",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1795065073_flyer_webinar4_medicalmasterclassseries.pdf": "4e1482a23ddd92a82c0fb7ecb8104b26c983d2670fcb92f4bd98276c8a01e130",
@@ -1327,7 +1360,19 @@
     "https://cms.upsc.gov.in/previous-exam-details": "4c6099acd97e7b2b2115cb943a432a65bcacc0ef80636cfd76ae4f20f1e662eb",
     "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/applicants-list": "b483fadea39e7c29e831465e172dd1b0d9ca8d8eebe65fcc21d7eb24480adf21",
     "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/notices": "57d3733e0bed6c68e984ca61f08d49cde6a5a43e44354b0821ad155bca92a823",
-    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/scrutiny": "e645291a03f05cb01fd07f2d6a7b1f09542deada97a7be5ae8a99723ab70a5d3"
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/scrutiny": "e645291a03f05cb01fd07f2d6a7b1f09542deada97a7be5ae8a99723ab70a5d3",
+    "https://ibpsreg.ibps.in/manitboct26": "23b61242de8cae6d1bc649aac4abef55427c115413c27c22c073001645ddfc14",
+    "https://ibpsreg.ibps.in/bpcljul26": "4758d91fcc89df2bd140cc61ed0cde55b1c5d836e210a1edb786c5b08917555d",
+    "https://ibpsreg.ibps.in/jkbvpocto26": "613e4e1a156ac0695dca40e8819951782634a64512040c81fdae97c088365bcc",
+    "https://ibpsreg.ibps.in/sbirscooct26": "c89356e23820665bb20b61773049afe1c39b5be71453bfdc5018b9656f523a5a",
+    "https://ibpsreg.ibps.in/sbiameoct26": "6cfb39e37abf8d8f53c9e018ba5b234200188c4438f0e3eb3d0b89ba234027e4",
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/interview-schedules": "4f3723253fbe6d8ef33c90dcc9120140d7e7729c22a031006189fd087c7594bb",
+    "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/results": "46f7245dac3ed185f0da1a121afed4f2fe1ea75fef99c875f9d2a5bcb2a57cd7",
+    "https://cms.upsc.gov.in/recruitment-tests/schedule-for-recruitment-tests-and-interviews": "697ed7f512abdae8eb46f0587bc41095ec9ee19e752707602665c694206e64b1",
+    "https://cms.upsc.gov.in/recruitment-tests/notice": "6db935635fb23ad2e57fc93e609ffea61516f8673b34ffee30acad6c0606c801",
+    "https://cms.upsc.gov.in/recruitment-tests/results": "24e59134d5cf3d7cad5df21365ff62fd695cd7cc173c2ea9d95f5743dab73269",
+    "https://cms.upsc.gov.in/recruitment-tests/cut-off-marks": "130c47b774912105236589ad62e3fcba4dd10ca9ff9a7cc7bbb099c2b10cd0b3",
+    "https://cms.upsc.gov.in/recruitment-tests/result-details": "2706cb33f2381a1c8a8d6cd5fcd4e47f89ed1930282a0456863df226af4e4067"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -2042,27 +2087,27 @@
       "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "315c5b17ea1f575d",
+      "id": "ddec3f091e0ed550",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": false,
-        "post_category": null,
+        "post_category": "result",
         "event_type": "result",
-        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम। result_tkdl_16112026.pdf",
-        "exam_name": "CSIR TKDL Ayurveda Recruitment (Advt No. TKDL/08/2026)",
-        "cycle_label": "Advt No. TKDL/08/2026",
+        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
+        "exam_name": "CSIR TKDL Recruitment 2026 (Ayurveda)",
+        "cycle_label": "Advt. TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Ayurveda Recruitment (Advt No. TKDL/08/2026)"
+          "CSIR TKDL Recruitment 2026 (Ayurveda)"
         ],
         "result_url": null,
         "result_declared": true,
         "related_notice": null,
-        "event_date": null,
+        "event_date": "2026-10-22",
         "previous_event_date": null,
         "change_reason": null,
         "recruitment_evidence": null,
-        "notice_type": null,
-        "post_title": "CSIR TKDL Ayurveda Interview Result Declared (Advt TKDL/08/2026)",
+        "notice_type": "result",
+        "post_title": "CSIR TKDL Advt TKDL/08/2026 Ayurveda Interview Result",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [],
         "advertisement_number": "TKDL/08/2026",
@@ -2073,17 +2118,17 @@
         "application_end_date": null,
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
         "application_url": null,
         "important_dates": [
-          "2026-10-22: Interview conducted"
+          "2026-10-22: Date of Interview"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the results of the interview held on 22 October 2026 for recruitment under advertisement number TKDL/08/2026 (Ayurveda). Candidates can access the result document directly from the official portal.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has declared the result of the interviews held on October 22, 2026, for advertisement number TKDL/08/2026 (Ayurveda). Candidates can access the official result document directly on the portal.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.8-flash"
+        "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-21T19:45:55.998024+00:00"
+      "updated_at": "2026-11-22T10:16:25.368711+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -4133,58 +4178,54 @@
       "updated_at": "2026-11-04T09:49:43.645122+00:00"
     },
     "55d72fcb49d657b37aec78799d1b09ca4e3774f1cba0419ae6c5a8d3014792d5": {
-      "id": "e7a3a11b86b603c1",
+      "id": "453e04bb654ed49a",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "application_update",
-        "event_evidence": "RECRUITMENT OF SPECIALIST CADRE OFFICERS ON REGULAR BASIS FOR THE POST OF ASSISTANT MANAGER – ENGINEER (FIRE) (Apply Online from 04.11.2026 TO 25.11.2026)",
-        "exam_name": "SBI Specialist Cadre Officers Assistant Manager Engineer Fire 2026",
-        "cycle_label": "2026-27",
+        "event_type": "application_window",
+        "event_evidence": "Commencement of online registration of application 04/11/2026 Closure of registration of application 25/11/2026",
+        "exam_name": "SBI SCO Assistant Manager Engineer Fire Recruitment 2026",
+        "cycle_label": "CRPD/SCO/2026-27/29",
         "related_exams": [
-          "SBI Specialist Cadre Officers Assistant Manager Engineer Fire 2026",
-          "SBI Specialist Cadre Officers Manager Security Deputy Manager 2026",
-          "SBI Specialist Cadre Officers Chief Manager Manager Product Research 2026",
-          "SBI Specialist Cadre Officers Risk Specialist 2026"
+          "SBI SCO Assistant Manager Engineer Fire Recruitment 2026"
         ],
         "result_url": null,
         "result_declared": false,
         "related_notice": null,
-        "event_date": "2026-11-25",
+        "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "State Bank of India provides many opportunities for young graduates as well as experienced professionals... RECRUITMENT OF SPECIALIST CADRE OFFICERS ON REGULAR BASIS FOR THE POST OF ASSISTANT MANAGER – ENGINEER (FIRE) (Apply Online from 04.11.2026 TO 25.11.2026)",
-        "notice_type": "recruitment",
-        "post_title": "SBI Specialist Cadre Officers Recruitment 2026 Openings",
+        "recruitment_evidence": "Recruitment of Specialist Cadre Officer (Assistant Manager -Engineer (Fire)) On Regular Basis (Advertisement No.: CRPD/SCO/2026-27/29) Commencement of online registration of application 04/11/2026",
+        "notice_type": "vacancy",
+        "post_title": "SBI SCO Assistant Manager Engineer Fire Recruitment 2026 Registration",
         "organisation": "State Bank of India",
         "post_names": [
-          "Assistant Manager (Engineer - Fire)",
-          "Manager (Security)",
-          "Deputy Manager",
-          "Chief Manager (Product & Research - Forex & Rupee Derivatives)",
-          "Manager (Product & Research Analyst)",
-          "Risk Specialist"
+          "Assistant Manager - Engineer (Fire)"
         ],
         "advertisement_number": "CRPD/SCO/2026-27/29",
         "vacancy_count": null,
-        "qualification": "Graduates / Experienced Professionals",
+        "qualification": null,
         "age_limit": null,
         "application_start_date": "2026-11-04",
         "application_end_date": "2026-11-25",
         "application_fee": null,
         "selection_process": null,
-        "official_notification_url": "https://sbi.bank.in/web/careers/current-openings",
-        "application_url": "https://sbi.bank.in/web/careers/current-openings",
+        "official_notification_url": null,
+        "application_url": "https://ibpsreg.ibps.in/sbiameoct26/",
         "important_dates": [
-          "2026-11-04 to 2026-11-25"
+          "2026-11-04: Commencement of online registration of application",
+          "2026-11-25: Closure of registration of application",
+          "2026-11-25: Closure for editing application details",
+          "2026-12-10: Last date for printing application",
+          "2026-11-04 to 2026-11-25: Online Fee Payment"
         ],
-        "summary": "State Bank of India has opened online applications for multiple Specialist Cadre Officer positions including Assistant Manager, Manager, and Risk Specialist roles. Interested eligible candidates can submit their applications online through the official SBI careers portal.",
+        "summary": "State Bank of India has opened online registrations for the recruitment of Specialist Cadre Officers (Assistant Manager - Engineer (Fire)) on a regular basis under Advertisement No. CRPD/SCO/2026-27/29. Interested candidates must submit their applications and pay the fee online by November 25, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
-        "model": "gemini-3.5-flash-lite"
+        "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-06T19:43:09.632187+00:00"
+      "updated_at": "2026-11-22T10:25:18.367048+00:00"
     },
     "97daa77d877c8328483d097f5abfa8b981867782bd34e1648ec24916a116a9bb": {
       "id": "6f11cbc10aadd27a",
@@ -7125,27 +7166,25 @@
       "updated_at": "2026-11-15T10:06:58.185111+00:00"
     },
     "786b3d20468aa7e01f32e46d5241d743de97b0e3b93a4894e8d16bbabf4d6686": {
-      "id": "eec47f119d074d96",
+      "id": "1b60ddd841d293d4",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "vacancy",
-        "event_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "event_type": null,
+        "event_evidence": null,
         "exam_name": "CSIR CGCRI Director Recruitment 2026",
-        "cycle_label": "2026",
-        "related_exams": [
-          "CSIR CGCRI Director Recruitment 2026"
-        ],
+        "cycle_label": null,
+        "related_exams": [],
         "result_url": null,
         "result_declared": false,
         "related_notice": null,
         "event_date": null,
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान (सीएसआईआर-सीजीसीआरआई), कोलकाता में निदेशक के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
-        "notice_type": "advertisement",
-        "post_title": "CSIR CGCRI Director Recruitment 2026",
+        "recruitment_evidence": "Advertisement for the post of Director at CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata with last date 30/11/2026.",
+        "notice_type": "recruitment_advertisement",
+        "post_title": "CSIR CGCRI Director Recruitment 2026 Notification",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
           "Director"
@@ -7161,14 +7200,14 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana",
         "application_url": null,
         "important_dates": [
-          "Application deadline: 2026-11-30"
+          "Application Deadline: 2026-11-30"
         ],
-        "summary": "Council of Scientific & Industrial Research (CSIR) has issued an advertisement for recruitment to the post of Director at CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata. The last date for submission of applications is November 30, 2026.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has released an advertisement for recruitment to the post of Director at CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata. Eligible candidates must submit their applications on or before November 30, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-20T20:49:27.038392+00:00"
+      "updated_at": "2026-11-22T10:18:04.005937+00:00"
     },
     "2b66ce491270b4373f02dc0b030dcdf83175c2b7a7cf506781a9341c4d60af71": {
       "id": "037a8b5ec35d057a",
@@ -10302,15 +10341,15 @@
       "updated_at": "2026-11-20T10:26:38.447208+00:00"
     },
     "ffdc196f8aec45808f4cfef60b89449d5bf6b541913acec80e6618fc2d632f89": {
-      "id": "1e932bbc0939f738",
+      "id": "0fcebc0ab08c19ae",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "vacancy",
-        "event_type": "interview_schedule",
-        "event_evidence": "'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
-        "exam_name": "CSIR-HRDG Project Staff Recruitment 2026",
-        "cycle_label": "HCP002601",
+        "event_type": "walk_in_interview",
+        "event_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
+        "exam_name": "CSIR HRDG Project Staff Recruitment 2026",
+        "cycle_label": "Project HCP002601",
         "related_exams": [],
         "result_url": null,
         "result_declared": false,
@@ -10318,12 +10357,12 @@
         "event_date": "2026-11-30",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत",
-        "notice_type": "recruitment_notice",
-        "post_title": "CSIR-HRDG Project Personnel Walk-in Interview 2026",
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा' (HCP002601) के अंतर्गत",
+        "notice_type": "Walk-in Interview Notice",
+        "post_title": "CSIR HRDG Project Staff Walk-in Interview 2026",
         "organisation": "Council of Scientific & Industrial Research - Human Resource Development Group (CSIR-HRDG)",
         "post_names": [
-          "Project Personnel"
+          "Project Staff"
         ],
         "advertisement_number": "HCP002601",
         "vacancy_count": null,
@@ -10336,14 +10375,14 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
         "application_url": null,
         "important_dates": [
-          "Walk-in Interview: 2026-11-30"
+          "Walk-in Interview Date: 2026-11-30"
         ],
-        "summary": "CSIR-HRDG, New Delhi will conduct a walk-in interview for the recruitment of project personnel under the project 'CSIR Jigyasa: Connecting Scientists and School Students for R&D Outreach and Innovation' (HCP002601). The walk-in interview is scheduled for November 30, 2026.",
+        "summary": "CSIR-HRDG, New Delhi has invited candidates for a walk-in interview to engage Project Staff under the project 'CSIR Jigyasa' (HCP002601). Eligible candidates can attend the walk-in interview scheduled for November 30, 2026.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-20T10:33:36.281496+00:00"
+      "updated_at": "2026-11-22T10:17:44.549944+00:00"
     },
     "852ca6ec7724b2e7978d5b00da0e81053a83007e394e7152194c86563cada8c2": {
       "id": "6aa242e1cf975fa3",
@@ -10987,6 +11026,585 @@
         "model": "gemini-3.8-flash"
       },
       "updated_at": "2026-11-21T19:49:59.528101+00:00"
+    },
+    "af238630eb7d026e4efdaf1bfa3726912c588117ff0e2aa3db3ea67112194d27": {
+      "id": "1649c1d83a29c220",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "recruitment_notification",
+        "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम और निदेशक एवं प्रोजेक्ट कर्मियों के पदों हेतु विज्ञापन।",
+        "exam_name": "CSIR Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR TKDL Ayurveda Recruitment 2026 (Advt. TKDL/08/2026)",
+          "CSIR Jigyasa Project Staff Recruitment 2026 (Advt. HRDG/JIGYASA/01/2026)",
+          "CSIR CGCRI Director Recruitment 2026 (Advt. 05/2026)",
+          "CSIR NCL Director Recruitment 2026 (Advt. 04/2026)"
+        ],
+        "result_url": null,
+        "result_declared": true,
+        "related_notice": null,
+        "event_date": "2026-11-30",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-केंद्रीय कांच एवं सिरेमिक अनुसंधान संस्थान में निदेशक के पद के लिए विज्ञापन (05/2026) और सीएसआईआर-नेशनल केमिकल लेबोरेटरी पुणे में डायरेक्टर के पद के लिए विज्ञापन (04/2026)।",
+        "notice_type": "Recruitment Notifications and Results",
+        "post_title": "CSIR Recruitment 2026 Notifications and Interview Results",
+        "organisation": "Council of Scientific & Industrial Research",
+        "post_names": [
+          "Director",
+          "Project Staff"
+        ],
+        "advertisement_number": "TKDL/08/2026, HRDG/JIGYASA/01/2026, 05/2026, 04/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Interview / Walk-in Interview",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "2026-10-22: Interview conducted for TKDL/08/2026 (Ayurveda)",
+          "2026-11-30: Walk-in Interview date for CSIR Jigyasa Project Staff (HRDG/JIGYASA/01/2026)",
+          "2026-11-30: Application deadline for Director post at CSIR-CGCRI (Advt. 05/2026)",
+          "2026-11-30: Application deadline for Director post at CSIR-NCL (Advt. 04/2026)"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has published multiple recruitment notifications and updates. Key updates include the interview result declaration for Advt. TKDL/08/2026 (Ayurveda), walk-in interview details for Project Staff under the CSIR Jigyasa project, and active application windows for Director posts at CSIR-CGCRI Kolkata and CSIR-NCL Pune.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:14:16.159613+00:00"
+    },
+    "71bc4715c357176eca42086efaf58be42d8ea7d2541da1841eefbf6bf8e684b2": {
+      "id": "4e258dff6c9a656f",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": "vacancy_announcement",
+        "event_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "exam_name": "CSIR NCL Director Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+        "notice_type": "recruitment_notice",
+        "post_title": "CSIR NCL Pune Director Recruitment 2026",
+        "organisation": "CSIR - National Chemical Laboratory (NCL), Pune",
+        "post_names": [
+          "Director"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-30: Last date for submission of applications"
+        ],
+        "summary": "Council of Scientific & Industrial Research (CSIR) has released an advertisement for the recruitment of Director at the CSIR-National Chemical Laboratory (NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:18:20.417143+00:00"
+    },
+    "c3b8050e8353370591183df45b17f829d36fdb1757c8aba77d1e8a53c112d075": {
+      "id": "0fdda0d8b79a8a83",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "MANIT Group B and C Non-Teaching Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "MANIT Group B and C Non-Teaching Recruitment 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Commencement of online registration of application 13/11/2026, Closure of registration of application 10/12/2026",
+        "notice_type": null,
+        "post_title": "MANIT Group B and C Non-Teaching Recruitment 2026",
+        "organisation": "Maulana Azad National Institute of Technology",
+        "post_names": [
+          "Group B Non-Teaching Positions",
+          "Group C Non-Teaching Positions"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": "2026-11-13",
+        "application_end_date": "2026-12-10",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": "https://ibpsreg.ibps.in/manitboct26/",
+        "important_dates": [
+          "Commencement of online registration of application: 13/11/2026",
+          "Closure of registration of application: 10/12/2026",
+          "Closure for editing application details: 10/12/2026",
+          "Last date for printing your application: 25/12/2026",
+          "Online Fee Payment: 13/11/2026 to 10/12/2026"
+        ],
+        "summary": "Maulana Azad National Institute of Technology (MANIT) has opened online registration for various Group B and Group C non-teaching positions. Eligible candidates can register and pay fees online through the portal until December 10, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:23:55.250138+00:00"
+    },
+    "fbac0d2e59caa9c7d7923be6f7d28b9c3a3757cb13e4f1d4b559824b299f98aa": {
+      "id": "f5406528dc51661c",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": "Commencement of online registration of application 07/11/2026 Closure of registration of application 26/11/2026",
+        "exam_name": "JKB Recruitment of Various Posts 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "JKB Recruitment of Various Posts 2026"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Commencement of online registration of application 07/11/2026 Closure of registration of application 26/11/2026",
+        "notice_type": "vacancy",
+        "post_title": "JKB Recruitment 2026 Online Registration Open for Various Posts",
+        "organisation": "JKB",
+        "post_names": [
+          "Various Posts"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": "2026-11-07",
+        "application_end_date": "2026-11-26",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": "https://ibpsreg.ibps.in/jkbvpocto26/",
+        "important_dates": [
+          "Commencement of online registration of application: 07/11/2026",
+          "Closure of registration of application: 26/11/2026",
+          "Closure for editing application details: 26/11/2026",
+          "Last date for printing application: 11/12/2026",
+          "Online Fee Payment: 07/11/2026 to 26/11/2026"
+        ],
+        "summary": "JKB has opened the online registration process for the Recruitment of Various Posts 2026. Eligible candidates can submit their applications and complete fee payments through the IBPS portal until November 26, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:24:32.448308+00:00"
+    },
+    "daf8561e5ada933bde7dbaceee5b676997789649ea1a5682d185bac3da5b11fc": {
+      "id": "11045d7472639e31",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "SBI Specialist Cadre Officers Recruitment 2026-27",
+        "cycle_label": "CRPD/SCO/2026-27/28",
+        "related_exams": [
+          "SBI Specialist Cadre Officers Recruitment 2026-27"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "Commencement of online registration of application 04/11/2026 Closure of registration of application 25/11/2026",
+        "notice_type": "Recruitment Notice",
+        "post_title": "SBI Specialist Cadre Officers Recruitment 2026",
+        "organisation": "State Bank of India",
+        "post_names": [
+          "Manager (Security)",
+          "Deputy Manager (Security)"
+        ],
+        "advertisement_number": "CRPD/SCO/2026-27/28",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": "04/11/2026",
+        "application_end_date": "25/11/2026",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": "https://ibpsreg.ibps.in/sbirscooct26/",
+        "important_dates": [
+          "Commencement of online registration of application: 04/11/2026",
+          "Closure of registration of application: 25/11/2026",
+          "Closure for editing application details: 25/11/2026",
+          "Last date for printing application: 10/12/2026",
+          "Online Fee Payment: 04/11/2026 to 25/11/2026"
+        ],
+        "summary": "State Bank of India is inviting online applications for Specialist Cadre Officers (Manager - Security and Deputy Manager - Security) on a regular basis under Advt. No. CRPD/SCO/2026-27/28. Interested candidates can register and submit their applications online through the official IBPS portal before November 25, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:25:05.869889+00:00"
+    },
+    "b198352e0901ee66ed32d3a45b182f0e686527bd21415946137c621fb7c56169": {
+      "id": "e2d28f79fca1e919",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": null,
+        "event_type": "interview_schedule",
+        "event_evidence": "Union Public Service Commission published interview schedules for multiple recruitment posts under Advertisements 01/2025, 07/2025, 08/2025, 09/2025, 53/2025, and 54/2025.",
+        "exam_name": "UPSC Various Posts Recruitment 2025",
+        "cycle_label": "2025",
+        "related_exams": [
+          "UPSC Advt 08-2025 Specialist Grade III Assistant Professor (Psychiatry)",
+          "UPSC Advt 07-2025 Specialist Grade III Assistant Professor (Ophthalmology)",
+          "UPSC Advt 08-2025 Junior Scientific Officer M/o Defence",
+          "UPSC Advt 54-2025 Training Officer (Mechanic Motor Vehicle)",
+          "UPSC Advt 08-2025 Scientist B Zoological Survey of India",
+          "UPSC Advt 09-2025 Junior Scientific Officer M/o Health & Family Welfare",
+          "UPSC Advt 07-2025 Divisional Medical Officer (General Medicine)",
+          "UPSC Advt 01-2025 Assistant Professor (Commerce)",
+          "UPSC Advt 53-2025 Training Officer (Mechanic Diesel)"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "interview_schedule",
+        "post_title": "UPSC Various Posts 2025 Interview Schedules Released",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Specialist Grade III Assistant Professor (Psychiatry)",
+          "Specialist Grade III Assistant Professor (Ophthalmology)",
+          "Junior Scientific Officer",
+          "Training Officer (Mechanic Motor Vehicle)",
+          "Scientist B",
+          "Divisional Medical Officer (General Medicine)",
+          "Assistant Professor (Commerce)",
+          "Training Officer (Mechanic Diesel)"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/interview-schedules/",
+        "application_url": null,
+        "important_dates": [],
+        "summary": "The Union Public Service Commission has released interview schedules for various recruitment posts advertised under 2025 notifications. Candidates can view and download the official interview schedule documents directly from the UPSC recruitment portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:26:13.902304+00:00"
+    },
+    "60a7f5a347f3696d178958d7be3f960a5550502ea50302818f7c2ab806598d36": {
+      "id": "4876808cce865425",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "result",
+        "event_type": "final_result_declared",
+        "event_evidence": "Union Public Service Commission published final results for multiple recruitment advertisements including Junior Mining Geologist, Junior Scientific Officer, and Assistant Mineral Economist on its official portal.",
+        "exam_name": "UPSC Direct Recruitment Final Results",
+        "cycle_label": "2026",
+        "related_exams": [
+          "Junior Mining Geologist (Advt. 07/2025)",
+          "Junior Scientific Officer (Advt. 09/2025)",
+          "Assistant Mineral Economist (Intelligence) (Advt. 05/2024)",
+          "Assistant Central Intelligence Officer Grade-I (Documents) (Advt. 08/2025)",
+          "Assistant Professor, Civil Engineering (Soil Mechanics) (Advt. 05/2025)",
+          "Lecturer/Assistant Professor in Special Education (MR/ID) (Advt. 07/2026)",
+          "Junior Scientific Officer (Toxicology) (Advt. 08/2025)",
+          "Deputy Director (Planning/Statistics) (Advt. 16/2023)",
+          "Deputy Director (Medical) (Advt. 07/2025)",
+          "Training Officer (Sewing Technology) (Advt. 53/2025)"
+        ],
+        "result_url": "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/results/",
+        "result_declared": true,
+        "related_notice": null,
+        "event_date": "2026-11-20",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "result",
+        "post_title": "UPSC Final Results Declared for Various Direct Recruitment Posts",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Junior Mining Geologist",
+          "Junior Scientific Officer",
+          "Assistant Mineral Economist (Intelligence)",
+          "Assistant Central Intelligence Officer Grade-I (Documents)",
+          "Assistant Professor, Civil Engineering (Soil Mechanics)",
+          "Lecturer/Assistant Professor in Special Education (MR/ID)",
+          "Junior Scientific Officer (Toxicology)",
+          "Deputy Director (Planning/Statistics)",
+          "Deputy Director (Medical)",
+          "Training Officer (Sewing Technology)"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/results/",
+        "application_url": null,
+        "important_dates": [
+          "2026-11-20: Final Result uploaded for Junior Mining Geologist (Advt. 07-2025)",
+          "2026-11-19: Final Result uploaded for Junior Scientific Officer (Advt. 09-2025)",
+          "2026-11-17: Final Result uploaded for Assistant Mineral Economist and ACIO Grade-I",
+          "2026-11-11: Final Result uploaded for Assistant Professor, Civil Engineering"
+        ],
+        "summary": "The Union Public Service Commission has released final selection results for various direct recruitment posts, including Junior Mining Geologist, Junior Scientific Officer, and Assistant Mineral Economist. Candidates who appeared in these recruitment selections can check their result PDFs on the official UPSC website.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:26:24.851598+00:00"
+    },
+    "d3b26b9ed5e69ce624387423dbb1f704c50579513727e85dcbfb30f0fea84789": {
+      "id": "2b45d1f7ad3f3f59",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "exam_schedule",
+        "event_type": "exam_schedule_released",
+        "event_evidence": "UPSC has published schedule documents for recruitment tests and interviews for Assistant Public Prosecutor in CBI (Advt No. 12 - 2025) uploaded on 12/11/2026 and Assistant Provident Fund Commissioner in EPFO (Advt No. 52 - 2025 - Special) uploaded on 30/10/2026.",
+        "exam_name": "UPSC Recruitment Tests and Interviews 2025",
+        "cycle_label": "2025",
+        "related_exams": [
+          "UPSC Assistant Public Prosecutor in CBI Recruitment Test 2025",
+          "UPSC Assistant Provident Fund Commissioner EPFO Recruitment Test 2025"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "schedule_notice",
+        "post_title": "UPSC Recruitment Test and Interview Schedules Published for APP and APFC Posts",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Assistant Public Prosecutor",
+          "Assistant Provident Fund Commissioner"
+        ],
+        "advertisement_number": "12 - 2025, 52 - 2025 - (Special)",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/recruitment-tests/schedule-for-recruitment-tests-and-interviews/",
+        "application_url": null,
+        "important_dates": [
+          "2026-10-30: Upload date for Assistant Provident Fund Commissioner EPFO schedule document",
+          "2026-11-12: Upload date for Assistant Public Prosecutor in CBI schedule document"
+        ],
+        "summary": "The Union Public Service Commission has released the schedule documents for recruitment tests and interviews for multiple posts. The update covers 19 posts of Assistant Public Prosecutor in CBI and 74 posts of Assistant Provident Fund Commissioner in EPFO.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:26:39.260996+00:00"
+    },
+    "a79cd9bdfd0d2b15711bdef25e466dcae41d361f241ae1fd76ddb6a81046bc75": {
+      "id": "e741ae9bb72b6526",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "result",
+        "event_type": "result_declaration",
+        "event_evidence": "Results published on the UPSC recruitment tests portal for Accounts Officer (Advt 13-2025) on 05/11/2026 and Manager Grade–I & Administrative Officer Grade–I (Advt 08-2025) on 23/10/2026.",
+        "exam_name": "UPSC Recruitment Tests 2025",
+        "cycle_label": "Advt. 08/2025 & Advt. 13/2025",
+        "related_exams": [
+          "UPSC Accounts Officer Recruitment (Advt. 13/2025)",
+          "UPSC Manager Grade – I – Section Officer Recruitment (Advt. 08/2025)",
+          "UPSC Administrative Officer Grade – I Recruitment (Advt. 08/2025)"
+        ],
+        "result_url": "https://cms.upsc.gov.in/recruitment-tests/results/",
+        "result_declared": true,
+        "related_notice": null,
+        "event_date": "2026-11-05",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "result",
+        "post_title": "UPSC Recruitment Test Results Declared for Various Posts",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Accounts Officer",
+          "Manager Grade – I – Section Officer",
+          "Administrative Officer Grade – I"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/recruitment-tests/results/",
+        "application_url": null,
+        "important_dates": [
+          "2026-10-23: Results uploaded for Manager Grade – I and Administrative Officer Grade – I",
+          "2026-11-05: Results uploaded for Accounts Officer"
+        ],
+        "summary": "The Union Public Service Commission has declared results for recruitment tests covering Accounts Officer in UT of Ladakh, alongside Manager Grade–I (Section Officer) and Administrative Officer Grade–I in the Ministry of Defence. Candidates can view and download their result documents on the official UPSC portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:27:14.908853+00:00"
+    },
+    "abc1fdfb900962bb6605f1e7e2929621feac467f594d0684c235dcec459e3083": {
+      "id": "3b0368d2c721ef2e",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "cut_off",
+        "event_type": "cut_off_released",
+        "event_evidence": "Union Public Service Commission uploaded cut-off marks documents on 02/11/2026 for various recruitment tests.",
+        "exam_name": "UPSC Recruitment Tests Cut-off Marks 2024-2025",
+        "cycle_label": null,
+        "related_exams": [
+          "UPSC Drugs Inspector (Medical Devices) Recruitment 2025 (Advt No. 06/2025)",
+          "UPSC Assistant Director of Operations DGCA Recruitment 2024 (Advt No. 03/2024)",
+          "UPSC Scientific Officer Ministry of Culture Recruitment 2025 (Advt No. 08/2025)",
+          "UPSC DCIO-Tech MHA Recruitment 2025 (Advt No. 07/2025)"
+        ],
+        "result_url": "https://cms.upsc.gov.in/recruitment-tests/cut-off-marks/",
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": "2026-11-02",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "cut_off",
+        "post_title": "UPSC Cut-off Marks Released for Various Recruitment Posts",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Drugs Inspector (Medical Devices)",
+          "Assistant Director of Operations",
+          "Scientific Officer",
+          "Deputy Central Intelligence Officer (Technical) (DCIO-Tech)"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/recruitment-tests/cut-off-marks/",
+        "application_url": null,
+        "important_dates": [
+          "Cut-off marks upload date: 02/11/2026"
+        ],
+        "summary": "The Union Public Service Commission has published the official cut-off marks for recruitment tests including Drugs Inspector, Assistant Director of Operations, Scientific Officer, and DCIO (Technical). Candidates can check the detailed cut-off mark PDF documents on the UPSC website.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-22T10:27:30.690978+00:00"
+    },
+    "88aaa31c1af816c99ea1e10fdaa6a077f57ecf6cfd7ccc22fa023ad6a03dfcc8": {
+      "id": "0442b650d189bce1",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": false,
+        "post_category": "result",
+        "event_type": "result_update",
+        "event_evidence": "Union Public Service Commission published recruitment test result details for multiple advertisements including Drugs Inspector (Medical Devices), Assistant Director of Operations, Scientific Officer, and Deputy Central Intelligence Officer (Technical).",
+        "exam_name": "UPSC Recruitment Tests 2024-2025",
+        "cycle_label": null,
+        "related_exams": [
+          "UPSC Drugs Inspector Medical Devices Advt 06-2025",
+          "UPSC Assistant Director of Operations DGCA Advt 03-2024",
+          "UPSC Scientific Officer Ministry of Culture Advt 08-2025",
+          "UPSC Deputy Central Intelligence Officer Technical MHA Advt 07-2025"
+        ],
+        "result_url": "https://cms.upsc.gov.in/recruitment-tests/result-details/",
+        "result_declared": true,
+        "related_notice": null,
+        "event_date": "2026-11-02",
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": null,
+        "notice_type": "Result Details",
+        "post_title": "UPSC Recruitment Tests Result Details Released",
+        "organisation": "Union Public Service Commission",
+        "post_names": [
+          "Drugs Inspector (Medical Devices)",
+          "Assistant Director of Operations",
+          "Scientific Officer",
+          "Deputy Central Intelligence Officer (Technical)"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": "86",
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": null,
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": "https://cms.upsc.gov.in/recruitment-tests/result-details/",
+        "application_url": null,
+        "important_dates": [
+          "Upload Date: 2026-11-02"
+        ],
+        "summary": "The Union Public Service Commission has released result details for recruitment tests across multiple posts, including Drugs Inspector, Assistant Director of Operations, Scientific Officer, and Deputy Central Intelligence Officer (Technical). Candidates who appeared for these tests can check the newly uploaded documents on the official UPSC portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.5-flash-lite"
+      },
+      "updated_at": "2026-11-22T10:27:38.965509+00:00"
     }
   }
 }
