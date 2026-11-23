@@ -366,7 +366,8 @@
     "https://bpsc.bihar.gov.in",
     "https://bpsc.bihar.gov.in/exam-calendar",
     "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Kaagaz_20260502_160639877178_BPSC-20260502-zjmn51.pdf",
-    "https://bpsc.bihar.gov.in/advertisement"
+    "https://bpsc.bihar.gov.in/advertisement",
+    "https://www.ugc.gov.in/pdfnews/0632563_Constitution-Day-2026.pdf"
   ],
   "hashes": [
     "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
@@ -1073,10 +1074,15 @@
     "17ca678ab164418ac6fe3f571a1a116e8dd073d3a515b313997b2a708df3ba9f",
     "daa4daf26c6c147e684ba0afbe5e32d1a00d166c5d0bb14f05e632408598ab03",
     "007705d233a3a0191b3fcb8e33500703546d422a1b512149a9c79a19f3edad86",
-    "b914c92f426dd772c40e7ba96967a540f4371dc34be2870ebceeb5b35f6cc120"
+    "b914c92f426dd772c40e7ba96967a540f4371dc34be2870ebceeb5b35f6cc120",
+    "b655952a4256d7b9451eb34de3f3398c8db3eb2afdec5902f6a31a55c7fef38a",
+    "0728988ef8ea2b7bd2516aaaeb82edca1a79e6d36f7b86698f9b0b75fc97760e",
+    "ae45d4ce9fb5445ee8f7f751e37885d219c821f6404f7b59f472c0d8e51e50ce",
+    "004f8f95a4cc9c7dcc9e1593f98029c2847f89163fef51aa1022ffdbf796423b",
+    "d3658679d280d73314deb5f5dbfb08733f35744fa1f5820f2dbf09a8adfec2c0"
   ],
   "snapshots": {
-    "https://nta.ac.in": "f99ae988c27bf6c76a63f35d7e7bc13bd8894f1902f4dfd02884fd7eaf8ce358",
+    "https://nta.ac.in": "b655952a4256d7b9451eb34de3f3398c8db3eb2afdec5902f6a31a55c7fef38a",
     "https://nta.ac.in/Download/Notice/ExamcalendarRevised.pdf": "8f66c1f0e5920930a54f812e71e43e8febd7326e525cc472cd38d825be1f061e",
     "https://nta.ac.in/Download/Notice/Notice_20261030202143.pdf": "6dc3b0379b42a405aa8f3bab63851ac718d392ec049732eb60088e52b4128a19",
     "https://nta.ac.in/Download/Notice/Notice_20261028220547.pdf": "d24733397846ca61d0ef44f7ab3eda31f09851b48e9a661d95953f37561b53c3",
@@ -1224,7 +1230,7 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "ebbfe5ef6726007c7f9887252cc610b6139d69811b5c9636ec31e321d51f563e",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "004f8f95a4cc9c7dcc9e1593f98029c2847f89163fef51aa1022ffdbf796423b",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
@@ -1361,7 +1367,7 @@
     "https://www.keralapsc.gov.in/index.php/answerkey_onlineexams": "b914c92f426dd772c40e7ba96967a540f4371dc34be2870ebceeb5b35f6cc120",
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
-    "https://www.ugc.gov.in/recruitment": "e488e98e1e4038c824c2e090e3802fd3b745ecfd84d976bf8e2dc2aea80f03ae",
+    "https://www.ugc.gov.in/recruitment": "0728988ef8ea2b7bd2516aaaeb82edca1a79e6d36f7b86698f9b0b75fc97760e",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "18e1cdb35012129846f0453b74b36af44c29322a568385b727774c92c6bb0e83",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
@@ -1397,7 +1403,7 @@
     "https://www.tnpsc.gov.in/English/scheme.html": "6857e8464ead74f3a96e7f1b3bf00d630af76e954679e9b05407f82ea23adfb7",
     "https://www.tnpsc.gov.in/DynamicPortals/SelectionSchedule/SelectionSchedule.aspx": "84bc96e7d4ce24b87506d069d91772ce16880782cbf95f5c7bb04c287765d30a",
     "https://www.tnpsc.gov.in/English/Notification.aspx": "3093052a5994d79cb62f19fa769b052241fb87e85b442a4eb7cb4235855033b1",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "73b9e9bbe8d0f90955d21e8d57f1b7c9b6f0df5e9e08edb5afd703c5f0f1afba",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen": "d3658679d280d73314deb5f5dbfb08733f35744fa1f5820f2dbf09a8adfec2c0",
     "https://www.ugc.gov.in/pdfnews/8745845_Public-Notice-Fake-University.pdf": "97693e2331295fc2408526f2ac46816194518bba79b583e32274f0fe53ed8a8d",
     "https://www.icmr.gov.in": "4953fc38ca619914fa2edde5c8445321a33f4d28a9327ab709f7bf57f0e0f920",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1795065073_flyer_webinar4_medicalmasterclassseries.pdf": "4e1482a23ddd92a82c0fb7ecb8104b26c983d2670fcb92f4bd98276c8a01e130",
@@ -1439,7 +1445,8 @@
     "https://bpsc.bihar.gov.in": "3620a5e8e9349f73398a13dc79786495fffc07093c728ae91fcb353772bfc81e",
     "https://bpsc.bihar.gov.in/exam-calendar": "00df4eba6e0e94616f3f1cca95067e9371a063204201657aa8c3bb63b8902610",
     "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Kaagaz_20260502_160639877178_BPSC-20260502-zjmn51.pdf": "17ca678ab164418ac6fe3f571a1a116e8dd073d3a515b313997b2a708df3ba9f",
-    "https://bpsc.bihar.gov.in/advertisement": "daa4daf26c6c147e684ba0afbe5e32d1a00d166c5d0bb14f05e632408598ab03"
+    "https://bpsc.bihar.gov.in/advertisement": "daa4daf26c6c147e684ba0afbe5e32d1a00d166c5d0bb14f05e632408598ab03",
+    "https://www.ugc.gov.in/pdfnews/0632563_Constitution-Day-2026.pdf": "ae45d4ce9fb5445ee8f7f751e37885d219c821f6404f7b59f472c0d8e51e50ce"
   },
   "notice_registry": {
     "1e4ef913cd26c0f83abbe37e8676ef3119c9ba19a36e259397461ea39b5872f6": {
@@ -2154,31 +2161,29 @@
       "updated_at": "2026-11-13T20:12:31.099728+00:00"
     },
     "aaa22f4d594955161e9662679e78697a16388369a751763aed7d386a27e2e2a9": {
-      "id": "931e197c7b6fa476",
+      "id": "792b4d1b11e434cf",
       "draft": {
         "is_relevant_notice": true,
-        "is_recruitment_notice": true,
-        "post_category": "result",
-        "event_type": "interview_result",
+        "is_recruitment_notice": false,
+        "post_category": null,
+        "event_type": "result",
         "event_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
-        "exam_name": "CSIR TKDL Ayurveda Recruitment 2026 (Advt TKDL/08/2026)",
-        "cycle_label": "Advt. TKDL/08/2026",
+        "exam_name": "CSIR TKDL Advt TKDL/08/2026 (Ayurveda) Recruitment",
+        "cycle_label": "Advt. No. TKDL/08/2026",
         "related_exams": [
-          "CSIR TKDL Ayurveda Recruitment 2026 (Advt TKDL/08/2026)"
+          "CSIR TKDL Advt TKDL/08/2026 (Ayurveda) Recruitment"
         ],
-        "result_url": null,
+        "result_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
         "result_declared": true,
         "related_notice": null,
         "event_date": "2026-10-22",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "विज्ञापन संख्या TKDL/08/2026 (आयुर्वेद) के संदर्भ में 22.10.2026 को आयोजित साक्षात्कार का परिणाम।",
-        "notice_type": "result",
-        "post_title": "CSIR TKDL Advt TKDL/08/2026 Ayurveda Interview Result Declared",
+        "recruitment_evidence": null,
+        "notice_type": "Interview Result",
+        "post_title": "CSIR TKDL Advt TKDL/08/2026 Interview Result Released",
         "organisation": "Council of Scientific & Industrial Research",
-        "post_names": [
-          "Ayurveda"
-        ],
+        "post_names": [],
         "advertisement_number": "TKDL/08/2026",
         "vacancy_count": null,
         "qualification": null,
@@ -2190,14 +2195,14 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-ayauravaeda-kae-sandarabha-maen",
         "application_url": null,
         "important_dates": [
-          "2026-10-22: Interview Date"
+          "Interview Held: 2026-10-22"
         ],
-        "summary": "The Council of Scientific & Industrial Research (CSIR) has released the interview result for Advertisement No. TKDL/08/2026 (Ayurveda). The interview was conducted on October 22, 2026, and candidates can check the official portal for the result list.",
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has declared the result of the interview conducted on October 22, 2026, under Advertisement No. TKDL/08/2026 (Ayurveda). Candidates can access the official notification details directly on the CSIR portal.",
         "uncertainties": [],
         "status": "ai_draft",
         "model": "gemini-3.6-flash"
       },
-      "updated_at": "2026-11-22T20:00:08.928567+00:00"
+      "updated_at": "2026-11-23T11:35:39.436854+00:00"
     },
     "44d21701b233bd316b73711e83120795b861b5c99d3fd6193da97a855c63b513": {
       "id": "93a181eb53912f63",
@@ -12931,6 +12936,100 @@
         "model": "gemini-3.5-flash-lite"
       },
       "updated_at": "2026-11-22T20:06:34.447313+00:00"
+    },
+    "14ee267ff5e742bbcbb1112b52ea0692456b8737c6436f35fcbf900125939a92": {
+      "id": "03ae97aa0757c0bc",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "UGC Standing Counsel and Panel Advocate Empanelment 2026",
+        "cycle_label": "2026",
+        "related_exams": [],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "UGC invites online applications for empanelment of the Standing Counsel(s) and Panel Advocate(s) to represent UGC before the Hon’ble Supreme Court of India / High Courts / Tribunals / Commissions / District Courts, and other judicial bodies across the country.",
+        "notice_type": "vacancy",
+        "post_title": "UGC Standing Counsel and Panel Advocate Empanelment 2026",
+        "organisation": "University Grants Commission",
+        "post_names": [
+          "Standing Counsel",
+          "Panel Advocate"
+        ],
+        "advertisement_number": null,
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": "2026-11-23",
+        "application_end_date": "2026-11-23",
+        "application_fee": null,
+        "selection_process": null,
+        "official_notification_url": null,
+        "application_url": "https://www.ugc.gov.in/recruitment",
+        "important_dates": [
+          "Application window: 2026-11-23 to 2026-11-23"
+        ],
+        "summary": "The University Grants Commission has invited online applications for the empanelment of Standing Counsel and Panel Advocates to represent the UGC before the Supreme Court of India, High Courts, Tribunals, and District Courts. Eligible candidates can submit their applications online through the official UGC portal.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-23T11:17:04.101002+00:00"
+    },
+    "c5957d287d4d59db7c162fa446ab3d4fb29b4d9db43eb9238d8e217e0fc31cf8": {
+      "id": "766cc68a618a638f",
+      "draft": {
+        "is_relevant_notice": true,
+        "is_recruitment_notice": true,
+        "post_category": "vacancy",
+        "event_type": null,
+        "event_evidence": null,
+        "exam_name": "CSIR Recruitment 2026",
+        "cycle_label": "2026",
+        "related_exams": [
+          "CSIR Project Personnel Walk-in Interview 2026 (Advt. HRDG/JIGYASA/01/2026)",
+          "CSIR-CGCRI Director Recruitment 2026 (Advt. 05/2026)",
+          "CSIR-NCL Director Recruitment 2026 (Advt. 04/2026)"
+        ],
+        "result_url": null,
+        "result_declared": false,
+        "related_notice": null,
+        "event_date": null,
+        "previous_event_date": null,
+        "change_reason": null,
+        "recruitment_evidence": "CSIR has listed notifications for walk-in interview for Project Personnel at CSIR-HRDG (Advt No. HRDG/JIGYASA/01/2026) and Director posts at CSIR-CGCRI (Advt No. 05/2026) and CSIR-NCL (Advt No. 04/2026) with key dates on 30/11/2026.",
+        "notice_type": "Recruitment Notification",
+        "post_title": "CSIR Director and Project Staff Recruitment 2026",
+        "organisation": "Council of Scientific & Industrial Research (CSIR)",
+        "post_names": [
+          "Project Personnel",
+          "Director"
+        ],
+        "advertisement_number": "HRDG/JIGYASA/01/2026, 05/2026, 04/2026",
+        "vacancy_count": null,
+        "qualification": null,
+        "age_limit": null,
+        "application_start_date": null,
+        "application_end_date": "2026-11-30",
+        "application_fee": null,
+        "selection_process": "Walk-in Interview (Project Personnel), Selection (Director)",
+        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment",
+        "application_url": null,
+        "important_dates": [
+          "Walk-in Interview / Last Date to Apply: 2026-11-30"
+        ],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has announced recruitment for Project Personnel at CSIR-HRDG New Delhi as well as Director posts at CSIR-CGCRI Kolkata and CSIR-NCL Pune. Eligible candidates can participate in the walk-in interview or submit their applications by November 30, 2026.",
+        "uncertainties": [],
+        "status": "ai_draft",
+        "model": "gemini-3.6-flash"
+      },
+      "updated_at": "2026-11-23T11:22:02.829251+00:00"
     }
   }
 }
