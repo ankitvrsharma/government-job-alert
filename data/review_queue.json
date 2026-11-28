@@ -25285,5 +25285,133 @@
       "status": "ai_draft",
       "model": "gemini-3.5-flash-lite"
     }
+  },
+  {
+    "id": "2d2ab550ce15ee7d",
+    "detected_at_utc": "2026-11-28T11:00:09.214473+00:00",
+    "source_name": "CSIR",
+    "source_page": "https://www.csir.res.in/",
+    "candidate_title": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
+    "candidate_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+    "document_sha256": "5d6a08a116f503687e4e3e5b7dedcbac4a5f71dbab3b25d6bb2fa5a6a99c2ee6",
+    "local_pdf": null,
+    "local_attachment": null,
+    "attachment_sha256": null,
+    "attachment_mime_type": null,
+    "attachment_source_url": null,
+    "review_status": "pending_review",
+    "human_verified": false,
+    "post_type": "update",
+    "previous_post_id": "dd65981c86157acf",
+    "change_summary": [
+      "Event type: walk_in_interview -> interview_schedule",
+      "Examination: CSIR Jigyasa Project HCP002601 Walk-in Interview 2026 -> CSIR-HRDG Project Staff Recruitment 2026",
+      "Important dates: Walk-in Interview Date: 2026-11-30 -> 2026-11-30: Walk-in Interview"
+    ],
+    "ai_draft": {
+      "is_relevant_notice": true,
+      "is_recruitment_notice": true,
+      "post_category": "interview_schedule",
+      "event_type": "interview_schedule",
+      "event_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
+      "exam_name": "CSIR-HRDG Project Staff Recruitment 2026",
+      "cycle_label": "2026",
+      "related_exams": [],
+      "result_url": null,
+      "result_declared": false,
+      "related_notice": null,
+      "event_date": "2026-11-30",
+      "previous_event_date": null,
+      "change_reason": null,
+      "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+      "notice_type": "interview_schedule",
+      "post_title": "CSIR-HRDG Project Staff Walk-in Interview 2026",
+      "organisation": "Council of Scientific & Industrial Research",
+      "post_names": [
+        "Project Staff"
+      ],
+      "advertisement_number": "HCP002601",
+      "vacancy_count": null,
+      "qualification": null,
+      "age_limit": null,
+      "application_start_date": null,
+      "application_end_date": null,
+      "application_fee": null,
+      "selection_process": "Walk-in Interview",
+      "official_notification_url": null,
+      "application_url": null,
+      "important_dates": [
+        "2026-11-30: Walk-in Interview"
+      ],
+      "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview for the recruitment of Project Staff under the CSIR Jigyasa project (HCP002601). The walk-in interview is scheduled to take place on 30 November 2026.",
+      "uncertainties": [
+        "Exact number of vacancies, eligibility criteria, and interview venue details are contained in the attached advertisement PDF and not specified on the webpage."
+      ],
+      "status": "ai_draft",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  {
+    "id": "54825a543ebaa353",
+    "detected_at_utc": "2026-11-28T11:07:37.324596+00:00",
+    "source_name": "CSIR",
+    "source_page": "https://www.csir.res.in/",
+    "candidate_title": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+    "candidate_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+    "document_sha256": "4e5705259cc8db80da06b859bebf7554c2f63de016b62d079d0f0cb2590b6f89",
+    "local_pdf": null,
+    "local_attachment": null,
+    "attachment_sha256": null,
+    "attachment_mime_type": null,
+    "attachment_source_url": null,
+    "review_status": "pending_review",
+    "human_verified": false,
+    "post_type": "update",
+    "previous_post_id": "eb0aecacc56b3335",
+    "change_summary": [
+      "Important dates: Application deadline: 30/11/2026 -> Application deadline: 2026-11-30"
+    ],
+    "ai_draft": {
+      "is_relevant_notice": true,
+      "is_recruitment_notice": true,
+      "post_category": "vacancy",
+      "event_type": null,
+      "event_evidence": null,
+      "exam_name": "CSIR-NCL Pune Director Recruitment 2026",
+      "cycle_label": "2026",
+      "related_exams": [],
+      "result_url": null,
+      "result_declared": false,
+      "related_notice": null,
+      "event_date": null,
+      "previous_event_date": null,
+      "change_reason": null,
+      "recruitment_evidence": "सीएसआईआर-नेशनल केमिकल लेबोरेटरी (सीएसआईआर-एनसीएल), पुणे में डायरेक्टर के पद के लिए विज्ञापन [अंतिम तिथि: 30/11/2026]",
+      "notice_type": "Recruitment Advertisement",
+      "post_title": "CSIR NCL Pune Director Recruitment 2026",
+      "organisation": "Council of Scientific & Industrial Research (CSIR) - National Chemical Laboratory (NCL)",
+      "post_names": [
+        "Director"
+      ],
+      "advertisement_number": null,
+      "vacancy_count": null,
+      "qualification": null,
+      "age_limit": null,
+      "application_start_date": null,
+      "application_end_date": "2026-11-30",
+      "application_fee": null,
+      "selection_process": null,
+      "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
+      "application_url": null,
+      "important_dates": [
+        "Application deadline: 2026-11-30"
+      ],
+      "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
+      "uncertainties": [
+        "Exact vacancy count, qualification, age limit, and application procedure are detailed in the attached advertisement PDF and not specified directly in the webpage text."
+      ],
+      "status": "ai_draft",
+      "model": "gemini-3.8-flash"
+    }
   }
 ]

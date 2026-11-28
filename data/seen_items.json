@@ -1234,7 +1234,12 @@
     "c596d1ebf67fbd339bc1601e3bc4d8463b97e70507b54205bcbe0faeb95221f4",
     "14081cb602cf0a748244d9fca94aa16a05127e3f97915a654492de1ba1996ea2",
     "77b138532308eda89c9594f78b8a1311ac79fab99008669c5b9c59b9493c35c9",
-    "dd50685446aaee65bab43f4bac1d2251f8aa1df46a97495a5fe2715f3542be1a"
+    "dd50685446aaee65bab43f4bac1d2251f8aa1df46a97495a5fe2715f3542be1a",
+    "b19994679bd996d946962d06b16a36cad55507c62243f2c2a012381048258beb",
+    "5d6a08a116f503687e4e3e5b7dedcbac4a5f71dbab3b25d6bb2fa5a6a99c2ee6",
+    "439d2d91ec3d283c72944f21fbbd090f28d43decaf3ab1daf46dee91f7178f19",
+    "4e5705259cc8db80da06b859bebf7554c2f63de016b62d079d0f0cb2590b6f89",
+    "1662c9bdc4c374d0b012568457d818ae0e820716ad205447298ec07084e66d90"
   ],
   "snapshots": {
     "https://nta.ac.in": "81ff5f246860dd8152fe0beb5f1161f745be6feda6dc2997e38cfe67d7ed9229",
@@ -1385,13 +1390,13 @@
     "https://ncs.gov.in/assets/pdf/Employer registration flowchart 1.pdf": "a0f63b883aa14f937f5c0c3303f67d7e57076fb806738e126b04b7d63eb91be0",
     "https://ncs.gov.in/careerSchemes": "cdc87bc8307420c5d635f072f5c439f7d34b1b65bb73f53811571022dcb30e35",
     "https://employmentnews.gov.in/NewEmp/Home.aspx": "b6e4de828683ab7919ced21536bb0c12ad765e82197d641a34e5ee38d9160d1b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment": "b79131922bc43a004c14abd4e71356769ddcb4be46f94520c8ad9479275e5fab",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment": "b19994679bd996d946962d06b16a36cad55507c62243f2c2a012381048258beb",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-taikaedaiela-yauunaita-nai-dailalai-maen-0": "db571728c51e710e046e3b779fd99f229859db2a9efecaa5a1826fa5cab7819d",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/vaijanaapana-sankhayaa-tkdl082026-saovaa-raigapaa-kae-sandarabha": "11760f42e57b3b77b7ed749b771b22f22ed46345c07cc989bad98a38de66ac73",
     "https://www.csir.res.in/hi/career-opportunities/recruitment/paraojaekata-karamaiyaon-kai-naiyaukatai-kae-laie-vaoka-ina": "c1b2ea1dca08ca193b28f26f45ce9d9c31183c7db2bbb82144c3d19b2c2bc0fd",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "49ec142133bf5d09d3e7205e003cc208385a29acf22601062ea08c47a01b4c5b",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "84ed9503c73c11f5ead52cb943348d8460caba6dc43af063f0e5733e1bd1717e",
-    "https://www.csir.res.in/hi/career-opportunities": "d5305de6ee50f0496365e5be96a9cd6beac02121b191dea6dc634b1cc0a374c6",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-kaendaraiya-kaanca-evan-sairaemaika-anausandhaana": "439d2d91ec3d283c72944f21fbbd090f28d43decaf3ab1daf46dee91f7178f19",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara": "4e5705259cc8db80da06b859bebf7554c2f63de016b62d079d0f0cb2590b6f89",
+    "https://www.csir.res.in/hi/career-opportunities": "1662c9bdc4c374d0b012568457d818ae0e820716ad205447298ec07084e66d90",
     "https://www.csir.res.in/hi/notification": "61a27b2111c6decde909fe42c20038046a46f54f335529b92232c6869ae68e36",
     "https://www.csir.res.in/sites/default/files/2023-08/CSIR-GIGW-2023-1.pdf": "944e9aa0968279286dfcd7d773394e3eb449e3b137300b13699e06088f9fb9b2",
     "https://www.icmr.gov.in/employment-opportunities": "34de89c80a2e051fcd8521696f47b70ccd035f7053753555a84ebe415186c9fd",
@@ -1523,7 +1528,7 @@
     "https://www.keralapsc.gov.in/index.php/question-paper-descriptive-exam": "03c27b9f25363c3a73f1204cb1fe3245d14c798eeac4fb191c540340819991f2",
     "https://www.keralapsc.gov.in/index.php/notifications": "d7d7e3dea6dc6e99a26643b32b09d828de869574fa20a0949f770f9a5b5434a2",
     "https://www.ugc.gov.in/recruitment": "d934af49191a9d6295686a66dbbece9a258bc5543c0a16262b358626c14a051d",
-    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "8174013c2d783119e48b2430e9e981bc0aa64f2e9bd246011f96ac761d6a8641",
+    "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu": "5d6a08a116f503687e4e3e5b7dedcbac4a5f71dbab3b25d6bb2fa5a6a99c2ee6",
     "https://www.ugc.gov.in/pdfnews/9707555_Kashi-Tamil-Sangamam-KTS.pdf": "8e62c6a730a1e2705a5918f12c74a46e551697b278e30fa5a97fca7205925004",
     "https://www.icmr.gov.in/icmrobject/uploads/Events/1794455805_srma_workshopflyer_f.pdf": "557a12ba280ca3c4ae0e19c81f5675b49e0daade523bf8e13863cd38cba5045c",
     "https://www.ibps.in/index.php/careers": "d51626015fb6a4ff1b31d1a2e5483beb31d4cf63a2e933e7952785a711662291",
@@ -10336,27 +10341,25 @@
       "updated_at": "2026-11-16T22:52:37.522136+00:00"
     },
     "fdcb9a29083e62adf4faf669b80b36df82876ae9ece10b589bc60f0b497f44dd": {
-      "id": "dd65981c86157acf",
+      "id": "2d2ab550ce15ee7d",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
         "post_category": "interview_schedule",
-        "event_type": "walk_in_interview",
-        "event_evidence": "वॉक-इन इंटरव्यू 30/11/2026",
-        "exam_name": "CSIR Jigyasa Project HCP002601 Walk-in Interview 2026",
+        "event_type": "interview_schedule",
+        "event_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति - प्रोजेक्ट 'सीएसआईआर जिज्ञासा: आर&डी आउटरीच और इनोवेशन के लिए वैज्ञानिकों और स्कूली छात्रों को जोड़ना' (HCP002601) के अंतर्गत (वॉक-इन इंटरव्यू 30/11/2026)",
+        "exam_name": "CSIR-HRDG Project Staff Recruitment 2026",
         "cycle_label": "2026",
-        "related_exams": [
-          "CSIR Jigyasa Project HCP002601"
-        ],
+        "related_exams": [],
         "result_url": null,
         "result_declared": false,
         "related_notice": null,
         "event_date": "2026-11-30",
         "previous_event_date": null,
         "change_reason": null,
-        "recruitment_evidence": "वॉक-इन इंटरव्यू के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
-        "notice_type": "Interview Schedule",
-        "post_title": "CSIR HRDG New Delhi Project Staff Walk-In Interview 2026",
+        "recruitment_evidence": "सीएसआईआर-एचआरडीजी, नई दिल्ली में 'वॉक-इन इंटरव्यू' के माध्यम से प्रोजेक्ट कर्मियों की नियुक्ति",
+        "notice_type": "interview_schedule",
+        "post_title": "CSIR-HRDG Project Staff Walk-in Interview 2026",
         "organisation": "Council of Scientific & Industrial Research",
         "post_names": [
           "Project Staff"
@@ -10369,17 +10372,19 @@
         "application_end_date": null,
         "application_fee": null,
         "selection_process": "Walk-in Interview",
-        "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-ecaaradaijai-nai-dailalai-maen-vaoka-ina-intaravayauu",
+        "official_notification_url": null,
         "application_url": null,
         "important_dates": [
-          "Walk-in Interview Date: 2026-11-30"
+          "2026-11-30: Walk-in Interview"
         ],
-        "summary": "CSIR-HRDG New Delhi has announced a walk-in interview for project personnel under the CSIR Jigyasa outreach and innovation project. Eligible candidates can attend the interview scheduled for 30 November 2026.",
-        "uncertainties": [],
+        "summary": "CSIR-HRDG, New Delhi has announced a walk-in interview for the recruitment of Project Staff under the CSIR Jigyasa project (HCP002601). The walk-in interview is scheduled to take place on 30 November 2026.",
+        "uncertainties": [
+          "Exact number of vacancies, eligibility criteria, and interview venue details are contained in the attached advertisement PDF and not specified on the webpage."
+        ],
         "status": "ai_draft",
-        "model": "gemini-3.5-flash-lite"
+        "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-26T11:28:54.332133+00:00"
+      "updated_at": "2026-11-28T11:00:09.214496+00:00"
     },
     "01e57bddf8c5429fde881bf7a5c4af0acfc00d92a2c707cecfd86924231a295d": {
       "id": "d5b85db2310e4b04",
@@ -10478,7 +10483,7 @@
       "updated_at": "2026-11-19T11:03:53.195434+00:00"
     },
     "0e85fffed9c6d80be5de4e42df4f6a0f69e02c47adf329022a1bc80f6b137352": {
-      "id": "eb0aecacc56b3335",
+      "id": "54825a543ebaa353",
       "draft": {
         "is_relevant_notice": true,
         "is_recruitment_notice": true,
@@ -10512,14 +10517,16 @@
         "official_notification_url": "https://www.csir.res.in/hi/career-opportunities/recruitment/saiesaaiara-naesanala-kaemaikala-laebaoraetarai-saiesaaiara",
         "application_url": null,
         "important_dates": [
-          "Application deadline: 30/11/2026"
+          "Application deadline: 2026-11-30"
         ],
-        "summary": "CSIR has issued a recruitment advertisement for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until 30 November 2026.",
-        "uncertainties": [],
+        "summary": "The Council of Scientific & Industrial Research (CSIR) has invited applications for the post of Director at CSIR-National Chemical Laboratory (CSIR-NCL), Pune. Eligible candidates can submit their applications until November 30, 2026.",
+        "uncertainties": [
+          "Exact vacancy count, qualification, age limit, and application procedure are detailed in the attached advertisement PDF and not specified directly in the webpage text."
+        ],
         "status": "ai_draft",
         "model": "gemini-3.8-flash"
       },
-      "updated_at": "2026-11-19T21:15:37.706033+00:00"
+      "updated_at": "2026-11-28T11:07:37.324609+00:00"
     },
     "f2bb3f5dccec717ba2ca56b09220f2a2bc110c01c272e5e469550ddfc5ad23a1": {
       "id": "3df71a7b2d78de27",
